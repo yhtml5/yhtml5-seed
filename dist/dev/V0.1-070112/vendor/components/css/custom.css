@@ -1,0 +1,283 @@
+/*==================== custom bootstrap ====================*/
+.showcase-form textarea .ng-dirty.ng-invalid,
+.showcase-form select .ng-dirty.ng-invalid,
+.showcase-form input.ng-dirty.ng-invalid {
+    border-color: #e9322d;
+    -webkit-box-shadow: 0 0 6px #f8b9b7;
+    -moz-box-shadow: 0 0 6px #f8b9b7;
+    box-shadow: 0 0 6px #f8b9b7;
+}
+
+.y-upload-img {
+    border-radius: 6px;
+    border: 1px solid #999;
+    background-color: #fbfbfb;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 180px;
+}
+
+.y-upload-img img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    min-width: 200px;
+}
+
+
+/* Sidebar navigation */
+
+.nav-sidebar {
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.nav-sidebar li {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    margin-top: -1px;
+}
+
+.nav-sidebar > li > a {
+    color: #7f7f7f;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #099fdd;
+}
+
+
+/*progressbar*/
+
+.y-progress-step {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding-left: 0;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+.y-progress-step li {
+    list-style-type: none;
+    color: #a9a9a9;
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.y-progress-step li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    background: #a9a9a9;
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+}
+
+
+/*progressbar connectors*/
+
+.y-progress-step li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #a9a9a9;
+    position: absolute;
+    left: -50%;
+    top: 14px;
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+
+.y-progress-step li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+
+/*marking active/completed steps green*/
+
+
+/*The number of the step and the connector before it = green*/
+
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+    background: #099fdd;
+    color: white;
+}
+
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+    background: #099fdd;
+    color: white;
+}
+
+.y-progress-step .active .y-turn-blue {
+    color: #099fdd;
+}
+
+
+/* header style
+ * ============ */
+
+.y-header .navbar-collapse {
+    margin-top: 15px;
+}
+
+.y-header .navbar {
+    background: #fff;
+    box-shadow: 2px 3px 9px 0 rgba(0, 0, 0, 0.06);
+    border-color: #e7e7e7;
+}
+
+.y-header .navbar-toggle {
+    margin-top: 24px;
+    margin-right: 18px;
+}
+
+.y-header .y-header-logo img {
+    height: 100%;
+    width: auto;
+    margin-left: 10px;
+}
+
+.y-header-logo {
+    float: left;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.y-header-search {
+    color: #099fdd;
+}
+
+.y-header-search input {
+    height: 36px;
+}
+
+@media (max-width: 768px) {
+    .y-header-close {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.y-header-close {
+    color: #777;
+}
+
+.y-header-close:hover,
+.y-header-close:focus {
+    color: #f25050;
+    background-color: transparent;
+}
+
+.y-header-close i {
+    font-size: 40px;
+    margin: auto 20px;
+}
+
+.y-header-help {
+    border: solid 1px #099fdd;
+    color: #099fdd;
+}
+
+@media (min-width: 768px) {
+    .y-header-help {
+        margin-left: 20px;
+    }
+}
+
+.y-header-help i {
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+.y-header-help i,
+.y-header-help span {
+    color: #099fdd;
+}
+
+.y-header-search {
+    height: 36px;
+}
+
+
+/*
+ * === change ===
+ */
+
+.y-card-default {
+    border: solid 2px #555;
+    padding: 30px 10px;
+    margin: auto;
+}
+
+.y-card {
+    border: solid 1px #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    text-align: center;
+    background-color: #fefefe;
+    color: #2f2f2f;
+    margin: auto;
+}
+
+.y-card-sm {
+    padding: 20px 10px;
+}
+
+.y-card-md {
+    padding: 50px 10px;
+}
+
+.y-card-sm .iconfont {
+    font-size: 50px;
+    color: #777;
+}
+
+.y-card-md .iconfont {
+    font-size: 90px;
+    color: #777;
+}
+
+.y-box-sm {
+    width: 90%;
+    max-width: 120px;
+    margin: auto;
+    padding: 8px;
+    border: solid 1px #666;
+    border-radius: 4px;
+}

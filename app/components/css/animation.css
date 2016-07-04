@@ -1,0 +1,154 @@
+/*==================== animation ====================*/
+.y-transition-border-color-info {
+    -webkit-transition: border-color 0.4s ease-out 0s;
+    -moz-transition: border-color 0.4s ease-out 0s;
+    transition: border-color 0.4s ease-out 0s;
+}
+
+.y-transition-border-color-info:hover,
+.y-transition-border-color-info:focus {
+    border-color: #099fdd;
+}
+
+.y-transition-color-info {
+    -webkit-transition: color 0.4s ease-out 0s;
+    -moz-transition: color 0.4s ease-out 0s;
+    transition: color 0.4s ease-out 0s;
+}
+
+.y-transition-color-info:hover,
+.y-transition-color-info:focus {
+    color: #099fdd;
+}
+
+.y-panel-display h3,
+.y-panel-display-money p,
+.y-panel-display-user p,
+.y-panel-display-money i,
+.y-panel-display .y-num,
+.y-panel-display-set i,
+.y-panel-display-set p,
+.y-panel-display-user i,
+.y-dashboard-set-platform i,
+.y-dashboard-set-demo i,
+.y-undeveloped i {
+    -webkit-transition: color 0.4s ease-out 0s;
+    -moz-transition: color 0.4s ease-out 0s;
+    transition: color 0.4s ease-out 0s;
+}
+
+.y-panel-display h3:hover,
+.y-panel-display h3:focus,
+.y-panel-display .y-num:hover,
+.y-panel-display .y-num:focus,
+.y-panel-display-money i:hover,
+.y-panel-display-money i:focus,
+.y-panel-display-user i:hover,
+.y-panel-display-user i:focus,
+.y-panel-display-money p:hover,
+.y-panel-display-money p:focus,
+.y-panel-display-user p:hover,
+.y-panel-display-user p:focus,
+.y-dashboard-set-platform i:hover,
+.y-dashboard-set-platform i:focus,
+.y-dashboard-set-demo i:hover,
+.y-dashboard-set-demo i:focus,
+.y-undeveloped i:hover,
+.y-undeveloped i:focus {
+    color: #099fdd;
+}
+
+.y-panel-display-set i:hover,
+.y-panel-display-set i:focus,
+.y-panel-display-set p:hover,
+.y-panel-display-set p:focus {
+    color: #3a3a3a;
+}
+
+.y-body {
+    margin-top: 130px;
+    text-align: center;
+}
+
+.y-body .panel {
+    box-shadow: 0 0 9px 5px rgba(255, 255, 255, 0.04);
+    -webkit-box-shadow: 0 0 9px 5px rgba(255, 255, 255, 0.04);
+    -webkit-transition: box-shadow 0.3s ease-out 0s;
+    -moz-transition: box-shadow 0.3s ease-out 0s;
+    transition: box-shadow 0.3s ease-out 0s;
+}
+
+.y-body .panel:hover,
+.y-body .panel:focus {
+    -webkit-box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 11px 7px rgba(0, 0, 0, 0.1);
+}
+
+
+/*
+ * === change ===
+ */
+
+@keyframes bg-generator {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}
+
+@-webkit-keyframes bg-generator {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}
+
+.y-bg-transition {
+    overflow: hidden;
+    padding: 2em 2em 1em;
+    position: relative;
+    transition: padding 0.2s ease 0s;
+    z-index: -1;
+}
+
+.y-bg-transition-info {
+    background-color: #1c81df;
+    width: 100%;
+    height: 760px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
+    background: linear-gradient(223deg, #1c81df, #e48ba4, #37b5e4, #8dd088);
+    background-size: 600% 600%;
+    -webkit-animation: bg-generator 50s ease infinite;
+    animation: bg-generator 10s ease infinite;
+}
+
+.y-tsc-info,
+.y-tsc-dark {
+    -webkit-transition: color 0.4s ease-out 0s;
+    -moz-transition: color 0.4s ease-out 0s;
+    transition: color 0.4s ease-out 0s;
+}
+
+.y-tsc-info:hover,
+.y-tsc-info:focus {
+    color: #099fdd;
+}
+
+.y-tsc-dark:hover,
+.y-tsc-dark:focus {
+    color: #555;
+}

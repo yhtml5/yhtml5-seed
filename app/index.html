@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yhtml5" ng-controller="controllers" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <link rel="import" href="components/head/head.html?__inline">
+</head>
+
+<body class="y-bg-ebebeb">
+<!--[if lt IE 8]>
+<p class="browsehappy">您在使用<strong>上个世纪</strong>浏览器.
+    请<a href="http://browsehappy.com/">升级您的浏览器</a>获取更好的体验</p>
+<![endif]-->
+<header class="y-header" ui-view="nav"></header>
+<div ui-view="content"></div>
+<div ui-view="modal"></div>
+<p> hello world11</p>
+
+<!--* =============== css ===============-->
+<!--@require /bower_components/bootstrap/dist/css/bootstrap.css-->
+<!--@require /server/author.css-->
+<!--* ================ js ================-->
+<!--@require /bower_components/angular/angular.js-->
+<!--@require /bower_components/angular-ui-router/release/angular-ui-router.js-->
+<!--@require /server/author.js-->
+
+</body>
+
+</html>

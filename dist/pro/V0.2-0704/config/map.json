@@ -1,0 +1,171 @@
+{
+    "res": {
+        "fis-conf.js": {
+            "uri": "/config/fis-conf.js",
+            "type": "js"
+        },
+        "components/css/animation.css": {
+            "uri": "/vendor/components/css/animation.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/base.css": {
+            "uri": "/vendor/components/css/base.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/bootstrap.ex.css": {
+            "uri": "/vendor/components/css/bootstrap.ex.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/box.css": {
+            "uri": "/vendor/components/css/box.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/css/cover.css": {
+            "uri": "/vendor/components/css/cover.css",
+            "type": "css",
+            "deps": [
+                "bower_components/bootstrap/dist/css/bootstrap.css"
+            ],
+            "pkg": "p0"
+        },
+        "components/css/custom.css": {
+            "uri": "/vendor/components/css/custom.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/iconfont/iconfont.css": {
+            "uri": "/vendor/components/iconfont/iconfont.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "components/js/ctrl.js": {
+            "uri": "/vendor/components/js/ctrl.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "components/js/directive.js": {
+            "uri": "/vendor/components/js/directive.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "components/js/filter.js": {
+            "uri": "/vendor/components/js/filter.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "components/js/router.js": {
+            "uri": "/vendor/components/js/router.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "components/nav/nav.css": {
+            "uri": "/vendor/components/nav/nav.css",
+            "type": "css",
+            "deps": [
+                "../head/head.css"
+            ],
+            "pkg": "p0"
+        },
+        "server/author.css": {
+            "uri": "/server/author.css",
+            "type": "css",
+            "pkg": "p0"
+        },
+        "server/author.js": {
+            "uri": "/server/author.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "bower_components/angular/angular.js": {
+            "uri": "/vendor/angular/angular.js",
+            "type": "js",
+            "pkg": "p2"
+        },
+        "bower_components/angular/angular.min.js": {
+            "uri": "/vendor/angular/angular.min.js",
+            "type": "js",
+            "extras": {}
+        },
+        "bower_components/angular-ui-router/release/angular-ui-router.js": {
+            "uri": "/vendor/angular/angular-ui-router.js",
+            "type": "js",
+            "extras": {},
+            "pkg": "p2"
+        },
+        "bower_components/angular-ui-router/release/angular-ui-router.min.js": {
+            "uri": "/vendor/angular/angular-ui-router.min.js",
+            "type": "js",
+            "extras": {}
+        },
+        "bower_components/bootstrap/dist/css/bootstrap.css": {
+            "uri": "/vendor/bootstrap/css/bootstrap.css",
+            "type": "css",
+            "extras": {},
+            "pkg": "p3"
+        },
+        "bower_components/bootstrap/dist/css/bootstrap.min.css": {
+            "uri": "/vendor/bootstrap/css/bootstrap.min.css",
+            "type": "css",
+            "extras": {}
+        },
+        "bower_components/bootstrap/dist/js/bootstrap.js": {
+            "uri": "/vendor/bootstrap/js/bootstrap.js",
+            "type": "js"
+        },
+        "bower_components/bootstrap/dist/js/bootstrap.min.js": {
+            "uri": "/vendor/bootstrap/js/bootstrap.min.js",
+            "type": "js"
+        }
+    },
+    "pkg": {
+        "p0": {
+            "uri": "./static/index.96b2b35.css",
+            "type": "css",
+            "has": [
+                "server/author.css",
+                "components/css/bootstrap.ex.css",
+                "components/iconfont/iconfont.css",
+                "components/css/cover.css",
+                "components/css/animation.css",
+                "components/css/custom.css",
+                "components/css/base.css",
+                "components/css/box.css",
+                "components/nav/nav.css"
+            ],
+            "deps": [
+                "bower_components/bootstrap/dist/css/bootstrap.css",
+                "../head/head.css"
+            ]
+        },
+        "p1": {
+            "uri": "./static/index.2663c33.js",
+            "type": "js",
+            "has": [
+                "server/author.js",
+                "components/js/directive.js",
+                "components/js/filter.js",
+                "components/js/router.js",
+                "components/js/ctrl.js"
+            ]
+        },
+        "p2": {
+            "uri": "./static/yhtml5.c34abfd.js",
+            "type": "js",
+            "has": [
+                "bower_components/angular/angular.js",
+                "bower_components/angular-ui-router/release/angular-ui-router.js"
+            ]
+        },
+        "p3": {
+            "uri": "./static/yhtml5.e9d112c.css",
+            "type": "css",
+            "has": [
+                "bower_components/bootstrap/dist/css/bootstrap.css"
+            ]
+        }
+    }
+}

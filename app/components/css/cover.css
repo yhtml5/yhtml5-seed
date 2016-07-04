@@ -1,0 +1,26 @@
+/*
+ * @require ../../bower_components/bootstrap/dist/css/bootstrap.css
+ */
+
+/*==================== cover ====================*/
+
+body {
+    font-family: "microsoft yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+    background-color: #099fdd;
+    border-color: #099fdd;
+}
+
+.modal-content .close {
+    font-size: 30px;
+}
+
+.panel-default .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
