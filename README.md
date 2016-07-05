@@ -1,15 +1,15 @@
 ## YHTML5-Seed
 
-YHTML5-Seed scaffolds out a new application, writing your build configuration (e.g fis3) 
-and pulling in relevant build tasks and package manager dependencies (e.g npm) that you might need for your build
+YHTML5-Seed scaffolds out a new application, writing your build configuration (e.g fis3)
+               and pulling in relevant build tasks and package manager dependencies (e.g npm) that you might need for your build
 
-![npm version]
-![node version]
-![Build Status]
-![downloads total]
-![author]
+               ![npm version]
+               ![node version]
+               ![Build Status]
+               ![downloads total]
+               ![author]
 
-### Quick Links
+               ### Quick Links
 - [Introduction](#introduction)
     - [project progress]  
     - [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
