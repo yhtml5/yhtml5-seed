@@ -53,7 +53,7 @@ and pulling in relevant build tasks and package manager dependencies (e.g npm) t
   * Etc,etc
 
 #### [changeLog] 
-#### [problem]
+#### [issue]
 #### [project progress]
 
 ## Getting Started  
@@ -124,45 +124,19 @@ Now browse to the app at `http://localhost:8080`.
 
 ### Directory Layout
 ```
+.
+|____bower_components
 |____components
-| |____footer
-| | |____footer.html
-| | |____footer.js
+| |____css
+| | |____animation.css
+| | |____base.css
+| | |____bootstrap.ex.css
+| | |____box.css
+| | |____cover.css
+| | |____custom.css
 | |____head
-| | |____head.css
 | | |____head.html
-| | |____iconfont.eot
-| | |____iconfont.svg
-| | |____iconfont.ttf
-| | |____iconfont.woff
 | | |____shortcut-icon.png
-| |____header
-| | |____header.css
-| | |____header.html
-| | |____logo-sdk.png
-| |____help-center
-| | |____help-center.css
-| | |____help-center.html
-| | |____help-center.js
-| |____panel-add
-| | |____panel-add.css
-| | |____panel-add.html
-| |____panel-display
-| | |____panel-display.css
-| | |____panel-display.html
-| |____public
-| | |____jq-index.js
-| | |____ng-app.js
-| | |____ng-ctrl.js
-| |____undeveloped
-| | |____undeveloped.html
-|____fis-conf.js
-|____map.json
-|____Reademe.html
-|____server
-| |____demo.json
-| |____init.json
-|____static
 | |____iconfont
 | | |____demo.css
 | | |____demo.html
@@ -171,21 +145,21 @@ Now browse to the app at `http://localhost:8080`.
 | | |____iconfont.svg
 | | |____iconfont.ttf
 | | |____iconfont.woff
-| | |____shortcut-icon.png
-| |____img
-| |____lib
-| | |____angular
-| | | |____angular.js
-| | | |____angular.min.js
-| | |____bootstrap
-| | | |____bootstrap.css
-| | | |____bootstrap.js
-| | |____jquery
-| | | |____jquery-2.2.0.min.js
-| | | |____jquery.min.js
-|____template
-| |____dashboard.html
-| |____index.html
+| |____js
+| | |____.DS_Store
+| | |____ctrl.js
+| | |____directive.js
+| | |____filter.js
+| | |____router.js
+| |____public
+|____fis-conf.js
+|____index.html
+|____map.json
+|____server
+| |____author.css
+| |____author.js
+|____view
+
 ```
 
 [git]: http://git-scm.com/
