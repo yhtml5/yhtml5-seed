@@ -44,7 +44,6 @@ fis.match('::package', {
         useInlineMap: true
     })
 });
-
 /*** public resourse ***/
 fis.match('/bower_components/{angular/angular,angular-ui-router/release/angular-ui-router}.js', {
     packTo: '${project.static}/yhtml5.js',
@@ -125,6 +124,14 @@ fis.media('pro')
             "cascade": true
         })
     })
+    // .match('yhtml5.css', {
+    //     optimizer: fis.plugin('htmlminify', {
+    //         removeComments: true,
+    //         collapseWhitespace: true,
+    //         minifyJS: true
+    //     })
+    // })
+
 // 自动雪碧图
 // .match('::package', {
 //     packager: fis.plugin('map'),
@@ -146,4 +153,3 @@ fis.media('pro')
 //         }
 //     })
 // })
-
