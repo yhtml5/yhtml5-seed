@@ -124,13 +124,21 @@ fis.media('pro')
             "cascade": true
         })
     })
-    // .match('yhtml5.css', {
-    //     optimizer: fis.plugin('htmlminify', {
-    //         removeComments: true,
-    //         collapseWhitespace: true,
-    //         minifyJS: true
-    //     })
-    // })
+// .match('/{{components,view}/**/*.{html,css},index.html}', {
+//     optimizer: fis.plugin('htmlminify', {
+//         removeComments: true,
+//         collapseWhitespace: true,
+//         minifyJS: true,
+//         minifyCSS: true
+//     })
+// })
+// .match('/{components,view}/**/init.js', {
+//     optimizer: fis.plugin('htmlminify', {
+//         removeComments: true,
+//         collapseWhitespace: true,
+//         minifyJS: true
+//     })
+// })
 
 // 自动雪碧图
 // .match('::package', {
