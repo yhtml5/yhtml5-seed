@@ -1,5 +1,5 @@
 /*=====================================================================
- * Author:Kyle
+ * Author:Kyle && qichao
  * Website:http://yhtml5.com
  * Gihub:https://github.com/yhtml5
  * Description: We work hard to contribute our work back

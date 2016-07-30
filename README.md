@@ -1,9 +1,8 @@
 ## YHTML5-Seed
 
 YHTML5-Seed scaffolds out a new application, writing your build configuration (e.g fis3)
-               and pulling in relevant build tasks and package manager dependencies (e.g npm) that you might need for your build   
+and pulling in relevant build tasks and package manager dependencies (e.g npm) that you might need for your build   
                
-
 ![npm version] ![node version] ![Build Status] ![downloads total] ![author]
 
 
@@ -33,6 +32,11 @@ YHTML5-Seed scaffolds out a new application, writing your build configuration (e
   * Etc,etc
 
 ### Technology stack
+
+There are some Thchnology stack to deveolepmTent webapp: 
+
+#### 
+
 
   * AngularJS
   * AngularUI
