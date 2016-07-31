@@ -1,0 +1,95 @@
+<link rel="import" href="../components/head/index.html?__inline">
+<body class="y-bgc-f2">
+<link rel="import" href="../components/ie/index.html?__inline">
+<header class="y-logo-sm">
+    <div class="container">
+        <img src="scanPay/logo-alipay.jpg" alt="">
+    </div>
+</header>
+<div class="y-bgfull-sm">
+    <div class="container">
+        <div class="row y-mt-8">
+            <h4 class="col-sm-6">收款方: 13588525424
+                <small>(本次交易将直达收款账户)</small>
+            </h4>
+            <h4 class="col-sm-3 col-sm-push-3 text-right">支付金额: 10元</h4>
+        </div>
+    </div>
+</div>
+<div class="y-bgfull-md">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-push-1">
+                <ul class="y-breadcrumb-pay">
+                    <span class="y-breadcrumb-title">支付流程演示: </span>
+                    <li class="" data-target="[y-carousel='scanPayDemo']" data-slide-to="0">
+                        <i class="iconfont">&#xe609;</i>
+                        扫一扫
+                    </li>
+                    <li class="" data-target="[y-carousel='scanPayDemo']" data-slide-to="1">
+                        <i class="iconfont">&#xe60a;</i>
+                        选择转账
+                    </li>
+                    <li class="active" data-target="[y-carousel='scanPayDemo']" data-slide-to="2">
+                        <i class="iconfont">&#xe60b;</i>
+                        输入充值金额和备注内容
+                    </li>
+                </ul>
+                <img class="y-qrcode" src="scanPay/QR-code.jpg" alt="">
+                <h4 class="y-cl-ff0000 y-fw-b">备注内容&nbsp;:&nbsp;
+                    <span class="y-fs-40">FKB001</span>
+                </h4>
+                <h1 class="y-notice-pay">
+                    支付宝转账时, 请务必填写备注内容 !
+                </h1>
+                <p class="y-fs-16 y-cl-666 y-mt-30 y-mb-20">如未正确填写备注内容导致充值不到账,请在付款成功后,点此
+                    <button type="button" class="y-btn y-btn-info-outline y-btn-sm y-ml-2" data-toggle="modal"
+                            data-target="[y-modal='scanPay.pickup']">提现
+                    </button>
+                </p>
+                <p class="y-fs-16 y-cl-666 y-mb-30">已完成备注转账支付，则
+                    <a href="index.html" class="y-btn y-btn-info-outline y-btn-sm y-ml-2 y-td-n">返回商户</a>
+                    <a href="payDemo.html" class="y-btn y-btn-info-outline y-btn-sm y-ml-2 y-td-n">付款Demo</a>
+                    <button type="button" class="y-btn y-btn-info-outline y-btn-sm y-ml-2 y-td-n" data-toggle="modal"
+                            data-target="[y-modal='notice.simple']">
+                        异常弹窗
+                    </button>
+                    <button type="button" class="y-btn y-btn-info-outline y-btn-sm y-ml-2" data-toggle="modal"
+                            data-target="[y-modal='notice.danger']">测试
+                    </button>
+                </p>
+                <link rel="import" href="scanPay/pickup.html?__inline">
+                <link rel="import" href="notice/simple.html?__inline">
+            </div>
+            <div class="col-sm-4">
+                <div y-carousel="scanPayDemo" class="carousel slide y-carousel-default y-mt-20"
+                     data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active" y-value="0">
+                            <img class="" src="scanPay/1.gif" alt="">
+                        </div>
+                        <div class="item" y-value="1">
+                            <img class="" src="scanPay/2.gif" alt="">
+                        </div>
+                        <div class="item" y-value="2">
+                            <img class="" src="scanPay/3.gif" alt="">
+                        </div>
+                    </div>
+                    <a class="y-left carousel-control" href="#" onclick="javascript:return false;"
+                       data-target="[y-carousel='scanPayDemo']" role="button"
+                       data-slide="prev">
+                        <i class="iconfont">&#xe60f;</i>
+                    </a>
+                    <a class="y-right carousel-control" href="#" onclick="javascript:return false;"
+                       data-target="[y-carousel='scanPayDemo']" role="button"
+                       data-slide="next">
+                        <i class="iconfont">&#xe60e;</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="import" href="notice/danger.html?__inline">
+<link rel="import" href="footer/notice.html?__inline">
+<link rel="import" href="../components/required/index.html?__inline">

@@ -1,0 +1,28 @@
+<nav class="text-center">
+    <ul class="pagination y-pagination">
+        <li class="">
+            <a href="#" onclick="javascript:return false;" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="y-active"><a href="#" onclick="javascript:return false;">1</a></li>
+        <li class=""><a href="#" onclick="javascript:return false;">2</a></li>
+        <li class=""><a href="#" onclick="javascript:return false;">3</a></li>
+        <li class=""><a href="#" onclick="javascript:return false;">4</a></li>
+        <li class=""><a href="#" onclick="javascript:return false;">5</a></li>
+        <li class=""><a href="#" onclick="javascript:return false;">6 </a></li>
+        <li class=""><a href="#" onclick="javascript:return false;">7</a></li>
+        <li class="">
+            <a href="#" onclick="javascript:return false;" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    $(".pagination li").click(function () {
+        $(".pagination li").removeClass("y-active");
+        $(this).addClass("y-active");
+    })
+</script>

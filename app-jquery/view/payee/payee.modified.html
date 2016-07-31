@@ -1,0 +1,81 @@
+<div class="modal fade" id="" y-modal="payee.modified" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" data-backdrop="static">
+    <div class="modal-dialog modal-lg y-mt-120" role="document">
+        <div class="modal-content y-modal-content">
+            <div class="modal-header y-modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title y-modal-title" id="myLargeModalLabel">添加收款账户</h3>
+            </div>
+            <div class="modal-body y-position-relative">
+                <form class="form-horizontal">
+                    <div class="form-group y-mt-20">
+                        <label for="alipayAccount" class="col-sm-3 control-label">支付宝账号：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="alipayAccount" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="alipayCode" class="col-sm-3 control-label">支付宝二维码：</label>
+                        <div class="col-sm-3">
+                            <a href="javascript:void(0)" class="y-file-a">
+                                <input type="file" class="y-input-file" id="alipayCode" placeholder="">重新上传
+                            </a>
+
+                        </div>
+                        <div class="col-sm-3 col-sm-pull-1 y-mt-3 y-ml-n-33" y-popoper="payee.modified.show.QRcode">
+                            <button type="button" class="btn btn-link">查看支付宝二维码</button>
+                        </div>
+                        <div class="col-sm-3 col-sm-pull-2 y-mt-8" y-popoper="uploadQRcode">
+                            <a href="#" class="y-cl-45c65d y-fs-14">如何生成支付宝付款二维码？</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="noopsycheMoney" class="col-sm-3 control-label">智能收款切换额度(元)：</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="noopsycheMoney" placeholder="">
+                        </div>
+                        <div class="col-sm-3 y-mt-5" y-popoper="noopsycheMoney">
+                            <a href="#" class="y-cl-45c65d y-fs-14">智能收取款是什么？</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gatheringOrder" class="col-sm-3 control-label">收款顺序:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="gatheringOrder" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">状态:</label>
+                        <div class="col-sm-6 y-pt-7">
+                            <input type="checkbox" id="status" class="" checked>&nbsp; &nbsp;
+                            <label for="status">启用</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-push-3 col-sm-1">
+                            <button type="button" class="y-btn y-btn-lg y-btn-info">保&nbsp;&nbsp;存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div y-popoper="payee.ewmsml" class="y-position-absolute">
+                <img src="ewmsm1.jpg" alt=""
+                     class="y-hide y-mt-n-300 y-ml-100 y-boxsh-cl-ca" width="700" height="364">
+            </div>
+
+            <div class="y-popoper-ul y-hide" y-popoper="infoUl">
+                <ul class="">
+                    <li>智能收取切换额度;</li>
+                    <li>当某个支付宝账号收款额度达到设置额度后，自动切换到下一个账号;</li>
+                    <li>通过实名认证，收款额度不限;</li>
+                    <li class="y-cl-e54545 y-pt-20">只通过银行卡认证，但未通过实名认证，单笔1万，单月5万;</li>
+                </ul>
+            </div>
+
+            <div y-popoper="payee.modified.QRcode" class="y-position-absolute">
+                <img src="../scanPay/QR-code.jpg" alt="MyCode"
+                     class="y-hide y-boxsh-cl-ca y-mt-n-445 y-ml-330" width="200">
+            </div>
+        </div>
+    </div>
+</div>
