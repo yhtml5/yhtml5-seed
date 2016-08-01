@@ -1,0 +1,70 @@
+/*
+ * @require bootstrap.ex.css
+ */
+
+/*==================== animation ====================*/
+.y-transition-border-info {
+    -webkit-transition: border-color 0.4s ease-out 0s;
+    -moz-transition: border-color 0.4s ease-out 0s;
+    transition: border-color 0.4s ease-out 0s;
+}
+
+.y-transition-border-info:hover,
+.y-transition-border-info:focus {
+    border-color: #099fdd;
+}
+
+.y-transition-info,
+.y-tsc-dark {
+    -webkit-transition: color 0.4s ease-out 0s;
+    -moz-transition: color 0.4s ease-out 0s;
+    transition: color 0.4s ease-out 0s;
+}
+
+.y-transition-info:hover,
+.y-transition-info:focus {
+    color: #099fdd;
+}
+.y-transition-dark:hover,
+.y-transition-dark:focus {
+    color: #555;
+}
+
+@keyframes bg-generator {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}
+
+@-webkit-keyframes bg-generator {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}
+
+.y-bg-transition-info {
+    background-color: #1c81df;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
+    background: linear-gradient(223deg, #4c7dd4, #e48ba4, #00b5b4, #8dd088);
+    background-size: 600% 600%;
+    -webkit-animation: bg-generator 50s ease infinite;
+    animation: bg-generator 10s ease infinite;
+}

@@ -1,7 +1,9 @@
 # custom
 logs/*
 /node_modules/
-/app/bower_components/
+/app-angular/bower_components/
+/app-jquery/bower_components/
+/app-react/bower_components/
 
 
 tmp

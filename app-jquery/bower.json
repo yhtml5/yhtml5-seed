@@ -1,0 +1,17 @@
+{
+  "name": "yhtml5-share",
+  "description": "share front-end technology",
+  "version": "0.1.1",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.x",
+    "bootstrap-datepicker": "^1.6.1",
+    "blueimp-file-upload": "jquery-file-upload#^9.12.5",
+    "form.validation": "*",
+    "html5-boilerplate": "~5.2.0",
+    "jquery": "~1.x",
+    "smalot-bootstrap-datetimepicker": "^2.3.11"
+  }
+}
