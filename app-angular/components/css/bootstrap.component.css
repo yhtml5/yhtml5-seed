@@ -1,45 +1,5 @@
 /*==================== Expand bootstrap ====================*/
 
-.y-navbar-info {
-}
-
-.y-navbar-info .navbar-nav > li > a {
-    color: #333;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-.y-navbar-info .navbar-nav > li > a:hover,
-.y-navbar-info .navbar-nav > li > a:focus {
-    color: #099fdd;
-    background-color: transparent;
-}
-
-.y-navbar-info .navbar-nav > .active > a,
-.y-navbar-info .navbar-nav > .active > a:hover,
-.y-navbar-info .navbar-nav > .active > a:focus {
-    color: #fff;
-    background-color: #099fdd;
-}
-
-.y-navbar-info .navbar-toggle {
-    border-color: #099fdd;
-}
-
-.y-navbar-info .navbar-toggle:hover,
-.y-navbar-info .navbar-toggle:focus {
-    background-color: #f9f9f9;
-}
-
-.y-navbar-info .navbar-toggle .icon-bar {
-    background-color: #099fdd;
-}
-
-.y-navbar-info .navbar-collapse,
-.y-navbar-info .navbar-form {
-    border-color: #e7e7e7;
-}
-
 .y-btn-blue {
     color: #fff;
     background-color: #099fdd;
@@ -100,4 +60,124 @@ fieldset[disabled] .y-btn-blue.focus {
     background-color: #fff;
 }
 
+.carousel-control.y-left,
+.carousel-control.y-right {
+    right: 0;
+    margin: auto;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    color: #999;
+    background-color: #f2f2f2;
+    padding-top: 6px;
+}
 
+.carousel-control.y-left:hover,
+.carousel-control.y-right:hover {
+    color: #00aaee;
+}
+
+.carousel-control.y-left .iconfont,
+.carousel-control.y-right .iconfont {
+    font-size: 26px;
+}
+
+.carousel-control.y-left {
+    left: -380px;
+}
+
+.carousel-control.y-right {
+    left: 240px;
+}
+
+.y-pagination li a {
+    color: #3f3f3f;
+}
+
+.y-navbar-info {
+}
+
+.y-navbar-info .navbar-nav > li > a {
+    color: #333;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.y-navbar-info .navbar-nav > li > a:hover,
+.y-navbar-info .navbar-nav > li > a:focus {
+    color: #099fdd;
+    background-color: transparent;
+}
+
+.y-navbar-info .navbar-nav > .active > a,
+.y-navbar-info .navbar-nav > .active > a:hover,
+.y-navbar-info .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #099fdd;
+}
+
+.y-navbar-info .navbar-toggle {
+    border-color: #099fdd;
+}
+
+.y-navbar-info .navbar-toggle:hover,
+.y-navbar-info .navbar-toggle:focus {
+    background-color: #f9f9f9;
+}
+
+.y-navbar-info .navbar-toggle .icon-bar {
+    background-color: #099fdd;
+}
+
+.y-navbar-info .navbar-collapse,
+.y-navbar-info .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.y-pagination .y-active a,
+.y-pagination .y-active a:focus,
+.y-pagination .y-active a:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #40aaf2;
+    border-color: #40aaf2;
+}
+
+.table .y-td-xs {
+    max-width: 10px;
+}
+
+.table .y-td-sm {
+    max-width: 50px;
+}
+
+.table .y-td-md {
+    max-width: 100px;
+}
+
+.table .y-td-lg {
+    max-width: 324px;
+    min-width: 200px;
+}
+
+.table-hover:hover {
+    background-color: #e7f4fd;
+}
+
+.y-table-default thead {
+    background-color: #f3f3f3;
+}
+
+.y-table-default thead th {
+    text-align: center;
+    font-weight: 400;
+}
+
+.y-table-default td, .y-table-default th {
+    word-wrap: break-word;
+    font-size: 14px;
+    color: #3f3f3f;
+    vertical-align: middle !important;
+}

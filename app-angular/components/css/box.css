@@ -2,6 +2,12 @@
 *  @require
 */
 /*==================== box ====================*/
+.y-display-b{
+    display: block;
+}
+.y-display-ib{
+    display: inline-block;
+}
 
 .y-m-x-auto {
     margin-right: auto;
