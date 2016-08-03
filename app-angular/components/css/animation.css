@@ -1,32 +1,33 @@
 /*
- * @require bootstrap.ex.css
+ * @require bootstrap.base.css
+ * @require bootstrap.component.css
  */
 
 /*==================== animation ====================*/
-.y-transition-border-info {
+.y-animation-bd-cl {
     -webkit-transition: border-color 0.4s ease-out 0s;
     -moz-transition: border-color 0.4s ease-out 0s;
     transition: border-color 0.4s ease-out 0s;
 }
 
-.y-transition-border-info:hover,
-.y-transition-border-info:focus {
+.y-animation-bd-cl.y-info:hover,
+.y-animation-bd-cl.y-info:focus {
     border-color: #099fdd;
 }
 
-.y-transition-info,
-.y-tsc-dark {
+.y-animation-color {
     -webkit-transition: color 0.4s ease-out 0s;
     -moz-transition: color 0.4s ease-out 0s;
     transition: color 0.4s ease-out 0s;
 }
 
-.y-transition-info:hover,
-.y-transition-info:focus {
+.y-animation-color.y-info:hover,
+.y-animation-color.y-info:focus {
     color: #099fdd;
 }
-.y-transition-dark:hover,
-.y-transition-dark:focus {
+
+.y-animation-color.y-dark:hover,
+.y-animation-color.y-dark:focus {
     color: #555;
 }
 
@@ -54,17 +55,25 @@
     }
 }
 
-.y-bg-transition-info {
-    background-color: #1c81df;
+.y-animation-bg {
     width: 100%;
     height: 100%;
-    position:absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
-    background: linear-gradient(223deg, #4c7dd4, #e48ba4, #00b5b4, #8dd088);
     background-size: 600% 600%;
-    -webkit-animation: bg-generator 50s ease infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     animation: bg-generator 10s ease infinite;
+    -webkit-animation: bg-generator 50s ease infinite;
+    transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
+}
+
+.y-animation-bg.y-soft {
+    background-color: #1c81df;
+    background-image: linear-gradient(223deg, rgb(76, 125, 212), rgb(228, 139, 164), rgb(0, 181, 180), rgb(141, 208, 136));
+}
+
+.y-animation-bg.y-colorful {
+    background-color: #8B00FF;
+    background-image: linear-gradient(223deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #00FFFF, #0000FF, #8B00FF);
 }

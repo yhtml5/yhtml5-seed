@@ -1,9 +1,9 @@
 {
-  "name": "YHTML5-Seed",
+  "name": "yhtml5-seed",
   "authors": "yhtml5",
   "description": "a websit design by bootstrap",
   "version": "0.1.1",
-  "homepage": "yhtml5.com",
+  "homepage": "//yhtml5.com",
   "license": "MIT",
   "dependencies": {
     "angular": "~1.5.x",
