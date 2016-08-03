@@ -1,39 +1,40 @@
 ## YHTML5-Seed
 
-YHTML5-Seed scaffolds out a new application, writing your build configuration (e.g fis3)
-and pulling in relevant build tasks and package manager dependencies (e.g npm) that you might need for your build   
+
+YHTML5-Seed 一个新应用程序脚手架，用来写你的构建程序，你可能会需要为你的构建进行相关的任务搭建和包管理依赖
+
                
 ![npm version] ![node version] ![Build Status] ![downloads total] ![author]
 
 
-### Quick Links
-- [Introduction](#introduction)
-    - [project progress]  
-    - [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
+### 快速链接
+- [项目简介](#项目简介)
+    - [项目进展]
+    - [版本历史](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
     - [issue]
-    - [Features](#features)
-    - [Browser Compatibility](#browser-compatibility)
-    - [Directory Layout](#directory-layout) 
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Clone Dashboard](#clone-dashboard)
-    - [Install Dependencies](#install-dependencies)
-    - [Run the Application](#run-the-application)
+    - [特点](#特点)
+    - [浏览器兼容](#浏览器兼容)
+    - [目录布局](#目录布局)
+    - [入门指南](#入门指南)
+    - [开发环境](#开发环境)
+    - [克隆Dashboard](#克隆Dashboard)
+    - [安装依赖](#安装依赖)
+    - [运行应用程序](#运行应用程序)
     
 
-## Introduction  
+## 项目简介
 
-### Features  
-  * Automagically wire-up dependencies installed with Bower
-  * 遵循百度前端开发规范(待翻译)
-  * 样式结构、模板引擎、业务逻辑解耦(待翻译)
-  * 前后端分离，使用json等交互数据(待翻译)
-  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV(待翻译)
+### 特点
+  * Bower安装自动的线式的依赖
+  * 遵循百度前端开发规范
+  * 样式结构、模板引擎、业务逻辑解耦
+  * 前后端分离，使用json等交互数据
+  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV
   * Etc,etc
 
-### Technology stack
+### 技术栈
 
-There are some Thchnology stack to deveolepmTent webapp: 
+有一些技术堆栈开发的Web应用程序：
 
 #### 
 
@@ -49,81 +50,80 @@ There are some Thchnology stack to deveolepmTent webapp:
   * ProtractorJS
   * NodeJS 
 
-### Browser Compatibility
+### 浏览器兼容性
   * modern browsers: chrome, firefox, safari, Microsoft Edge  
   * IE8+
   * Etc,etc
 
-#### [changeLog] 
+#### [版本历史]
 #### [issue]
-#### [project progress]
+#### [项目进展]
 
-## Getting Started  
+## 入门指南
 
-To get you started you can simply clone the angular-seed repository and install the dependencies:
+开始你可以简单克隆angular-seed库和安装依赖关系：
 
-### Prerequisites  
+### 开发环境
 
-You need git to clone the Dashboard repository. You can get git from
+你需要git去克隆Dashboard库。你可以从http://git-scm.com/得到git
 [http://git-scm.com/](http://git-scm.com/).
 
-We also use a number of node.js tools to initialize and test Dashboard. You must have node.js and
-its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+我们也使用node.js工具初始化和测试Dashboard。你必须有node.js和npm，你可以从http://nodejs.org/得到这些
+[http://nodejs.org/](http://nodejs.org/).
+
  
-### Clone Dashboard  
+### 克隆Dashboard
 
-Clone the Dashboard repository using [git][git]:
-
+用git克隆Dashboard库
+[git][git]:
 ```
 git clone https://github.com/yhtml5/YHTML5-WEB.git
 cd YHTML5-WEB\dashboard
 ```
 
-If you just want to start a new project without the dashboard commit history then you can do:
+如果你想开始一个没有dashboard历史命令的新项目，你可以：
 
 ```bash
 git clone --depth=1 https://github.com/yhtml5/YHTML5-WEB.git <your-project-name>
 ```
 
-The `depth=1` tells git to only pull down one commit worth of historical data.
+告诉git只下拉有历史数据的命令
 
-### Install Dependencies  
+### 安装依赖
 
-We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
-us manage and test the application.
+在这个项目中我们有两种依赖：工具和angular框架源码。工具帮我们管理和测试应用程序
 
-* We get the tools we depend upon via `npm`, the [node package manager][npm].
-* We get the angular code via `bower`, a [client-side code package manager][bower].
+* 我们通过npm得到依赖的工具
+[node package manager][npm].
+* 我们通过bower得到angular源码
+[client-side code package manager][bower].
 
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
-
+我们能简单的用npm去自动运行bower：
 ```
 npm install
 ```
 
-Behind the scenes this will also call `bower install`.  You should find that you have two new
-folders in your project.
+这也叫做bower install。在你的项目里你应该能找到两个新的文件。
 
-* `node_modules` - contains the npm packages for the tools we need
-* `app/bower_components` - contains the angular framework files
+* `node_modules`-工具包含了我们需要的npm包
+* `app/bower_components`-包含了angular框架文件
 
-*Note that the `bower_components` folder would normally be installed in the root folder but
-dashboard changes this location through the `.bowerrc` file.  Putting it in the app folder makes
-it easier to serve the files by a webserver.*
 
+*注意`bower_components`文件通常被安装在根文件夹，但dashboard改变位置通过`.bowerrc`文件。
+把它放在app文件夹中，更容易通过网络服务提供文件。*
 
 
 
-### Serving the Application Files
+### 服务应用程序文件
 
-While AngularJS is client-side-only technology and it's possible to create AngularJS webapps that don't require a backend server at all,
-we recommend serving the project files using a local web server during development to avoid issues with security restrictions (sandbox) in browsers. 
-The sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr, etc to function properly when an html page is opened via file:// scheme instead of http://.
+AngularHS的client-side-only技术可能创建AngularJS webapps而不需要一个后端的服务器，
+我们推荐服务项目文件使用一个本地的服务器在开发过程中避免在浏览器中的安全限制。
+sandbox实现在浏览器之间有所不同，但往往防止一些像cookies，xhr等，当一个html页面通过一个文件打开才能正常工作而不是http的方案
 
-### Run the Application  
 
-We have preconfigured the project with a simple development web server.  The simplest way to start
-this server is:
+### 运行应用程序
+
+我们已经配置了一个简单的开发web服务的项目。最简单的方法开始这个服务：
 
 ```
 cd YHTML5-WEB\dashboard\app 
@@ -133,7 +133,7 @@ fis3 release -wl
 
 Now browse to the app at `http://localhost:8080`.
 
-### Directory Layout
+### 目录布局
 ```
 app                            --> all of the source files for the application
 |____bower_components          --> bower package manager

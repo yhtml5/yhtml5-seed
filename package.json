@@ -1,6 +1,5 @@
 {
   "name": "yhtml5-seed",
-  "private": true,
   "version": "0.0.0",
   "description": "a workflow biuld by bower+fis3+npm+nodejs",
   "repository": "https://github.com/yhtml5/YHTML5-Seed",
