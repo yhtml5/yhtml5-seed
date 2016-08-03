@@ -134,44 +134,55 @@ fis3 release -wl
 Now browse to the app at `http://localhost:8080`.
 
 ### 目录布局
-```
-app                            --> all of the source files for the application
-|____bower_components          --> bower package manager
-|____components
-| |____css                     --> default stylesheet
-| | |____animation.css
-| | |____base.css
-| | |____bootstrap.ex.css
-| | |____box.css
-| | |____cover.css
-| | |____custom.css
-| |____head
-| | |____head.html
-| | |____shortcut-icon.png
-| |____iconfont
-| | |____demo.css
-| | |____demo.html
-| | |____iconfont.css
-| | |____iconfont.eot
-| | |____iconfont.svg
-| | |____iconfont.ttf
-| | |____iconfont.woff
-| |____js
-| | |____.DS_Store
-| | |____ctrl.js
-| | |____directive.js
-| | |____filter.js
-| | |____router.js
-| |____public
-|____fis-conf.js
-|____index.html                --> app layout file (the main html template file of the app)
-|____map.json
-|____server
-| |____author.css
-| |____author.js
-|____view
 
 ```
+YHTML5-Seed
+|____app                              --> all of the source files for the application
+| |____index.html                     --> app layout file (the main html template file of the app)
+| |____fis-conf.js                    --> fis3 配置文件
+| |____bower.json                     --> bower package manager
+| |____bower_components               --> custom comonents for project
+| |____map.json
+| |____components
+| | |____css                          --> app's stylesheet
+| | | |____angular.css                --> angular 特有样式
+| | | |____animation.css              --> animation css
+| | | |____base.css                   --> 基础css属性
+| | | |____bootstrap.base.css
+| | | |____bootstrap.component.css
+| | | |____box.css
+| | | |____custom.css
+| | |____head
+| | | |____index.html
+| | | |____shortcut-icon.png
+| | |____js
+| | | |____ctrl.js
+| | | |____directive.js
+| | | |____filter.js
+| | | |____router.js
+| | |____iconfont
+| | |____ie
+| | |____public
+| | |____require
+| |____server
+| | |____author.css
+| | |____author.js
+| | |____console.js
+| |____view
+| | |____browsehappy
+| | |____nav
+| | | |____index.html
+|____blog.md
+|____issue.md
+|____LICENSE
+|____package.json
+|____progress.md
+|____README.md             
+|____README_ZH.md
+|____node_modules    
+|____dist                             --> 产品发布目录
+```
+
 
 [git]: http://git-scm.com/
 [bower]: http://bower.io

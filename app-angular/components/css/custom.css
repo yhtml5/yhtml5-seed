@@ -1,6 +1,9 @@
 /*
- * @require base.css
- */
+* @require animation.css
+* @require bootstrap.base.css
+* @require bootstrap.component.css
+*/
+
 /*==================== custom bootstrap ====================*/
 .y-center-all {
     position: absolute;
@@ -63,6 +66,82 @@
 
 .y-card a {
     text-decoration: none;
+}
+
+/*progressbar*/
+
+.y-progress-step {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding-left: 0;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+.y-progress-step li {
+    list-style-type: none;
+    color: #a9a9a9;
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.y-progress-step li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    background: #a9a9a9;
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+}
+
+/*progressbar connectors*/
+
+.y-progress-step li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #a9a9a9;
+    position: absolute;
+    left: -50%;
+    top: 14px;
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+
+.y-progress-step li:first-child:after {
+    content: none;
+    /*connector not needed before the first step*/
+}
+
+/*marking active/completed steps green*/
+
+/*The number of the step and the connector before it = green*/
+
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+    background: #099fdd;
+    color: white;
+}
+
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+    background: #099fdd;
+    color: white;
+}
+
+.y-progress-step .active .y-turn-blue {
+    color: #099fdd;
 }
 
 

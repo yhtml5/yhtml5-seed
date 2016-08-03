@@ -1,3 +1,7 @@
+/*
+ * @require bootstrap.component.css
+ */
+
 /*==================== Expand bootstrap ====================*/
 .text-truncate {
     overflow: hidden;

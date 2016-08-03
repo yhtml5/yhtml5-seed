@@ -1,10 +1,7 @@
 # custom
 logs/*
 /node_modules/
-/app-angular/bower_components/
-/app-jquery/bower_components/
-/app-react/bower_components/
-
+/*/bower_components/
 
 tmp
 .DS_Store
