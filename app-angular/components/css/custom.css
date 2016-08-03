@@ -1,9 +1,7 @@
 /*
  * @require base.css
  */
-
 /*==================== custom bootstrap ====================*/
-
 .y-center-all {
     position: absolute;
     top: 0;
@@ -39,10 +37,6 @@
     background-color: #fff;
 }
 
-.y-notice-danger {
-
-}
-
 .y-card {
     border-radius: 4px;
     border: solid 1px #e0e0e0;
@@ -71,7 +65,4 @@
     text-decoration: none;
 }
 
-.y-popoper-sm {
-
-}
 

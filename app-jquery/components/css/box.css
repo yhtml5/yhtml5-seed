@@ -2,14 +2,12 @@
 *  @require
 */
 /*==================== box ====================*/
-
-
-.y-w-100 {
-    width: 100%;
+.y-display-b {
+    display: block;
 }
 
-.y-w-95 {
-    width: 95%;
+.y-display-ib {
+    display: inline-block;
 }
 
 .y-m-x-auto {
@@ -305,8 +303,13 @@
     padding-left: -20px;
 }
 
+.y-w-p-100 {
+    width: 100%;
+}
 
-
+.y-w-p-95 {
+    width: 95%;
+}
 
 
 

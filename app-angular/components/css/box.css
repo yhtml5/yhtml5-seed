@@ -2,10 +2,11 @@
 *  @require
 */
 /*==================== box ====================*/
-.y-display-b{
+.y-display-b {
     display: block;
 }
-.y-display-ib{
+
+.y-display-ib {
     display: inline-block;
 }
 
@@ -302,11 +303,11 @@
     padding-left: -20px;
 }
 
-.y-w-100 {
+.y-w-p-100 {
     width: 100%;
 }
 
-.y-w-95 {
+.y-w-p-95 {
     width: 95%;
 }
 

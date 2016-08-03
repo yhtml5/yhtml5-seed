@@ -1,4 +1,5 @@
 /*==================== base ====================*/
+
 .y-bgc-000 {
     background-color: #000;
 }
@@ -29,6 +30,10 @@
 
 .y-bgc-ff0000 {
     background-color: #ff0000;
+}
+
+.y-border-none {
+    border: none;
 }
 
 .y-cl-000 {
