@@ -1,18 +1,15 @@
 ## YHTML5-Seed
 
 
-YHTML5-Seed 一个新应用程序脚手架，用来写你的构建程序，你可能会需要为你的构建进行相关的任务搭建和包管理依赖
-
+YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构建一个全新的前端应用. 
+你可能需要根据具体的项目进行相关的任务搭建和包依赖管理.
                
 ![npm version] ![node version] ![Build Status] ![downloads total] ![author]
 
 
 ### 快速链接
 - [项目简介](#项目简介)
-    - [项目进展]
-    - [版本历史](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
-    - [issue]
-    - [特点](#特点)
+    - [项目特点](#项目特点)
     - [浏览器兼容](#浏览器兼容)
     - [目录布局](#目录布局)
     - [入门指南](#入门指南)
@@ -20,13 +17,16 @@ YHTML5-Seed 一个新应用程序脚手架，用来写你的构建程序，你�
     - [克隆Dashboard](#克隆Dashboard)
     - [安装依赖](#安装依赖)
     - [运行应用程序](#运行应用程序)
+    - [项目进展]
+    - [版本历史](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
+    - [issue]
     
 
 ## 项目简介
 
-### 特点
-  * Bower安装自动的线式的依赖
+### 项目特点
   * 遵循百度前端开发规范
+  * 使用npm全自动安装所依赖的包
   * 样式结构、模板引擎、业务逻辑解耦
   * 前后端分离，使用json等交互数据
   * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV
@@ -37,7 +37,6 @@ YHTML5-Seed 一个新应用程序脚手架，用来写你的构建程序，你�
 有一些技术堆栈开发的Web应用程序：
 
 #### 
-
 
   * AngularJS
   * AngularUI
@@ -184,23 +183,23 @@ YHTML5-Seed
 ```
 
 
-[git]: http://git-scm.com/
+[author]:https://img.shields.io/badge/author-yhtml5-blue.svg
 [bower]: http://bower.io
-[npm]: https://www.npmjs.org/
-[node]: http://nodejs.org
-[protractor]: https://github.com/angular/protractor
+[Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
+[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+[downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
+[git]: http://git-scm.com/
+[http-server]: https://github.com/nodeapps/http-server
+[issue]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
 [jasmine]: http://jasmine.github.io
 [karma]: http://karma-runner.github.io
-[travis]: https://travis-ci.org/
-[http-server]: https://github.com/nodeapps/http-server
-
+[npm]: https://www.npmjs.org/
 [npm version]:https://img.shields.io/npm/v/npm.svg
+[node]: http://nodejs.org
 [node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
-[Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
-[downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
-[author]:https://img.shields.io/badge/author-yhtml5-blue.svg
-
-[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
 [project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
-[issue]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+[protractor]: https://github.com/angular/protractor
+[travis]: https://travis-ci.org/
+
+

@@ -1,10 +1,9 @@
-## YHTML5-Seed
+## YHTML5-Seed丨[中文文档]
+![npm version] ![node version] ![Build Status] ![downloads total] ![author]
 
 YHTML5-Seed scaffolds out a new application, writing your build configuration (e.g fis3)
 and pulling in relevant build tasks and package manager dependencies (e.g npm) that you might need for your build   
                
-![npm version] ![node version] ![Build Status] ![downloads total] ![author]
-
 
 ### Quick Links
 - [Introduction](#introduction)
@@ -193,3 +192,6 @@ app                            --> all of the source files for the application
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
 [project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
 [issue]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
+
+
+[中文文档]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README_ZH.md
