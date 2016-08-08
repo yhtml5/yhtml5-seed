@@ -33,7 +33,9 @@ and pulling in relevant build tasks and package manager dependencies (e.g npm) t
 
 ### Technology stack
 
-There are some Thchnology stack to deveolepmTent webapp: 
+There are some Thchnology stack to deveolepmTent webapp:
+
+We development **app-angular** first, and then deploy deploy to others
 
 #### 
 

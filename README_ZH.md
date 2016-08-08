@@ -137,16 +137,16 @@ Now browse to the app at `http://localhost:8080`.
 
 ```
 YHTML5-Seed
-|____app                              --> all of the source files for the application
-| |____index.html                     --> app layout file (the main html template file of the app)
+|____app                              --> all of the source files for the application 所有应用程序的源文件
+| |____index.html                     --> app layout file (the main html template file of the app) 应用程序布局文件（该应用程序的主要的HTML模板文件）
 | |____fis-conf.js                    --> fis3 配置文件
-| |____bower.json                     --> bower package manager
-| |____bower_components               --> custom comonents for project
+| |____bower.json                     --> bower package manager  bower包管理
+| |____bower_components               --> custom comonents for project 项目自定义组件
 | |____map.json
 | |____components
-| | |____css                          --> app's stylesheet
+| | |____css                          --> app's stylesheet  应用程序的样式表
 | | | |____angular.css                --> angular 特有样式
-| | | |____animation.css              --> animation css
+| | | |____animation.css              --> animation css  css动画
 | | | |____base.css                   --> 基础css属性
 | | | |____bootstrap.base.css
 | | | |____bootstrap.component.css
