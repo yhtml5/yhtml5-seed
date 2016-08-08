@@ -107,14 +107,19 @@ fis.media('pro')
             "cascade": true
         })
     })
-    .match('/{components/**/*.css', {
+    .match('/components/**/*.css', {
         optimizer: fis.plugin('htmlminify', {
             removeComments: true,
             collapseWhitespace: true,
             minifyCSS: true
         })
     })
-
+    //html 去除注释
+    .match('{/index.html,/view/*.html}', {
+        optimizer: function (content) {
+            return content.replace(/<!--([\s\S]*?)-->/g, '');
+        }
+    })
 // .match('/{{components,view}/**/*.{html,css},index.html}', {
 //     optimizer: fis.plugin('htmlminify', {
 //         removeComments: true,
