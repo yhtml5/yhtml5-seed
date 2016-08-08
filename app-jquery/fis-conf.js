@@ -6,18 +6,18 @@ fis.set('project.static', '/static');
 fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
 fis.set('project.files', [
     '/fis-conf.js', '/map.json', 'progress.md',
-    '/components/**', '/server/*', '/view/**',
+    '/components/**', '/server/*', '/page/**',
     '/bower_components/bootstrap/dist/**/{bootstrap.min.{css,js},glyphicons-halflings-regular.*}',
     '/bower_components/jquery/dist/jquery.min.js',
     '/bower_components/form.validation/dist/css/formValidation.min.css',
     '/bower_components/form.validation/dist/js/{formValidation.min,framework/bootstrap.min,language/zh_CN}.js',
     '/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css',
     '/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
-    '/bower_components/bootstrap-datepicker/dist/js/locales/bootstrap-datepicker.zh-CN.min.js'
+    '/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js'
 ]);
 
 /************************* 目录规范 *****************************/
-fis.match('/view/(*.html)', {
+fis.match('/page/(*.html)', {
     release: '/$1'
 });
 fis.match('/bower_components/(**)', {
@@ -26,7 +26,7 @@ fis.match('/bower_components/(**)', {
 fis.match('/components/**', {
     release: '/vendor/$0'
 });
-fis.match('/{components,bower_components,view}/**/(*.{png,gif,jpg,jpeg,svg})', {
+fis.match('/{components,bower_components,page}/**/(*.{png,gif,jpg,jpeg,svg})', {
     release: '${project.static}/img/$1'
 });
 fis.match('/**/(*.design.*)', {
@@ -96,7 +96,7 @@ fis.match('{/server/author.css,/components/**/*.css}', {
 /************************* Pro规范 *****************************/
 
 fis.media('pro')
-    .match('/{static/**,{components,bower_components,view}/**/*.{png,gif,jpg,jpeg,eot,ttf,woff,woff2,svg}}', {
+    .match('/{static/**,{components,bower_components,page}/**/*.{png,gif,jpg,jpeg,eot,ttf,woff,woff2,svg}}', {
         useHash: false,
         domain: '.'
     })
@@ -111,7 +111,8 @@ fis.media('pro')
         optimizer: fis.plugin('htmlminify', {
             removeComments: true,
             collapseWhitespace: true,
-            minifyCSS: true
+            minifyCSS: true,
+            minifyJS: true
         })
     })
     //html 去除注释
@@ -120,21 +121,6 @@ fis.media('pro')
             return content.replace(/<!--([\s\S]*?)-->/g, '');
         }
     })
-// .match('/{{components,view}/**/*.{html,css},index.html}', {
-//     optimizer: fis.plugin('htmlminify', {
-//         removeComments: true,
-//         collapseWhitespace: true,
-//         minifyJS: true,
-//         minifyCSS: true
-//     })
-// })
-// .match('/{components,view}/**/init.js', {
-//     optimizer: fis.plugin('htmlminify', {
-//         removeComments: true,
-//         collapseWhitespace: true,
-//         minifyJS: true
-//     })
-// })
 
 // 自动雪碧图
 // .match('::package', {

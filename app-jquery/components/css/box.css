@@ -1,6 +1,10 @@
 /*
-*  @require
+* @require animation.css
+* @require bootstrap.base.css
+* @require bootstrap.component.css
+* @require custom.css
 */
+
 /*==================== box ====================*/
 .y-display-b {
     display: block;
