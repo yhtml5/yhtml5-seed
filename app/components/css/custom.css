@@ -5,15 +5,42 @@
 */
 
 /*==================== custom bootstrap ====================*/
+.y-center-container {
+    position: relative;
+}
+
 .y-center-all {
     position: absolute;
+    z-index: 2;
     top: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     right: 0;
     margin: auto;
-    z-index: 2;
+    overflow: auto;
+    width: 50%;
+    height: 50%;
     text-align: center;
+}
+
+.y-center-all.y-fixed {
+    position: fixed;
+}
+
+.y-center-all.y-responsive-sm {
+    width: 60%;
+    height: 60%;
+    min-width: 180px;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.y-center-all.y-responsive-sm {
+    width: 60%;
+    height: 60%;
+    min-width: 240px;
+    max-width: 600px;
+    padding: 40px;
 }
 
 .y-bgfull-md {
