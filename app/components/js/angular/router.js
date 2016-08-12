@@ -1,3 +1,6 @@
+/*
+ * @require ../../../server/author.js
+ */
 /************************* Router *****************************/
 angular.module('yhtml5', [
     'ui.router',

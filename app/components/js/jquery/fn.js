@@ -1,5 +1,5 @@
 /*
- * @require ../../server/author.js
+ * @require ../../../server/author.js
  */
 /************  fn  ************/
 function changeimg() {

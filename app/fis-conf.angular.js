@@ -7,9 +7,9 @@ fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
 fis.set('project.files', [
     'fis-conf.js', 'index.html', 'map.json',
     '/components/**', '/server/*', '/view/**',
-    '/bower_components/angular/angular{.,.min.}js',
-    '/bower_components/angular-ui-router/release/angular-ui-router{.,.min.}js',
-    '/bower_components/bootstrap/dist/**/{bootstrap{.,.min.}{css,js},glyphicons-halflings-regular.*}'
+    '/bower_components/angular/angular.js',
+    '/bower_components/angular-ui-router/release/angular-ui-router.js',
+    '/bower_components/bootstrap/dist/**/{bootstrap.min.css,glyphicons-halflings-regular.*}'
 ]);
 
 /************************* 目录规范 *****************************/
@@ -59,23 +59,14 @@ fis.match('/bower_components/bootstrap/dist/css/bootstrap.css', {
 });
 
 /*** custom resourse ***/
-fis.match('{/server/author.js, /components/**/*.js}', {
+fis.match('{/server/*.js, /components/**/*.js}', {
     packTo: '${project.static}/index.js'
 });
 fis.match('/server/author.js', {
-    packOrder: -89
+    packOrder: -99
 });
-fis.match('/components/js/directive.js', {
-    packOrder: -78
-});
-fis.match('/components/js/filter.js', {
-    packOrder: -77
-});
-fis.match('/components/js/router.js', {
-    packOrder: -76
-});
-fis.match('/components/js/ctrl.js', {
-    packOrder: -75
+fis.match('/server/console.js', {
+    packOrder: 2
 });
 fis.match('{/server/author.css,/components/**/*.css}', {
     packTo: '${project.static}/index.css'
@@ -85,24 +76,6 @@ fis.match('/server/author.css', {
 });
 fis.match('/components/iconfont/iconfont.css', {
     packOrder: -78
-});
-fis.match('/components/css/bootstrap.ex.css', {
-    packOrder: -78
-});
-fis.match('/components/css/cover.css', {
-    packOrder: -77
-});
-fis.match('/components/css/animation.css', {
-    packOrder: -76
-});
-fis.match('/components/css/custom.css', {
-    packOrder: -75
-});
-fis.match('/components/css/base.css', {
-    packOrder: -74
-});
-fis.match('/components/css/box.css', {
-    packOrder: -73
 });
 /************************* Pro规范 *****************************/
 
