@@ -183,17 +183,13 @@ app                            --> all of the source files for the application
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
-
 [npm version]:https://img.shields.io/npm/v/npm.svg
 [node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
 [downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
-
 [changeLog]:https://github.com/yhtml5/YHTML-Seed/blob/master/changeLog.md
 [problem]:https://github.com/yhtml5/YHTML-Seed/blob/master/question.md
 [project progress]:https://github.com/yhtml5/YHTML-Seed/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
 [issue]:https://github.com/yhtml5/YHTML-Seed/blob/master/changeLog.md
-
-
 [中文文档]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README_ZH.md
