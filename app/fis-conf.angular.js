@@ -33,7 +33,7 @@ fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})
     release: '${project.static}/iconfont/$1',
     url: '/iconfont/$1'
 });
-fis.match('{/map.json,fis-conf.*}', {
+fis.match('/{map.json,fis-conf.*}', {
     release: '/config/$0'
 });
 

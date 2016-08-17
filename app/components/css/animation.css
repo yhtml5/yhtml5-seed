@@ -31,19 +31,7 @@
     color: #555;
 }
 
-@keyframes bg-generator {
-    0% {
-        background-position: 0% 84%
-    }
-    50% {
-        background-position: 100% 17%
-    }
-    100% {
-        background-position: 0% 84%
-    }
-}
-
-@-webkit-keyframes bg-generator {
+@keyframes bg-position {
     0% {
         background-position: 0% 84%
     }
@@ -63,8 +51,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    animation: bg-generator 10s ease infinite;
-    -webkit-animation: bg-generator 50s ease infinite;
+    animation: bg-position 10s ease infinite;
     transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
 }
 
@@ -76,4 +63,26 @@
 .y-animation-bg.y-colorful {
     background-color: #8B00FF;
     background-image: linear-gradient(223deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #00FFFF, #0000FF, #8B00FF);
+}
+
+@keyframes shadow-info {
+    0% {
+        opacity: .5;
+        border: 1px solid rgba(59, 235, 235, .1);
+        box-shadow: 0 1px 2px rgba(255, 255, 255, .1)
+    }
+    50% {
+        opacity: 1;
+        border: 1px solid rgba(59, 235, 235, 1);
+        box-shadow: 0 1px 30px rgba(59, 255, 255, 1)
+    }
+    100% {
+        opacity: .5;
+        border: 1px solid rgba(59, 235, 235, .1);
+        box-shadow: 0 1px 2px rgba(255, 255, 255, .1)
+    }
+}
+
+.y-animation-shadow-info {
+    animation: shadow-info 2s infinite linear;
 }
