@@ -123,7 +123,7 @@ fis.media('pro')
             "browsers": ["FireFox > 1", "Chrome > 1", "ie >= 8"],
             "cascade": true
         })
-    })
+    });
 // .match('/{{components,view}/**/*.{html,css},index.html}', {
 //     optimizer: fis.plugin('htmlminify', {
 //         removeComments: true,
