@@ -1,7 +1,8 @@
-## YHTML5-Seed
+## YHTML5-Seed丨[中文文档] [问题记录] [项目进度]
 
 
-YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构建一个全新的前端应用. 
+YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构建一个全新的前端应用.   
+
 你可能需要根据具体的项目进行相关的任务搭建和包依赖管理.
                
 ![npm version] ![node version] ![Build Status] ![downloads total] ![author]
@@ -10,9 +11,8 @@ YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构�
 ### 快速链接
 - [项目简介](#项目简介)
     - [项目特点](#项目特点)
-    - [浏览器兼容](#浏览器兼容)
-    - [目录布局](#目录布局)
-    - [入门指南](#入门指南)
+    - [技术栈](#浏览器兼容)
+- [入门指南](#入门指南)
     - [开发环境](#开发环境)
     - [克隆Dashboard](#克隆Dashboard)
     - [安装依赖](#安装依赖)
@@ -25,18 +25,24 @@ YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构�
 ## 项目简介
 
 ### 项目特点
+  * 解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题 
   * 遵循百度前端开发规范
   * 使用npm全自动安装所依赖的包
   * 样式结构、模板引擎、业务逻辑解耦
   * 前后端分离，使用json等交互数据
-  * 全端支持，全面支持浏览器、IOS、Android、HybirdApp、windows、Mac、Linux、TV
+  * 规范项目开发, 测试, 发布等目录及文件路径
+  * 模块化开发, 分而治之, 各模块同目录下就近维护 
   * Etc,etc
 
 ### 技术栈
 
-有一些技术堆栈开发的Web应用程序：
+#### 前端工具
+  * bower
+  * Fis3
+  * ProtractorJS
+  * NodeJS 
 
-#### 
+#### 前端框架/类库
 
   * AngularJS
   * AngularUI
@@ -44,34 +50,24 @@ YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构�
   * AngularUI-Router
   * Bootstrap
   * EchartJS 
-  * Fis3
   * html5-boilerplate
-  * ProtractorJS
-  * NodeJS 
-
+  
 ### 浏览器兼容性
-  * modern browsers: chrome, firefox, safari, Microsoft Edge  
+  * modern browsers: chrome, firefox, safari, Edge  
   * IE8+
   * Etc,etc
 
-#### [版本历史]
-#### [issue]
-#### [项目进展]
-
 ## 入门指南
-
-开始你可以简单克隆angular-seed库和安装依赖关系：
 
 ### 开发环境
 
-你需要git去克隆Dashboard库。你可以从http://git-scm.com/得到git
-[http://git-scm.com/](http://git-scm.com/).
+首先, 你需要git去克隆YHTML5-Seed库. 你需要下载git. [http://git-scm.com/](http://git-scm.com/).
 
-我们也使用node.js工具初始化和测试Dashboard。你必须有node.js和npm，你可以从http://nodejs.org/得到这些
+我们也使用node.js工具初始化和测试Dashboard。你必须有node.js和npm
 [http://nodejs.org/](http://nodejs.org/).
 
  
-### 克隆Dashboard
+### 克隆项目
 
 用git克隆Dashboard库
 [git][git]:
@@ -201,5 +197,7 @@ YHTML5-Seed
 [project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
 [protractor]: https://github.com/angular/protractor
 [travis]: https://travis-ci.org/
-
+[问题解析]:https://github.com/yhtml5/YHTML-Seed/issue.md
+[项目进度]:https://github.com/yhtml5/YHTML-Seed/progress.md
+[英文文档]:https://github.com/yhtml5/YHTML5-Seed/README.md
 

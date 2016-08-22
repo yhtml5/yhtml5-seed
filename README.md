@@ -8,7 +8,7 @@ and pulling in relevant build tasks and package manager dependencies (e.g npm) t
 ### Quick Links
 - [Introduction](#introduction)
     - [project progress]  
-    - [changeLog](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
+    - [changeLog](https://github.com/yhtml5/Dashboard/blob/master/changeLog.md)
     - [issue]
     - [Features](#features)
     - [Browser Compatibility](#browser-compatibility)
@@ -34,7 +34,6 @@ and pulling in relevant build tasks and package manager dependencies (e.g npm) t
 
 There are some Thchnology stack to deveolepmTent webapp:
 
-We development **app-angular** first, and then deploy deploy to others
 
 #### 
 
@@ -71,16 +70,16 @@ You need git to clone the Dashboard repository. You can get git from
 We also use a number of node.js tools to initialize and test Dashboard. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
  
-### Clone Dashboard  
+### Clone YHTML-Seed  
 
-Clone the Dashboard repository using [git][git]:
+Clone the YHTML-Seed repository using [git][git]:
 
 ```
 git clone https://github.com/yhtml5/YHTML5-WEB.git
-cd YHTML5-WEB\dashboard
+cd YHTML5-WEB\YHTML-Seed
 ```
 
-If you just want to start a new project without the dashboard commit history then you can do:
+If you just want to start a new project without the YHTML-Seed commit history then you can do:
 
 ```bash
 git clone --depth=1 https://github.com/yhtml5/YHTML5-WEB.git <your-project-name>
@@ -109,7 +108,7 @@ folders in your project.
 * `app/bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
-dashboard changes this location through the `.bowerrc` file.  Putting it in the app folder makes
+YHTML-Seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes
 it easier to serve the files by a webserver.*
 
 
@@ -127,7 +126,7 @@ We have preconfigured the project with a simple development web server.  The sim
 this server is:
 
 ```
-cd YHTML5-WEB\dashboard\app 
+cd YHTML5-WEB\YHTML-Seed\app 
 fis3 server start
 fis3 release -wl
 ```
@@ -183,17 +182,13 @@ app                            --> all of the source files for the application
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
-
 [npm version]:https://img.shields.io/npm/v/npm.svg
 [node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
 [downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
-
-[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
-[problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
-[project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
-[issue]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
-
-
+[changeLog]:https://github.com/yhtml5/YHTML-Seed/blob/master/changeLog.md
+[problem]:https://github.com/yhtml5/YHTML-Seed/blob/master/question.md
+[project progress]:https://github.com/yhtml5/YHTML-Seed/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
+[issue]:https://github.com/yhtml5/YHTML-Seed/blob/master/changeLog.md
 [中文文档]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README_ZH.md
