@@ -1,10 +1,11 @@
 {
   "name": "yhtml5-seed",
   "authors": "yhtml5",
-  "description": "a websit design by bootstrap",
+  "description": "The web's scaffolding tool for modern webapps",
   "version": "0.1.1",
   "homepage": "//yhtml5.com",
   "license": "MIT",
+  "main": "",
   "dependencies": {
     "angular": "~1.5.x",
     "angular-animate": "~1.5.x",
@@ -16,6 +17,5 @@
     "animate.css": "^3.5.2",
     "bootstrap": "~3.x",
     "html5-boilerplate": "~5.x"
-  },
-  "main": ""
+  }
 }

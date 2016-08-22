@@ -1,14 +1,14 @@
 {
   "name": "yhtml5-seed",
   "version": "0.0.0",
-  "description": "a workflow biuld by bower+fis3+npm+nodejs",
-  "repository": "https://github.com/yhtml5/YHTML5-Seed",
-  "license": "MIT",
-  "devDependencies": {
-    "bower": "^1.3.1",
-    "fis3": "^3.4.15"
-  },
-  "scripts": {
-    "postinstall": "bower install"
-     }
+"description": "a workflow biuld by bower+fis3+npm+nodejs",
+"repository": "https://github.com/yhtml5/YHTML5-Seed",
+"license": "MIT",
+"devDependencies": {
+"bower": "^1.3.1",
+"fis3": "^3.4.15"
+},
+"scripts": {
+"postinstall": "bower install"
+}
 }
