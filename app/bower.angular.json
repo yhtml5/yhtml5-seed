@@ -15,7 +15,7 @@
     "angular-ui-select": "^0.18.1",
     "animate.css": "^3.5.2",
     "bootstrap": "~3.x",
-    "html5-boilerplate": "~5.x"
+    "normalize-css": "~4.x"
   },
   "main": ""
 }

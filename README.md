@@ -29,6 +29,22 @@ and pulling in relevant build tasks and package manager dependencies (e.g npm) t
   * Front and rear ends separation, use json interactive data
   * Full-side support, fully supported browser, IOS, Android, Hybrid App, windows, Mac, Linux, TV
   * Etc,etc
+  
+  
+  
+  * HTML5 ready. Use the new elements with confidence.
+  * Designed with progressive enhancement in mind.Includes:
+      * Normalize.css for CSS normalizations and common bug fixes
+      * jQuery via CDN, with a local fallback
+      * A custom build of Modernizr for feature detection
+      * Apache Server Configs that, among other, improve the web site's performance and security
+  * Placeholder CSS Media Queries.
+  * Useful CSS helper classes.
+  * Default print styles, performance optimized.
+  * An optimized version of the Google Universal Analytics snippet.
+  * Protection against any stray console statements causing JavaScript errors in older browsers.
+  * "Delete-key friendly." Easy to strip out parts you don't need.
+  * Extensive inline and accompanying documentation.
 
 ### Technology stack
 

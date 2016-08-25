@@ -10,8 +10,8 @@
     "bootstrap-datepicker": "^1.6.1",
     "blueimp-file-upload": "jquery-file-upload#^9.12.5",
     "form.validation": "*",
-    "html5-boilerplate": "~5.2.0",
     "jquery": "~1.x",
+    "normalize-css": "~4.x",
     "smalot-bootstrap-datetimepicker": "^2.3.11"
   }
 }
