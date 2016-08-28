@@ -26,15 +26,15 @@ fis.match('/bower_components/angular-ui-router/release/(**)', {
 fis.match('/components/**', {
     release: '/vendor/$0'
 });
+fis.match('/{map.json,fis-conf.*}', {
+    release: '/config/$0'
+});
 fis.match('/{components,bower_components}/**/(*.{png,gif,jpg,jpeg,svg})', {
     release: '${project.static}/img/$1'
 });
 fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})', {
     release: '${project.static}/iconfont/$1',
     url: '/iconfont/$1'
-});
-fis.match('/{map.json,fis-conf.*}', {
-    release: '/config/$0'
 });
 
 /************************* 打包规范 *****************************/

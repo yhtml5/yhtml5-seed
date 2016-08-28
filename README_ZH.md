@@ -33,21 +33,9 @@ YHTML5-Seed是一个前端脚手架. 我们可以借助这个种子项目来构�
   * 前后端分离，使用json等交互数据
   * 规范项目开发, 测试, 发布等目录及文件路径
   * 模块化开发, 分而治之, 各模块同目录下就近维护 
+  * Normalize.css对CSS的标准化和通用错误修复
+  * Modernizr的的自定义生成特征检测
   * 兼容大部分主流浏览器
-  HTML5做好准备。放心地使用新的元素。
-      设计时考虑逐步增强。
-      包括：
-          Normalize.css对CSS的标准化和通用错误修复
-          通过CDN的jQuery，与当地的回退
-          Modernizr的的自定义生成特征检测
-          Apache服务器的Configs的是，除其他外，提高了网站的性能和安全性
-      占位符CSS媒体查询。
-      有用的CSS辅助类。
-      默认的打印样式，性能优化。
-      优化版本的谷歌通用分析片断的。
-      防止造成旧的浏览器的JavaScript错误的任何杂散控制台声明。
-      “删除键友好。”易剥离出来你不需要的部分。
-      丰富的内联和附带的文档。
   * Etc,etc
 
 ### 技术栈
@@ -190,24 +178,33 @@ YHTML5-Seed
 ```
 
 
+The term shiv originates from John Resig, who was thought to have used the word for its slang meaning, 
+a sharp object used as a knife-like weapon, intended for Internet Explorer. 
+Truth be known, John probably intended to use the word shim, which in computing means an application compatibility workaround. 
+Rather than correct his mispelling, most developers familiar with Internet Explorer appreciated the visual imagery. 
+And that, kids, is etymology.
+
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
-[bower]: http://bower.io
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
-[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
 [downloads total]:https://img.shields.io/github/downloads/atom/atom/total.svg
+[npm version]:https://img.shields.io/npm/v/npm.svg
+[node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
+
+[bower]: http://bower.io
+[changeLog]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
 [git]: http://git-scm.com/
 [http-server]: https://github.com/nodeapps/http-server
 [issue]:https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md
 [jasmine]: http://jasmine.github.io
 [karma]: http://karma-runner.github.io
+[modernizr]:https://modernizr.com
 [npm]: https://www.npmjs.org/
-[npm version]:https://img.shields.io/npm/v/npm.svg
 [node]: http://nodejs.org
-[node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
 [project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
 [protractor]: https://github.com/angular/protractor
 [travis]: https://travis-ci.org/
+
 [问题解析]:https://github.com/yhtml5/YHTML-Seed/issue.md
 [项目进度]:https://github.com/yhtml5/YHTML-Seed/progress.md
 [英文文档]:https://github.com/yhtml5/YHTML5-Seed/README.md
