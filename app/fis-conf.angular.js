@@ -57,6 +57,24 @@ fis.match('/bower_components/angular-ui-router/release/angular-ui-router.js', {
 fis.match('/bower_components/bootstrap/dist/css/bootstrap.css', {
     packTo: '${project.static}/yhtml5.css'
 });
+fis.match('/components/iconfont/*.css', {
+    packTo: '${project.static}/yhtml5.css'
+});
+fis.match('/bower_components/html5-boilerplate/dist/**/normalize.css', {
+    packOrder: -99
+});
+fis.match('/bower_components/html5-boilerplate/dist/**/main.css', {
+    packOrder: -97
+});
+fis.match('/bower_components/bootstrap/dist/**/bootstrap.min.css', {
+    packOrder: -89
+});
+fis.match('/bower_components/angular-bootstrap/ui-bootstrap-csp.css', {
+    packOrder: -87
+});
+fis.match('/components/iconfont/*.css', {
+    packOrder: -77
+});
 
 /*** custom resourse ***/
 fis.match('{/server/*.js, /components/**/*.js}', {
