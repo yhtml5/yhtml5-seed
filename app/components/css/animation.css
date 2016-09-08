@@ -54,6 +54,9 @@
     animation: bg-position 10s ease infinite;
     transition: -webkit-filter 0.2s ease, background-image 0.2s ease;
 }
+.y-animation-bg.y-full {
+    position: absolute;
+}
 
 .y-animation-bg.y-soft {
     background-color: #1c81df;

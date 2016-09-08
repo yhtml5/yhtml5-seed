@@ -127,6 +127,18 @@ fis3 release -wl
 
 Now browse to the app at `http://localhost:8080`.
 
+
+
+### 其它工作
+
+* 本脚手架具有俩种开发模式:
+  * SPA应用, 渲染引擎在客户端, 适合开发移动端APP. 首页入口为 '/index.html'; UI界面在/view 目录下开发 
+  * PG应用, 配合后台java, php使用, 适合开发WebApp. 首页入口为 '/page/index.html'; UI界面在/page下开发  
+* 如果你没使用angular, 请删除'components/head/index.html'下的ng-app属性 
+
+
+
+
 ### 目录布局
 
 ```

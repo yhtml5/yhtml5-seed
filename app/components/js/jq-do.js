@@ -17,6 +17,7 @@ $(function () {
     $("[y-close='nav.userPanel']").mouseleave(function () {
         $("[y-navbar='nav.float.window']").fadeOut();
     });
+    toggleActive(".y-nav a", 'click')
 });
 
 

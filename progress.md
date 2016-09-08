@@ -8,6 +8,9 @@
 - [ ] update readme document
 - [ ] merging angular, jquery files into fis3-conf.js
 - [ ] add demos for YHTML5-Seed, (like bootstrap4 for deginer, animation, buttons)
+- [ ] 命名规范:
+     * 页面层,使用'.'区分父子页面
+     * y-btn="Business" 前面写操作对象, 引号内写业务逻辑
 - [ ] 整理优化CSS, css命名规则:  
      * UI组件: y-btn, y-btn-sm, y-btn-info, y-btn-block
      * 面对属性: y-m-y-0, y-m-y-10
@@ -21,14 +24,14 @@
      * [normalize]  --清除各浏览器自带的标签样式规则, 消除样式差异
      * 浏览器前缀  --现代浏览器,不同浏览器厂商, 使用构建工具自动添加 css浏览器前缀
      * Angular下的解决方案: 使用id选择器代替属性选择器 
+- [ ] 添加demo页
+- [ ] 介绍YHTML5-Seed
 
 
 ### changeLog
 - [ ] 2016.08.15 融合SPA单页应用模式, 以及普通开发模式 不再以按文件夹区分  
 - [ ] 2016.08.22 merging some files, /components/head.html, /bower.json
 - [ ] 2016.08.22 update README.md, /components/ie 
-    
-    
     
     
    

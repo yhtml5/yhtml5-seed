@@ -5,10 +5,6 @@
 */
 
 /*==================== custom bootstrap ====================*/
-.y-center-container {
-    position: relative;
-}
-
 .y-center-all {
     position: absolute;
     z-index: 2;
@@ -18,29 +14,13 @@
     right: 0;
     margin: auto;
     overflow: auto;
-    width: 50%;
-    height: 50%;
     text-align: center;
 }
 
-.y-center-all.y-fixed {
-    position: fixed;
-}
-
-.y-center-all.y-responsive-sm {
-    width: 60%;
-    height: 60%;
-    min-width: 180px;
-    max-width: 400px;
+.y-center-all.y-sm {
     padding: 20px;
-}
-
-.y-center-all.y-responsive-sm {
-    width: 60%;
-    height: 60%;
-    min-width: 240px;
-    max-width: 600px;
-    padding: 40px;
+    width: 50%;
+    height: 50%;
 }
 
 .y-bgfull-md {
