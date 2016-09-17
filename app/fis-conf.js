@@ -36,8 +36,8 @@ fis.match('/{components,bower_components,view,page}/**/(*.{png,gif,jpg,jpeg,svg}
 });
 fis.match('/**/({glyphicons-halflings-regular.*,iconfont.{eot, svg, ttf, woff}})', {
     release: '${project.static}/iconfont/$1',
-    // domain: '.',
-    url: '/iconfont/$1'
+    url:'/iconfont/$1',
+    domain: '.'
 });
 
 /************************* Package Standard *****************************/
@@ -130,34 +130,29 @@ fis.media('pro')
         domain: '.'
     })
     //html remove comments
-    .match('/{index,{view,page}/**/*}.html', {
+    .match('/{index,{view,page,components}/{*,**/*}.html', {
         optimizer: function (content) {
             return content.replace(/<!--([\s\S]*?)-->/g, '');
         }
     })
     //css 自动补充兼容性 https://github.com/ai/browserslist#queries
-    .match('/{components,page,view}/**/*.css', {
+    .match('/{page,components}/{*,**/*}.css', {
         preprocessor: fis.plugin('cssprefixer', {
             "browsers": ["FireFox > 1", "Chrome > 1", "ie >= 8"],
             "cascade": true
         })
     })
-    .match('/components/**/*.css', {
+    .match('/{page,components}/{*,**/*}.{css,js,html}', {
         optimizer: fis.plugin('htmlminify', {
             removeComments: true,
             collapseWhitespace: true,
             minifyCSS: true,
             minifyJS: true
         })
-    });
-// .match('/{{components,view}/**/*.{html,css},index.html}', {
-//     optimizer: fis.plugin('htmlminify', {
-//         removeComments: true,
-//         collapseWhitespace: true,
-//         minifyJS: true,
-//         minifyCSS: true
-//     })
-// })
+    })
+    .match('/components/public/csssprites/(*)', {
+        url: '/img/$1'
+    })
 // 自动雪碧图
 // .match('::package', {
 //     packager: fis.plugin('map'),
@@ -166,16 +161,5 @@ fis.media('pro')
 //         margin: '15'
 //     })
 // })
-// .match('*.css', {
-//     optimizer: fis.plugin('clean-css', {
-//         'keepBreaks': false,
-//         useSprite: true
-//     })
-// })
-// .match('*.js', {
-//     optimizer: fis.plugin('uglify-js', {
-//         mangle: {
-//             expect: ['require', 'define', 'some string']
-//         }
-//     })
-// })
+
+//uglify
