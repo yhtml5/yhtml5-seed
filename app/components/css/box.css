@@ -314,7 +314,12 @@
 .y-w-p-95 {
     width: 95%;
 }
-
+.y-w-min-200{
+    min-width: 200px;
+}
+.y-w-max-200{
+    max-width: 200px;
+}
 
 
 

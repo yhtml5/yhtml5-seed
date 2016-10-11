@@ -16,6 +16,7 @@
      * 面对属性: y-m-y-0, y-m-y-10
      * 业务逻辑: v-login, v-login search, v-login btn
      * 工具类: active disable    
+              success,warning,danger,info
 - [ ] 添加浏览器兼容性解决方案:
      * [es5-shim]  --为低版本浏览器, 添加es5规则      
      * [html5shiv]  --创建新的HTML5标签,自动完成了设置 IE 浏览器和新语义元素的兼容性
