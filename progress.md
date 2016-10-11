@@ -1,5 +1,45 @@
 # the progress of YHTML5-Seed
 
+### **任务分配**
+
+<table cellspacing="0">
+   <tr>
+      <td>功能模块</td>
+      <td>负责人</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>项目构架</td>
+      <td>张大漾</td>
+      <td>项目基础工程搭建(项目包依赖管理, 配置fis-conf.js, 配置依赖关系)</td>
+   </tr>
+   <tr>
+       <td>资源更新</td>
+       <td>陈孟圆</td>
+       <td>字体图标, 设计稿件等更新 </td>
+   </tr>
+   <tr>
+      <td>项目开发</td>
+      <td>陈奇文,陈孟圆,张大漾</td>
+      <td>页面模块化开发, UI组件化开发</td>
+   </tr>
+   <tr>
+      <td>数据联调</td>
+      <td>陈奇文,张大漾</td>
+      <td>管理VM模块的数据绑定与通讯, 负责与后台数据接口联调</td>
+   </tr>
+   <tr>
+      <td>项目测试</td>
+      <td>陈奇文,陈孟圆,张大漾</td>
+      <td>测试页面逻辑是否正确, UI细节是否完善, 功能是否满足, 有无明显的bug</td>
+   </tr>
+   <tr>
+      <td>项目发布</td>
+      <td>张大漾</td>
+      <td>基于NodeJS编译输出完整的html页面, 完成基本bug修复, 处理代码冲突  </td>
+   </tr>
+</table>
+
 ### All
 - [ ] 分析依赖关系, 项目内部用require取代packOrder
 - [ ] 增加react, vue项目的脚手架
