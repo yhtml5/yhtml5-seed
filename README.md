@@ -1,4 +1,4 @@
-## YHTML5-Seed丨[英文文档] [问题记录] [项目进度]
+## YHTML5-Seed丨[Document]丨[项目问题]丨[项目进度]
                
 ![npm version] ![node version] ![Build Status] ![downloads total] ![author]
 
@@ -126,8 +126,9 @@ fis3 release -cwl
 
 ### 其它工作
 
-* **/** 为项目根目录, 所有文件监听, 基础构建, 项目开发都基于此
+* **/** 为项目根目录,即fis-conf.js所在的目录. 所有文件监听, 基础构建, 项目开发都基于此
 * page下的组件**a**标签中的链接默认不监听, 注意应基于开发根目录进行定位
+* 请更改项目名称,链接,信息. 包括但不限于: /server/**, /app/fis-conf.js, README.md
 * 本脚手架具有俩种开发模式:
   * SPA应用, 渲染引擎在客户端, 适合开发移动端APP. 首页入口为 '/index.html'; UI界面在/view 目录下开发 
   * PG应用, 配合后台java, php使用, 适合开发WebApp. 首页入口为 '/page/index.html'; UI界面在/page下开发  
@@ -190,11 +191,13 @@ YHTML5-Seed
 [node version]:https://img.shields.io/badge/node-v4.3.2-blue.svg
 
 [bower]: http://bower.io
+[es5-shim]:https://github.com/es-shims/es5-shim
 [git]: http://git-scm.com/
 [http-server]: https://github.com/nodeapps/http-server
+[html5shiv]:https://github.com/aFarkas/html5shiv
 [jasmine]: http://jasmine.github.io
 [karma]: http://karma-runner.github.io
-[modernizr]:https://modernizr.com
+[Modernizr]:https://github.com/Modernizr/Modernizr
 [NPM]: https://www.npmjs.org/
 [NodeJS]: http://nodejs.org
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
@@ -202,8 +205,12 @@ YHTML5-Seed
 [protractor]: https://github.com/angular/protractor
 [travis]: https://travis-ci.org/
 
-[英文文档]:https://github.com/yhtml5/YHTML5-Seed/README.md
-[项目问题]:https://github.com/yhtml5/YHTML-Seed/issue.md
-[issue]:https://github.com/yhtml5/FW-Dashboard/blob/master/issue.md
-[项目进度]:https://github.com/yhtml5/YHTML-Seed/progress.md
-[project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
+[Document]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README_EN.md
+[中文文档]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README.md
+[Issue]:https://github.com/yhtml5/YHTML5-Seed/blob/master/issue.md
+[项目问题]:https://github.com/yhtml5/YHTML5-Seed/blob/master/issue.md
+[Progress]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
+[项目进度]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
+
+
+
