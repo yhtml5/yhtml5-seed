@@ -1,0 +1,67 @@
+.v-list-group {
+    text-align: center;
+}
+
+.v-list-group .v-more {
+    font-size: 18px;
+    color: #999;
+    padding: 16px;
+}
+
+.v-list {
+    display: block;
+    color: #333;
+    padding-top: 16px;
+    padding-bottom: 12px;
+}
+
+.v-list .v-text-note {
+    margin-top: 4px;
+    color: #f13d1f;
+}
+
+.v-list .v-num {
+    font-size: 18px;
+    color: #f13d1f;
+}
+
+.v-list-reportForm {
+    text-align: center;
+    padding-top: 18px;
+    color: #666;
+}
+
+.v-list-group-simple {
+}
+.v-list-group-simple .v-box a{
+    display: block;
+    color:#666;
+}
+.v-list-group-simple .v-head {
+    line-height: 30px;
+    background-color: #f8f8f8;
+    padding: 0 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ececec;
+}
+
+.v-list-group-simple .v-item {
+    line-height: 2.5;
+    padding: 0 10px;
+    background-color: #fff;
+}
+
+.v-nav-letter {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    padding-top: 18px;
+    color: #666;
+}
+
+.v-empty {
+    position: relative;
+    left: 50%;
+    margin: 40% 0 0 -98px;
+}

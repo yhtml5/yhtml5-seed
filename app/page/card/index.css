@@ -1,0 +1,11 @@
+.v-card-group{
+
+}
+.v-card{
+    background-color:#fff;
+    border-radius: 4px;
+    margin-top:10px;
+    display: none;
+    padding: 20px 26px;
+}
+

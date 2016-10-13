@@ -4,7 +4,7 @@ var isBrowserMobile = browserKeywordsMobile.test(navigator.userAgent);
 if (isBrowserMobile) {
     console.log(isBrowserMobile);
 } else {
-    console.log(a);
+    // console.log(a);
 }
 
 

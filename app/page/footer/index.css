@@ -1,0 +1,7 @@
+.v-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 6px 18px;
+    border-top: solid #ddd 1px;
+}

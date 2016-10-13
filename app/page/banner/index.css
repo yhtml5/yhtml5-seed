@@ -1,0 +1,47 @@
+.v-banner {
+    width: 100%;
+    min-height: 240px;
+    padding: 10px;
+}
+.v-banner.v-banner-black {
+    background-color: #1d2027;
+}
+
+.v-banner .v-title {
+    color: #fff;
+    text-align: center;
+}
+
+.v-banner .v-h6 {
+    color: #969cac;
+    font-size: 12px;
+}
+.v-banner .iconfont {
+    font-size: 24px;
+    color: #fff;
+    opacity: .5;
+}
+.v-circle {
+    width: 110px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #2a2e38;
+}
+
+
+.v-circle.v-circle-white {
+    background-color: #f8f8f8;
+}
+
+
+.v-circle .v-num {
+    color: #f13d1f;
+    padding-top: 20px;
+    font-size: 36px;
+}
+
+
+

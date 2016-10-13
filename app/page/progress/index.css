@@ -1,0 +1,82 @@
+/*progressbar*/
+
+.y-progress-step {
+    max-width: 640px;
+    overflow: hidden;
+    padding-left: 0;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+.y-progress-step.y-defalut {
+    background-color: #f8f8f8;
+    padding-top: 12px;
+    padding-bottom: 16px;
+}
+
+.y-progress-step li {
+    list-style-type: none;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.y-progress-step li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    background: #b0b0b0;
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+    padding-right: 1px;
+    z-index: 2;
+    position: relative;
+}
+
+/*progressbar connectors*/
+
+.y-progress-step li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #b0b0b0;
+    position: absolute;
+    left: -50%;
+    top: 10px;
+    /*put it behind the numbers*/
+}
+
+.y-progress-step li:first-child:after {
+    content: none;
+    /*connector not needed before the first step*/
+}
+
+/*marking active/completed steps green*/
+
+/*The number of the step and the connector before it = green*/
+
+.y-progress-step li:before:focus,
+.y-progress-step li:after:focus,
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+    background: #f13d1f;
+    color: white;
+}
+
+.y-progress-step li.active:before,
+.y-progress-step li.active:after {
+    background: #f13d1f;
+    color: white;
+}
+
+.y-progress-step .active .y-turn-blue {
+    color: #f13d1f;
+}

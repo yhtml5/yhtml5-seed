@@ -1,0 +1,37 @@
+.v-pickadate {
+    margin-top: 4px;
+}
+
+.v-pickadate .picker th {
+    text-align: center;
+}
+
+.v-pickadate input {
+    width: 100%;
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+}
+
+@media (min-height: 33.875em) {
+    .picker__box {
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid #777;
+    }
+}
+
+@media (min-height: 40.125em) {
+    .picker__frame {
+        margin-bottom: 0;
+    }
+}
+
+.picker__input.picker__input--active {
+    border: none;
+}
+.picker__select--month, .picker__select--year{
+    padding: 2px;
+    text-align: center;
+}

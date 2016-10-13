@@ -127,13 +127,15 @@ fis3 release -cwl
 ### 其它工作
 
 * **/** 为项目根目录,即fis-conf.js所在的目录. 所有文件监听, 基础构建, 项目开发都基于此
-* page下的组件**a**标签中的链接默认不监听, 注意应基于开发根目录进行定位
-* 请更改项目名称,链接,信息. 包括但不限于: /server/**, /app/fis-conf.js, README.md
+* 请更改项目名称,链接,信息. 包括但不限于: `/server/**`, `/app/fis-conf.js`, `README.md`
 * 本脚手架具有俩种开发模式:
-  * SPA应用, 渲染引擎在客户端, 适合开发移动端APP. 首页入口为 '/index.html'; UI界面在/view 目录下开发 
-  * PG应用, 配合后台java, php使用, 适合开发WebApp. 首页入口为 '/page/index.html'; UI界面在/page下开发  
-
-
+  * SPA应用, 渲染引擎在客户端, 适合开发移动端APP. 首页入口为`/index.html`; UI界面在`/view`目录下开发 
+  * PG应用, 配合后台java, php使用, 适合开发WebApp. 首页入口为 `/page/index.html`; UI界面在`/page`下开发  
+* **PG应用**: 
+  * `/page` 下的组件**a**标签中的链接默认不监听, 注意应基于开发根目录进行定位
+  * `/page/*` 为页面, 页面为UI组件的容器, 容器中只存放布局框架, 依赖关系
+  * `/page/*/**` 为UI组件, 同级目录下存放与本组件相关的css, js, image, html 等所有相关信息
+    
 ### 目录布局
 
 ```

@@ -1,0 +1,56 @@
+.v-login {
+
+}
+
+.v-login .v-logo {
+    width: 180px;
+    height: 90px;
+    background: url(../../components/public/csssprites/logo.csp.png) no-repeat;
+    background-size: 100%;
+    margin: 30px auto 0 auto;
+}
+
+.v-login .v-input-list {
+    height: 60px;
+    border-bottom: 1px solid #A5A7BD;
+}
+
+.v-login .v-input-list input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+.v-login .v-input-list .v-input-c {
+    clear: both;
+}
+
+.v-login .v-input-list .v-input-r {
+    float: right;
+    margin-top: -34px;
+}
+
+.v-login .v-input-list .v-input-s {
+    width: 45%;
+}
+.v-login .v-input-list .v-img-code {
+    display: block;
+    width:96px;
+    height:34px;
+}
+
+.v-login .v-login-link {
+    display: block;
+    text-align: right;
+    color: #9c9db3;
+    padding-top: 12px;
+}
+
+#loginForm .help-block {
+    color: #f13d1f;
+}
+
+.form-group {
+    margin-bottom: 0;
+}

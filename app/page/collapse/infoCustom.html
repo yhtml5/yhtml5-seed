@@ -1,0 +1,39 @@
+<div class="panel v-collapse">
+    <div class="row panel-heading v-collapse-heading" role="tab" id="headingOne">
+        <a class="v-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#infoCustom" aria-expanded="true" aria-controls="collapseOne">
+            <div class="col-xs-2">
+                <i class="iconfont v-custom">&#xe606</i>
+            </div>
+            <div class="col-xs-4 v-info">
+                客户信息
+            </div>
+            <div class="col-xs-6 text-right">
+                <i class="iconfont v-icon-down active">&#xe60e</i>
+            </div>
+        </a>
+    </div>
+    <div id="infoCustom" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body v-collapse-body">
+            <div class="row">
+                <label for="input4" class="col-xs-4 v-label">主贷人:</label>
+                <div class="col-xs-8 text-right">
+                    <input type="text" class="y-input-clear text-right" id="input4" placeholder="请输入姓名" name="name" />
+                </div>
+            </div>
+            <div class="row">
+                <label for="input5" class="col-xs-4 v-label">身份证号:</label>
+                <div class="col-xs-8 text-right">
+                    <input type="text" class="y-input-clear text-right" id="input5" placeholder="请输入身份证号" name="ID" />
+                </div>
+            </div>
+            <div class="row">
+                <label for="input5" class="col-xs-4 v-label">联系方式:</label>
+                <div class="col-xs-8 text-right">
+                    <input type="text" class="y-input-clear text-right" id="phoneNum" placeholder="请输入手机号码" name="phone"/>
+                </div>
+            </div>
+            <button type="button" class="btn btn-block y-btn-white y-m-t-10" id="addPropertyBtn"><i class="iconfont">&#xe612;</i> 添加共同产权人</button>
+        </div>
+    </div>
+</div>
+<link rel="import" href="../card/addProperty.html?__inline">

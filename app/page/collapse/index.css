@@ -1,0 +1,124 @@
+.v-collapse-group {
+    margin-bottom:0;
+}
+
+.panel{
+     box-shadow: none;
+}
+.v-collapse-group .v-collapse {
+    border-radius: 0;
+}
+
+.v-collapse {
+    background-color: #fff;
+    border: none;
+    border-radius: 0 !important;
+    margin-top: 0 !important;
+    border-top: solid 1px #eee;
+}
+
+.v-collapse .v-title {
+    font-size: 14px;
+    color: #222;
+}
+
+.v-collapse .v-title .v-info {
+    margin-left: -20px;
+    margin-top: 1px;
+}
+
+.v-collapse .iconfont.v-custom {
+    width: 22px;
+    height: 22px;
+    padding-left: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    background-color: #6aade3;;
+}
+
+.v-collapse .iconfont.v-house {
+    width: 22px;
+    height: 22px;
+    padding-left: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    background-color: #52c7b6;
+}
+
+.v-collapse .iconfont.v-loan {
+    width: 22px;
+    height: 22px;
+    padding-left: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff8a50;
+}
+
+.v-collapse .iconfont.v-safe {
+    width: 22px;
+    height: 22px;
+    padding-left: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    background-color: #f13d1f;
+}
+
+.v-collapse .v-icon-down {
+    font-size: 16px;
+    color: #b0b0b0;
+}
+
+.v-collapse .v-icon-down.active {
+    font-size: 16px;
+    color: #ff8a50;
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+.v-collapse-heading {
+    padding: 10px 15px;
+    border-radius: 0;
+}
+
+.v-collapse-body {
+    background-color: #f8f8f8;
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+.v-collapse-body .v-label {
+    color: #999;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.v-collapse > .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border: none;
+}
+
+.v-input-file {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    outline: none;
+}
+.v-order-text{
+    width:100%;
+    background: none;
+    outline: none;
+    resize: none;
+    border:none;
+    text-align: right;
+}
