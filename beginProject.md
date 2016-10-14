@@ -1,0 +1,158 @@
+
+# How to begin a Front-end project
+
+Hello,大家好. 前些天我们分享了一些现在前端的一些理念思想, 开发会经历的几个阶段以及各个阶段需要做的事儿.   
+都是先让大家有个概念. 今天和大家一起分享如何使用这套脚手架, 以及脚手架里面都有些什么.   
+东西可能会很多很乱, 给我个机会, 尽量介绍清楚它,在这之前我们聊聊  
+
+## 概念
+脚手架是什么东西
+
+现在的产品, 开发周期短, 前端人员少, 基础不扎实. 如果每一个项目都是从零开始, 边学遍开发的话, 时间肯定来不及  
+
+每个公司的技术团队要把精力集中于业务逻辑的实现，而不是做一些IT基建工作, 甚至重复性的工作  
+好的工程师，应该擅于分析各种平台/框架/工具，再加以利用拼装，快速高效实现公司核心业务！  
+
+脚手架就是这样的一个东西: 解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题  
+
+当然卓越的前端工程师不会止于用轮子, 他们深入,当发现现有的轮子不满足业务的时候.
+能自己写一套, 引起共鸣后, 大家一同维护, 最后打造一个开源社区, 推翻原来轮子的统治地位
+
+现在前端变革非常大, 每天都会有新的技术取代旧的技术
+
+* grunt, gulp, npm script
+* jquery, angualr, vue, react
+
+基础服务我们没有必要自己造轮子,有限的人力投入到做好产品上. 做项目的过程中,造的一些轮子可以独立成一些组件, 再融合回脚手架中
+
+- [ ] 文档与规范: 
+     - [ ]Directory Standard 
+     - [ ]Code Standard
+     - [ ]README.md
+     - [ ]progress.md 
+     - [ ]issue.md
+     - [ ]project.md
+     - [ ]styleguide
+     - [ ]Etc. etc.
+
+     
+- [ ] other:
+     - [ ].gitigoner
+     - [ ]LICENSE  
+     - [ ]design
+     - [ ]production
+
+
+
+ 
+## 环境的安装  
+  
+前端开发还需要安装环境? 是的,前端也需要, 也很有必要这么做.  
+
+### Linux命令行  
+
+前端也需要敲命令行?  是的,不敲还正不行. 今天主要介绍几个常用的命令行,这些是基础:
+cd . ..   
+ls  
+ls -a  
+open  
+cat  
+touch  
+clear 
+vim  
+history  
+top arrow  
+Tab   
+sudo  
+还有其他作用, 给大家一个链接自己去扩展
+
+### Git
+  
+我们需要Git版本管理工具, 可以安装Github客户端, 也可以安装git  
+
+用Git克隆项目仓库  
+```
+git clone git@github.com:yhtml5/YHTML5-Seed.git 
+cd YHTML5-Seed/app 
+```
+
+如果你想开始一个没有dashboard历史命令的新项目，你可以：
+  
+```
+bash
+git clone --depth=1 https://github.com/yhtml5/YHTML5-WEB.git <your-project-name>
+```
+
+告诉git只下拉有历史数据的命令
+
+### NodeJS  
+几乎所有的构建工具都是是基于nodejs, 正确的安装很很重要  
+window / mac, 安装官网已编译的安装包  
+安装好了,npm就自动装好了, 国内通常非常慢, 可以使用cnpm替代  
+
+```
+npm install xxx -g
+npm install bower -g
+npm install fis3 -g 
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+
+### 包管理器
+
+**在这个项目中我们有俩种包管理工具**  
+
+* 我们通过`npm`管理开发环境依赖的构建工具及插件. [Node 包管理工具][npm].  
+* 我们通过`bower`管理项目依赖的第三方包. [客户端代码包管理][bower].  
+
+我们能简单的用命令行去安装项目依赖的包
+
+```
+cd YHTML5-Seed
+npm install
+
+cd YHTML5-Seed/app
+bower install
+```
+
+安装后在项目里你应该能找到两个新的文件。  
+* `node_modules`-工具包含了我们需要的npm包  
+* `app/bower_components`-包含了angular框架文件  
+
+> 注意`bower_components`文件通常被安装在根文件夹，但dashboard改变位置通过`.bowerrc`文件。  
+> 把它放在app文件夹中，更容易通过网络服务提供文件。  
+
+
+上面的基础知识,不论是否使用本脚手架工具都是需要掌握的, 具体的我这有一些相关教程,不懂一定要问.  
+**专家盲点**
+  
+## 如何开始使用
+
+到这里,大家可能在想, what are you talk about? 脚手架在哪里? 
+那我们就开始吧, 让大家成功运行一个demo项目
+
+```
+open github.com  
+git clone
+cd YHTML5-Seed/app
+ls
+```
+
+```
+fis3 -h               | help
+fis3 server start     | stop/restart/info/help | ipconfig
+fis3 release -cwl     | clean/watching/living
+fis3 release pro -cwl | pro/cdn/test
+fis-conf.js           | config file
+
+change something and enjoying yourself
+```
+
+```
+
+```
+ 
+**目录结构**
+
+
+
+ 

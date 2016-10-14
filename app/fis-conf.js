@@ -3,14 +3,19 @@
  *
  * 监听文件: 选择你需要监听的文件, 已经有了对应的demo写法(Glob/正则)
  * 目录规范: 提供默认demo写法
+ * 配置data:
+ *    name  --项目名
+ *    path  --静态资源目录
+ *    viewType  view--单页应用, page--多页应用
+ *    framework  可配置项 jquery,angular,vue,(react)
  *
  *====================================================================*/
-
 var yhtml5Data = {
     name: "yhtml5",
-    viewType: "view",
+    viewType: "page",
     domain: ".",
-    path: "/static"
+    path: "/static",
+    framework: "jquery"
 }
 /************************* Project Setting *****************************/
 fis.set('project.md5Length', 7);
@@ -20,7 +25,7 @@ fis.set('project.static', '/static');
 fis.set('project.ignore', ['*.test.*', '*.psd', '.git/**', '/**/demo.*']);
 fis.set('project.files', [
     'fis-conf.js', './index.html', './map.json', './progress.md',
-    '/components/**', '/server/*', '/view/**', '/page/**',
+    '/components/**', '/server/*', '/' + yhtml5Data.viewType + '/**',
     // '/bower_components/angular/angular.min.js',
     // '/bower_components/angular-ui-router/release/angular-ui-router.min.js',
     '/bower_components/bootstrap/dist/**/bootstrap.min.{css,js}',
@@ -31,18 +36,17 @@ fis.set('project.files', [
     // '/bower_components/vue/dist/vue.min.js',
 ]);
 /************************* Directory Standard *****************************/
-fis.match('/page/(*.html)', {
-    release: '/$1'
-});
 fis.match('/bower_components/(**)', {
     release: '/vendor/$1'
 });
 fis.match('/components/**', {
     release: '/vendor/$0'
 });
-fis.match('/page/(*.html)', {
-    release: '/$1'
-});
+if (yhtml5Data.viewType === 'page') {
+    fis.match('/page/(*.html)', {
+        release: '/$1'
+    });
+}
 fis.match('/**/(*.design.*)', {
     release: '/vendor/design/$1'
 });
@@ -144,17 +148,16 @@ fis.match('/bower_components/pickadate/lib/compressed/**/default.date.css', {
 fis.match('/bower_components/pickadate/lib/compressed/**/default.time.css', {
     packOrder: -265
 });
-
 /*** custom resourse ***/
-// fis.match('/{server,components,page}/{*,**/*}.js', {
-//     packTo: '${project.static}/index.js'
-// });
-// fis.match('/server/author.js', {
-//     packOrder: -99
-// });
-// fis.match('/server/console.js', {
-//     packOrder: 2
-// });
+fis.match('/{server,components/jquery}/{*,**/*}.js', {
+    packTo: '${project.static}/yhtml5.js'
+});
+fis.match('/server/author.js', {
+    packOrder: -999
+});
+fis.match('/server/console.js', {
+    packOrder: 2
+});
 fis.match('/{server,components}/{*,**/*}.css', {
     packTo: '${project.static}/yhtml5.css'
 });
@@ -164,7 +167,6 @@ fis.match('/server/author.css', {
 fis.match('/components/iconfont/iconfont.css', {
     packOrder: -78
 });
-
 
 /************************* Pro规范 *****************************/
 fis.media('pro')
