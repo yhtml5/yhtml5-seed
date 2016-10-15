@@ -13,38 +13,72 @@ Hello,大家好. 前些天我们分享了一些现在前端的一些理念思想
 每个公司的技术团队要把精力集中于业务逻辑的实现，而不是做一些IT基建工作, 甚至重复性的工作  
 好的工程师，应该擅于分析各种平台/框架/工具，再加以利用拼装，快速高效实现公司核心业务！  
 
-脚手架就是这样的一个东西: 解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题  
+脚手架就是这样的一个东西: 解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题    
+YHTML5-Seed是一个前端脚手架工具. 我们可以借助这个种子项目来构建一个全新的前端应用.可以是多页面应用, 单页面应用, 亦或是Hybird App   
+你只需要根据具体的项目进行相关的构建任务搭建和包依赖管理. 并提供对应的demo
 
 当然卓越的前端工程师不会止于用轮子, 他们深入,当发现现有的轮子不满足业务的时候.
 能自己写一套, 引起共鸣后, 大家一同维护, 最后打造一个开源社区, 推翻原来轮子的统治地位
 
 现在前端变革非常大, 每天都会有新的技术取代旧的技术
 
-* grunt, gulp, npm script
-* jquery, angualr, vue, react
+> grunt, gulp, npm script
+> jquery, angualr, vue, react
 
-基础服务我们没有必要自己造轮子,有限的人力投入到做好产品上. 做项目的过程中,造的一些轮子可以独立成一些组件, 再融合回脚手架中
+基础服务我们没有必要自己造轮子,有限的人力投入到做好产品上. 做项目的过程中,造的一些轮子可以独立成一些组件, 再融合回脚手架中**xmind --Workflow**
 
-- [ ] 文档与规范: 
+**xmind --筑家易前端开发模式**
+
+里面所有的技术元素都会不断更新换代, 但是这套工作流不会有大变化
+
+- [x] 文档与规范
+     - [ ]codeStandard
      - [ ]Directory Standard 
-     - [ ]Code Standard
      - [ ]README.md
-     - [ ]progress.md 
-     - [ ]issue.md
-     - [ ]project.md
-     - [ ]styleguide
+     - [x]progress.md 
+     - [x]issue.md
      - [ ]Etc. etc.
-
-     
-- [ ] other:
+     - [ ](待融合晨翱的css规范)
+- [ ] 包管理(框架,工具,元素,组件) 
+     - [ ]bower
+     - [ ]npm
+     - [ ] [semver]
+     - [ ]custom 
+     - [ ]etc, xmind
+- [ ] components
+     - [ ]css
+         -[ ]animation.css    
+         -[ ]bootstap.base.css
+         -[ ]custom.css 
+         -[ ]base.css
+     - [ ]iconfont
+     - [ ]meta
+     - [ ]js
+         -[ ]把常用的函数封装
+- [ ] viewType
+     - [ ]SPA
+     - [ ]Pages
+     - [ ]Etc.etc.
+- [ ]解决方案        
+     - [ ] 浏览器兼容性解决方案
+         - [ ] 浏览器前缀  --现代浏览器,不同浏览器厂商, 使用构建工具自动添加 css浏览器前缀
+         - [ ] [normalize]  --清除各浏览器自带的标签样式规则, 消除样式差异
+         - [ ] [html5shiv]  --创建新的HTML5标签,自动完成了设置 IE 浏览器和新语义元素的兼容性
+         - [ ] [es5-shim]  --为低版本浏览器, 添加es5规则      
+         - [ ] [json2]  --IE6 IE7 IE8 不支持 JSON 对象
+         - [ ] [Modernizr]  --监测浏览器特性, 根据不同是否支持某个属性添加 相对于的css,js
+     - [ ] 模拟数据
+         - [ ] mock.js  (待扩展)
+- [ ] other
      - [ ].gitigoner
      - [ ]LICENSE  
      - [ ]design
      - [ ]production
 
+到这里,大家可能在想, what are you talk about? 脚手架在哪里?
+那我们就开始吧, 让大家成功运行一个demo项目
+在开始之前,我们需要一些准备工作
 
-
- 
 ## 环境的安装  
   
 前端开发还需要安装环境? 是的,前端也需要, 也很有必要这么做.  
@@ -127,12 +161,11 @@ bower install
   
 ## 如何开始使用
 
-到这里,大家可能在想, what are you talk about? 脚手架在哪里? 
-那我们就开始吧, 让大家成功运行一个demo项目
-
 ```
 open github.com  
 git clone
+git branch -a
+git checkout -b dev origin/dev
 cd YHTML5-Seed/app
 ls
 ```
@@ -147,12 +180,21 @@ fis-conf.js           | config file
 change something and enjoying yourself
 ```
 
-```
-
-```
+**Fis3常用错误**
  
 **目录结构**
 
 
+不过遗憾的是: FIS3/gulp/grunt 将会被淘汰  
+总得来说就是 它引入了一层复杂但是多余的抽象层，用来抽象直接的构建命令  
+比如 gulp-uglify 和 grunt-contrib-uglify 用来包装 uglifyjs 命令。这层抽象所建立的插件生态带来了很多问题:  
+额外的抽象; 带来了额外的学习成本; 插件依赖作者; 无论是插件质量、设计合理性、文档、更新及时性等严重依赖作者自身的水平与投入  
+所以以后我们会自己构建shell脚本, 定制更符合我们公司的构建工具.   
+
+
+
+
+
+[semver]:http://semver.org/
 
  

@@ -11,6 +11,7 @@
  *
  *====================================================================*/
 var yhtml5Data = {
+    version: 1.2,
     name: "yhtml5",
     viewType: "page",
     domain: ".",
@@ -45,7 +46,7 @@ fis.match('/components/**', {
 if (yhtml5Data.viewType === 'page') {
     fis.match('/page/(*.html)', {
         release: '/$1'
-    });
+    })
 }
 fis.match('/**/(*.design.*)', {
     release: '/vendor/design/$1'
