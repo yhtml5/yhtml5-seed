@@ -22,7 +22,7 @@ var yhtml5Data = {
     domain: ".",
     path: "/static",
     framework: "jquery",
-    isStart: false
+    isStart: true
 }
 console.log('This project is based on YHTML5-Seed and developed by ' + yhtml5Data.author)
 /************************* Project Setting *****************************/
@@ -193,7 +193,7 @@ fis.media('pro')
         }
     })
     //css 自动补充兼容性 https://github.com/ai/browserslist#queries
-    .match('/{'+yhtml5Data.viewType+',components}/{*,**/*}.css', {
+    .match('/{' + yhtml5Data.viewType + ',components}/{*,**/*}.css', {
         preprocessor: fis.plugin('cssprefixer', {
             "browsers": ["FireFox > 1", "Chrome > 1", "ie >= 8"],
             "cascade": true
