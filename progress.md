@@ -28,6 +28,9 @@
 - [ ] 添加demo页
 - [ ] 介绍YHTML5-Seed
 - [ ] 增加文档系统: 项目说明, 项目进度, 任务分配
+- [ ] 学习 npm script, 自动安装插件, bower install
+- [ ] 学习 npm script, 替换bower
+
 
 ### changeLog
 - [ ] 2016.08.15 融合SPA单页应用模式, 以及普通开发模式 不再以按文件夹区分  

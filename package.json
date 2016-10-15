@@ -1,7 +1,9 @@
 {
   "name": "yhtml5-seed",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "The web's scaffolding tool for modern webapps",
+  "main": "app/fis-conf.js",
+  "author": "yhtml5 <1417376255@qq.com>",
   "repository": "https://github.com/yhtml5/YHTML5-Seed",
   "license": "MIT",
   "devDependencies": {

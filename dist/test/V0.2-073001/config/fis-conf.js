@@ -112,7 +112,7 @@ fis.media('pro')
         domain: '.'
     })
     //html 去除注释
-    .match('{/index.html,/view/*.html}', {
+    .match('{/start.html,/view/*.html}', {
         optimizer: function (content) {
             return content.replace(/<!--([\s\S]*?)-->/g, '');
         }
@@ -124,7 +124,7 @@ fis.media('pro')
             "cascade": true
         })
     })
-// .match('/{{components,view}/**/*.{html,css},index.html}', {
+// .match('/{{components,view}/**/*.{html,css},start.html}', {
 //     optimizer: fis.plugin('htmlminify', {
 //         removeComments: true,
 //         collapseWhitespace: true,
