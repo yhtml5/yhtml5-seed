@@ -40,7 +40,8 @@ fis.set('project.files', [
     '/bower_components/jquery/dist/jquery.min.js',
     '/bower_components/pickadate/lib/compressed/**/{picker,default,zh_CN}.*',
     '/bower_components/form.validation/dist/**/{formValidation.min,bootstrap.min,zh_CN}.*',
-    '/bower_components/bootstrap-datepicker/dist/**/{bootstrap-datepicker3.min.css,bootstrap-datepicker.min.js,bootstrap-datepicker.zh-CN.min.js}'
+    '/bower_components/bootstrap-datepicker/dist/**/{bootstrap-datepicker3.min.css,bootstrap-datepicker.min.js,bootstrap-datepicker.zh-CN.min.js}',
+    '/bower_components/echarts/dist/echarts.min.js'
     // '/bower_components/vue/dist/vue.min.js',
 ]);
 /************************* Directory Standard *****************************/
@@ -176,6 +177,9 @@ fis.match('/bower_components/pickadate/lib/compressed/**/default.date.css', {
 });
 fis.match('/bower_components/pickadate/lib/compressed/**/default.time.css', {
     packOrder: -265
+});
+fis.match('/bower_components/echarts/dist/echarts.min.js', {
+    packOrder: -199
 });
 fis.match('/components/iconfont/iconfont.css', {
     packOrder: -99
