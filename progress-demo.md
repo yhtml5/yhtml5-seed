@@ -2,47 +2,14 @@
 
 ### **任务分配**
 
-<table cellspacing="0">
-  <thead>
-   <tr>
-     <th>功能模块</td>
-     <th>负责人</td>
-     <th>备注</td>
-   </tr>
-  </thead>
-  <tbody> 
-   <tr>
-      <td>项目构架</td>
-      <td>Kyle</td>
-      <td>项目基础工程搭建(项目包依赖管理, 配置fis-conf.js, 配置依赖关系)</td>
-   </tr>
-   <tr>
-       <td>资源更新</td>
-       <td>Meng</td>
-       <td>字体图标, 设计稿件,切图等更新 </td>
-   </tr>
-   <tr>
-      <td>项目开发</td>
-      <td>wen,Meng,Kyle</td>
-      <td>页面模块化开发, UI组件化开发</td>
-   </tr>
-   <tr>
-      <td>数据联调</td>
-      <td>wen,Kyle</td>
-      <td>管理VM模块的数据绑定与通讯, 负责与后台数据接口联调</td>
-   </tr>
-   <tr>
-      <td>项目测试</td>
-      <td>wen,Meng,Kyle</td>
-      <td>测试页面逻辑是否正确, UI细节是否完善, 功能是否满足, 有无明显的bug</td>
-   </tr>
-   <tr>
-      <td>项目发布</td>
-      <td>Kyle</td>
-      <td>基于NodeJS编译输出完整的html页面, 完成基本bug修复, 处理代码冲突  </td>
-   </tr>
-   </tbody>
-</table>
+|功能模块|负责人|备注|
+|:---|:---|:---|
+|项目构架|Kyle|项目基础工程搭建(项目包依赖管理, 配置fis-conf.js, 配置依赖关系)|
+|资源更新|Meng|字体图标, 设计稿件,切图等更新|
+|项目开发|wen,Meng,Kyle|页面模块化开发, UI组件化开发|
+|数据联调|wen,Kyle|管理VM模块的数据绑定与通讯, 负责与后台数据接口联调|
+|项目测试|wen,Meng,Kyle|测试页面逻辑是否正确, UI细节是否完善, 功能是否满足, 有无明显的bug|
+|项目发布|Kyle|基于NodeJS编译输出完整的html页面, 完成基本bug修复, 处理代码冲突|
 
 ### demo 
 - [ ] UI components
