@@ -207,7 +207,7 @@ change something and enjoying yourself
   fis3 server start           | stop/restart/info/help | ipconfig
   fis3 release -cwl           | clean/watching/living
   fis3 release pro -cwl       | pro/cdn/test
-  fis3 release pro -d ../dist |
+  fis3 release pro -d ../dist/v0.1/ |
   fis-conf.js                 | config file
 
 * 内容嵌入
