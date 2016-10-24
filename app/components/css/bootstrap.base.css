@@ -6,7 +6,7 @@
 .text-truncate {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal;
+    white-space: nowrap;
 }
 
 .text-indent-2 {
