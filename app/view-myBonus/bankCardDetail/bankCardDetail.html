@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--开发环境-->
+<html lang="en">
+<head>
+    <link rel="import" href="../../components/meta/index.html?__inline">
+    <!--STYLE_PLACEHOLDER-->
+</head>
+<body class="y-bgc-f5f5f5">
+<div id="bankCardDetail" v-cloak>
+    <x-header :left-options="{showBack:true,backText: '账户管理'}">
+        <span class="y-cl-fff" slot="right" @click="cardDelete()">删除</span>
+    </x-header>
+
+    <div class="y-bank-list">
+        <div class="y-bank-li row">
+            <div class="col-xs-2"><img :src="accountLogo" class="y-bank-icon"/></div>
+            <div class="col-xs-10">{{accountName}}</div>
+        </div>
+    </div>
+    <group class="y-m-t-10">
+        <div class="weui_cell weui_cell_warn">
+            <div class="weui_cell_hd">
+                <label class="weui_label" style="width: 4em;">{{inputNum}}</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" v-model="accountNum" type="text" >
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_warn">
+            <div class="weui_cell_hd">
+                <label class="weui_label" style="width: 4em;">{{inputName}}</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" v-model="cardName" type="text" value="张三">
+            </div>
+        </div>
+    </group>
+    <p class="y-text-notice">只能绑定本人的银行卡</p>
+    <x-button type="primary" @click="cardChange()">保存</x-button>
+    <loading :show="notice.loading"></loading>
+    <toast :show.sync="notice.success" :time="1000">{{notice.successText}}</toast>
+    <toast :show.sync="notice.valid" type="text" width="160px">{{notice.text}}</toast>
+</div>
+<!--SCRIPT_PLACEHOLDER-->
+<!--@require /server/author.css-->
+<!--@require /server/author.js-->
+<!--@require /page/start/index.css-->
+<!--@require /page/card/index.css-->
+<!--@require /page/nav/index.css-->
+<!--@require /components/js/bankCardDetail.js-->
+</body>
+</html>
+

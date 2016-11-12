@@ -11,7 +11,7 @@
     "fis3": "^3.4.15",
     "fis3-optimizer-htmlminify": "^1.0.1",
     "fis3-postpackager-loader": "^2.1.3",
-    "fis3-preprocessor-cssprefixer": "^0.0.2"
+    "fis3-preprocessor-cssprefixer": "*"
   },
   "scripts": {
     "postinstall": "bower install"

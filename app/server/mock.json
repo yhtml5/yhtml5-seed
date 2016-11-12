@@ -1,0 +1,21 @@
+{
+  "resultCode": 0,
+  "errMsg": "",
+  "userId": "yhtml5",
+  "accountDetail": [
+    {
+      "createTime": "2016-02-26 19:21:45",
+      "completionTime": "2016-02-26 19:21:45",
+      "num": "16022621421937332592",
+      "orderNum": "7564563434267987",
+      "class": "手续费",
+      "expense": "+100",
+      "income": "-200",
+      "balance": "3,293.22",
+      "note": "test",
+      "money": "-0.22",
+      "payType": "支付宝",
+      "state": "支付成功"
+    }
+  ]
+}

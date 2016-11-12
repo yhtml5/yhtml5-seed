@@ -1,0 +1,127 @@
+/*
+* @require animation.css
+* @require box.css
+* @require custom.css
+*/
+
+/*==================== base ====================*/
+
+.y-bgc-000 {
+    background-color: #000;
+}
+
+.y-bgc-333 {
+    background-color: #333;
+}
+
+.y-bgc-666 {
+    background-color: #666;
+}
+
+.y-bgc-999 {
+    background-color: #999;
+}
+
+.y-bgc-ccc {
+    background-color: #ccc;
+}
+
+.y-bgc-fff {
+    background-color: #fff;
+}
+
+.y-bgc-f5f5f5 {
+    background-color: #f5f5f5;
+}
+
+.y-bgc-ff0000 {
+    background-color: #ff0000;
+}
+
+.y-border-none {
+    border: none;
+}
+
+.y-cl-000 {
+    color: #000;
+}
+
+.y-cl-333 {
+    color: #333;
+}
+
+.y-cl-666 {
+    color: #666;
+}
+
+.y-cl-999 {
+    color: #999;
+}
+
+.y-cl-ccc {
+    color: #ccc;
+}
+
+.y-cl-ddd {
+    color: #ddd;
+}
+
+.y-cl-eee {
+    color: #eee;
+}
+
+.y-cl-fff {
+    color: #fff;
+}
+
+.y-cl-f5f5f5 {
+    color: #f5f5f5;
+}
+
+.y-cl-ff0000 {
+    color: #ff0000;
+}
+
+.y-fs-14 {
+    font-size: 14px;
+}
+
+.y-fs-16 {
+    font-size: 16px;
+}
+
+.y-fs-18 {
+    font-size: 18px;
+}
+
+.y-fs-24 {
+    font-size: 24px;
+}
+
+.y-fs-28 {
+    font-size: 28px;
+}
+
+.y-fs-36 {
+    font-size: 36px;
+}
+
+.y-fs-50 {
+    font-size: 50px;
+}
+
+.y-fs-90 {
+    font-size: 90px;
+}
+
+.y-fs-120 {
+    font-size: 120px;
+}
+
+.y-fw-b {
+    font-weight: 700;
+}
+
+.y-fw-n {
+    font-weight: 400;
+}

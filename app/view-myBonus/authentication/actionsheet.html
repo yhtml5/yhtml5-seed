@@ -1,0 +1,12 @@
+<!--<actionsheet :show.sync="actionsheet.show" :menus="actionsheet.menus" @on-menu-click="choiceImage" cancel-text="取消" show-cancel></actionsheet>-->
+<div class="vux-actionsheet">
+    <div class="weui_mask_transition" :class="{'y-display-b': actionsheet.show, 'weui_fade_toggle':actionsheet.show}" @click="actionsheetCancel()"></div>
+    <div class="weui_actionsheet" :class="{'weui_actionsheet_toggle': actionsheet.show}">
+        <div class="weui_actionsheet_menu">
+            <div class="weui_actionsheet_cell" @click="wxChooseImageAlbum">相机</div>
+            <div class="weui_actionsheet_cell">照片</div>
+            <div class="vux-actionsheet-gap"></div>
+            <div class="weui_actionsheet_cell" @click="actionsheetCancel()">取消</div>
+        </div>
+    </div>
+</div>

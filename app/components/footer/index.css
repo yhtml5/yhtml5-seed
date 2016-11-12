@@ -1,0 +1,15 @@
+.v-footer {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    position: fixed;
+    bottom: 0;
+    left:0;
+}
+
+.v-footer.v-default {
+    background-color: #22c064;
+    color: #fff;
+}

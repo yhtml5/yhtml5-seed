@@ -1,0 +1,84 @@
+.v-nav-orderManager {
+
+}
+
+.v-nav-orderManager .active {
+    border-bottom: #f13d1f solid 2px;
+}
+
+.v-nav-orderManager .col-xs-3:hover,
+.v-nav-orderManager .col-xs-3:focus {
+    border-bottom: #f13d1f solid 2px;
+}
+
+.y-nav {
+    text-align: center;
+    padding: 16px 0;
+    color: #999;
+}
+
+.y-nav a {
+    text-decoration: none;
+}
+
+.y-nav .y-nav-red {
+    color: #ff6161;
+    background-color: #ffffff;
+    border-color: #ff6161;
+    width: 68px;
+}
+
+.y-nav .y-nav-red.active {
+    color: #fff;
+    background-color: #ff6161;
+    border-color: #ff6161;
+    box-shadow: none;
+}
+
+.v-nav {
+    text-align: center;
+    padding: 16px 0;
+    color: #999;
+}
+
+.v-nav .active {
+    color: #f13d1f;
+}
+
+.y-nav-bg {
+    position: relative;
+    background-color: #1d2027;
+    line-height: 50px;
+    height: 50px;
+    color: #fff;
+}
+
+.y-nav-bg .daohangfanhui {
+    position: absolute;
+    color: #fff;
+}
+
+
+
+.y-nav-bg .select {
+    position: absolute;
+    right: 10px;
+    top:0;
+    color: #999;
+    height: 50px;
+    background-color: #1d2027;
+    font-size: 13px;
+}
+
+.y-nav-bg .v-date {
+    margin: 0 auto;
+    width: 70px;
+    color:#fff;
+
+}
+
+.y-nav-bg .v-date .picker__input {
+    border: none;
+    background-color: #1d2027;
+    padding: 0;
+}

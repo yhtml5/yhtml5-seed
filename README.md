@@ -1,27 +1,25 @@
-## YHTML5-Seed丨[Document]丨[项目问题]丨[项目进度]
+## YHTML5-Seed丨[Document]
                
 ![npm version] ![node version] ![Build Status] ![downloads total] ![author]
+
+### 项目简介 
 
 YHTML5-Seed是一个前端脚手架工具. 我们可以借助这个种子项目来构建一个全新的前端应用.可以是多页面应用, 单页面应用, 亦或是Hybird App   
 你只需要根据具体的项目进行相关的构建任务搭建和包依赖管理.
 
-### 快速链接
-- [项目简介](#项目简介)
-    - [项目特点](#项目特点)
-    - [技术栈](#浏览器兼容)
-- [入门指南](#入门指南)
-    - [开发环境](#开发环境)
-    - [克隆Dashboard](#克隆Dashboard)
-    - [安装依赖](#安装依赖)
-    - [运行应用程序](#运行应用程序)
-    - [项目进展]
-    - [版本历史](https://github.com/yhtml5/FW-Dashboard/blob/master/changeLog.md)
-    - [issue]
+### 项目构成
 
-## 项目简介 
+- [ ] [思维导图][production]
+- [ ] [代码规范][codeStandard]
+- [ ] 解决方案
+    - [ ] 使用iconfont,css,svg代替传统图片,图标
+    - [ ] 浏览器兼容性
+    - [ ] 虚拟数据
+    - [ ] 预制代码 
+    - [ ] 可定制设计Demo
 
 ### 项目特点  
-  * 遵循筑家易前端开发代码规范(待完善)
+  * 遵循筑家易前端开发[代码规范][codeStandard]
   * 使用npm全自动安装所依赖的包,构建项目初始框架
   * 支持阿里矢量图标 (6w+ 可自定义图标)
   * 规范项目开发, 测试, 发布等目录及文件路径
@@ -37,31 +35,26 @@ YHTML5-Seed是一个前端脚手架工具. 我们可以借助这个种子项目�
 根据产品的需求,功能模块,UI特色, 选择一套合适的技术栈. 以下为可选的技术元素, 可以自由组合
 
 #### 构建工具(开发环境)
-  * bower
+  * bower/[NPM][npm]
   * commonjs
-  * Fis3
+  * fis3
   * ProtractorJS
   * [NodeJS]
-  * [NPM]
-
+  
 #### 前端框架/类库(生产环境)
-  * AngularJS
-  * AngularUI
-  * AngularUI-bootstrap
-  * AngularUI-Router
-  * Animate.css
-  * Bootstrap
-  * EchartJS 
-  * html5-boilerplate
-  * Jquery
-  * Modernizr
-  * Normalize.css
-  * Vue.js
+  * AngularJS/AngularUI/AngularUI-bootstrap/AngularUI-Router
+  * Animate.css/EchartJS/signature_pad
+  * Bootstrap/Jquery
+  * html5-boilerplate/Modernizr/Normalize.css
+  * reqwest
+  * vue/vux
 
 ## 开发指南  
+
 ### 开发环境  
 首先, 你需要git去克隆[YHTML5-Seed]库. 你需要下载[git].   
-我们也使用[NodeJS]工具初始化和测试cmbc2。你必须有Node环境和[NPM]
+你可以在[YHTML5-Tutorial][YHTML5-Tutorial-Git]找到git常用命令   
+我们也使用[NodeJS][nodejs]工具初始化和测试cmbc2。你必须有Node环境和[NPM][npm]
 
 ### 克隆项目
 
@@ -91,19 +84,17 @@ git clone --depth=1 https://github.com/yhtml5/YHTML5-WEB.git <your-project-name>
 我们能简单的用命令行去安装项目依赖的包
 
 ```
+git checkout -b dev origin/dev
+
 cd YHTML5-Seed
 npm install
-
-cd YHTML5-Seed/app
-bower install
 ```
 
 安装后在项目里你应该能找到两个新的文件。  
 * `node_modules`-工具包含了我们需要的npm包  
-* `app/bower_components`-包含了angular框架文件  
+* `app/bower_components`-包含了项目所依赖的类库,框架,UI或工具  
 
 > 注意`bower_components`文件通常被安装在根文件夹，但dashboard改变位置通过`.bowerrc`文件。  
-> 把它放在app文件夹中，更容易通过网络服务提供文件。  
 
 ### 服务应用程序文件  
 [NodeJS]本身就可以在本地创建一个服务器,新建一个前端应用, 而不需要一个后端的服务器  
@@ -202,20 +193,19 @@ YHTML5-Seed
 [html5shiv]:https://github.com/aFarkas/html5shiv
 [jasmine]: http://jasmine.github.io
 [karma]: http://karma-runner.github.io
-[Modernizr]:https://github.com/Modernizr/Modernizr
-[NPM]: https://www.npmjs.org/
-[NodeJS]: http://nodejs.org
-[problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
-[project progress]:https://github.com/yhtml5/FW-Dashboard/issues?q=%E4%BB%BB%E5%8A%A1+is%3Aopen
+[modernizr]:https://github.com/Modernizr/Modernizr
+[npm]: https://www.npmjs.org/
+[nodejs]: http://nodejs.org
 [protractor]: https://github.com/angular/protractor
 [travis]: https://travis-ci.org/
 
-[Document]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README_EN.md
-[中文文档]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README.md
-[Issue]:https://github.com/yhtml5/YHTML5-Seed/blob/master/issue.md
-[项目问题]:https://github.com/yhtml5/YHTML5-Seed/blob/master/issue.md
-[Progress]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
-[项目进度]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
+[codeStandard]:https://github.com/yhtml5/YHTML5-Seed/blob/master/codeStandard
+[document]:https://github.com/yhtml5/YHTML5-Seed/blob/master/README_EN.md
+[issue]:https://github.com/yhtml5/YHTML5-Seed/blob/master/issue.md
+[progress]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
+[problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
+[YHTML5-Tutorial-Git]:https://github.com/yhtml5/YHTML5-Tutorial/tree/master/app/git
+
 
 
 

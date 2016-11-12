@@ -1,0 +1,49 @@
+
+.y-open-autograph{
+  padding:10px;
+  background:#fff;
+  color:#666;
+  margin-top:10px;
+}
+
+.y-open-autograph .y-autograph-img{
+  width:40px;
+  height:40px;
+}
+
+.v-autograph{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #fbfbfb;
+}
+
+.v-autograph .vux-header{
+  height:46px;
+}
+
+.y-autograph-box{
+  width:100%;
+  height:calc(100% - 86px);
+  background:#fff;
+}
+
+.y-autograph-box .y-autograph-body{
+  position: absolute;
+  width:100%;
+  height:calc(100% - 85px);
+}
+
+.y-autograph-clear{
+  width:100%;
+  line-height: 42px;
+  background-color:#fff;
+  text-align: center;
+  color:#666;
+  border-top:1px solid #e0e0e0;
+  position: absolute;
+  bottom: 0;
+  left:0;
+}

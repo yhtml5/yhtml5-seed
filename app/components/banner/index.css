@@ -1,0 +1,23 @@
+.v-banner {
+    background-color: #539fbf;
+    padding: 20px;
+    color: #ddd;
+}
+
+.v-banner h4 {
+    font-size: 14px;
+}
+
+.v-banner .y-hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.v-banner .v-num {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 30px;
+    min-height: 48px;
+}

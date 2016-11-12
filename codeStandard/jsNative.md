@@ -33,7 +33,7 @@
 	```
 	* 回调函数：
 		
-		```
+	```
 	zjyVM.appUploadImageResult(data);
 	```
 		* data格式JSON对象:{code : 200, msg : '', url : '...', index : 1}，
@@ -48,5 +48,6 @@
 ## Demo
 [jingjitong.html](js_native_interaction_demo/jingjitong.html)
 [jingjitong2.html](js_native_interaction_demo/jingjitong2.html)
+
 [documentIOS]:http://192.168.1.235:8777/iOSTeam/Documents
 

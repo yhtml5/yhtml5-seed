@@ -1,0 +1,17 @@
+.v-notice {
+    background-color: #f8f8f8;
+    padding: 10px;
+    color: #c0c0c0;
+    font-size: 14px;
+}
+
+.v-notice .v-num {
+    margin: auto 4px;
+}
+
+.v-notice-black {
+    background-color: #333;
+    padding: 8px 20px;
+    color: #999;
+    font-size: 14px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--开发环境-->
+<html lang="en">
+<head>
+    <link rel="import" href="../../components/meta/index.html?__inline">
+    <!--STYLE_PLACEHOLDER-->
+</head>
+<body class="y-bgc-f5f5f5">
+<div id="withdrawals" v-cloak>
+    <x-header :left-options="{showBack:true,backText: '提现'}"></x-header>
+    <group>
+        <cell title="到账账户" :value="accountValue" is-link @click="openAccountList"></cell>
+    </group>
+    <div class="y-withdrawal-text">
+        <p class="y-fs-16 y-cl-666">提现金额</p>
+        <div class="y-fs-36 y-p-y-20 row">
+            <div class="col-xs-2">￥</div>
+            <div class="col-xs-10"><input type="number" class="y-withdrawal-input" v-model="withdrawalAmount" placeholder="请输入"></div>
+        </div>
+        <p class="y-fs-16 y-cl-666">可用金额：{{availableAmount}}元</p>
+    </div>
+    <p class="y-text-notice">
+        注：单月提取超过800元，将需要扣个人所得税，具体见<br>
+        <a href="question.html" class="y-cl-539fbf">
+            <icon type="info" class="y-p-r-20"></icon>
+            &nbsp;&nbsp;常见问题</a>
+    </p>
+    <x-button v-if="btnSave" type="primary" @click="saveWithdrawalAmount">保存</x-button>
+    <x-button v-else class="y-bgc-d5d5d5 y-cl-fff">保存</x-button>
+    <p class="y-text-notice">2小时后到账</p>
+    <div v-show="accountList" class="v-accountList">
+        <div class="vux-header" @click="returnWithdrawals">
+            <div class="vux-header-left"><a class="vux-header-back v-transition">选择账户</a></div>
+            <h1 class="vux-header-title"><span class="v-transition hide"></span></h1>
+        </div>
+        <ul class="v-accountList-ul">
+            <li v-for="account in arrAccounts" class="y-bank-li row" @click="selectAccountValue($index)">
+                <div class="col-xs-2">
+                    <img :src=account.accountLogo class="v-img">
+                </div>
+                <div class="col-xs-10">
+                    <p>{{account.accountName}}</p>
+                    <p>{{account.accountNum}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <loading :show="notice.loading" :text="提交中..."></loading>
+    <toast :show.sync="notice.success" :time="1000">提交成功</toast>
+    <toast :show.sync="notice.valid" type="text" width="160px">{{notice.text}}</toast>
+</div>
+<!--SCRIPT_PLACEHOLDER-->
+<!--@require /server/author.css-->
+<!--@require /server/author.js-->
+<!--@require /page/list/index.css-->
+<!--@require /page/card/index.css-->
+<!--@require /page/nav/index.css-->
+<!--@require /components/js/withdrawals.js-->
+</body>
+</html>
+

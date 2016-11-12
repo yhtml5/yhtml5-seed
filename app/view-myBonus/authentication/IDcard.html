@@ -1,0 +1,7 @@
+<div class="v-card" v-for="(index,IDcard) in IDcards">
+    <p class="ID-title">{{IDcard.name}}</p>
+    <img v-show="IDcardUpload.img" :src=IDcard.imgUrl alt="" class="v-card-img"/>
+    <div></div>
+    <div v-show="IDcardUpload.backdrop" :class="['v-card-backdrop',{'v-active':IDcardUpload.backdrop}]"></div>
+    <div v-show="IDcardUpload.add" class="v-card-add" @click="openActionsheet($index)">+</div>
+</div>

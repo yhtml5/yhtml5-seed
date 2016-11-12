@@ -1,0 +1,7 @@
+<div class="weui_cells vux-no-group-title y-m-b-20" @click="toMyAccount">
+    <div class="weui_cell vux-tap-active">
+        <div class="weui_cell_bd weui_cell_primary">我的账户</div>
+        <div class="y-cl-e59313 with_arrow" v-show="myAccountNum == 0">立即绑定</div>
+        <div class="weui_cell_ft with_arrow" v-show="!myAccountNum == 0">{{myAccountNum}}</div>
+    </div>
+</div>

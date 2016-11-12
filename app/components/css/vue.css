@@ -1,0 +1,255 @@
+/*
+* @require base.css
+* @require box.css
+* @require custom.css
+*/
+/*==================== vue ====================*/
+
+[v-cloak] {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-indent-2 {
+    text-indent: 2em;
+}
+
+.vux-no-group-title, .weui_cells {
+    margin-top: 0;
+}
+
+.weui_input {
+    padding-right: 10px;
+    width: calc(100% - 10px);
+}
+
+.y-text-notice {
+    text-indent: 15px;
+    font-size: 12px;
+    color: #999;
+    line-height: 30px;
+}
+
+.y-text-error {
+    text-indent: 15px;
+    font-size: 12px;
+    color: #d34e4e;
+    line-height: 30px;
+}
+
+.vux-header {
+    background: #539fbf;
+}
+
+.vux-header .vux-header-left .vux-header-back:before {
+    border-color: #fff;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+}
+
+.vux-header .vux-header-left a, .vux-header .vux-header-right a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.vux-header .vux-header-left a {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dp-header .dp-item {
+    color: #539fbf;
+}
+
+.y-question-p {
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    margin: 10px 0 0 12px;
+    font-size: 12px;
+    color: #999;
+}
+
+button.weui_btn {
+    margin-top: 50px;
+    width: 92%;
+}
+
+.weui_btn_primary {
+    background-color: #22c064;
+}
+
+.y-bank-list {
+    background: #fff;
+    padding-left: 14px;
+}
+
+.y-bank-list > .y-bank-li {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.y-bank-list > .y-bank-li:last-child {
+    border: none;
+}
+
+.y-bank-li .y-bank-icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 6px;
+
+}
+
+.y-bankCard {
+    margin: 0 auto 10px auto;
+    background-color: #fff;
+    width: 84%;
+    height: 100px;
+    padding: 12px;
+    border-radius: 6px 6px 0 0;
+}
+
+.y-bankCard .y-bankCard-icon {
+    width: 40px;
+    height: 40px;
+    padding-top: 4px;
+}
+
+.y-account-empty {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.y-account-empty img {
+    width: 60%;
+    padding-bottom: 20px;
+
+}
+
+.vux-button-group > a.hover, .vux-button-group > a.vux-button-group-current, .vux-button-group > a:active {
+    border-color: #539fbf;
+    background: #539fbf;
+}
+
+.bank-item {
+    display: block;
+    background: #ddd;
+    line-height: 40px;
+    margin-bottom: 2px;
+}
+
+.y-select-account {
+    background: #fff;
+    padding: 14px 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.y-select-account .y-bank-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.y-withdrawal-text {
+    background: #fff;
+    padding: 10px 0 10px 10px;
+    margin-top: 10px;
+}
+
+.y-withdrawal-text .y-withdrawal-input {
+    border: none;
+    outline: none;
+    font-size: 36px;
+    width: 100%;
+}
+
+.y-record-select {
+    background: #fff;
+    text-align: center;
+    line-height: 44px;
+}
+
+.y-record-select .y-triangle-down {
+    display: inline-block;
+    border-top: 5px solid #f2dede;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.y-type-list {
+    background: #fff;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.y-type-list .y-list-left, .y-type-list .y-list-right {
+    list-style: none;
+    line-height: 30px;
+    text-indent: 1em;
+}
+
+.y-time-list {
+    text-align: center;
+    line-height: 30px;
+}
+
+.y-record-cover {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 900;
+}
+
+.y-cover-animate {
+    animation: opacityShow 0.5s ease;
+}
+
+@keyframes opacityShow {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.y-agreement-notice {
+    font-size: 12px;
+    padding: 10px;
+    color: #999;
+}
+
+.weui_input {
+    padding-right: 20px;
+    width: calc(100% - 20px);
+}

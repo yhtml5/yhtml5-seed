@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--开发环境-->
+<html lang="en">
+<head>
+    <link rel="import" href="../../components/meta/index.html?__inline">
+</head>
+<body>
+<div id="bankCardList" v-cloak>
+    <x-header :left-options="{showBack:true,backText: '我的账户'}" class="y-p-b-10">
+        <a slot="right" href="accountBind.html" >+</a>
+    </x-header>
+    <div class="y-bankCard row" v-for="item in accountList" @click="cardDetail($index)">
+        <div class="col-xs-3">
+            <img :src=item.accountLogo class="y-bankCard-icon"/>
+        </div>
+        <div class="col-xs-9">
+            <p class="y-fs-20 y-cl-333">{{item.accountName}}</p>
+            <p class="y-fs-14 y-cl-999">{{item.accountType}}</p>
+            <p class="y-p-t-20 y-cl-333">{{item.accountNum}}</p>
+        </div>
+    </div>
+
+    <div class="y-account-empty" v-show="empty">
+        <img src="../../components/img/accountEmpty.png">
+        <p class="y-cl-999">请先绑定一个银行/支付宝账户</p>
+    </div>
+    <loading :show="loading"></loading>
+</div>
+
+<!--SCRIPT_PLACEHOLDER-->
+<!--@require /server/author.css-->
+<!--@require /server/author.js-->
+<!--@require /page/start/index.css-->
+<!--@require /page/card/index.css-->
+<!--@require /page/nav/index.css-->
+<!--@require /components/js/bankCardList.js-->
+
+</body>
+</html>
+

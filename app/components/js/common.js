@@ -7,7 +7,6 @@ if (isBrowserMobile) {
     // console.log(a);
 }
 
-
 function userBrowser(){
     var browserName=navigator.userAgent.toLowerCase();
     if(/msie/i.test(browserName) && !/opera/.test(browserName)){

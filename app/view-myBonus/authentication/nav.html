@@ -1,0 +1,10 @@
+<div class="vux-header">
+    <div class="vux-header-left"  @click="goBackApp">
+        <a class="vux-header-back v-transition">实名认证</a>
+    </div>
+    <h1 class="vux-header-title"></h1>
+    <div class="vux-header-right">
+        <a v-show="headerRightBtn.submit" slot="right" @click="submitAuthentication()">提交</a>
+        <a v-show="headerRightBtn.reAuthenticate" slot="right" @click="reAuthenticate()">重新认证</a>
+    </div>
+</div>

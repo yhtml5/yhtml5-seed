@@ -1,0 +1,30 @@
+<group>
+    <!--fieldset-->
+    <div class="weui_cell weui_cell_warn">
+        <div class="weui_cell_hd">
+            <label class="weui_label" style="width: 3em;">姓名</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input v-show="inputIDcard" class="weui_input" v-model="realname" type="text" placeholder="请输入姓名" style="text-align: right;">
+            <input v-else class="weui_input" v-model="realname" disabled placeholder="请输入姓名" style="text-align: right;">
+        </div>
+    </div>
+    <div class="weui_cell weui_cell_warn">
+        <div class="weui_cell_hd">
+            <label class="weui_label" style="width: 4em;">身份证</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input v-show="inputIDcard" class="weui_input" v-model="identity_card" type="text" placeholder="请输入身份证" style="text-align: right;">
+            <input v-else class="weui_input" v-model="identity_card" type="text" disabled placeholder="请输入身份证" style="text-align: right;">
+        </div>
+    </div>
+    <datetime v-show="inputIDcard" title="证件有效期" :value.sync="identity_date" confirm-text="确认" cancel-text="取消" placeholder="请选择证件有效期"></datetime>
+    <div v-show="!inputIDcard" class="weui_cell weui_cell_warn">
+        <div class="weui_cell_hd">
+            <label class="weui_label" style="width: 6em;">证件有效期</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" v-model="identity_date" disabled type="text" style="text-align: right;">
+        </div>
+    </div>
+</group>
