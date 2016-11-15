@@ -4,6 +4,9 @@
  */
 
 /*==================== animation ====================*/
+.y-animation:active{
+
+}
 .y-animation-bd-cl {
     -webkit-transition: border-color 0.4s ease-out 0s;
     -moz-transition: border-color 0.4s ease-out 0s;
