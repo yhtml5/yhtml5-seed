@@ -1,0 +1,33 @@
+<scroller lock-x scrollbar-y use-pullup pullup-config="config" height="calc(100% - 89px)" @pullup:loading="load">
+    <div class="v-list-group">
+        <div class="v-title" v-show="btnShow">流水明细 (元)</div>
+        <div class="v-list" v-for="(index,item) in items">
+            <div class="row">
+                <div class="col-xs-2">{{item.title}}</div>
+                <div class="col-xs-6 v-lable-warn text-truncate">
+                <span v-show="item.money_source==1||item.money_source==2||item.money_source==3||item.money_source==4">
+                    <span v-show="item.status==0">待审核</span>
+                    <span v-show="item.status==1">审核成功</span>
+                    <span v-show="item.status==2">审核失败</span>
+                </span>
+                    <span v-show="item.money_source==5||item.money_source==6">
+                <span v-show="item.withdraw_status==0">待提取</span>
+                    <span v-show="item.withdraw_status==1">提取成功</span>
+                    <span v-show="item.withdraw_status==2">提取失败</span>
+                </span>
+                </div>
+                <div class="col-xs-4 text-right">{{item.money}}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 v-lable-default text-truncate">
+                    <p>{{item.cust_name}} {{item.house_name}} {{item.withdraw_account}} {{item.withdraw_fail_reason}}
+                        <span v-show="item.withdraw_type == 1">支付宝</span>
+                        <span v-show="item.withdraw_type == 2">银行卡</span>
+                    </p>
+                </div>
+                <div class="col-xs-4 v-lable-default text-right">{{item.created_at}}</div>
+            </div>
+        </div>
+        <div class="v-more y-m-b-60" v-show="btnShow" @click="toRecordDetails">查看更多</div>
+    </div>
+</scroller>

@@ -12,11 +12,16 @@ var yhtml5Validator = {
         return result
     },
     isIdCard: function (str) {
-        var result = /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/.test(str)
+        var result = /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/.test(str);
         return result
     },
     isPhoneNum: function () {
         var result = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/.test(str);
         return result
+    },
+    isNum: function () {
+        var result = /^[0-9]*$/.test(str);
+        return result
     }
+
 }

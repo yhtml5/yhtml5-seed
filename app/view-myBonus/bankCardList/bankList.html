@@ -1,0 +1,15 @@
+<div class="y-bankCard row" v-for="item in accountList" @click="cardDetail($index)">
+    <div class="col-xs-3">
+        <img :src=item.accountLogo class="y-bankCard-icon"/>
+    </div>
+    <div class="col-xs-9">
+        <p class="y-fs-20 y-cl-333">{{item.accountName}}</p>
+        <p class="y-fs-14 y-cl-999">{{item.accountType}}</p>
+        <p class="y-p-t-20 y-cl-333">{{item.accountNum}}</p>
+    </div>
+</div>
+
+<div class="y-account-empty" v-show="empty">
+    <img src="../../components/img/accountEmpty.png">
+    <p class="y-cl-999">请先绑定一个银行/支付宝账户</p>
+</div>

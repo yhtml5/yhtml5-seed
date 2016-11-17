@@ -1,0 +1,29 @@
+<div class="row y-record-select">
+    <div class="col-xs-6" @click="getRecordType()">账单类型 <span class="y-triangle-down"></span></div>
+    <div class="col-xs-6" @click="getRecordTime()">账单时间 <span class="y-triangle-down"></span></div>
+</div>
+<div :class="['row','y-type-list',{'y-cover-animate':recordType}]"  v-show="recordType">
+    <ul class="col-xs-4 y-list-left">
+        <li @click="recordCancel()">全部</li>
+        <li @click="getTypeIncome()">收入</li>
+        <li @click="getTypeWithdrawals()">提现</li>
+    </ul>
+
+    <ul class="col-xs-8 y-list-right">
+        <li @click="getTypeState('all')">全部</li>
+        <li v-show="typeIncome">
+            <p @click="getTypeState(1)">已审核</p>
+            <p @click="getTypeState(0)">待审核</p>
+        </li>
+        <li v-show="typeWithdrawals">
+            <p @click="getTypeState(1)">成功</p>
+            <p @click="getTypeState(0)">失败</p>
+        </li>
+    </ul>
+</div>
+<div :class="['y-time-list','y-type-list',{'y-cover-animate':recordTime}]" v-show="recordTime">
+    <p @click="getOrderType('asc')">排序时间由远到近</p>
+    <p @click="getOrderType('desc')">排序时间由近到远</p>
+</div>
+
+<div :class="['y-record-cover',{'y-cover-animate':coverShow}]" v-show = "coverShow" @click="recordCancel()"></div>

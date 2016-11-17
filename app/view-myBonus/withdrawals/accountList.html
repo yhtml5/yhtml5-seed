@@ -1,0 +1,17 @@
+<div v-show="accountList" class="v-accountList">
+    <div class="vux-header" @click="returnWithdrawals">
+        <div class="vux-header-left"><a class="vux-header-back v-transition">选择账户</a></div>
+        <h1 class="vux-header-title"><span class="v-transition hide"></span></h1>
+    </div>
+    <ul class="v-accountList-ul">
+        <li v-for="account in arrAccounts" class="y-bank-li row" @click="selectAccountValue($index)">
+            <div class="col-xs-2">
+                <img :src=account.accountLogo class="v-img">
+            </div>
+            <div class="col-xs-10">
+                <p>{{account.accountName}}</p>
+                <p>{{account.accountNum}}</p>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,7 @@
+<div class="row y-open-autograph">
+    <div class="col-xs-6">委托人</div>
+    <div class="col-xs-6 text-right" @click="openAutograph">
+        <p v-show="imgEmpty">点击此签名</p>
+        <img v-show="!imgEmpty" :src="autographImg" class="y-autograph-img"/>
+    </div>
+</div>

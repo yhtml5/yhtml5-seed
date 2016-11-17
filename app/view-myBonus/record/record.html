@@ -8,84 +8,16 @@
 <body class="y-bgc-f5f5f5">
 <div id="record" v-cloak>
     <x-header :left-options="{showBack:true,backText: '流水明细'}"></x-header>
-    <div class="row y-record-select">
-        <div class="col-xs-6" @click="getRecordType()">账单类型 <span class="y-triangle-down"></span></div>
-        <div class="col-xs-6" @click="getRecordTime()">账单时间 <span class="y-triangle-down"></span></div>
-    </div>
-    <div :class="['row','y-type-list',{'y-cover-animate':recordType}]"  v-show="recordType">
-        <ul class="col-xs-4 y-list-left">
-            <li @click="recordCancel()">全部</li>
-            <li @click="getTypeIncome()">收入</li>
-            <li @click="getTypeWithdrawals()">提现</li>
-        </ul>
-
-        <ul class="col-xs-8 y-list-right">
-            <li @click="getTypeState('all')">全部</li>
-            <li v-show="typeIncome">
-                <p @click="getTypeState(1)">已审核</p>
-                <p @click="getTypeState(0)">待审核</p>
-            </li>
-            <li v-show="typeWithdrawals">
-                <p @click="getTypeState(1)">成功</p>
-                <p @click="getTypeState(0)">失败</p>
-            </li>
-        </ul>
-    </div>
-    <div :class="['y-time-list','y-type-list',{'y-cover-animate':recordTime}]" v-show="recordTime">
-        <p @click="getOrderType('asc')">排序时间由远到近</p>
-        <p @click="getOrderType('desc')">排序时间由近到远</p>
-    </div>
-    <div :class="['y-record-cover',{'y-cover-animate':coverShow}]" v-show = "coverShow" @click="recordCancel()"></div>
-
-    <!--<link rel="import" href="list/waterDetails.html?__inline">-->
-
-    <scroller lock-x scrollbar-y use-pullup pullup-config="config" height="calc(100% - 89px)" @pullup:loading="load">
-        <div class="v-list-group">
-            <div class="v-title" v-show="btnShow">流水明细 (元)</div>
-            <div class="v-list" v-for="(index,item) in items">
-                <div class="row">
-                    <div class="col-xs-2">{{item.title}}</div>
-                    <div class="col-xs-6 v-lable-warn text-truncate">
-                <span v-show="item.money_source==1||item.money_source==2||item.money_source==3||item.money_source==4">
-                    <span v-show="item.status==0">待审核</span>
-                    <span v-show="item.status==1">审核成功</span>
-                    <span v-show="item.status==2">审核失败</span>
-                </span>
-                        <span v-show="item.money_source==5||item.money_source==6">
-                <span v-show="item.withdraw_status==0">待提取</span>
-                    <span v-show="item.withdraw_status==1">提取成功</span>
-                    <span v-show="item.withdraw_status==2">提取失败</span>
-                </span>
-                    </div>
-                    <div class="col-xs-4 text-right">{{item.money}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-8 v-lable-default text-truncate">
-                        <p>{{item.cust_name}} {{item.house_name}} {{item.withdraw_account}} {{item.withdraw_fail_reason}}
-                            <span v-show="item.withdraw_type == 1">支付宝</span>
-                            <span v-show="item.withdraw_type == 2">银行卡</span>
-                        </p>
-                    </div>
-                    <div class="col-xs-4 v-lable-default text-right">{{item.created_at}}</div>
-                </div>
-            </div>
-            <div class="v-more y-m-b-60" v-show="btnShow" @click="toRecordDetails">查看更多</div>
-        </div>
-    </scroller>
-
+    <link rel="import" href="recordType.html?__inline">
+    <link rel="import" href="recordList.html?__inline">
     <loading :show="notice.loading" ></loading>
     <toast :show.sync="notice.valid" type="text" :time="1000">{{notice.text}}</toast>
-
 </div>
 
 <!--SCRIPT_PLACEHOLDER-->
-<!--@require /server/author.css-->
-<!--@require /server/author.js-->
-<!--@require /page/start/index.css-->
-<!--@require /page/card/index.css-->
-<!--@require /page/nav/index.css-->
-<!--@require /page/list/index.css-->
-<!--@require /components/js/record.js-->
+<!--@require /app/server/author.css-->
+<!--@require /app/server/author.js-->
+<!--@require record.js-->
 </body>
 </html>
 

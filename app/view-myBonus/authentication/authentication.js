@@ -5,6 +5,7 @@
  *
  */
 /************  authentication  ************/
+"use strict";
 var zjyData = {
     identity_status: 0,
     realname: '',
