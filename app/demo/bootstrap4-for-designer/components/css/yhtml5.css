@@ -1,0 +1,68 @@
+/*=========================================================================================
+ * Author:Kyle|张大漾
+ * Author Website:http://yhtml5.com
+ * Author Gihub:https://github.com/yhtml5
+ * Description: A Website disgned by boostrap and Jquery.Do something awesome and have fun !
+ *==========================================================================================*/
+
+
+/* base style
+ * ========== */
+.css-boeder-radius0{
+	border-radius: 0;
+}
+.css-height500 {
+	height: 500px;
+}
+.css-mt54 {
+	margin-top: 54px;
+}
+.css-width80 {
+	width: 80%;
+}
+
+.css-width100 {
+	width: 100%;
+}
+
+
+/* cover bootstrap
+ * =============== */
+
+
+/* style customized
+ * ================ */
+.css-banner {
+	text-align: center;
+	height: 400px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0) linear-gradient(135deg, #271b38, #563d7c, #7952b3) repeat scroll 0 0;
+}
+
+.css-banner .lead {
+	color: #fff;
+	font-size: 2rem;
+	line-height: 3rem;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.css-banner button{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	font-size: 4rem;
+	border-radius: 10px;
+}
+.css-banner img {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 500px;
+}
+
+.demo-button button {
+	margin-bottom: 10px;
+}
+
+.btn-group-vertical button {
+	margin-bottom: 0;
+}
