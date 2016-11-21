@@ -32,6 +32,7 @@
 - [ ] 学习 npm script, 替换bower
 - [ ] 数据与服务
 - [ ] 增加demo给设计师, 移动端, 可定制
+- [ ] 二维码组件
 
 
 ### changeLog
