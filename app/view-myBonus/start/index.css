@@ -1,3 +1,15 @@
+a:link{
+    text-decoration: none;
+    background:none;
+}
+a:active{
+    text-decoration: none;
+    background:none;
+}
+body{
+    background-image: radial-gradient(#374566, #010203);
+    background-image: -webkit-radial-gradient(#374566, #010203);
+}
 .v-start {
     position: absolute;
     z-index: 1;
@@ -6,10 +18,47 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 50%;
     min-width: 200px;
     max-width: 500px;
     height: 500px;
     overflow: hidden;
     text-align: center;
+}
+.list-group a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background:#539fbf;
+    color:#fff;
+    border-radius: 20px;
+    position:absolute;
+}
+
+
+.list-group a:nth-child(2n+1){
+    animation: animateLeft 6s ease-in-out infinite;
+    -webkit-animation: animateLeft 6s ease-in-out infinite;
+}
+
+.list-group a:nth-child(2n){
+    animation: animateRight 6s ease-in-out infinite;
+    -webkit-animation: animateRight 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes animateLeft {
+    0%, 100% {
+        -webkit-transform: translate(100px, 0) rotate(-6deg);
+    }
+    50% {
+        -webkit-transform: translate(-30px, 0) rotate(8deg);
+    }
+}
+
+@-webkit-keyframes animateRight {
+    0%, 100% {
+        -webkit-transform: translate(-100px, 0) rotate(8deg);
+    }
+    50% {
+        -webkit-transform: translate(30px, 0) rotate(-6deg);
+    }
 }

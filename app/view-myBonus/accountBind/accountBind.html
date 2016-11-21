@@ -8,63 +8,8 @@
 <body class="y-bgc-f5f5f5">
 <div id="accountBind" v-cloak>
     <x-header :left-options="{showBack:true,backText: '绑定账户'}"></x-header>
-    <button-tab :index.sync="index" class="y-m-a-10">
-        <button-tab-item selected>支付宝</button-tab-item>
-        <button-tab-item @click="getBankList">银行卡</button-tab-item>
-    </button-tab>
-    <swiper :index.sync="index" height="300px" :show-dots="false">
-        <swiper-item>
-            <div class="weui_cell weui_cell_warn y-bgc-fff">
-                <div class="weui_cell_hd">
-                    <label class="weui_label" style="width: 3em;">账号</label>
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" v-model="alipay_account" type="text" placeholder="邮箱/手机号">
-                </div>
-            </div>
-            <div class="weui_cell weui_cell_warn y-bgc-fff">
-                <div class="weui_cell_hd">
-                    <label class="weui_label" style="width: 3em;">姓名</label>
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" type="text" placeholder="请填写">
-                </div>
-            </div>
-            <p class="y-text-notice">只能绑定本人的支付宝帐号</p>
-            <x-button type="primary" :disabled="isButtonDisabled" @click="savaAliAccount">保存</x-button>
-        </swiper-item>
-        <swiper-item>
-            <div class="weui_cell weui_cell_warn y-bgc-fff">
-                <div class="weui_cell_hd">
-                    <label class="weui_label" style="width: 5em;">选择银行</label>
-                </div>
-                <div class="weui_cell_bd weui_cell_primary weui_cell_ft with_arrow">
-                        <select class="weui_input" v-model="bank_id">
-                            <option value="0" selected>请选择银行</option>
-                            <option v-for="item in list" :value="item.id">{{item.bank_name}}</option>
-                        </select>
-                </div>
-            </div>
-            <div class="weui_cell weui_cell_warn y-bgc-fff">
-                <div class="weui_cell_hd">
-                    <label class="weui_label" style="width: 5em;">卡号</label>
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" v-model="bank_card_no" type="text" placeholder="银行卡号">
-                </div>
-            </div>
-            <div class="weui_cell weui_cell_warn y-bgc-fff">
-                <div class="weui_cell_hd">
-                    <label class="weui_label" style="width: 5em;">开卡人</label>
-                </div>
-                <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" v-model="true_name" type="text" placeholder="真实开卡人信息">
-                </div>
-            </div>
-            <p class="y-text-notice">只能绑定本人的银行卡</p>
-            <x-button type="primary" :disabled="isButtonDisabled" @click="savaBankAccount">保存</x-button>
-        </swiper-item>
-    </swiper>
+    <link rel="import" href="tabTitle.html?__inline">
+    <link rel="import" href="tab.html?__inline">
     <loading :show="notice.loading" :text="提交中..."></loading>
     <toast :show.sync="notice.success" :time="1000">提交成功</toast>
     <toast :show.sync="notice.valid" type="text" width="160px">{{notice.text}}</toast>
@@ -75,7 +20,7 @@
 <!--@require /page/start/index.css-->
 <!--@require /page/card/index.css-->
 <!--@require /page/nav/index.css-->
-<!--@require /components/js/accountBind.js-->
+<!--@require accountBind.js-->
 </body>
 </html>
 

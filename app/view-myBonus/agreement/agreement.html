@@ -7,65 +7,18 @@
 </head>
 <body class="y-bgc-f5f5f5" onselectstart="return false">
 <div id="agreement" v-cloak>
-    <x-header :left-options="{showBack:true,backText: '委托协议'}">
-        <a slot="right" @click="submitImageToQiniu()">提交</a>
-    </x-header>
-    <p class="y-agreement-notice">按照法律法规规定您提现的金额需要进行缴纳个人所得税，该笔个人所得税将由经纪通平台代为缴纳，故请先签署代扣代缴委托书！</p>
-    <div class="y-p-x-10 y-bgc-fff">
-        <h4 class="text-center y-p-y-20">委托书</h4>
-        <p>兹委托贵公司负责办理代开劳务费发票并依法缴纳税款相关事宜，一切产生的责任与后果由我本人承担！特此声明！</p>
-        <p class="y-p-y-20">授权有效期限：2016.01.01至2016.12.31</p>
-    </div>
-    <div class="row y-open-autograph">
-        <div class="col-xs-6">委托人</div>
-        <div class="col-xs-6 text-right" @click="openAutograph">
-            <p v-show="imgEmpty">点击此签名</p>
-            <img v-show="!imgEmpty" :src="autographImg" class="y-autograph-img"/>
-        </div>
-    </div>
-    <!--<div id="container" style="position: relative;">-->
-    <!--<a class="btn btn-default btn-lg " id="pickfiles" href="#" @click="submitImageToQiniu">-->
-    <!--<i class="glyphicon glyphicon-plus"></i>-->
-    <!--<span>选择文件</span>-->
-    <!--</a>-->
-    <!--<div id="html5_1b0g46gn8ht618n01jn5ndidri3_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 145px; height: 46px; overflow: hidden;">-->
-    <!--<input id="html5_1b0g46gn8ht618n01jn5ndidri3" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" accept="">-->
-    <!--</div>-->
-    <!--</div>-->
-    <div v-show="autograph" class="v-autograph">
-        <div class="vux-header">
-            <div class="vux-header-left" @click="returnAgreement"><a class="vux-header-back v-transition">签名</a></div>
-            <div class="vux-header-right" id="agreementSave" @click="saveCanvas"><a>保存</a></div>
-        </div>
-        <p class="y-agreement-notice">建议横向手绘，以保证签名完整清晰</p>
-        <!--<div id="signature-pad" class="m-signature-pad">
-            <div class="m-signature-pad&#45;&#45;body">
-                <canvas></canvas>
-            </div>
-            <div class="m-signature-pad&#45;&#45;footer">
-                <div class="description">Sign above</div>
-                <button type="button" class="button clear" data-action="clear">Clear</button>
-                <button type="button" class="button save" data-action="save">Save</button>
-            </div>
-        </div>-->
-        <div class="y-autograph-box">
-            <div class="y-autograph-body">
-                <canvas id="canvasSignature"></canvas>
-            </div>
-            <div class="y-autograph-clear" @click="clearCanvas">清除</div>
-        </div>
-
-    </div>
+    <link rel="import" href="nav.html?__inline">
+    <link rel="import" href="content.html?__inline">
+    <link rel="import" href="enterSignature.html?__inline">
+    <link rel="import" href="signature.html?__inline">
     <loading :show="notice.loading" :text="提交中..."></loading>
     <toast :show.sync="notice.success" :time="1000">提交成功</toast>
     <toast :show.sync="notice.valid" type="text" width="160px">{{notice.text}}</toast>
 </div>
 <!--SCRIPT_PLACEHOLDER-->
-<!--@require /server/author.css-->
-<!--@require /server/author.js-->
-<!--@require /page/signature/index.css-->
-<!--@require /page/nav/index.css-->
-<!--@require /components/js/agreement.js-->
+<!--@require /app/server/author.css-->
+<!--@require /app/server/author.js-->
+<!--@require agreement.js-->
 </body>
 </html>
 

@@ -1,0 +1,13 @@
+<div v-show="autograph" class="v-autograph">
+    <div class="vux-header">
+        <div class="vux-header-left" @click="returnAgreement"><a class="vux-header-back v-transition">签名</a></div>
+        <div class="vux-header-right" id="agreementSave" @click="saveCanvas"><a>保存</a></div>
+    </div>
+    <p class="y-agreement-notice">建议横向手绘，以保证签名完整清晰</p>
+    <div class="y-autograph-box">
+        <div class="y-autograph-body">
+            <canvas id="canvasSignature"></canvas>
+        </div>
+        <div class="y-autograph-clear" @click="clearCanvas">清除</div>
+    </div>
+</div>
