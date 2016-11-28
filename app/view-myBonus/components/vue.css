@@ -8,33 +8,6 @@
 [v-cloak] {
     display: none;
 }
-
-.hide {
-    display: none;
-}
-
-.text-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-indent-2 {
-    text-indent: 2em;
-}
-
 .vux-no-group-title, .weui_cells {
     margin-top: 0;
 }

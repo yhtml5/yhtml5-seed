@@ -1,152 +1,38 @@
-/*
-* @require animation.css
-* @require bootstrap.base.css
-* @require bootstrap.component.css
-*/
+.table .y-td-xs {
+    max-width: 10px;
+}
 
-/*==================== custom bootstrap ====================*/
-.y-center-all {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    overflow: auto;
+.table .y-td-sm {
+    max-width: 50px;
+}
+
+.table .y-td-md {
+    max-width: 100px;
+}
+
+.table .y-td-lg {
+    max-width: 324px;
+    min-width: 200px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
     text-align: center;
 }
 
-.y-center-all.y-sm {
-    padding: 20px;
-    width: 50%;
-    height: 50%;
+.text-indent-2 {
+    text-indent: 2em;
 }
 
-.y-bgfull-md {
-    width: 100%;
-    padding: 20px 0px 60px 0px;
-    height: 60px;
-    min-height: 30px;
-    background-color: #fff;
+.text-right {
+    text-align: right;
 }
 
-.y-bgfull-sm {
-    width: 100%;
-    padding: 20px 0px 60px 0px;
-    height: 60px;
-    min-height: 30px;
-    background-color: #fff;
-}
-
-.y-bgfull-lg {
-    width: 100%;
-    padding: 20px 0px 60px 0px;
-    height: 60px;
-    min-height: 30px;
-    background-color: #fff;
-}
-
-.y-card {
-    border-radius: 4px;
-    border: solid 1px #e0e0e0;
-    width: 90%;
-    height: 280px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
-    background-color: #fefefe;
-    text-align: center;
-    color: #2f2f2f;
-    margin: auto;
-    padding-top: 40px;
-}
-
-.y-card-default {
-    border: solid 2px #555;
-    padding: 30px 10px;
-    margin: auto;
-}
-
-.y-card i {
-    font-size: 60px;
-    color: #3f3f3f;
-}
-
-.y-card a {
-    text-decoration: none;
-}
-
-/*progressbar*/
-
-.y-progress-step {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
+.text-truncate {
     overflow: hidden;
-    padding-left: 0;
-    /*CSS counters to number the steps*/
-    counter-reset: step;
-}
-
-.y-progress-step li {
-    list-style-type: none;
-    color: #a9a9a9;
-    text-transform: uppercase;
-    font-size: 18px;
-    width: 33.33%;
-    float: left;
-    position: relative;
-    text-align: center;
-}
-
-.y-progress-step li:before {
-    content: counter(step);
-    counter-increment: step;
-    width: 30px;
-    line-height: 30px;
-    display: block;
-    font-size: 16px;
-    color: #fff;
-    background: #a9a9a9;
-    border-radius: 50%;
-    margin: 0 auto 5px auto;
-}
-
-/*progressbar connectors*/
-
-.y-progress-step li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #a9a9a9;
-    position: absolute;
-    left: -50%;
-    top: 14px;
-    z-index: -1;
-    /*put it behind the numbers*/
-}
-
-.y-progress-step li:first-child:after {
-    content: none;
-    /*connector not needed before the first step*/
-}
-
-/*marking active/completed steps green*/
-
-/*The number of the step and the connector before it = green*/
-
-.y-progress-step li.active:before,
-.y-progress-step li.active:after {
-    background: #099fdd;
-    color: white;
-}
-
-.y-progress-step li.active:before,
-.y-progress-step li.active:after {
-    background: #099fdd;
-    color: white;
-}
-
-.y-progress-step .active .y-turn-blue {
-    color: #099fdd;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

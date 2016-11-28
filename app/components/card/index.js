@@ -1,3 +1,0 @@
-/*
- * @require ../../server/author.js
- */
