@@ -1,15 +1,16 @@
-## YHTML5-Seed丨[Document]
+## YHTML5-Seed
                
 ![npm version] ![node version] ![Build Status] ![downloads total] ![author]
 
-### 项目简介 
+### Introduction
 
-YHTML5-Seed是一个前端脚手架工具. 我们可以借助这个种子项目来构建一个全新的前端应用.可以是多页面应用, 单页面应用, 亦或是Hybird App   
-你只需要根据具体的项目进行相关的构建任务搭建和包依赖管理.
+YHTML5-Seed scaffolds out a new application. We can building a SPA, webapp or Hybird app.
+writing your build configuration, pulling in relevant build tasks 
+and package manager dependencies (e.g npm) that you might need for your build   
+               
+### Solutions
 
-### 项目构成
-
-- [ ] [思维导图][production]
+- [ ] [Xmind][production]
 - [ ] [代码规范][codeStandard]
 - [ ] 解决方案
     - [ ] 使用iconfont,css,svg代替传统图片,图标
@@ -18,9 +19,9 @@ YHTML5-Seed是一个前端脚手架工具. 我们可以借助这个种子项目�
     - [ ] 预制代码 
     - [ ] 可定制设计Demo
 
-### 项目特点  
+### Feature
   * 遵循筑家易前端开发[代码规范][codeStandard]
-  * 使用npm全自动安装所依赖的包,构建项目初始框架
+  * Automagically wire-up dependencies installed with [NPM][npm],initializes the project
   * 支持阿里矢量图标 (6w+ 可自定义图标)
   * 规范项目开发, 测试, 发布等目录及文件路径
   * 样式结构、模板引擎、业务逻辑解耦, 高内聚、低耦合
@@ -31,17 +32,17 @@ YHTML5-Seed是一个前端脚手架工具. 我们可以借助这个种子项目�
   * 一套前端资源加载策略, 实现资源同步加载/异步加载, 按需加载/预加载, 请求合并等机制
   * Etc,etc
 
-### 技术栈
+### Technology Stack
 根据产品的需求,功能模块,UI特色, 选择一套合适的技术栈. 以下为可选的技术元素, 可以自由组合
 
-#### 构建工具(开发环境)
+#### Building tools (dev)
   * bower/[NPM][npm]
   * commonjs
   * fis3
   * ProtractorJS
   * [NodeJS]
   
-#### 前端框架/类库(生产环境)
+#### Frameworks (pro)
   * AngularJS/AngularUI/AngularUI-bootstrap/AngularUI-Router
   * Animate.css/EchartJS/signature_pad
   * Bootstrap/Jquery
@@ -49,39 +50,45 @@ YHTML5-Seed是一个前端脚手架工具. 我们可以借助这个种子项目�
   * reqwest
   * vue/vux
 
-## 开发指南  
 
-### 开发环境  
-首先, 你需要git去克隆[YHTML5-Seed]库. 你需要下载[git].   
-你可以在[YHTML5-Tutorial][YHTML5-Tutorial-Git]找到git常用命令   
-我们也使用[NodeJS][nodejs]工具初始化和测试cmbc2。你必须有Node环境和[NPM][npm]
+## Development Guides 
 
-### 克隆项目
+### Prerequisites
+  
+You need git to clone the [YHTML5-Seed] repository. You can get git from [http://git-scm.com/][git].
+You can find git common commands from [YHTML5-Tutorial][YHTML5-Tutorial-Git].
 
-用Git克隆项目仓库
+We also use a number of [NodeJS][node] tools to initialize and test [YHTML5-Seed]. You must have node.js and
+its package manager [NPM][npm] installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+  
+### Clone YHTML-Seed  
+
+Clone the YHTML-Seed repository using [git][git]:
 
 ```
 git clone git@github.com:yhtml5/YHTML5-Seed.git 
 cd YHTML5-Seed/app 
 ```
 
-如果你想开始一个没有dashboard历史命令的新项目，你可以：
+If you just want to start a new project without the YHTML-Seed commit history then you can do:
 
 ```
 bash
-git clone --depth=1 https://github.com/yhtml5/YHTML5-WEB.git <your-project-name>
+git clone --depth=1 https://github.com/yhtml5/YHTML5-Seed.git <your-project-name>
 ```
 
-告诉git只下拉有历史数据的命令
+The `depth=1` tells git to only pull down one commit worth of historical data.
 
-### 包管理器
 
-**在这个项目中我们有俩种包管理工具**
+### Install Dependencies  
 
-* 我们通过`npm`管理开发环境依赖的构建工具及插件. [Node 包管理工具][npm].  
-* 我们通过`bower`管理项目依赖的第三方包. [客户端代码包管理][bower].
+We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
+us manage and test the application.
 
-我们能简单的用命令行去安装项目依赖的包
+* We get the tools we depend upon via `npm`, the [node package manager][npm].
+* We get the angular code via `bower`, a [client-side code package manager][bower].
+
+We have preconfigured `npm` to automatically run `bower` so we can simply do:
 
 ```
 git checkout -b dev origin/dev
@@ -90,20 +97,27 @@ cd YHTML5-Seed
 npm install
 ```
 
-安装后在项目里你应该能找到两个新的文件。  
-* `node_modules`-工具包含了我们需要的npm包  
-* `app/bower_components`-包含了项目所依赖的类库,框架,UI或工具  
+After everthing was installed, you should find that you have two new folders in your project.
 
-> 注意`bower_components`文件通常被安装在根文件夹，但dashboard改变位置通过`.bowerrc`文件。  
+* `node_modules` - contains the npm packages for the tools we need
+* `app/bower_components` - contains the angular framework files
 
-### 服务应用程序文件  
-[NodeJS]本身就可以在本地创建一个服务器,新建一个前端应用, 而不需要一个后端的服务器  
-我们推荐整个项目都在一个本地的服务器中进行, 在开发过程中就避免一些线上环境将会遇到的问题.   
-如在浏览器中的安全限制, 跨域请求, 资源路径, 模拟数据等等  
-> sandbox实现在浏览器之间有所不同，但往往防止一些像cookies，xhr等，需要一个html页面通过一次http请求可以正常工作, 而不是本地文件直接打开.  
+*Note that the `bower_components` folder would normally be installed in the root folder but
+YHTML-Seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes
+it easier to serve the files by a webserver.*
 
-### 运行应用程序
-我们已经配置了一个简单的开发web服务的项目。最简单的方法开始这个服务：
+### Serving the Application Files
+
+[NodeJS][node]本身就可以在本地创建一个服务器,新建一个前端应用, 而不需要一个后端的服务器
+we recommend serving the project files using a local web server during development to avoid issues 
+with security restrictions (sandbox) in browsers. 
+The sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr, etc to function properly 
+when an html page is opened via `file://` scheme instead of `http://`
+
+### Run the Application  
+
+We have preconfigured the project with a simple development web server.  The simplest way to start
+this server is:
 
 ```
 cd YHTML5-Seed/app 
@@ -112,10 +126,9 @@ fis3 server start
 fis3 release -cwl
 ```
 
-现在我们可以通过 `http://localhost:8080` 访问应用首页了
+Now browse to the app at `http://localhost:8080`.
 
-
-### 其它工作
+### Others
 
 * **/** 为项目根目录,即fis-conf.js所在的目录. 所有文件监听, 基础构建, 项目开发都基于此
 * 请更改项目名称,链接,信息. 包括但不限于: `/server/**`, `/app/fis-conf.js`, `README.md`
@@ -129,8 +142,7 @@ fis3 release -cwl
 * 甚至整个项目可以同时存在SPA应用,PG应用
 * 在这个项目中我们处理两种依赖关系: 生产环境中构建工具提供的依赖分析, 和框架提供的依赖管理。工具帮我们管理和测试应用程序
 
-    
-### 目录布局
+### Directory Layout
 
 ```
 YHTML5-Seed
@@ -195,7 +207,7 @@ YHTML5-Seed
 [karma]: http://karma-runner.github.io
 [modernizr]:https://github.com/Modernizr/Modernizr
 [npm]: https://www.npmjs.org/
-[nodejs]: http://nodejs.org
+[node]: http://nodejs.org
 [protractor]: https://github.com/angular/protractor
 [travis]: https://travis-ci.org/
 
@@ -205,7 +217,4 @@ YHTML5-Seed
 [progress]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
 [YHTML5-Tutorial-Git]:https://github.com/yhtml5/YHTML5-Tutorial/tree/master/app/git
-
-
-
-
+[YHTML5-Seed]:https://github.com/yhtml5/YHTML5-Seed
