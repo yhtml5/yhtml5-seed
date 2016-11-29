@@ -6,6 +6,15 @@ We work hard to contribute my work back to the web, mobile, server && new Front-
 
 study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 
+|Name|Usage|Time|Note|
+|---|---|---|---|
+|[vue]|--||
+|[vux]||[gitbook][vux-gitbook], [demo][vux-demo]|
+|[vuex]|manage status||[gitbook][vuex-gitbook]| 
+|[vue-cli]||[vue 结合 webpack 使用案例][vue-cli-templates-webpack]| 
+|[vue-loader]||| 
+|[vue-router]|||  
+
 - [ ] [vue]
 - [ ] [vux]  
     - [ ] [gitbook][vux-gitbook],
