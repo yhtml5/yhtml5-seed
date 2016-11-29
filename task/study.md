@@ -6,62 +6,51 @@ We work hard to contribute my work back to the web, mobile, server && new Front-
 
 study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 
-|Name|Usage|Time|Note|
-|---|---|---|---|
-|[vue]|--||
+|Name|Usage|Note|
+|---|---|---|
+|[vue]|||
 |[vux]||[gitbook][vux-gitbook], [demo][vux-demo]|
-|[vuex]|manage status||[gitbook][vuex-gitbook]| 
+|[vuex]|manage status|[gitbook][vuex-gitbook]| 
 |[vue-cli]||[vue 结合 webpack 使用案例][vue-cli-templates-webpack]| 
 |[vue-loader]||| 
 |[vue-router]|||  
 
-- [ ] [vue]
-- [ ] [vux]  
-    - [ ] [gitbook][vux-gitbook],
-    - [ ] [demo][vux-demo]
-- [ ] [vuex] | [gitbook][vuex-gitbook] 
-- [ ] [vue-cli]  
-    - [ ] [vue 结合 webpack 使用案例][vue-cli-templates-webpack] 
-- [ ] [vue-loader] 
-- [ ] [vue-router]  
- 
- 
 ### basic
-- [ ] [ES6] | [阮一峰Es6入门][es6-ruan]
-- [ ] git | [廖雪峰git教程][git-liao]
-- [ ] http    
-- [ ] linux | [鸟哥的linux私房菜][linux-vbird]
-- [ ] markdown   
-- [ ] [W3C]
-    - [ ] [html5][w3c-html5]
-    - [ ] [html5][w3c-html5.2]
 
-### node 
+|Name|Usage|Note|
+|---|---|---|
+|[ES6]||[阮一峰Es6入门][es6-ruan]|
+|git||[廖雪峰git教程][git-liao]|
+|http|||    
+|linux||[鸟哥的linux私房菜][linux-vbird]|
+|markdown|||   
+|[W3C]||[html5][w3c-html5], [html5][w3c-html5.2]|
+
+### Node.js 
 
 **Note: we'll never use fis3/gulp/grunt/yoman/bower agin. Npm script can do anything** 
 
-- [ ] [babel]
-- [ ] [express]
-    - [ ] [Express 中文文档][express-cn] 
-    - [ ] 《Node与Express开发》 
-- [ ] [eslint]
-- [ ] [forever]
-- [ ] [karma]
-- [ ] nginx
-- [ ] [npm]
-- [ ] [node] | 《深入浅出node》
-- [ ] [mockjs]
-- [ ] [mongoDB]
-- [ ] [sass]
-- [ ] [webpack]
-- [ ] security
-- [x] ~~bower~~
-- [x] ~~fis3~~
-- [x] ~~less~~
-- [x] ~~grunt~~
-- [x] ~~gulp~~
-- [x] ~~yoman~~
-
+|Name|Usage|Note|
+|---|---|---|
+|[babel]|||
+|[express]||[Express 中文文档][express-cn],《Node与Express开发》| 
+|[eslint]|||
+|[forever]|||
+|[karma]|||
+|nginx|||
+|[npm]|||
+|[node]||《深入浅出node》
+|[mockjs]|||
+|[mongoDB]|||
+|[sass]|||
+|[webpack]|||
+|security|||
+|~~bower~~||we'll nerver use|
+|~~fis3~~||we'll nerver use|
+|~~less~~||we'll nerver use|
+|~~grunt~~||we'll nerver use|
+|~~gulp~~||we'll nerver use|
+|~~yoman~~||we'll nerver use|
 
 [babel]:https://github.com/babel/babel
 [eslint]:https://github.com/eslint/eslint
