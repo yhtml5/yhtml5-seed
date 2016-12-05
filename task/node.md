@@ -4,7 +4,19 @@
 
 We work hard to contribute my work back to the web, mobile, server && new Front-end technology. 
 
-### vue(Optional)
+
+### Basic
+
+|Name|Usage|Note|
+|---|---|---|
+|[ES6]||[阮一峰Es6入门][es6-ruan], [Mozilla Developer Network][mdn-js]|
+|git||[廖雪峰git教程][git-liao]|
+|http||[Mozilla Developer Network][mdn-http]|    
+|linux||[鸟哥的linux私房菜][linux-vbird]|
+|markdown|||   
+|[W3C]||[html5][w3c-html5], [html5.2][w3c-html5.2]|
+
+### VUE(Optional)
 
 study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 
@@ -16,17 +28,6 @@ study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 |[vue-cli]||[vue 结合 webpack 使用案例][vue-cli-templates-webpack]| 
 |[vue-loader]||| 
 |[vue-router]|||  
-
-### basic
-
-|Name|Usage|Note|
-|---|---|---|
-|[ES6]||[阮一峰Es6入门][es6-ruan], [Mozilla Developer Network][MDN-js]|
-|git||[廖雪峰git教程][git-liao]|
-|http|||    
-|linux||[鸟哥的linux私房菜][linux-vbird]|
-|markdown|||   
-|[W3C]||[html5][w3c-html5], [html5][w3c-html5.2]|
 
 ### Node.js 
 
@@ -67,7 +68,8 @@ study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 [linux-vbird]:http://linux.vbird.org/
 [npm]:https://www.npmjs.com/
 [node]:https://nodejs.org/en/
-[MDN-js]:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
+[mdn-http]:https://developer.mozilla.org/zh-CN/docs/Web/HTTP
+[mdn-js]:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 [mockjs]:http://mockjs.com/
 [mongoDB]:https://www.mongodb.com/
 [mongoDB]:https://docs.mongodb.com/
