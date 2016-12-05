@@ -2,14 +2,16 @@
 
 ![author]
 
-We work hard to contribute my work back to the web, mobile, server && new Front-end technology. 
+我们认为学习是一个持续的过程，不可能一劳永逸，所以我们列出常用的技术元素  
+同时，前端有着我们一辈子也学不完技术。我们会列出曾经被使用，但已经过时不太适用的技术，并给出替代方案
 
+Now you only need to learn the following:
 
 ### Basic
 
 |Name|Usage|Note|
 |---|---|---|
-|[ES6]||[阮一峰Es6入门][es6-ruan], [Mozilla Developer Network][mdn-js]|
+|[ES6]|ECMAScript 2015|[阮一峰Es6入门][es6-ruan], [Mozilla Developer Network][mdn-js]|
 |git||[廖雪峰git教程][git-liao]|
 |http||[Mozilla Developer Network][mdn-http]|    
 |linux||[鸟哥的linux私房菜][linux-vbird]|
@@ -48,14 +50,21 @@ study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 |[sass]|||
 |[webpack]|||
 |security|||
-|~~bower~~||we'll nerver use|
-|~~fis3~~||we'll nerver use|
-|~~less~~||we'll nerver use|
-|~~grunt~~||we'll nerver use|
-|~~gulp~~||we'll nerver use|
-|~~yoman~~||we'll nerver use|
 
-[author]:https://img.shields.io/badge/group-刘海军、张大漾、陈奇文、陈孟圆、李元庆、曾孟圆-blue.svg
+### outTime
+
+we'll nerver use these
+
+|Name|Introduction|Note|
+|---|---|---|
+|~~bower~~||npm|
+|~~fis3~~||webpack && npm script|
+|~~less~~||sass || scss|
+|~~grunt~~||webpack && npm script|
+|~~gulp~~||webpack && npm script|
+|~~yoman~~||webpack && npm script|
+
+[author]:https://img.shields.io/badge/group-军、漾、文、圆、庆、媛-blue.svg
 [babel]:https://github.com/babel/babel
 [eslint]:https://github.com/eslint/eslint
 [es6]:http://www.ecma-international.org/ecma-262/6.0/index.html

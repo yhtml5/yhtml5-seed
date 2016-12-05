@@ -1,10 +1,5 @@
 ## Display npm module dependencies in package.json
 
-我们认为学习是一个持续的过程，不可能一劳永逸，所以我们列出常用的npm依赖模块 
-同时，前端有着我们一辈子也学不完技术。我们会列出曾经被使用，但已经过时不太适用的技术，并给出替代方案
-
-Now you only need to learn the following:
-
 ### dependencies
 
 |Name|Introduction|Note|
@@ -51,19 +46,6 @@ Now you only need to learn the following:
 |[vue-cli]||[vue 结合 webpack 使用案例][vue-cli-templates-webpack]| 
 |[vue-loader]||| 
 |[webpack]|||
-
-### outTime
-
-we'll nerver use these
-
-|Name|Introduction|Note|
-|---|---|---|
-|~~bower~~||npm|
-|~~fis3~~||webpack && npm script|
-|~~less~~||sass || scss|
-|~~grunt~~||webpack && npm script|
-|~~gulp~~||webpack && npm script|
-|~~yoman~~||webpack && npm script|
 
 [animate]:https://daneden.github.io/animate.css/
 [angular]:https://angularjs.org/
