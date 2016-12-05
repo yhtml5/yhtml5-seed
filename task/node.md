@@ -1,5 +1,7 @@
 ## The Task of Node Group
 
+![author]
+
 We work hard to contribute my work back to the web, mobile, server && new Front-end technology. 
 
 ### vue(Optional)
@@ -19,7 +21,7 @@ study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 
 |Name|Usage|Note|
 |---|---|---|
-|[ES6]||[阮一峰Es6入门][es6-ruan]|
+|[ES6]||[阮一峰Es6入门][es6-ruan], [Mozilla Developer Network][MDN-js]|
 |git||[廖雪峰git教程][git-liao]|
 |http|||    
 |linux||[鸟哥的linux私房菜][linux-vbird]|
@@ -41,7 +43,7 @@ study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 |[npm]|||
 |[node]||《深入浅出node》
 |[mockjs]|||
-|[mongoDB]|||
+|[mongoDB]||[document][mongoDB]|
 |[sass]|||
 |[webpack]|||
 |security|||
@@ -52,6 +54,7 @@ study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 |~~gulp~~||we'll nerver use|
 |~~yoman~~||we'll nerver use|
 
+[author]:https://img.shields.io/badge/group-刘海军、张大漾、陈奇文、陈孟圆、李元庆、曾孟圆-blue.svg
 [babel]:https://github.com/babel/babel
 [eslint]:https://github.com/eslint/eslint
 [es6]:http://www.ecma-international.org/ecma-262/6.0/index.html
@@ -64,8 +67,10 @@ study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
 [linux-vbird]:http://linux.vbird.org/
 [npm]:https://www.npmjs.com/
 [node]:https://nodejs.org/en/
+[MDN-js]:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 [mockjs]:http://mockjs.com/
 [mongoDB]:https://www.mongodb.com/
+[mongoDB]:https://docs.mongodb.com/
 [sass]:http://sass-lang.com/
 [vue]:http://cn.vuejs.org/
 [vue-cli]:https://github.com/vuejs/vue-cli  

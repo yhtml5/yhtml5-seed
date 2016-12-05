@@ -147,6 +147,10 @@ Now browse to the app at `http://localhost:8080`.
 ```
 YHTML5-Seed
 |____app                              --> all of the source files for the application 所有应用程序的源文件
+| |____client
+| |____server
+| |____test
+| |____dist
 | |____index.html                     --> app layout file (the main html template file of the app) 应用程序布局文件（该应用程序的主要的HTML模板文件）
 | |____fis-conf.js                    --> fis3 配置文件
 | |____bower.json                     --> bower package manager  bower包管理

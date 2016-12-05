@@ -1,5 +1,9 @@
 ### changeLog
 
+#### v0.2.1 (2016-12-01)
+
+- [x] 新增 | add package.md to display modules that used or out time 
+
 #### v0.2.0 (2016-08-11)
 
 - [x] 优化 | 融合SPA单页应用模式, 以及普通开发模式 不再以按文件夹区分  
