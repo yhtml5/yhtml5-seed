@@ -1,0 +1,39 @@
+19:40:09.302 INFO - Launching a standalone Selenium Server
+19:40:09.332 INFO - Java: Oracle Corporation 25.91-b14
+19:40:09.332 INFO - OS: Mac OS X 10.12.1 x86_64
+19:40:09.346 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
+19:40:09.399 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+19:40:09.400 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+19:40:09.400 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+19:40:09.400 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+19:40:09.401 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+19:40:09.401 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+19:40:09.457 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+19:40:09.457 INFO - Selenium Server is up and running
+19:40:09.799 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+19:40:09.807 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 34341
+Only local connections are allowed.
+19:40:10.785 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+19:40:10.802 INFO - Executing: [get: http://localhost:8080])
+19:40:13.765 INFO - Done: [get: http://localhost:8080]
+19:40:13.776 INFO - Executing: [find elements: By.cssSelector: #app])
+19:40:13.808 INFO - Done: [find elements: By.cssSelector: #app]
+19:40:13.816 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (85cb697babc1947075a30281b41329f4)] -> css selector: #app]])
+19:40:13.835 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (85cb697babc1947075a30281b41329f4)] -> css selector: #app]]
+19:40:13.842 INFO - Executing: [find elements: By.cssSelector: .hello])
+19:40:13.860 INFO - Done: [find elements: By.cssSelector: .hello]
+19:40:13.869 INFO - Executing: [find element: By.cssSelector: h1])
+19:40:13.888 INFO - Done: [find element: By.cssSelector: h1]
+19:40:13.893 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (85cb697babc1947075a30281b41329f4)] -> css selector: h1]])
+19:40:13.913 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (85cb697babc1947075a30281b41329f4)] -> css selector: h1]]
+19:40:13.921 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
+      return document.querySelectorAll(selector).length;
+    }.apply(window, passedArgs);, [img]])
+19:40:13.927 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
+      return document.querySelectorAll(selector).length;
+    }.apply(window, passedArgs);, [img]]
+19:40:13.932 INFO - Executing: [delete session: c1e603f1-e90d-4d15-9004-2a66e0b5948f])
+19:40:14.008 INFO - Done: [delete session: c1e603f1-e90d-4d15-9004-2a66e0b5948f]
