@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import router from './router/index'
-import App from './App'
+import Index from './router/home.vue'
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: {App}
+  template: '<Index/>',
+  components: {Index}
 }).$mount('#app')
