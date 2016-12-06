@@ -23,7 +23,7 @@ var yhtml5Data = {
     staticPath: "/static",
     viewType: "view",
     viewPath: "view-myBonus",
-    version: 2.0
+    version: 0.2.1
 }
 console.log('This project is based on YHTML5-Seed and developed by ' + yhtml5Data.author)
 /************************* Project Setting *****************************/
