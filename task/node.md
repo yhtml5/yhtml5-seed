@@ -18,6 +18,16 @@ Now you only need to learn the following:
 |markdown|||   
 |[W3C]||[html5][w3c-html5], [html5.2][w3c-html5.2]|
 
+### React
+
+study step: **`react` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
+
+|Name|Usage|Note|
+|---|---|---|
+|[react]|||
+|[react-redux]||[gitbook][vux-gitbook], [demo][vux-demo]|
+|[react-router]||| 
+
 ### VUE(Optional)
 
 study step: **vue` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**

@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <v-search title="Search"></v-search>
+
     <img src="../assets/logo.png">
     <hello></hello>
     <p>
@@ -26,23 +28,27 @@
 </template>
 
 <script>
-  import Hello from '../components/Hello'
+  import Hello from '../components/Hello.vue'
+  import vHeader from '../components/header.vue'
+  import vSearch from '../components/search.vue'
 
   export default {
     name: 'app',
     components: {
-      Hello
+      Hello,
+      vHeader,
+      vSearch
     }
   }
 </script>
+<style scoped>
+  @import '../../../node_modules/weui/dist/style/weui.min.css';
 
-<style>
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
 </style>
