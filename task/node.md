@@ -20,12 +20,12 @@ Now you only need to learn the following:
 
 ### React
 
-study step: **`react` > `vue-cli` > `vue-loader` > `vue-router` > `vuex` > `vux**
+study step: **`ES6` > `react` > `redux` > `react-router`**
 
 |Name|Usage|Note|
 |---|---|---|
 |[react]|||
-|[react-redux]||[gitbook][vux-gitbook], [demo][vux-demo]|
+|[redux]||[gitbook-cn][[redux-gitbook-cn]],[gitbook][[redux-gitbook-en]],[react-training]|
 |[react-router]||| 
 
 ### VUE(Optional)
@@ -92,6 +92,12 @@ we'll nerver use these
 [mockjs]:http://mockjs.com/
 [mongoDB]:https://www.mongodb.com/
 [mongoDB]:https://docs.mongodb.com/
+[react]:https://facebook.github.io/react/
+[react-router]:https://github.com/ReactTraining/react-router
+[react-training]:https://github.com/ReactTraining
+[redux]:https://github.com/reactjs/redux
+[redux-gitbook-cn]:http://cn.redux.js.org/index.html
+[redux-gitbook-en]:http://redux.js.org/
 [sass]:http://sass-lang.com/
 [vue]:http://cn.vuejs.org/
 [vue-cli]:https://github.com/vuejs/vue-cli  
