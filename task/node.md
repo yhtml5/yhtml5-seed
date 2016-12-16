@@ -25,6 +25,7 @@ study step: **`ES6` > `react` > `redux` > `react-router`**
 |Name|Usage|Note|
 |---|---|---|
 |[react]|||
+|[react-redux]|||
 |[redux]||[gitbook-cn][[redux-gitbook-cn]],[gitbook][[redux-gitbook-en]],[react-training]|
 |[react-router]||| 
 
