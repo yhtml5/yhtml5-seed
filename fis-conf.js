@@ -59,32 +59,32 @@ if (yhtml5Data.viewType == 'pages') {
         // '/bower_components/vue-validator/dist/vue-validator.min.js',
         '/bower_components/vux/dist/vux.css',
         '/bower_components/countUp.js/dist/countUp.min.js',
-        '/bower_components/vux/dist/**/actionsheet/index.js',
-        '/bower_components/vux/dist/**/cell/index.js',
-        '/bower_components/vux/dist/**/confirm/index.js',
-        '/bower_components/vux/dist/**/datetime/index.js',
-        '/bower_components/vux/dist/**/divider/index.js',
-        '/bower_components/vux/dist/**/flexbox/index.js',
-        '/bower_components/vux/dist/**/flexbox-item/index.js',
-        '/bower_components/vux/dist/**/group/index.js',
-        '/bower_components/vux/dist/**/icon/index.js',
-        '/bower_components/vux/dist/**/loading/index.js',
-        '/bower_components/vux/dist/**/switch/index.js',
-        '/bower_components/vux/dist/**/toast/index.js',
-        '/bower_components/vux/dist/**/x-header/index.js',
-        '/bower_components/vux/dist/**/x-input/index.js',
-        '/bower_components/vux/dist/**/tab/index.js',
-        '/bower_components/vux/dist/**/tab-item/index.js',
-        '/bower_components/vux/dist/**/button-tab/index.js',
-        '/bower_components/vux/dist/**/button-tab-item/index.js',
-        '/bower_components/vux/dist/**/swiper/index.js',
-        '/bower_components/vux/dist/**/swiper-item/index.js',
-        '/bower_components/vux/dist/**/selector/index.js',
-        '/bower_components/vux/dist/**/x-button/index.js',
-        '/bower_components/vux/dist/**/popup/index.js',
-        '/bower_components/vux/dist/**/checker/index.js',
-        '/bower_components/vux/dist/**/checker-item/index.js',
-        '/bower_components/vux/dist/**/scroller/index.js'
+        '/bower_components/vux/dist/**/actionsheet/router.js',
+        '/bower_components/vux/dist/**/cell/router.js',
+        '/bower_components/vux/dist/**/confirm/router.js',
+        '/bower_components/vux/dist/**/datetime/router.js',
+        '/bower_components/vux/dist/**/divider/router.js',
+        '/bower_components/vux/dist/**/flexbox/router.js',
+        '/bower_components/vux/dist/**/flexbox-item/router.js',
+        '/bower_components/vux/dist/**/group/router.js',
+        '/bower_components/vux/dist/**/icon/router.js',
+        '/bower_components/vux/dist/**/loading/router.js',
+        '/bower_components/vux/dist/**/switch/router.js',
+        '/bower_components/vux/dist/**/toast/router.js',
+        '/bower_components/vux/dist/**/x-header/router.js',
+        '/bower_components/vux/dist/**/x-input/router.js',
+        '/bower_components/vux/dist/**/tab/router.js',
+        '/bower_components/vux/dist/**/tab-item/router.js',
+        '/bower_components/vux/dist/**/button-tab/router.js',
+        '/bower_components/vux/dist/**/button-tab-item/router.js',
+        '/bower_components/vux/dist/**/swiper/router.js',
+        '/bower_components/vux/dist/**/swiper-item/router.js',
+        '/bower_components/vux/dist/**/selector/router.js',
+        '/bower_components/vux/dist/**/x-button/router.js',
+        '/bower_components/vux/dist/**/popup/router.js',
+        '/bower_components/vux/dist/**/checker/router.js',
+        '/bower_components/vux/dist/**/checker-item/router.js',
+        '/bower_components/vux/dist/**/scroller/router.js'
     ]);
 } else {
     fis.set('project.files', [
@@ -204,10 +204,10 @@ if (yhtml5Data.framework == 'angular') {
     fis.match('/bower_components/vue/dist/vue.min.js', {
         packOrder: -399
     });
-    fis.match('/bower_components/vux/**/divider/index.js', {
+    fis.match('/bower_components/vux/**/divider/router.js', {
         packOrder: -369
     });
-    fis.match('/bower_components/vux/**/x-header/index.js', {
+    fis.match('/bower_components/vux/**/x-header/router.js', {
         packOrder: -368
     });
 }

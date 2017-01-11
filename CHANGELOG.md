@@ -1,8 +1,11 @@
 ### changeLog
 
-#### v0.2.1 (2016-12-01)
+#### v0.2.1 (2016-12-06)
 
-- [x] 新增 | add package.md to display modules that used or out time 
+- [x] **update**  | add package.md to display modules that used or out time
+- [x] **release** | git tag v0.2.1
+- [x] **note**    | we'll never use fis3 bower and no longer support v0.2.1 version  
+- [x] **add**| add editorconfig http://editorconfig.org/
 
 #### v0.2.0 (2016-08-11)
 
