@@ -16,6 +16,9 @@ writing your build configuration, and package manager dependencies (e.g npm) tha
 
 Welcome to NEW front-end world and enjoy yourself
 
+**[Document][YHTML5-Seed-document]**
+**[Issue][YHTML5-Seed-issue]**
+
 ### Target
 
 * 构建丨解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题
@@ -24,20 +27,6 @@ Welcome to NEW front-end world and enjoy yourself
 * 统一丨统一风格，统一[代码规范][codeStandard]，统一技术栈，减少代码冲突,并配套对应检测工具
 * 效率丨让团队成员只需要简单培训学习使用这套框架，将精力主要放在业务需求开发上，
   而不需要额外学习研究webpack，jsx，babel，node，shell,express等等一堆概念与知识
-### Quick start
-
-``` bash
-# install dependencies, and become building exmple program, please be patience
-npm start
-
-# build for production with minification
-npm run build
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-tutorial]
 
 ### Solutions
 
@@ -46,8 +35,6 @@ There are so many problems when we start a front-end project, like:
 打包非常慢，不支持多页面，不知道加载了哪些模块，开发问题路径定位，
 打包模块通常非常大，没有很好拆分第三方依赖包与业务逻辑代码，没有按需加载，
 没有区分开发环境和生产环境，没有热更新等等。
-
-- [ ] [Xmind][production]
 
 ### Feature
 
@@ -107,11 +94,7 @@ There are so many problems when we start a front-end project, like:
    - [ ] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower
 
-### bug
-- [ ] 级别3 --开发模式下热更新俩次
-- [ ] level1  --can't set chunkhash in dev.env
-
-
+目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
 
 ### Technology Stack
 
@@ -125,96 +108,18 @@ There are so many problems when we start a front-end project, like:
 * webpack
 * Etc，etc
 
-## Development Guides
+### command line
 
-### Prerequisites
+|command line|usage|
+|---|---|
+|npm start|install dependencies, and become building exmple program, please be patience|
+|npm run build|build production|
+|npm run build-debug|debug model|
+|npm run dev|develop model|
+|npm run test|test code|
+|npm run git|commit your code to git remote repertory|
 
-You need git to clone the [YHTML5-Seed] repository. You can get git from [http://git-scm.com/][git].
-You can find git common commands from [YHTML5-Tutorial][YHTML5-Tutorial-Git].
-
-We also use a number of [NodeJS][node] tools to initialize and test [YHTML5-Seed]. You must have node.js and
-its package manager [NPM][npm] installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
-
-### Clone YHTML-Seed
-
-Clone the YHTML-Seed repository using [git][git]:
-
-```
-git clone git@github.com:yhtml5/YHTML5-Seed.git
-cd YHTML5-Seed/app
-```
-
-If you just want to start a new project without the YHTML-Seed commit history then you can do:
-
-```
-bash
-git clone --depth=1 https://github.com/yhtml5/YHTML5-Seed.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
-
-
-### Install Dependencies
-
-We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
-us manage and test the application.
-
-* We get the tools we depend upon via `npm`, the [node package manager][npm].
-* We get the angular code via `bower`, a [client-side code package manager][bower].
-
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
-
-```
-git checkout -b dev origin/dev
-
-cd YHTML5-Seed
-npm install
-```
-
-After everthing was installed, you should find that you have two new folders in your project.
-
-* `node_modules` - contains the npm packages for the tools we need
-* `app/bower_components` - contains the angular framework files
-
-*Note that the `bower_components` folder would normally be installed in the root folder but
-YHTML-Seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes
-it easier to serve the files by a webserver.*
-
-### Serving the Application Files
-
-[NodeJS][node]本身就可以在本地创建一个服务器,新建一个前端应用, 而不需要一个后端的服务器
-we recommend serving the project files using a local web server during development to avoid issues
-with security restrictions (sandbox) in browsers.
-The sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr, etc to function properly
-when an html page is opened via `file://` scheme instead of `http://`
-
-### Run the Application
-
-We have preconfigured the project with a simple development web server.  The simplest way to start
-this server is:
-
-```
-cd YHTML5-Seed/app
-fis3 server clean
-fis3 server start
-fis3 release -cwl
-```
-
-Now browse to the app at `http://localhost:8080`.
-
-### Others
-
-* **/** 为项目根目录,即fis-conf.js所在的目录. 所有文件监听, 基础构建, 项目开发都基于此
-* 请更改项目名称,链接,信息. 包括但不限于: `/server/**`, `/app/fis-conf.js`, `README.md`
-* 本脚手架具有俩种开发模式:
-  * SPA应用, 渲染引擎在客户端, 适合开发移动端APP. 首页入口为`/start.html`; UI界面在`/view`目录下开发
-  * PG应用, 配合后台java, php使用, 适合开发WebApp. 首页入口为 `/page/start.html`; UI界面在`/page`下开发
-* **PG应用**:
-  * `/page` 下的组件**a**标签中的链接默认不监听, 注意应基于开发根目录进行定位
-  * `/page/*` 为页面, 页面为UI组件的容器, 容器中只存放布局框架, 依赖关系
-  * `/page/*/**` 为UI组件, 同级目录下存放与本组件相关的css, js, image, html 等所有相关信息
-* 甚至整个项目可以同时存在SPA应用,PG应用
-* 在这个项目中我们处理两种依赖关系: 生产环境中构建工具提供的依赖分析, 和框架提供的依赖管理。工具帮我们管理和测试应用程序
+For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
 
 ### Directory Layout
 
@@ -278,5 +183,6 @@ Now browse to the app at `http://localhost:8080`.
 [progress]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
 [YHTML5-Seed]:https://github.com/yhtml5/YHTML5-Seed
-[YHTML5-Seed-tutorial]:./task/tutorial.md
+[YHTML5-Seed-document]:./document/README.md
+[YHTML5-Seed-issue]:./document/3.issue.md
 [YHTML5-Tutorial-Git]:https://github.com/yhtml5/YHTML5-Tutorial/tree/master/app/git
