@@ -1,11 +1,11 @@
 {
-  "name": "webpack-learn",
-  "version": "1.1.1",
-  "description": "",
-  "main": "index.js",
+  "name": "yhtml5-seed",
+  "version": "0.3.1",
   "author": "yhtml5 <1417376255@qq.com>",
+  "description": "The web's scaffolding tool for modern webapps",
+  "main": "app/index.js",
   "license": "MIT",
-  "repository": "https://github.com/yhtml5",
+  "repository": "https://github.com/YHTML5-Seed",
   "scripts": {
     "prestart": "clear",
     "start": "npm i && npm run build && npm run dev",
@@ -61,5 +61,22 @@
     "webpack-dev-middleware": "^1.9.0",
     "webpack-dev-server": "^2.1.0-beta.12",
     "webpack-merge": "^2.3.1"
+  },
+  "keywords": [
+    "component",
+    "framework",
+    "frontend",
+    "mobile",
+    "react",
+    "redux",
+    "scaffold",
+    "vue",
+    "web",
+    "webpack",
+    "weui"
+  ],
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
   }
 }

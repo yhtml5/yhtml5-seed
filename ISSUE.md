@@ -1,19 +1,28 @@
-## Develop react application with webpack 
+## Discuss some of the issues
 
-This is not only a project-seed for front-end. 它是一个从客户端到服务端的一整套方案：
-react,redux,webpack,web security,nodejs,express,api,git version,performance optimization
-what you want technology stack all in one  
+### CSS rules
 
-前端世界的变化总是惊人的，在这个项目里，我们会及时更新依赖的技术到最新最稳定版本，同时及时淘汰一些过时的技术元素
+#### UI components
 
-Welcome to front-end world and enjoy yourself
+*y-btn, y-btn-sm, y-btn-info, y-btn-block
+* y-   -- uniquely
+* -p   -- percent
+* -n   -- negative
 
-### command line
+#### Attribute-oriented
 
-> npm install webpack --save-dev
-> npm install webpack@<version> --save-dev
-> npm install webpack@beta --save-dev 
+* y-mt-60      -- {margin-top:60px}
+* y-mt-p-60    -- {margin-top:60%}
+* y-mt-pn-60   -- {margin-top:-60%}
 
+#### tools class 
+
+* active, disable
+ 
+#### business
+ 
+* v-login, v-login search, v-login btn
+  
 ### problems
 
 - [x] How to webpack Multi Page
@@ -74,31 +83,7 @@ Welcome to front-end world and enjoy yourself
     * set multiple pages with CommonsChunkPlugin and HtmlWebpackPlugin.   
     * CommonsChunkPlugin choice chunks pack into common package  `chunks: ['vendor', 'index']`
     
-```
-├── dist
-├── package.json
-├── node_modules
-├── src
-│   ├── components
-│   ├── libs
-|   ├── favicon.png
-|   ├── vendor.js             所有页面公用的第三方库
-│   └── pages                 页面放这里
-|       ├── foo               编译后生成 http://localhost:8100/foo.html
-|       |    ├── index.html
-|       |    ├── index.js
-|       |    ├── style.css
-|       |    └── pic.png
-|       └── bar               http://localhost:8100/bar.html
-|           ├── index.html
-|           ├── index.js
-|           ├── style.css
-|           └── baz           http://localhost:8100/bar/baz.html
-|               ├── index.html
-|               ├── index.js
-|               └── style.css
-└── webpack.config.js
-```    
+
     
 [react-hot-loader]:https://github.com/gaearon/react-hot-loader
 [react-hot-boilerplate]:https://github.com/gaearon/react-hot-boilerplate/tree/next

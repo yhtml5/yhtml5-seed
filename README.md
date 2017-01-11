@@ -4,13 +4,38 @@
 
 ### Introduction
 
-我们不建议使用别人发明的轮子，我们鼓励自己重复造轮子。在折腾中明白事情的始末，创造出更优质的代码
+This is not only a project-seed for front-end. It is a complete set of solutions from the client to the server:  
+react,redux,webpack,web security,nodejs,express,api,git version,performance optimization  
+what you want technology stack all in one, and provides many out-of-the-box features    
 
-YHTML5-Seed scaffolds out a new application. We can building a SPA, webapp or Hybird app.
-writing your build configuration, pulling in relevant build tasks 
-and package manager dependencies (e.g npm) that you might need for your build   
+YHTML5-Seed scaffolds out a new application. We can building a SPA or MPA.
+writing your build configuration, and package manager dependencies (e.g npm) that you might need for your build   
+
+前端世界的变化总是惊人的，在这个项目里，我们会及时更新依赖的技术到最新最稳定版本，同时及时淘汰一些过时的技术元素
+我们不建议重度依赖别人发明的轮子，我们鼓励自己重复造轮子。在编码中了解底层原理，创造出更适合团队的解决方案
+
+Welcome to NEW front-end world and enjoy yourself
                
+### Quick start
+
+``` bash
+# install dependencies, and become building exmple program, please be patience
+npm start 
+
+# build for production with minification
+npm run build
+
+# run all tests
+npm test
+```
 ### Solutions
+
+
+
+
+
+
+
 
 - [ ] [Xmind][production]
 - [ ] [代码规范][codeStandard]
@@ -147,56 +172,31 @@ Now browse to the app at `http://localhost:8080`.
 ### Directory Layout
 
 ```
-YHTML5-Seed
-|____app                              --> all of the source files for the application 所有应用程序的源文件
-| |____client
-| |____server
-| |____test
-| |____dist
-| |____index.html                     --> app layout file (the main html template file of the app) 应用程序布局文件（该应用程序的主要的HTML模板文件）
-| |____fis-conf.js                    --> fis3 配置文件
-| |____bower.json                     --> bower package manager  bower包管理
-| |____bower_components               --> custom comonents for project 项目自定义组件
-| |____map.json
-| |____components
-| | |____css                          --> app's stylesheet  应用程序的样式表
-| | | |____angular.css                --> angular 特有样式
-| | | |____animation.css              --> animation css  css动画
-| | | |____base.css                   --> 基础css属性
-| | | |____bootstrap.base.css
-| | | |____bootstrap.component.css
-| | | |____box.css
-| | | |____custom.css
-| | |____head
-| | | |____index.html
-| | | |____shortcut-icon.png
-| | |____js
-| | | |____ctrl.js
-| | | |____directive.js
-| | | |____filter.js
-| | | |____router.js
-| | |____iconfont
-| | |____ie
-| | |____public
-| | |____require
-| |____server
-| | |____author.css
-| | |____author.js
-| | |____console.js
-| |____view
-| | |____browsehappy
-| | |____nav
-| | | |____index.html
-|____blog.md
-|____issue.md
-|____LICENSE
-|____package.json
-|____progress.md
-|____README.md             
-|____README_ZH.md
-|____node_modules    
-|____dist                             --> 产品发布目录
-```
+├── dist                             --产品发布目录 
+├── node_modules 
+├── package.json
+├── README.md 
+├── app                              --the source files for the application
+│   ├── components
+│   ├── libs
+|   ├── favicon.png
+|   ├── vendor.js             所有页面公用的第三方库
+│   └── pages                 页面放这里
+|       ├── foo               编译后生成 http://localhost:8100/foo.html
+|       |    ├── index.html
+|       |    ├── index.js
+|       |    ├── style.css
+|       |    └── pic.png
+|       └── bar               http://localhost:8100/bar.html
+|           ├── index.html
+|           ├── index.js
+|           ├── style.css
+|           └── baz           http://localhost:8100/bar/baz.html
+|               ├── index.html
+|               ├── index.js
+|               └── style.css
+└── webpack.config.js
+```    
 
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
