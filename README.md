@@ -18,12 +18,12 @@ Welcome to NEW front-end world and enjoy yourself
 
 ### Target
 
+* 构建丨解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题
 * 优化丨极致性能体验，前端性能优化，永无止境。
 * 协作丨为团队提供愉悦的开发体验，提供前端开发脚手架的技术支持，专人维护解决脚手架问题
-* 统一丨统一风格，统一代码规范，统一技术栈，减少代码冲突
+* 统一丨统一风格，统一[代码规范][codeStandard]，统一技术栈，减少代码冲突,并配套对应检测工具
 * 效率丨让团队成员只需要简单培训学习使用这套框架，将精力主要放在业务需求开发上，
   而不需要额外学习研究webpack，jsx，babel，node，shell,express等等一堆概念与知识
-
 ### Quick start
 
 ``` bash
@@ -37,7 +37,7 @@ npm run build
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-tutorial]
 
 ### Solutions
 
@@ -48,9 +48,6 @@ There are so many problems when we start a front-end project, like:
 没有区分开发环境和生产环境，没有热更新等等。
 
 - [ ] [Xmind][production]
-- [ ] [代码规范][codeStandard]
-- [ ] 解决方案
-    - [ ]
 
 ### Feature
 
@@ -115,17 +112,6 @@ There are so many problems when we start a front-end project, like:
 - [ ] level1  --can't set chunkhash in dev.env
 
 
-  * 遵循筑家易前端开发[代码规范][codeStandard]
-  * Automagically wire-up dependencies installed with [NPM][npm],initializes the project
-  * 支持阿里矢量图标 (6w+ 可自定义图标)
-  * 规范项目开发, 测试, 发布等目录及文件路径
-  * 样式结构、模板引擎、业务逻辑解耦, 高内聚、低耦合
-  * 模块化开发, 分而治之, 各模块同目录下就近维护
-  * 支持前后端分离，使用json等交互数据(推荐)
-  * 自动对CSS的标准化和通用错误进行修复, 检测并兼容大部分主流浏览器
-  * 解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题
-  * 一套前端资源加载策略, 实现资源同步加载/异步加载, 按需加载/预加载, 请求合并等机制
-  * Etc,etc
 
 ### Technology Stack
 
@@ -232,31 +218,38 @@ Now browse to the app at `http://localhost:8080`.
 
 ### Directory Layout
 
+合理的规范有利于项目开发速度，我们推崇高内聚低耦合的代码结构
+模块化开发， 分而治之， 各模块同目录下就近维护。
+这里，我们规定了项目构建，开发，测试，发布等目录及文件路径（react项目为例）：
+
 ```
-├── dist                             --产品发布目录
-├── node_modules
-├── package.json
-├── README.md
-├── app                              --the source files for the application
-│   ├── components
-│   ├── libs
-|   ├── favicon.png
-|   ├── vendor.js             所有页面公用的第三方库
-│   └── pages                 页面放这里
-|       ├── foo               编译后生成 http://localhost:8100/foo.html
-|       |    ├── index.html
-|       |    ├── index.js
-|       |    ├── style.css
-|       |    └── pic.png
-|       └── bar               http://localhost:8100/bar.html
-|           ├── index.html
-|           ├── index.js
-|           ├── style.css
-|           └── baz           http://localhost:8100/bar/baz.html
-|               ├── index.html
-|               ├── index.js
-|               └── style.css
-└── webpack.config.js
+ root
+  ├── app                              --client source code
+  │   ├── components
+  │   ├── login
+  │   ├── static                       --公共静态资源
+  │   │     └── favicon.ico
+  │   └── others
+  ├── build
+  │   ├── webpack.config.js
+  │   ├── webpack.dev.js
+  │   ├── webpack.pro.js
+  │   └── other.js
+  ├── dist                             --产品发布目录
+  ├── node_modules
+  ├── server                           --server source code
+  ├── .babelrc
+  ├── .editorconfig
+  ├── .eslintignore
+  ├── .eslintrc.js
+  ├── .gitignore
+  ├── .npmignore
+  ├── .gitignore
+  ├── CHANGELOG.md
+  ├── ISSUE.md
+  ├── LICENSE
+  ├── package.json
+  └── README.md
 ```
 
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
@@ -284,5 +277,6 @@ Now browse to the app at `http://localhost:8080`.
 [issue]:https://github.com/yhtml5/YHTML5-Seed/blob/master/issue.md
 [progress]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
-[YHTML5-Tutorial-Git]:https://github.com/yhtml5/YHTML5-Tutorial/tree/master/app/git
 [YHTML5-Seed]:https://github.com/yhtml5/YHTML5-Seed
+[YHTML5-Seed-tutorial]:./task/tutorial.md
+[YHTML5-Tutorial-Git]:https://github.com/yhtml5/YHTML5-Tutorial/tree/master/app/git
