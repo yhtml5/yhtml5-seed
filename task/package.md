@@ -19,9 +19,12 @@
 |[cssnano]|A modular minifier, built on top of the PostCSS ecosystem|css去重|
 |[countUp][countUp]|数字滚动||
 |[echarts][echarts]|图表库|数据可视化、开放、大气|http://echarts.baidu.com/echarts2/doc/slide/whyEcharts.html|
-|[express]||[Express 中文文档][express-cn],《Node与Express开发》| 
+|[express]||[Express 中文文档][express-cn],《Node与Express开发》|
 |[form.validation][validation]|表单验证||
 |[fullpage][fullpage]|全屏滚动|支持鼠标滚动、触屏、窗口缩放||
+|html5-boilerplate| | |
+|Modernizr|浏览器兼容性监测| |
+|Normalize.css|重置浏览器css样式| |
 |[jquery][jquery]|js开发框架||
 |[mockjs]|||
 |[pickadate][pickadate]|时间选择|支持jq1.7+、触屏与鼠标、|url|
@@ -30,9 +33,9 @@
 |[reqwest][reqwest]|异步请求||
 |[signature_pad][signature_pad]|手写签名|canvas|url|
 |[vue]|渐进式框架|易用、灵活、高效|url|
-|[vuex]|manage status|[gitbook][vuex-gitbook]| 
+|[vuex]|manage status|[gitbook][vuex-gitbook]|
 |[vux]|Mobile web UI Components based on Vue and WeUI|[gitbook][vux-gitbook],[demo][vux-demo]|
-|[vue-router]|||  
+|[vue-router]|||
 |[weui]|||
 
 ### devDependencies
@@ -43,8 +46,8 @@
 |[eslint]|||
 |[forever]|||
 |[karma]|||
-|[vue-cli]||[vue 结合 webpack 使用案例][vue-cli-templates-webpack]| 
-|[vue-loader]||| 
+|[vue-cli]||[vue 结合 webpack 使用案例][vue-cli-templates-webpack]|
+|[vue-loader]|||
 |[webpack]|||
 
 [animate]:https://daneden.github.io/animate.css/
@@ -86,7 +89,7 @@
 [vux]:https://github.com/airyland/vux
 [vux-demo]:https://vux.li/
 [vux-gitbook]:https://vuxjs.gitbooks.io/vux/content/
-[vue-cli]:https://github.com/vuejs/vue-cli  
+[vue-cli]:https://github.com/vuejs/vue-cli
 [vue-cli-templates-webpack]:http://vuejs-templates.github.io/webpack/
 [vue-loader]:https://vue-loader.vuejs.org/en/
 [vue-router]:http://router.vuejs.org/zh-cn/essentials/getting-started.html
