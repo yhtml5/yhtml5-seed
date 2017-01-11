@@ -85,7 +85,7 @@ let config = function () {
                     fallbackLoader: "style-loader", //string | object | loader[] the loader(s) that should be used when the css is not extracted (i.e. in an additional chunk when allChunks: false)
                     notExtractLoader: "style-loader",
                     loader: [
-                        'css-loader',//https://css-modules.github.io/webpack-demo/
+                        'css-loader',//https://css-modules.github.io/webpack-demo/, https://github.com/css-modules/css-modules
                         //"css-loader?sourceMap",//(required) the loader(s) that should be used for converting the resource to a css exporting module
                         // 'postcss-loader'//[https://github.com/postcss/postcss,https://github.com/postcss/postcss-loader]
                     ],

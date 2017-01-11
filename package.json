@@ -18,6 +18,8 @@
     "pregit": "clear && git status",
     "git": "git checkout dev && git add -A && git commit -m 'auto update' && git checkout master && git merge dev && git push --all && git checkout dev && git merge master",
     "postgit": "clear && git status",
+    "predemo": "rimraf exmaple && mkdir exmaple && cd exmaple && touch .yhtml5",
+    "demo": "clear",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
