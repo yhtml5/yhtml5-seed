@@ -4,6 +4,8 @@
 
 ### Introduction
 
+我们不建议使用别人发明的轮子，我们鼓励自己重复造轮子。在折腾中明白事情的始末，创造出更优质的代码
+
 YHTML5-Seed scaffolds out a new application. We can building a SPA, webapp or Hybird app.
 writing your build configuration, pulling in relevant build tasks 
 and package manager dependencies (e.g npm) that you might need for your build   
@@ -16,7 +18,7 @@ and package manager dependencies (e.g npm) that you might need for your build
     - [ ] 使用iconfont,css,svg代替传统图片,图标
     - [ ] 浏览器兼容性
     - [ ] 虚拟数据
-    - [ ] 预制代码 
+    - [ ] 预制代码
     - [ ] 可定制设计Demo
 
 ### Feature

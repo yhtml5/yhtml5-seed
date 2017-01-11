@@ -1,0 +1,28 @@
+.app {
+  text-size-adjust: none;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 200%;
+  width: 100%;
+  margin: auto;
+  padding: 6px 20px 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.root {
+  composes: red from "./App.chilren.pcss";
+  margin: auto;
+  text-align: center;
+}
+
+.text {
+  composes: blue from "./App.chilren.pcss";
+  font-size: 16px;
+  text-align: right;
+}
+
+.text2 {
+  composes: app;
+}
