@@ -140,6 +140,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
   │   ├── webpack.dev.js
   │   ├── webpack.pro.js
   │   └── other.js
+  ├── exmaple
   ├── dist                             --产品发布目录
   ├── node_modules
   ├── server                           --server source code
