@@ -81,7 +81,7 @@ let config = function () {
                 //     'css-loader?modules',
                 //     'postcss-loader',
                 // ],
-                loader: ExtractTextPlugin.extract({
+                loader: ExtractTextPlugin.extract({//https://github.com/yhtml5/less-loader
                     fallbackLoader: "style-loader", //string | object | loader[] the loader(s) that should be used when the css is not extracted (i.e. in an additional chunk when allChunks: false)
                     notExtractLoader: "style-loader",
                     loader: [

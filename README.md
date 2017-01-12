@@ -134,6 +134,9 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
   │   ├── login
   │   ├── static                       --公共静态资源
   │   │     └── favicon.ico
+  │   ├── global.pcss                  --公共静态资源
+  │   ├── template.jsx                 --页面模板
+  │   ├── index.jsx                    --公用入口
   │   └── others
   ├── build
   │   ├── webpack.config.js
