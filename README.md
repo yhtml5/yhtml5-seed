@@ -4,12 +4,12 @@
 
 ### Introduction
 
+YHTML5-Seed scaffolds out a new application. We can building a SPA or MPA.
+writing your build configuration, and package manager dependencies (e.g npm) that you might need for your build
+
 This is not only a project-seed for front-end. It is a complete set of solutions from the client to the server:
 react,redux,webpack,web security,nodejs,express,api,git version,performance optimization
 what you want technology stack all in one, and provides many out-of-the-box features
-
-YHTML5-Seed scaffolds out a new application. We can building a SPA or MPA.
-writing your build configuration, and package manager dependencies (e.g npm) that you might need for your build
 
 前端世界的变化总是惊人的，在这个项目里，我们会及时更新依赖的技术到最新最稳定版本，同时及时淘汰一些过时的技术元素
 我们不建议重度依赖别人发明的轮子，我们鼓励自己重复造轮子。在编码中了解底层原理，创造出更适合团队的解决方案
@@ -96,21 +96,33 @@ There are so many problems when we start a front-end project, like:
 
 目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
 
-### Technology Stack
+### Technology Stacks
 
-* babel
-* express
-* [node][NodeJS]
-* [NPM][npm]
-* PM2
-* postCSS
-* react-hot-loader
-* webpack
-* Etc，etc
+#### Command Line
 
-### command line
+#### Technology Stacks for developing a project
 
-|command line|usage|
+|Name|Usage|Note|
+|---|---|---|
+|cssModule|||
+|react|||
+|redux|||
+|react-ant|||
+
+#### The web's scaffolding tool for build modern webapps(option)
+
+|Name|Usage|Note|
+|---|---|---|
+|babel|||
+|express|||
+|[node][NodeJS]|||
+|[NPM][npm]|||
+|PM2|||
+|postCSS|||
+|react-hot-loader|||
+|webpack|||
+
+|Command line|Usage|
 |---|---|
 |npm start|install dependencies, and become building exmple program, please be patience|
 |npm run build|build production|
@@ -118,7 +130,6 @@ There are so many problems when we start a front-end project, like:
 |npm run dev|develop model|
 |npm run test|test code|
 |npm run git|commit your code to git remote repertory|
-
 For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
 
 ### Directory Layout
@@ -188,5 +199,5 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
 [YHTML5-Seed]:https://github.com/yhtml5/YHTML5-Seed
 [YHTML5-Seed-document]:./document/README.md
-[YHTML5-Seed-issue]:./document/3.issue.md
+[YHTML5-Seed-issue]:./document/04-frequent-problems.md
 [YHTML5-Tutorial-Git]:https://github.com/yhtml5/YHTML5-Tutorial/tree/master/app/git

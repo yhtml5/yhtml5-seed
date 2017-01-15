@@ -20,7 +20,9 @@
     "postgit": "clear && git status",
     "predemo": "rimraf exmaple && mkdir exmaple && cd exmaple && touch .yhtml5",
     "demo": "clear",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prerelease": "",
+    "release": "cp ../../gitlab/ exmpale"
   },
   "peerDependencies": {
     "webpack": "*",
@@ -48,7 +50,7 @@
     "css-loader": "^0.23.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
-    "file-loader": "^0.9.0",
+    "file-loader": "github:webpack/file-loader",
     "handlebars-loader": "^1.4.0",
     "html-loader": "^0.4.4",
     "html-minifier": "^3.2.3",

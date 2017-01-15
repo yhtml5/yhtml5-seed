@@ -13,6 +13,17 @@
 - [ ] level3  --clear repeated css class
 
 ### Error in developing
+- [x] $ is not defined
+
+- [x] file-loader option.outputPath not working
+    It seems that some features on GitHub version are not yet deployed to npm registry.
+    Try installing from GitHub repo: npm install webpack/file-loader --save-dev. You also have to use trailing slash on your paths and it should work:
+    ```query: {
+      publicPath: 'static/fonts/',
+      outputPath: 'static/fonts/',
+      name: '[hash].[ext]',
+    }
+    ```
 - [x] if(!loader.query) return loader.loader;TypeError: Cannot read property 'query' of undefined
     Instead of using key loaders in your config use key loader.
     There is no option loaders in ExtractTextPlugin.
@@ -52,7 +63,7 @@
 - [x] how to set `*.*?hash`
     * `HtmlWebpackPlugin.hash=true`append a unique webpack compilation hash to all included scripts and CSS files. This is useful for cache busting.
     * `webpack.filename *.*?[hash]`
-- [ ] wrong chunks order[wrong-chunks-order]
+- [ ] Multiple pages, [wrong chunks order][wrong-chunks-order]
 - [x] webpackJsonp is not defined
     * set multiple pages with CommonsChunkPlugin and HtmlWebpackPlugin.
     * CommonsChunkPlugin choice chunks pack into common package  `chunks: ['vendor', 'index']`
