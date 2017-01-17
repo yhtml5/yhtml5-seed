@@ -21,6 +21,7 @@
     "predemo": "rimraf exmaple && mkdir exmaple && cd exmaple && touch .yhtml5",
     "demo": "clear",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint app",
     "prerelease": "",
     "release": "cp ../../gitlab/ exmpale"
   },
@@ -48,6 +49,8 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
     "css-loader": "^0.23.1",
+    "eslint": "^3.13.1",
+    "eslint-plugin-react": "^6.9.0",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "github:webpack/file-loader",

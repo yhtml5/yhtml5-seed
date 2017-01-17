@@ -57,6 +57,7 @@ There are so many problems when we start a front-end project, like:
    - [x] 局域网访问  --开发环境允许局域网访问
    - [x] 版本管理 --小版本携带版本号+时间戳，大版本使用版本号(字母)
    - [x] 重定向依赖 --使用第三方包提供的压缩包而不是通过webpack
+   - [x] windows兼容
 - [x] 可选功能
    - [ ] reload VS Hot Module Replacement(recommend)
    - [ ] externals VS resolve VS require
@@ -114,8 +115,9 @@ There are so many problems when we start a front-end project, like:
 |Name|Usage|Note|
 |---|---|---|
 |babel|||
+|[Eslint][eslint]|||
 |express|||
-|[node][NodeJS]|||
+|[NodeJS][node]|||
 |[NPM][npm]|||
 |PM2|||
 |postCSS|||
@@ -180,6 +182,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 
 [bower]: http://bower.io
 [es5-shim]:https://github.com/es-shims/es5-shim
+[eslint]:http://eslint.org/
 [git]: http://git-scm.com/
 [http-server]: https://github.com/nodeapps/http-server
 [html5shiv]:https://github.com/aFarkas/html5shiv

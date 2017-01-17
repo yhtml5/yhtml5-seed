@@ -13,8 +13,8 @@
 - [ ] level3  --clear repeated css class
 
 ### Error in developing
+- [ ] windows 下兼容问题
 - [x] $ is not defined
-
 - [x] file-loader option.outputPath not working
     It seems that some features on GitHub version are not yet deployed to npm registry.
     Try installing from GitHub repo: npm install webpack/file-loader --save-dev. You also have to use trailing slash on your paths and it should work:
