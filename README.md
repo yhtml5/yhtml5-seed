@@ -30,11 +30,7 @@ Welcome to NEW front-end world and enjoy yourself
 
 ### Solutions
 
-There are so many problems when we start a front-end project, like:
-
-打包非常慢，不支持多页面，不知道加载了哪些模块，开发问题路径定位，
-打包模块通常非常大，没有很好拆分第三方依赖包与业务逻辑代码，没有按需加载，
-没有区分开发环境和生产环境，没有热更新等等。
+There are so many problems when we start a front-end project
 
 ### Feature
 
