@@ -13,6 +13,13 @@
 - [ ] level3  --clear repeated css class
 
 ### Error in developing
+- [x] [Webpack ProvidePlugin vs externals?][provideplugin-vs-externals]
+    * Library from CDN: Use <script> tag and externals option
+    * Library from filesystem: Include the library in the bundle. (Maybe modify resolve options to find the library)
+    * externals: Make global vars available as module
+    * ProvidePlugin: Make modules available as free variables inside modules
+- [x] 外网能访问
+    * 开发的ip地址设为0.0.0.0
 - [ ] windows 下兼容问题
 - [x] $ is not defined
 - [x] file-loader option.outputPath not working
@@ -78,3 +85,4 @@
 [webpack-optimize-production]:http://dev.topheman.com/make-your-react-production-minified-version-with-webpack/
 [wrong-chunks-order]:https://github.com/ampedandwired/html-webpack-plugin/issues/481
 [template-option]:https://github.com/ampedandwired/html-webpack-plugin/blob/master/docs/template-option.md
+[provideplugin-vs-externals]:http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals
