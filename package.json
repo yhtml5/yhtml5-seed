@@ -1,6 +1,6 @@
 {
   "name": "yhtml5-seed",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "author": "yhtml5 <1417376255@qq.com>",
   "description": "The web's scaffolding tool for modern webapps",
   "main": "app/index.js",
