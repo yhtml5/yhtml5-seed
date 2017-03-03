@@ -17,12 +17,12 @@ import '~/components/a.js'
 // });
 
 const render = (Component, hot) => {
-    ReactDOM.render(
-        <AppContainer>
-            <Component/>
-        </AppContainer>,
-        document.getElementById('root')
-    );
+  ReactDOM.render(
+    <AppContainer>
+      <Component/>
+    </AppContainer>,
+    document.getElementById('root')
+  );
 };
 render(App);
 
@@ -35,9 +35,9 @@ render(App);
  **/
 
 function component() {
-    var element = document.createElement('div');
-    element.innerHTML = 'Hello webpack10'
-    return element;
+  var element = document.createElement('div');
+  element.innerHTML = 'Hello webpack10'
+  return element;
 }
 document.body.appendChild(component());
 
@@ -47,8 +47,8 @@ document.body.appendChild(component());
 // If you use Webpack 2 in ES modules mode, you can
 // use <App /> here rather than require() a <NextApp />.
 if (module.hot) {
-    module.hot.accept('./components/App.jsx', () => {
-        const NewApp = require('./components/App.jsx').default
-        render(NewApp)
-    });
+  module.hot.accept('./components/App.jsx', () => {
+    const NewApp = require('./components/App.jsx').App
+    render(NewApp)
+  });
 }
