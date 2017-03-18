@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--开发环境-->
+<html lang="en">
+<head>
+    <link rel="import" href="../../components/meta/index.html?__inline">
+    <!--STYLE_PLACEHOLDER-->
+</head>
+<body class="y-bgc-f5f5f5">
+<div id="withdrawals" v-cloak>
+    <x-header :left-options="{showBack:true,backText: '提现'}"></x-header>
+    <link rel="import" href="selectAccount.html?__inline">
+    <link rel="import" href="enterMoney.html?__inline">
+    <link rel="import" href="footer.html?__inline">
+    <link rel="import" href="accountList.html?__inline">
+    <loading :show="notice.loading" :text="提交中..."></loading>
+    <toast :show.sync="notice.success" :time="1000">提交成功</toast>
+    <toast :show.sync="notice.valid" type="text" width="160px">{{notice.text}}</toast>
+</div>
+<!--SCRIPT_PLACEHOLDER-->
+<!--@require /apps/server/author.css-->
+<!--@require /apps/server/author.js-->
+<!--@require withdrawals.js-->
+</body>
+</html>
+

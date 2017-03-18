@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--开发环境-->
+<html lang="en">
+<head>
+    <link rel="import" href="../../components/meta/index.html?__inline">
+    <!--STYLE_PLACEHOLDER-->
+</head>
+<body class="y-bgc-f5f5f5">
+<div id="record" v-cloak>
+    <x-header :left-options="{showBack:true,backText: '流水明细'}"></x-header>
+    <link rel="import" href="recordType.html?__inline">
+    <link rel="import" href="recordList.html?__inline">
+    <loading :show="notice.loading" ></loading>
+    <toast :show.sync="notice.valid" type="text" :time="1000">{{notice.text}}</toast>
+</div>
+
+<!--SCRIPT_PLACEHOLDER-->
+<!--@require /apps/server/author.css-->
+<!--@require /apps/server/author.js-->
+<!--@require record.js-->
+</body>
+</html>
+

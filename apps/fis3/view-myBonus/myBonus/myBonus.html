@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--开发环境-->
+<html lang="en">
+<head>
+    <link rel="import" href="../../components/meta/index.html?__inline">
+    <!--STYLE_PLACEHOLDER-->
+</head>
+<body class="y-bgc-f5f5f5">
+<div id="myBonus" v-cloak>
+    <link rel="import" href="nav.html?__inline">
+    <p class="v-notice-black" v-show="true">您还未实名认证, 无法提现.
+        <span class="y-cl-e59313" @click="toAuthentication">&nbsp;立即认证&nbsp;<span class="y-fs-18">&gt;</span></span>
+    </p>
+    <link rel="import" href="banner.html?__inline">
+    <link rel="import" href="list.account.html?__inline">
+    <link rel="import" href="list.waterDetails.html?__inline">
+    <link rel="import" href="footer.html?__inline">
+    <confirm :show.sync="confirm.reAuthenticating" confirm-text="重新认证" cancel-text="取消" title="实名认证不通过, 请重新认证" @on-confirm="toAuthentication"></confirm>
+    <confirm :show.sync="confirm.authenticating" confirm-text="朕知道了" cancel-text="确定" title="实名认证审核中">
+        <p class="text-center">三个工作日内给你回复</p>
+    </confirm>
+    <confirm :show.sync="confirm.invalid" confirm-text="重新认证" cancel-text="取消" title="身份已失效, 请重新认证" @on-confirm="toAuthentication"></confirm>
+    <confirm :show.sync="confirm.authentication" confirm-text="立即认证" cancel-text="取消" title="提现时需要实名认证" @on-confirm="toAuthentication">
+        <p class="text-center">您还没有认证</p>
+    </confirm>
+    <loading :show="notice.loading" :text="提交中..."></loading>
+    <toast :show.sync="notice.success" :time="1000">提交成功</toast>
+    <toast :show.sync="notice.valid" type="text" width="160px">{{notice.text}}</toast>
+</div>
+
+<!--SCRIPT_PLACEHOLDER-->
+<!--@require /apps/server/author.css-->
+<!--@require /apps/server/author.js-->
+<!--@require myBonus.js-->
+</body>
+</html>
+

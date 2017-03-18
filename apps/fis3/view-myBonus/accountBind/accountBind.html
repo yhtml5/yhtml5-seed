@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--开发环境-->
+<html lang="en">
+<head>
+    <link rel="import" href="../../components/meta/index.html?__inline">
+    <!--STYLE_PLACEHOLDER-->
+</head>
+<body class="y-bgc-f5f5f5">
+<div id="accountBind" v-cloak>
+    <x-header :left-options="{showBack:true,backText: '绑定账户'}"></x-header>
+    <link rel="import" href="tabTitle.html?__inline">
+    <link rel="import" href="tab.html?__inline">
+    <loading :show="notice.loading" :text="提交中..."></loading>
+    <toast :show.sync="notice.success" :time="1000">提交成功</toast>
+    <toast :show.sync="notice.valid" type="text" width="160px">{{notice.text}}</toast>
+</div>
+<!--SCRIPT_PLACEHOLDER-->
+<!--@require /apps/server/author.css-->
+<!--@require /apps/server/author.js-->
+<!--@require /page/start/index.css-->
+<!--@require /page/card/index.css-->
+<!--@require /page/nav/index.css-->
+<!--@require accountBind.js-->
+</body>
+</html>
+
