@@ -1,4 +1,4 @@
-## React + Redux + Webpack + Antd
+## React + Redux + Webpack2 + Ant-design
  
  
  

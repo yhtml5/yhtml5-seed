@@ -1,16 +1,15 @@
 {
   "name": "yhtml5-seed",
-  "version": "1.0.9",
+  "version": "1.0.8",
   "author": "yhtml5 <1417376255@qq.com>",
   "description": "The web's scaffolding tool for modern webapps",
   "main": "app/index.js",
   "license": "MIT",
   "repository": "git@github.com:yhtml5/YHTML5-Seed.git",
   "scripts": {
-    "start": "npm i && npm run build && npm run dev",
     "build": "node ./build/build.js",
     "build-debug": "NODE_ENV=debug  webpack-dashboard -- webpack --display-modules --progress --profile --colors --config build/webpack.pro.debug.js",
-    "dev": "webpack-dashboard -- webpack-dev-server --open  --config build/webpack.dev.js",
+    "start": "webpack-dashboard -- webpack-dev-server --open  --config build/webpack.dev.js",
     "dev-win": "webpack-dev-server --open  --config build/webpack.dev.js",
     "pregit": "clear && git status",
     "git": "git checkout new && git add -A && git commit -m 'auto commit' &&  git pull && git push",
@@ -52,7 +51,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
     "css-loader": "^0.23.1",
-    "express": "^4.14.0",
+    "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "github:webpack/file-loader",
     "handlebars-loader": "^1.4.0",
@@ -70,11 +69,11 @@
     "shelljs": "^0.7.6",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.0-rc.3",
-    "webpack-dashboard": "^0.2.1",
+    "webpack": "^2.3.1",
+    "webpack-dashboard": "^0.3.0",
     "webpack-dev-middleware": "^1.9.0",
-    "webpack-dev-server": "^2.1.0-beta.12",
-    "webpack-merge": "^2.3.1"
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0"
   },
   "keywords": [
     "component",

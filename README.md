@@ -34,11 +34,23 @@ There are so many problems when we start a front-end project
 
 ### Feature
 
+### Apps
+
+我们为不同的项目类型准备了不同的开发脚手架：
+
+type|demo|path
+---|---|---
+SPA|react+webpack|`apps/`|
+SPA|react+webpack|`apps/`|
+MPA|||
+
 #### Done
 
 - [x] 基础功能
    - [x] 打包 --打包合并，压缩混淆html,css,js
    - [x] 代码切割 --分离第三方包与业务逻辑代码
+     - [x] css与js分离、业务代码与公共第三方包分离
+     - [ ] 业务逻辑分离、第三方包分离，根据路由加载、按需加载
    - [x] 环境分离 --production, development, debug model
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
@@ -130,7 +142,7 @@ There are so many problems when we start a front-end project
 |npm run git|commit your code to git remote repertory|
 For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
 
-### Directory Layout
+### Directory Structure
 
 合理的规范有利于项目开发速度，我们推崇高内聚低耦合的代码结构
 模块化开发， 分而治之， 各模块同目录下就近维护。
