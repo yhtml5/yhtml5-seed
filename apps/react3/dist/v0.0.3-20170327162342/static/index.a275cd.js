@@ -1,1 +1,0 @@
-webpackJsonp([1],{14:function(n,e,o){o(18)},17:function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var t=o(15),c=(o.n(t),o(16));o.n(c);throw new Error('Cannot find module "./index.css"')},18:function(n,e){console.log("***** I AM a *****")}},[17]);
