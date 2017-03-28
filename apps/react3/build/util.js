@@ -3,7 +3,7 @@ const packageConfig = require('../package.json')
 const formatMoment = (moment) => (moment < 10) ? "0" + "" + moment : moment;
 
 function getVersionDate() {
-  var year = new Date().getFullYear(),
+  const year = new Date().getFullYear(),
     month = new Date().getMonth() + 1,
     day = new Date().getDate(),
     hour = new Date().getHours(),
@@ -16,4 +16,13 @@ function getVersionDate() {
 
 const version = 'v' + packageConfig.version + ((/[a-zA-Z]/.test(packageConfig.version)) ? '' : ('-' + getVersionDate()))
 
-module.exports = {version}
+function isMin() {
+  console.log(process.env.NODE_ENV, process.env.NODE_ENV === 'production')
+  if (process.env.NODE_ENV === 'production') {
+    return ''
+  } else {
+    return 'min'
+  }
+}
+
+module.exports = {version, isMin}

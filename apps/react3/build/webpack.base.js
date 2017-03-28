@@ -2,16 +2,29 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {version} = require('./util')
+const {version, isMin} = require('./util')
 
 module.exports = function () {
   return {
+    // context: path.resolve(__dirname, "../app"),
     entry: {
       index: './app/index.js', // path?
     },
     output: {
       filename: 'static/[name].js',
       path: path.resolve(__dirname, '../dist/'),
+    },
+    resolve: {
+      alias: {
+        // '~': path.resolve(__dirname, '../app'),
+        // jquery: "jquery/dist/jquery" + isMin() + ".js",
+        // react: "./node_modules/react/dist/react" + isMin() + ".js",
+        // "react-dom": "./node_modules/react-dom/dist/react-dom" + isMin() + ".js",
+        // "react-redux": "./node_modules/react-redux/dist/react-redux" + isMin() + ".js",
+        // "react-router": "./node_modules/react-router/umd/ReactRouter" + isMin() + ".js",
+        // "react-router-redux": "./node_modules/react-router-redux/dist/ReactRouterRedux" + isMin() + ".js",
+        // redux: "./node_modules/redux/dist/redux" + isMin() + ".js",
+      }
     },
     module: {
       rules: [

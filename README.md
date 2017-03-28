@@ -32,8 +32,6 @@ Welcome to NEW front-end world and enjoy yourself
 
 There are so many problems when we start a front-end project
 
-### Feature
-
 ### Apps
 
 我们为不同的项目类型准备了不同的开发脚手架：
@@ -43,6 +41,20 @@ type|demo|path
 SPA|react+webpack|`apps/`|
 SPA|react+webpack|`apps/`|
 MPA|||
+
+### Command Line
+
+|Command line|Usage|
+|---|---|
+|npm start|install dependencies, and become building exmple program, please be patience|
+|npm run build|build production|
+|npm run build-debug|debug model|
+|npm run dev|develop model|
+|npm run test|test code|
+|npm run git|commit your code to git remote repertory|
+For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
+
+### Feature
 
 #### Done
 
@@ -107,8 +119,6 @@ MPA|||
 
 ### Technology Stacks
 
-#### Command Line
-
 #### Technology Stacks for developing a project
 
 |Name|Usage|Note|
@@ -132,55 +142,19 @@ MPA|||
 |react-hot-loader|||
 |webpack|||
 
-|Command line|Usage|
-|---|---|
-|npm start|install dependencies, and become building exmple program, please be patience|
-|npm run build|build production|
-|npm run build-debug|debug model|
-|npm run dev|develop model|
-|npm run test|test code|
-|npm run git|commit your code to git remote repertory|
-For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
+#### Development Dependencies
 
-### Directory Structure
+##### Node
 
-合理的规范有利于项目开发速度，我们推崇高内聚低耦合的代码结构
-模块化开发， 分而治之， 各模块同目录下就近维护。
-这里，我们规定了项目构建，开发，测试，发布等目录及文件路径（react项目为例）：
+name|usage|url
+---|---|---
+shelljs|Portable Unix shell commands for Node.js|`https://github.com/shelljs/shelljs`
+ora|Elegant terminal spinner |`https://github.com/sindresorhus/ora`
 
-```
- root
-  ├── app                              --client source code
-  │   ├── components
-  │   ├── login
-  │   ├── static                       --公共静态资源
-  │   │     └── favicon.ico
-  │   ├── global.pcss                  --公共静态资源
-  │   ├── template.jsx                 --页面模板
-  │   ├── index.jsx                    --公用入口
-  │   └── others
-  ├── build
-  │   ├── webpack.config.js
-  │   ├── webpack.dev.js
-  │   ├── webpack.pro.js
-  │   └── other.js
-  ├── exmaple
-  ├── dist                             --产品发布目录
-  ├── node_modules
-  ├── server                           --server source code
-  ├── .babelrc
-  ├── .editorconfig
-  ├── .eslintignore
-  ├── .eslintrc.js
-  ├── .gitignore
-  ├── .npmignore
-  ├── .gitignore
-  ├── CHANGELOG.md
-  ├── ISSUE.md
-  ├── LICENSE
-  ├── package.json
-  └── README.md
-```
+##### Webpack
+
+
+
 
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg

@@ -11,9 +11,6 @@
     "build-debug": "NODE_ENV=debug  webpack-dashboard -- webpack --display-modules --progress --profile --colors --config build/webpack.pro.debug.js",
     "start": "webpack-dashboard -- webpack-dev-server --open  --config build/webpack.dev.js",
     "dev-win": "webpack-dev-server --open  --config build/webpack.dev.js",
-    "pregit": "clear && git status",
-    "git": "git checkout new && git add -A && git commit -m 'auto commit' &&  git pull && git push",
-    "postgit": "clear && git status",
     "predemo": "rimraf exmaple && mkdir exmaple && cd exmaple && touch .yhtml5",
     "demo": "clear",
     "test": "echo \"Error: no test specified\" && exit 1"

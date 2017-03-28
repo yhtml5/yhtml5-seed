@@ -3,8 +3,10 @@ const express = require("express")
 const webpack = require("webpack")
 const webpackDevMiddleware = require("webpack-dev-middleware")
 const webpackConfig = require("./webpack.dev")()
+process.env.NODE_ENV = 'development'
 
 console.log('  Hi,又在写bug了？\n')
+console.log('  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
 
 let loading = ora('Program initialization')
 loading.start()
