@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react';
-import ReactDom from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
+import ReactDom from 'react-dom';
 import {combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import createRoute from './routes.jsx';
