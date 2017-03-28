@@ -5,23 +5,21 @@ const ora = require('ora')
 require('shelljs/global')
 const path = require('path')
 const webpack = require('webpack')
-const webpackConfig = require('./webpack.pro.js')
-
-const spinnerSetting = ora('Program initialization')
-spinnerSetting.start()
-spinnerSetting.color = 'blue'
+const webpackConfig = require('./webpack.pro.js')()
 
 console.log(
-  '\n  Tip:\n' +
+  '  Tip:\n' +
   '  Built files are meant to be served over an HTTP server.\n' +
   '  Opening index.html over file:// won\'t work.\n'
 )
 
-console.log('  Hi,又在写bug了？\n')
+let spinnerSetting = ora('Program initialization')
+spinnerSetting.start()
+spinnerSetting.color = 'blue'
 spinnerSetting.succeed()
 spinnerSetting.stop()
 
-const spinnerWebpack = ora('Webpack for production...')
+let spinnerWebpack = ora('Webpack for production...')
 
 spinnerWebpack.start()
 spinnerWebpack.color = 'blue'
@@ -36,7 +34,7 @@ spinnerWebpack.color = 'blue'
 webpack(webpackConfig, function (err, stats) {
   spinnerWebpack.succeed()
   spinnerSetting.stop()
-  console.warn('\n')
+  console.log('\n')
   if (err) throw err
   process.stdout.write(stats.toString({
       children: false,

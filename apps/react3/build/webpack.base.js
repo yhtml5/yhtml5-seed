@@ -12,7 +12,6 @@ module.exports = function () {
     output: {
       filename: 'static/[name].js',
       path: path.resolve(__dirname, '../dist/'),
-      // pathinfo: true,
     },
     module: {
       rules: [
@@ -40,7 +39,7 @@ module.exports = function () {
       new HtmlWebpackPlugin({
         chunks: ['index', 'vendor', 'manifest'],
         excludeChunks: [''],
-        filename: 'app.html',
+        filename: 'index.html',
         template: './app/template.js',
         chunksSortMode: 'dependency',
         title: 'Test',
@@ -57,7 +56,7 @@ module.exports = function () {
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
-        // names: ["vendor", "react"],
+        // names: ["vendor", 'react'],
         // chunks: ["vendor", "react"],
         // filename: "vendor.js",
         minChunks: function (module) {
