@@ -1,1 +1,0 @@
-webpackJsonp([1],[,function(n,o,e){e(5)},function(n,o){},,function(n,o,e){"use strict";Object.defineProperty(o,"__esModule",{value:!0});var t=e(3);e.n(t);throw new Error('Cannot find module "react"')},function(n,o){console.log("***** I AM a *****")}],[4]);

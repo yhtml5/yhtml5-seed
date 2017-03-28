@@ -2,7 +2,7 @@
 logs/*
 /**/node_modules/
 /**/bower_components/
-#/dist/
+#dist/
 npm-debug.log
 
 tmp
