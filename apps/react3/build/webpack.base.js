@@ -7,14 +7,12 @@ const {version} = require('./util')
 module.exports = function () {
   return {
     entry: {
-      index: './app/index.js' // path?
+      index: './app/index.js', // path?
     },
     output: {
-      filename: 'static/[name].[chunkhash:6].js',
-      path: path.resolve(__dirname, '../dist/' + version),
-      publicPath: './',
+      filename: 'static/[name].js',
+      path: path.resolve(__dirname, '../dist/'),
       // pathinfo: true,
-      // sourceMapFilename: '[name].map'
     },
     module: {
       rules: [
@@ -59,6 +57,9 @@ module.exports = function () {
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
+        // names: ["vendor", "react"],
+        // chunks: ["vendor", "react"],
+        // filename: "vendor.js",
         minChunks: function (module) {
           return module.context && module.context.indexOf('node_modules') !== -1;
         },
