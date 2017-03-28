@@ -2,7 +2,6 @@
 logs/*
 /**/node_modules/
 /**/bower_components/
-/community-dashboard/
 #/dist/
 npm-debug.log
 
@@ -13,7 +12,6 @@ tmp
 .test.html.swp
 .test.html.swo
 !.gitkeep
-
 
 # Windows image file caches
 Thumbs.db
