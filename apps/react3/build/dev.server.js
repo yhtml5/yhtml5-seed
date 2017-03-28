@@ -26,7 +26,7 @@ app.use(webpackDevMiddleware(compiler, {
 // })
 
 app.listen(9999, function () {
-  console.log("  you server will running on http://0.0.0.0:9999!\n")
+  console.log("  you server will running on: \n  http://0.0.0.0:9999! (windows: http://localhost:9999)\n")
 })
 
 loading.succeed()
