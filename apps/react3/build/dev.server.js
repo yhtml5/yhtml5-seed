@@ -5,7 +5,7 @@ const webpackDevMiddleware = require("webpack-dev-middleware")
 const webpackConfig = require("./webpack.dev")()
 process.env.NODE_ENV = 'development'
 
-console.log('  Hi,又在写bug了？\n')
+console.log('\n  Hi,又在写bug了？\n')
 console.log('  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
 
 let loading = ora('Program initialization')
@@ -26,7 +26,7 @@ app.use(webpackDevMiddleware(compiler, {
 // })
 
 app.listen(9999, function () {
-  console.log("you server will running on http://0.0.0.0:9999!\n")
+  console.log("  you server will running on http://0.0.0.0:9999!\n")
 })
 
 loading.succeed()
