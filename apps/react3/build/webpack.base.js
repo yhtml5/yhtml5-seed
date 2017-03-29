@@ -58,7 +58,7 @@ module.exports = function () {
         title: 'Test',
         hash: false,
         cache: true,
-        // favicon: 'static/favicon.ico',
+        favicon: './app/static/favicon.ico',
         // minify: {
         //   collapseWhitespace: true,
         //   removeComments: true,
