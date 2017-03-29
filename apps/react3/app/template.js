@@ -22,4 +22,4 @@ module.exports = function (templateParams) {
     + '</body>'
     + '</html>'
   return html
-};
+}

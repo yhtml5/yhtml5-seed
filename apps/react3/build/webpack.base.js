@@ -7,7 +7,7 @@ const {version, isMin} = require('./util')
 module.exports = function () {
   console.log('\n  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
   return {
-    // context: path.resolve(__dirname, "../app"),
+    // context: path.resolve(__dirname, "./app"),
     entry: {
       index: './app/index.js', // path?
     },
@@ -30,9 +30,40 @@ module.exports = function () {
     module: {
       rules: [
         {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: [
+            'babel-loader',
+          ],
+        }, {
+          test: /\.pcss$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: 'style-loader'
+            }, {
+              loader: 'css-loader',
+              options: {
+                modules: true
+              }
+            }, {
+              loader: 'postcss-loader',
+              options: {
+                plugins: function () {
+                  return [
+                    require('postcss-smart-import')({/* ...options */}),
+                    require('precss')({/* ...options */}),
+                    require('autoprefixer')({/* ...options */})
+                  ]
+                }
+              }
+            }]
+        }, {
           test: /\.css$/,
+          exclude: /node_modules/,
           use: ExtractTextPlugin.extract({
-            use: ['to-string-loader', 'css-loader']
+            fallback: 'style-loader',
+            use: ['css-loader']
           })
         }, {
           test: /\.(jpg|png|gif)$/,
@@ -51,7 +82,7 @@ module.exports = function () {
     plugins: [
       new ExtractTextPlugin('static/[name].[chunkhash:6].css'),
       new HtmlWebpackPlugin({
-        chunks: ['index', 'vendor', 'manifest'],
+        chunks: ['index', 'vendor', 'manifest', (process.env.NODE_ENV === 'development') ? 'hot' : ''],
         excludeChunks: [''],
         filename: 'index.html',
         template: './app/template.js',

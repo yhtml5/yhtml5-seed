@@ -4,7 +4,8 @@ function config() {
   return {
     hostname,
     port,
-    origin: 'http://' + hostname + ':' + port
+    origin: 'http://' + hostname + ':' + port,
+    domain: ''
   }
 }
 

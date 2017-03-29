@@ -1,15 +1,26 @@
-import _ from 'lodash'
 import React from 'react'
-import ReactDom from 'react-dom'
-import {combineReducers} from 'redux'
-import {Provider} from 'react-redux'
+import ReactDOM from 'react-dom'
+import {AppContainer} from 'react-hot-loader'
 import './index.css'
-import './test/index'
 
-function component() {
-  var element = document.createElement('div')
-  element.innerHTML = _.join(['Hello', 'Webpack'], ' ')
-  return element
+// AppContainer is a necessary wrapper component for HMR
+
+import App from './components/App';
+
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component/>
+    </AppContainer>,
+    document.getElementById('root')
+  )
 }
 
-document.body.appendChild(component())
+render(App);
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    render(App)
+  })
+}
