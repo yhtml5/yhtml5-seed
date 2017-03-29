@@ -26,7 +26,12 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
-    "css-loader": "^0.27.3",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.13.0",
+    "css-loader": "^0.23.1",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
@@ -34,13 +39,16 @@
     "opn": "^4.0.2",
     "ora": "^1.2.0",
     "pm2": "^2.4.2",
-    "postcss-loader": "^1.3.3",
+    "postcss-loader": "^0.9.1",
+    "react-hot-loader": "^3.0.0-beta.6",
     "script-ext-html-webpack-plugin": "^1.7.1",
     "shelljs": "^0.7.7",
+    "style-loader": "^0.13.1",
     "to-string-loader": "^1.1.5",
     "url-loader": "^0.5.8",
-    "webpack": "^2.3.1",
+    "webpack": "^2.1.0-beta.25",
     "webpack-dev-middleware": "^1.10.1",
+    "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-merge": "^4.1.0"
   }
 }
