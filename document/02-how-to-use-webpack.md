@@ -19,7 +19,8 @@ But in a production environment, those info are not expected to appear.
 So we can do like this:
 
 ```
-if(DEBUG){
+if(process.env.NODE_ENV !== 'production'){
   console.log
 }
 ```
+

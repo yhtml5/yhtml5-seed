@@ -29,7 +29,7 @@ module.exports = function (env) {
         },
         compress: {
           warnings: false,
-          screw_ie8: true
+          screw_ie8: true,
         },
         comments: false
       })
