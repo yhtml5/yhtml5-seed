@@ -1,8 +1,10 @@
 const ora = require('ora')
+const opn = require('opn')
 const express = require("express")
 const webpack = require("webpack")
 const webpackDevMiddleware = require("webpack-dev-middleware")
 const webpackConfig = require("./webpack.dev")()
+const {port, hostname, origin} = require('./config')()
 process.env.NODE_ENV = 'development'
 
 console.log('\n  Hi,又在写bug了？\n')
@@ -25,9 +27,10 @@ app.use(webpackDevMiddleware(compiler, {
 //   res.send('Hello World!')
 // })
 
-app.listen(9999, function () {
-  console.log("  you server will running on http://localhost:9999\n")
+app.listen(port, function () {
+  console.log('  you server will running on ' + origin + '\n')
 })
 
 loading.succeed()
 loading.stop()
+setTimeout(() => opn(origin), 1000)

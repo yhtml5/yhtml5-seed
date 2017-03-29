@@ -150,6 +150,7 @@ name|usage|url
 ---|---|---
 shelljs|Portable Unix shell commands for Node.js|`https://github.com/shelljs/shelljs`
 ora|Elegant terminal spinner |`https://github.com/sindresorhus/ora`
+opn|open browser|
 
 **How to export logo in term?**
 

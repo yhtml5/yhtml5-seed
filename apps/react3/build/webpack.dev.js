@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
+const {port} = require('./config')()
 
 module.exports = function (env) {
   return webpackMerge(commonConfig(), {
@@ -18,7 +19,7 @@ module.exports = function (env) {
       contentBase: path.join(__dirname, "../dist"),
       compress: true,
       host: "0.0.0.0",
-      port: 9999,
+      port: port,
       hot: true,
       inline: true,
       publicPath: '/',
