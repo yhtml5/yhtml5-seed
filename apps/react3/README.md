@@ -1,4 +1,4 @@
-## React + Redux + webpack2 
+## React + Redux + Webpack2 + Ant-design
 
 
 ### Directory Structure
