@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {version, isMin} = require('./util')
 
 module.exports = function () {
+  console.log('  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
   return {
     // context: path.resolve(__dirname, "../app"),
     entry: {
@@ -59,13 +60,15 @@ module.exports = function () {
         hash: false,
         cache: true,
         favicon: './app/static/favicon.ico',
-        // minify: {
-        //   collapseWhitespace: true,
-        //   removeComments: true,
-        //   removeScriptTypeAttributes: true,
-        //   removeStyleLinkTypeAttributes: true,
-        //   trimCustomFragments: true
-        // }
+        minify: (process.env.NODE_ENV === 'production') ?
+          {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            trimCustomFragments: true
+          }
+          : () => null
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
 const {version} = require('./util')
-
+process.env.NODE_ENV = 'production'
 
 module.exports = function (env) {
   return webpackMerge(commonConfig(), {

@@ -5,10 +5,8 @@ const webpack = require("webpack")
 const webpackDevMiddleware = require("webpack-dev-middleware")
 const webpackConfig = require("./webpack.dev")()
 const {port, hostname, origin} = require('./config')()
-process.env.NODE_ENV = 'development'
 
 console.log('\n  Hi,又在写bug了？\n')
-console.log('  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
 
 let loading = ora('Program initialization')
 loading.start()

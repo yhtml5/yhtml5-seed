@@ -3,14 +3,12 @@ require('shelljs/global')
 const path = require('path')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.pro.js')()
-process.env.NODE_ENV = 'production'
 
 console.log(
-  '\n  Tip:\n' +
+  '  Tip:\n' +
   '  Built files are meant to be served over an HTTP server.\n' +
   '  Opening index.html over file:// won\'t work.\n'
 )
-console.log('  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
 
 let spinnerSetting = ora('Program initialization')
 spinnerSetting.start()

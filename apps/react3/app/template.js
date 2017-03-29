@@ -18,6 +18,7 @@ module.exports = function (templateParams) {
     + '<meta name="format-detection" content="telephone=no">'
     + '</head>'
     + '<body>'
+    + '<!--<div>test</div>-->'
     + '</body>'
     + '</html>'
   return html
