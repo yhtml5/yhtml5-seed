@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {version, isMin} = require('./util')
 
 module.exports = function () {
-  console.log('  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
+  console.log('\n  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
   return {
     // context: path.resolve(__dirname, "../app"),
     entry: {
