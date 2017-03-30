@@ -84,7 +84,7 @@ module.exports = function () {
       new HtmlWebpackPlugin({
         chunks: ['index', 'vendor', 'manifest', (process.env.NODE_ENV === 'development') ? 'hot' : ''],
         excludeChunks: [''],
-        filename: 'index.html',
+        filename: 'app.html',
         template: './app/template.js',
         chunksSortMode: 'dependency',
         title: 'Test',

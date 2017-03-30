@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {AppContainer} from 'react-hot-loader'
-import './index.css'
-
 // AppContainer is a necessary wrapper component for HMR
-
+import './test/index'
+import './index.css'
 import App from './components/App';
 
 const render = (Component) => {
@@ -12,7 +11,7 @@ const render = (Component) => {
     <AppContainer>
       <Component/>
     </AppContainer>,
-    document.getElementById('root')
+    document.body.appendChild(document.createElement('div'))
   )
 }
 

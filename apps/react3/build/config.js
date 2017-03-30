@@ -5,7 +5,14 @@ function config() {
     hostname,
     port,
     origin: 'http://' + hostname + ':' + port,
-    domain: ''
+    domain: '',
+    pages: [{
+      key: 'app',
+      name: 'app.html'
+    }, {
+      key: 'login',
+      name: 'login.html'
+    }]
   }
 }
 

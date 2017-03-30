@@ -18,7 +18,8 @@ const compiler = webpack(webpackConfig);
 // app.use('/static', express.static(__dirname + '../../'))
 
 app.use(webpackDevMiddleware(compiler, {
-  publicPath: "/" // Same as `output.publicPath` in most cases.
+  publicPath: "/", // Same as `output.publicPath` in most cases.
+  index: 'app.html'
 }))
 
 // app.get('/', function (req, res) {

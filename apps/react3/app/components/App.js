@@ -3,7 +3,7 @@ import styles from './App.pcss';
 
 const App = () => (
   <div className={styles.app}>
-    <h2>Hello, </h2>
+    <h2>Hello world 2111</h2>
   </div>
 );
 
