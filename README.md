@@ -61,9 +61,10 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 - [x] 基础功能
    - [x] 打包 --打包合并，压缩混淆html,css,js
    - [x] 代码切割 --分离第三方包与业务逻辑代码
-     - [x] css与js分离、业务代码与公共第三方包分离
+     - [x] css与js分离
+     - [x] 业务代码与公共第三方包分离
      - [ ] 业务逻辑分离、第三方包分离，根据路由加载、按需加载
-   - [x] 环境分离 --production, development, debug model
+   - [x] 环境分离 --production, development, test
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
    - [x] 绝对路径  --简化import路径，`../../../a.js`, `~/components/a.js`

@@ -32,7 +32,17 @@ module.exports = function () {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.html$/,
+          use: [{
+            loader: 'html-loader',
+            // options: {
+            //     root: resolve(__dirname, 'src'),
+            //     attrs: ['img:src', 'link:href']
+            // }
+          }]
+        }, {
+          test: /\.\/app\/.+\.js$/,
+          // test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: [
             'babel-loader',
