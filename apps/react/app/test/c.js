@@ -1,1 +1,1 @@
-console.log('***** I AM c *****')
+console.log('I AM c')

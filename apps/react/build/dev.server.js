@@ -21,7 +21,7 @@ app.use(webpackDevMiddleware(compiler, {
   // publicPath: webpackConfig.output.publicPath,
   index: 'app.html',
   stats: {color: true},
-  // historyApiFallback: true
+  historyApiFallback: true
   // noInfo: true,
 }))
 

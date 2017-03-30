@@ -13,8 +13,9 @@ module.exports = function () {
         : './app/index.jsx'
     },
     output: {
-      filename: 'static/[name].js',
       path: path.resolve(__dirname, '../dist/'),
+      filename: 'static/[name].js',
+      // chunkFilename: '[name]-[id].js'
     },
     resolve: {
       alias: {
