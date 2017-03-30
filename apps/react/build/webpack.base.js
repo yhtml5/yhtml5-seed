@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {version, isMin} = require('./util')
 
 module.exports = function () {
   console.log('\n  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
@@ -10,8 +9,8 @@ module.exports = function () {
     // context: path.resolve(__dirname, "./app"),
     entry: {
       index: (process.env.NODE_ENV === 'development')
-        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.js']
-        : './app/index.js'
+        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.jsx']
+        : './app/index.jsx'
     },
     output: {
       filename: 'static/[name].js',
