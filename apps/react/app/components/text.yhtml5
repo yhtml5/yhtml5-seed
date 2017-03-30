@@ -1,4 +1,0 @@
-const a= 1
-
-console.log('*.yhtml5',a)
-console.log('*.yhtml6')

@@ -41,9 +41,11 @@ module.exports = function () {
             // }
           }]
         }, {
-          test: /\.\/app\/.+\.js$/,
-          // test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
+          test: /\.(js|jsx)$/,
+          include: [
+            path.resolve(__dirname, "../app")
+          ],
+          exclude: /node_modules|build/,
           use: [
             'babel-loader',
           ],
@@ -78,16 +80,25 @@ module.exports = function () {
             use: ['css-loader']
           })
         }, {
-          test: /\.(jpg|png|gif)$/,
-          use: 'file-loader'
+          test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+          exclude: /favicon\.ico/,
+          use: [{
+            loader: 'file-loader',//https://github.com/webpack/file-loader
+            options: {
+              name: '[sha512:hash:base64:7].[ext]',
+              outputPath: 'static/img/',
+              publicPath: '../img/',//works when you just want to prefix the name with a directory
+            }
+          }]
         }, {
-          test: /\.(woff|woff2|eot|ttf|svg)$/,
-          use: {
+          test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+          exclude: /favicon\.png$/,
+          use: [{
             loader: 'url-loader',
             options: {
-              limit: 100000
+              limit: 5000
             }
-          }
+          }]
         }
       ],
     },

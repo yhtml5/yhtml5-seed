@@ -2,7 +2,7 @@
   "name": "react3",
   "author": "yhtml5 <1417376255@qq.com>",
   "version": "0.3.2",
-  "main": "index.js",
+  "main": "./app/",
   "license": "MIT",
   "description": "The web's scaffolding tool for modern webapps",
   "repository": "git@github.com:yhtml5/YHTML5-Seed.git",
