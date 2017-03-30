@@ -45,7 +45,7 @@ module.exports = function () {
           include: [
             path.resolve(__dirname, "../app")
           ],
-          exclude: /node_modules|build/,
+          exclude: /node_modules/,
           use: [
             'babel-loader',
           ],
@@ -73,7 +73,7 @@ module.exports = function () {
               }
             }]
         }, {
-          test: /\.(css)$/,
+          test: /\.css$/,
           exclude: /node_modules/,
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
@@ -108,7 +108,7 @@ module.exports = function () {
         chunks: ['index', 'vendor', 'manifest'],
         excludeChunks: [''],
         filename: 'app.html',
-        template: './app/template.js',
+        template: path.resolve(__dirname, './template/template.js'),
         chunksSortMode: 'dependency',
         title: 'Test',
         hash: false,
