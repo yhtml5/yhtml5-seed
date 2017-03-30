@@ -74,6 +74,8 @@
 - [x] webpackJsonp is not defined
     * set multiple pages with CommonsChunkPlugin and HtmlWebpackPlugin.
     * CommonsChunkPlugin choice chunks pack into common package  `chunks: ['vendor', 'index']`
+- [ ] externals VS resolve VS require
+- [ ] jade/pug VS ejs VS underscore VS handlebars VS html-loader
 
 [react-hot-loader]:https://github.com/gaearon/react-hot-loader
 [react-hot-boilerplate]:https://github.com/gaearon/react-hot-boilerplate/tree/next

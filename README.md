@@ -58,7 +58,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 
 #### Done
 
-- [x] 基础功能
+- [x] **basic**
    - [x] 打包 --打包合并，压缩混淆html,css,js
    - [x] 代码切割 --分离第三方包与业务逻辑代码
      - [x] css与js分离
@@ -68,51 +68,38 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
    - [x] 绝对路径  --简化import路径，`../../../a.js`, `~/components/a.js`
-   - [ ] 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
+   - [ ] 支持 `markdown => html`
+   - [ ] support sass, less,postCSS
    - [x] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`
-- [x] 高级功能
-   - [x] 热更新 --及时刷新页面
+- [x] **development**
+   - [x] 自动打开默认浏览器
    - [x] 热替换 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
+   - [ ] 自动刷新 --及时刷新页面
    - [x] 源码映射 --追踪错误代码到开发源码的错误一行
    - [x] 打包监测 --分析打包性能，模块内容
    - [x] 局域网访问  --开发环境允许局域网访问
-   - [x] 版本管理 --小版本携带版本号+时间戳，大版本使用版本号(字母)
    - [x] 重定向依赖 --使用第三方包提供的压缩包而不是通过webpack
-   - [x] windows兼容
-- [x] 可选功能
-   - [ ] reload VS Hot Module Replacement(recommend)
-   - [ ] externals VS resolve VS require
-   - [ ] jade/pug VS ejs VS underscore VS handlebars VS html-loader
-   - [ ] icon/iconfont/png VS css/svg/js(recommend [ali font][iconfont-ali] which provide js)
-
-#### Doing
-
-- [ ] 加载策略
-   - [ ] 按需加载/异步加载
-   - [ ] 并线加载/同步执行
-   - [ ] 预加载
-- [ ] 优化策略
-   - [ ] 生产环境优化
-   - [ ] 删除热更新模块
-   - [ ] 删除调试信息  --console.log
-   - [ ] 清理重复cssClass等等
-   - [ ] 首屏内联样式
-   - [ ] 浏览器兼容性: IE系列,html5shim,css,js,兼容性检测
-   - [ ] 优化babel编译后的代码性能
-   - [ ] 首屏css内联 style-loader
-- [ ] 代码测试
+   - [x] 兼容windows系统
+   - [ ] mock  --mock data
+- [ ] **test**
    - [ ] .eslintrc, eslint
    - [ ] .editconfig --统一编辑器格式，减少代码冲突
-   - [ ]
-- [ ] server
-   - [ ] docker
-   - [ ] mock  --mock data
-   - [ ] 外网访问  --端口映射
+- [ ] **production**
+   - [x] 版本号管理 --小版本携带版本号+时间戳，大版本使用版本号(字母)
+   - [x] 删除 调试信息  console.log
+   - [x] 删除 未使用的函数 tree shaking
+   - [x] 删除 if(false){代码块}
+   - [ ] 删除 重复css class
+   - [ ] 删除 热更新模块
+   - [x] 增加 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
+   - [ ] 优化 首屏css内联 style-loader
+   - [ ] 优化 浏览器兼容性: IE系列,html5shim,css,js,兼容性检测
+   - [ ] 加载策略
+      - [ ] 按需加载/异步加载
+      - [ ] 并线加载/同步执行
+      - [ ] 预加载
+- [ ] **others**
    - [ ] 自动化部署  -- 一键推送线上
-- [ ] others
-   - [ ] 支持markdown
-   - [ ] support sass, less,postCSS
-   - [ ] 普通页面支持热更新
    - [ ] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower
 
