@@ -9,7 +9,9 @@ module.exports = function () {
   return {
     // context: path.resolve(__dirname, "./app"),
     entry: {
-      index: './app/index.js', // path?
+      index: (process.env.NODE_ENV === 'development')
+        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.js']
+        : './app/index.js'
     },
     output: {
       filename: 'static/[name].js',
@@ -82,7 +84,7 @@ module.exports = function () {
     plugins: [
       new ExtractTextPlugin('static/[name].[chunkhash:6].css'),
       new HtmlWebpackPlugin({
-        chunks: ['index', 'vendor', 'manifest', (process.env.NODE_ENV === 'development') ? 'hot' : ''],
+        chunks: ['index', 'vendor', 'manifest'],
         excludeChunks: [''],
         filename: 'app.html',
         template: './app/template.js',

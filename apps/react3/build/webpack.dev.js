@@ -9,18 +9,6 @@ process.env.NODE_ENV = 'development'
 
 module.exports = function (env) {
   return webpackMerge(commonConfig(), {
-    entry: {
-      hot: [
-        'react-hot-loader/patch',
-        // activate HMR for React
-        'webpack-dev-server/client?http://localhost:999',
-        // bundle the client for webpack-dev-server
-        // and connect to the provided endpoint
-        'webpack/hot/only-dev-server',
-        // bundle the client for hot reloading
-        // only- means to only hot reload for successful updates
-      ]
-    },
     output: {
       publicPath: '/',
       sourceMapFilename: '[name].map'
@@ -50,6 +38,7 @@ module.exports = function (env) {
       // enable HMR globally
       new webpack.NamedModulesPlugin(),
       // prints more readable module names in the browser console on HMR updates
+      new webpack.NoEmitOnErrorsPlugin()
     ]
   })
 }
