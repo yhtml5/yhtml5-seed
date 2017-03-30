@@ -40,6 +40,8 @@
 
 ### bugs
 - [ ] report export handle error result
+- [ ] 每次重新打开浏览器
+- [ ] style-loader, post-loader, 不要内嵌css
  
 
 

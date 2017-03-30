@@ -72,7 +72,7 @@ module.exports = function () {
               }
             }]
         }, {
-          test: /\.css$/,
+          test: /\.(css)$/,
           exclude: /node_modules/,
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
