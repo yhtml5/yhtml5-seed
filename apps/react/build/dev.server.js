@@ -18,13 +18,11 @@ loading.color = 'blue'
 // app.use('/static', express.static(__dirname + '../../'))
 
 app.use(webpackDevMiddleware(compiler, {
-  publicPath: "/", // Same as `output.publicPath` in most cases.
   // publicPath: webpackConfig.output.publicPath,
   index: 'app.html',
-  hot: true,
-  stats: {color: true}
-  // noInfo: true,
+  stats: {color: true},
   // historyApiFallback: true
+  // noInfo: true,
 }))
 
 app.use(webpackHotMiddleware(compiler, {

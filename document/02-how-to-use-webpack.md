@@ -11,8 +11,10 @@ Each editor has a different way of disabling this. For the most common ones:
     WebStorm - uncheck Use "safe write" in Preferences > Appearance & Behavior > System Settings
 ```
 
+### lazyLoad
 
-#### DEBUG
+
+### DEBUG
 
 In the development mode, we usually need to output some information for debug,like `console.log()`.
 But in a production environment, those info are not expected to appear.
