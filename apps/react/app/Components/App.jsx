@@ -1,12 +1,10 @@
-"use strict"
 import React from 'react'
 import styles from './App.pcss'
 
 function App() {
-
   return (
     <div className={styles.app}>
-      <h2>Hello world 991</h2>
+      <h2>Hello world 991221</h2>
     </div>
   )
 }

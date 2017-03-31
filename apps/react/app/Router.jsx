@@ -3,9 +3,9 @@ import React from 'react'
 import {Router, Route, Redirect} from 'react-router'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
 import {history} from './redux/store'
+import App from './Components/App.jsx';
 
 // import {routeChange, verifyPermissions} from './app/route'
-
 // import Home from './containers/homePage/index'
 // import FormulaManagement from './containers/FormulaManagement/index'
 // import ParkingFee from './containers/ParkingFee/index'
@@ -18,14 +18,16 @@ import {history} from './redux/store'
 // import Step3 from './containers/GenerateBill/Step3'
 // import Layout from './layout/'
 
-import App from './Components/App.jsx';
+// import Layout from './Components/Layout/index.jsx'
+// import 'antd/dist/antd.css'
+
 
 function newRouter() {
   // routeChange(history)
   return (
     <ConnectedRouter history={history}>
       <div>
-        <Route exact path="/" component={App}/>
+        <Route path="/" component={App}/>
       </div>
     </ConnectedRouter>
   )

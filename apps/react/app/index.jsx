@@ -8,13 +8,11 @@ import Router from './Router.jsx'
 import './global.css'
 import './test/index'
 
-// import '../node_modules/antd/dist/antd.less'
-
-const render = (ROUTER) => {
+const render = (Components) => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <ROUTER/>
+        <Components/>
       </Provider>
     </AppContainer>,
     document.getElementById('root')

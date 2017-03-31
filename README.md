@@ -69,7 +69,8 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [x] 模板引擎 --html模板，动态生成页面
    - [x] 绝对路径  --简化import路径，`../../../a.js`, `~/components/a.js`
    - [ ] 支持 `markdown => html`
-   - [ ] support sass, less,postCSS
+   - [ ] support sass, less, [postCSS][postCSS]
+   - [ ] 支持js、jsx、ts
    - [x] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`
 - [x] **development**
    - [x] 自动打开默认浏览器
@@ -93,7 +94,8 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [ ] 删除 热更新模块
    - [x] 增加 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
    - [ ] 优化 首屏css内联 style-loader
-   - [ ] 优化 浏览器兼容性: IE系列,html5shim,css,js,兼容性检测
+   - [ ] 兼容 css前缀、shim
+   - [ ] 兼容 浏览器兼容性: IE系列,html5shim,css,js,兼容性检测
    - [ ] 加载策略
       - [ ] 按需加载/异步加载
       - [ ] 并线加载/同步执行
@@ -177,3 +179,5 @@ opn|open browser|
 [YHTML5-Seed-document]:./document/README.md
 [YHTML5-Seed-issue]:./document/04-frequent-problems.md
 [YHTML5-Tutorial-Git]:https://github.com/yhtml5/YHTML5-Tutorial/tree/master/app/git
+
+[postCSS]:(https://github.com/postcss/postcss#usage)

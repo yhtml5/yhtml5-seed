@@ -18,6 +18,7 @@ module.exports = function () {
       // chunkFilename: '[name]-[id].js'
     },
     resolve: {
+      // extensions: [".tsx", ".ts", ".js"],
       alias: {
         // '~': path.resolve(__dirname, '../app'),
         // jquery: "jquery/dist/jquery" + isMin() + ".js",
@@ -32,7 +33,7 @@ module.exports = function () {
     module: {
       rules: [
         {
-          test: /\.html$/,
+          test: /\.yhtml$/,
           use: [{
             loader: 'html-loader',
             // options: {
@@ -45,10 +46,47 @@ module.exports = function () {
           include: [
             path.resolve(__dirname, "../app")
           ],
-          exclude: /node_modules/,
-          use: [
-            'babel-loader',
-          ],
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                // ["env", {
+                //   "targets": {
+                //     "browsers": ["last 2 versions", "safari >= 7"]
+                //   }
+                // }],
+                ["es2015", {
+                  "modules": false
+                }],
+                "stage-2",
+                "react"
+              ],
+              // plugins: ['transform-runtime']
+            }
+          }
+          // }, {
+          //   test: /\.js$/,
+          //   exclude: /node_modules/,
+          //   use: {
+          //     loader: 'babel-loader',
+          //     options: {
+          //       presets: [
+          //         ["es2015", {
+          //           "modules": false
+          //         }],
+          //         "stage-2",
+          //         "react"
+          //       ],
+          //       plugins: [
+          //         // 'transform-runtime',
+          //         ["import", {
+          //           "libraryName": "antd",
+          //           "style": 'css',  // `style: true` 会加载 less 文件
+          //         }]
+          //       ]
+          //     }
+          //   }
         }, {
           test: /\.pcss$/,
           exclude: /node_modules/,
@@ -58,7 +96,12 @@ module.exports = function () {
             }, {
               loader: 'css-loader',
               options: {
-                modules: true
+                modules: true,
+                // camelCase: true,
+                // localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                // sourceMap: true,
+                // importLoaders: 1,
+                minimize: process.env.NODE_ENV === 'production'
               }
             }, {
               loader: 'postcss-loader',
@@ -77,8 +120,20 @@ module.exports = function () {
           exclude: /node_modules/,
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
-            use: ['css-loader']
+            use: [{
+              loader: 'css-loader',
+              options: {
+                minimize: process.env.NODE_ENV === 'production'
+              }
+            }]
           })
+          // }, {
+          //   test: /\.css$/,
+          //   include: /node_modules/,
+          //   use: ExtractTextPlugin.extract({
+          //     fallback: 'style-loader',
+          //     use: ['css-loader']
+          //   })
         }, {
           test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
           exclude: /favicon\.ico/,
