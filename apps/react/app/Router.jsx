@@ -3,7 +3,8 @@ import React from 'react'
 import {Router, Route, Redirect} from 'react-router'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
 import {history} from './redux/store'
-import App from './Components/App.jsx';
+import App from './Components/App.jsx'
+// import Layout from './Components/Layout/index.jsx'
 
 // import {routeChange, verifyPermissions} from './app/route'
 // import Home from './containers/homePage/index'
@@ -17,8 +18,6 @@ import App from './Components/App.jsx';
 // import Step2 from './containers/GenerateBill/Step2'
 // import Step3 from './containers/GenerateBill/Step3'
 // import Layout from './layout/'
-
-// import Layout from './Components/Layout/index.jsx'
 // import 'antd/dist/antd.css'
 
 

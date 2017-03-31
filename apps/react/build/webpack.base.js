@@ -62,7 +62,13 @@ module.exports = function () {
                 "stage-2",
                 "react"
               ],
-              // plugins: ['transform-runtime']
+              plugins: [
+                // 'transform-runtime',
+                // ["import", {
+                //   "libraryName": "antd",
+                //   "style": "css" //`style: true` 会加载 less 文件
+                // }]
+              ]
             }
           }
           // }, {
@@ -90,43 +96,47 @@ module.exports = function () {
         }, {
           test: /\.pcss$/,
           exclude: /node_modules/,
-          use: [
-            {
-              loader: 'style-loader'
-            }, {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                // camelCase: true,
-                // localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                // sourceMap: true,
-                // importLoaders: 1,
-                minimize: process.env.NODE_ENV === 'production'
+          use: [{
+            loader: 'style-loader'
+          }, {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              // camelCase: true,
+              // localIdentName: '[path][name]__[local]--[hash:base64:5]',
+              // sourceMap: true,
+              // importLoaders: 1,
+              minimize: process.env.NODE_ENV === 'production'
+            }
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function () {
+                return [
+                  require('postcss-smart-import')({/* ...options */}),
+                  require('precss')({/* ...options */}),
+                  require('autoprefixer')({/* ...options */})
+                ]
               }
-            }, {
-              loader: 'postcss-loader',
-              options: {
-                plugins: function () {
-                  return [
-                    require('postcss-smart-import')({/* ...options */}),
-                    require('precss')({/* ...options */}),
-                    require('autoprefixer')({/* ...options */})
-                  ]
-                }
-              }
-            }]
+            }
+          }]
         }, {
           test: /\.css$/,
-          exclude: /node_modules/,
-          use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [{
-              loader: 'css-loader',
-              options: {
-                minimize: process.env.NODE_ENV === 'production'
-              }
-            }]
-          })
+          include: [
+            // path.resolve(__dirname, "../app"),
+            path.resolve(__dirname, "../node_modules/antd")
+          ],
+          // use: ExtractTextPlugin.extract({
+          //   fallback: 'style-loader',
+          use: [{
+            loader: 'style-loader'
+          }, {
+            loader: 'css-loader',
+            options: {
+              minimize: process.env.NODE_ENV === 'production'
+            }
+          }]
+          // })
           // }, {
           //   test: /\.css$/,
           //   include: /node_modules/,

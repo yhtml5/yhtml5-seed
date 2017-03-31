@@ -5,7 +5,7 @@ import {AppContainer} from 'react-hot-loader' // AppContainer is a necessary wra
 import {Provider} from 'react-redux'
 import {store} from './redux/store'
 import Router from './Router.jsx'
-import './global.css'
+import './global.pcss'
 import './test/index'
 
 const render = (Components) => {
