@@ -21,7 +21,7 @@ module.exports = function (templateParams) {
     <meta name="format-detection" content="telephone=no">
     </head>
     <body>
-    <div id="root"></div>
+    <div id="root" style="height:100%"></div>
     <!--<div>development mode</div>-->
     </body>
     </html>`

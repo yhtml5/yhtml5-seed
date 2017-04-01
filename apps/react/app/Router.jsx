@@ -4,7 +4,7 @@ import {Router, Route, Redirect} from 'react-router'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
 import {history} from './redux/store'
 import App from './Components/App.jsx'
-// import Layout from './Components/Layout/index.jsx'
+import Layout from './Components/Layout/index.jsx'
 
 // import {routeChange, verifyPermissions} from './app/route'
 // import Home from './containers/homePage/index'
@@ -25,8 +25,9 @@ function newRouter() {
   // routeChange(history)
   return (
     <ConnectedRouter history={history}>
-      <div>
-        <Route path="/" component={App}/>
+      <div style={{height: '100%'}}>
+        <Route path="/" component={Layout}/>
+        <Route path="/test" component={App}/>
       </div>
     </ConnectedRouter>
   )

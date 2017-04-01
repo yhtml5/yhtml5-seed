@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from './App.pcss'
 
-import Button from 'antd/lib/button'
-import 'antd/lib/button/style/index.css'
+import {Button} from 'antd'
 
 function App() {
   return (

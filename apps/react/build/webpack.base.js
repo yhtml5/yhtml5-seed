@@ -5,6 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = function () {
   console.log('\n  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
+
+  const extractPostcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
+  const extractAntdCss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}antd.css`)
+
   return {
     // context: path.resolve(__dirname, "./app"),
     entry: {
@@ -64,10 +68,10 @@ module.exports = function () {
               ],
               plugins: [
                 // 'transform-runtime',
-                // ["import", {
-                //   "libraryName": "antd",
-                //   "style": "css" //`style: true` 会加载 less 文件
-                // }]
+                ["import", {
+                  "libraryName": "antd",
+                  "style": "css" //`style: true` 会加载 less 文件
+                }]
               ]
             }
           }
@@ -96,47 +100,45 @@ module.exports = function () {
         }, {
           test: /\.pcss$/,
           exclude: /node_modules/,
-          use: [{
-            loader: 'style-loader'
-          }, {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              // camelCase: true,
-              // localIdentName: '[path][name]__[local]--[hash:base64:5]',
-              // sourceMap: true,
-              // importLoaders: 1,
-              minimize: process.env.NODE_ENV === 'production'
-            }
-          }, {
-            loader: 'postcss-loader',
-            options: {
-              plugins: function () {
-                return [
-                  require('postcss-smart-import')({/* ...options */}),
-                  require('precss')({/* ...options */}),
-                  require('autoprefixer')({/* ...options */})
-                ]
+          use: extractPostcss.extract({
+            fallback: 'style-loader',
+            use: [{
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                // camelCase: true,
+                // localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                // sourceMap: true,
+                // importLoaders: 1,
+                minimize: process.env.NODE_ENV === 'production'
               }
-            }
-          }]
+            }, {
+              loader: 'postcss-loader',
+              options: {
+                plugins: function () {
+                  return [
+                    require('postcss-smart-import')({/* ...options */}),
+                    require('precss')({/* ...options */}),
+                    require('autoprefixer')({/* ...options */})
+                  ]
+                }
+              }
+            }]
+          })
         }, {
           test: /\.css$/,
           include: [
-            // path.resolve(__dirname, "../app"),
             path.resolve(__dirname, "../node_modules/antd")
           ],
-          // use: ExtractTextPlugin.extract({
-          //   fallback: 'style-loader',
-          use: [{
-            loader: 'style-loader'
-          }, {
-            loader: 'css-loader',
-            options: {
-              minimize: process.env.NODE_ENV === 'production'
-            }
-          }]
-          // })
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [{
+              loader: 'css-loader',
+              options: {
+                minimize: process.env.NODE_ENV === 'production'
+              }
+            }]
+          })
           // }, {
           //   test: /\.css$/,
           //   include: /node_modules/,
@@ -168,7 +170,8 @@ module.exports = function () {
       ],
     },
     plugins: [
-      new ExtractTextPlugin('static/[name].[chunkhash:6].css'),
+      extractPostcss,
+      extractAntdCss,
       new HtmlWebpackPlugin({
         chunks: ['index', 'vendor', 'manifest'],
         excludeChunks: [''],

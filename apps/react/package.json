@@ -1,7 +1,7 @@
 {
   "name": "react3",
   "author": "yhtml5 <1417376255@qq.com>",
-  "version": "0.5.2",
+  "version": "0.6.2",
   "main": "",
   "license": "MIT",
   "description": "The web's scaffolding tool for modern webapps",
@@ -21,10 +21,6 @@
     "webpack",
     "weui"
   ],
-  "peerDependencies": {
-    "react": "^15.x",
-    "webpack": "^2.x"
-  },
   "dependencies": {
     "antd": "^2.8.3",
     "history": "^4.6.1",
@@ -76,6 +72,11 @@
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.17.1",
     "webpack-merge": "^4.1.0"
+  },
+  "peerDependencies": {
+    "react": "^15.x",
+    "webpack": "^2.x",
+    "babel-core": "^6.24.0"
   },
   "engines": {
     "node": ">= 5.0.0",

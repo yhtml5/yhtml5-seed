@@ -13,6 +13,10 @@ Each editor has a different way of disabling this. For the most common ones:
 
 ### lazyLoad
 
+### postcss
+
+use global
+
 
 ### DEBUG
 
