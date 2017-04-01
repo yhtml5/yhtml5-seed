@@ -1,9 +1,10 @@
-import {Modal, message, notification} from 'antd';
+import {Modal, message, notification} from 'antd'
 import {browserHistory} from 'react-router'
 import {UpdateState} from './action'
 import {validator} from  '../../util/validator'
-// import {ajax} from '../util/ajax'
-// import config from  '../config'
+import {config} from '../../config'
+const {title, subTitle} = config()
+
 // import {searchKeyWithPathname} from './util'
 // import {history} from '../store/index'
 
@@ -25,9 +26,9 @@ function toggleSider() {
     const layout = getState().layout
     dispatch(updateState({collapsed: !layout.collapsed}))
     if (layout.collapsed) {
-      setTimeout(() => dispatch(updateState({title: '家装后台管理系统'})), 100)
+      setTimeout(() => dispatch(updateState({title: title})), 100)
     } else {
-      dispatch(updateState({title: '管'}))
+      dispatch(updateState({title: subTitle}))
     }
   }
 }

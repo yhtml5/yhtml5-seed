@@ -2,8 +2,10 @@ function config() {
   let isMock = true
   return {
     entryUrl: '/',
+    title: 'XXXX管理系统',
+    subTitle: '管',
     environment: [{
-      name: 'development',
+      title: 'development',
       host: 'localhost:9999',
       api: (isMock) ? 'mock.yhtml5.com' : '//116.62.92.115:71'
     }, {

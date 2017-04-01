@@ -1,6 +1,9 @@
+import {config} from '../../config'
+const {title} = config()
+
 const state = {
   collapsed: false,
-  title: '家装后台管理系统'
+  title: title
 }
 
 export default state
