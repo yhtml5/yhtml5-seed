@@ -4,7 +4,7 @@ import {Router, Route, Redirect} from 'react-router'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
 import {history} from './redux/store'
 import App from './Components/App.jsx'
-import Layout from './Components/Layout/index.jsx'
+import Layout from './Containers/Layout/index.jsx'
 
 // import {routeChange, verifyPermissions} from './app/route'
 // import Home from './containers/homePage/index'

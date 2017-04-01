@@ -1,6 +1,6 @@
 function namespace(namespace, name, v) {
   return (
-    namespace + '-' + name + '-' + v
+    namespace + '-' + name
   )
 }
 

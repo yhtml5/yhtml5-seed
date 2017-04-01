@@ -19,7 +19,7 @@ module.exports = function () {
       // chunkFilename: '[name]-[id].js'
     },
     resolve: {
-      // extensions: [".tsx", ".ts", ".js"],
+      // extensions: [".jsx", ".js"],
       alias: {
         // '~': path.resolve(__dirname, '../app'),
         // jquery: "jquery/dist/jquery" + isMin() + ".js",

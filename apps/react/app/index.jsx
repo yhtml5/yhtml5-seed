@@ -25,5 +25,6 @@ render(Router)
 if (module.hot) {
   module.hot.accept('./Router.jsx', () => {
     render(Router)
+    console.clear()
   })
 }
