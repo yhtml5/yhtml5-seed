@@ -4,10 +4,12 @@ const express = require("express")
 const webpack = require("webpack")
 const webpackDevMiddleware = require("webpack-dev-middleware")
 const webpackHotMiddleware = require("webpack-hot-middleware")
+const DashboardPlugin = require('webpack-dashboard/plugin')
 const webpackConfig = require("./webpack.dev")()
 const {port, hostname, origin} = require('./config')()
 const app = express()
 const compiler = webpack(webpackConfig)
+compiler.apply(new DashboardPlugin())
 
 console.log('\n  Hi,又在写bug了？\n')
 
@@ -26,6 +28,10 @@ app.use(webpackDevMiddleware(compiler, {
 }))
 
 app.use(webpackHotMiddleware(compiler, {
+  // stats: {
+  //   colors: true,
+  //   progress: true
+  // },
   // log: console.log,
   // path: '/__webpack_hmr',
   // heartbeat: 10 * 1000

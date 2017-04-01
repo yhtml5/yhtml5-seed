@@ -69,6 +69,7 @@
     "typescript": "^2.2.2",
     "url-loader": "^0.5.8",
     "webpack": "^2.3.2",
+    "webpack-dashboard": "^0.3.0",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.17.1",
     "webpack-merge": "^4.1.0"
@@ -83,8 +84,10 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "dev": "clear && node ./build/dev.server.js",
+    "dev": "clear && webpack -- node ./build/dev.server.js",
+    "dev-debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
     "build": "clear && node ./build/build.js",
+    "build-debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pregit": "clear && git status",
     "git": "git checkout dev && git add -A && git commit -m 'auto update' && git checkout master && git merge dev && git push --all && git checkout dev && git merge master",

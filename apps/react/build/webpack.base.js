@@ -16,7 +16,7 @@ module.exports = function () {
     output: {
       path: path.resolve(__dirname, '../dist/'),
       filename: 'static/[name].js',
-      // chunkFilename: '[name]-[id].js'
+      chunkFilename: '[name]-[id].js'
     },
     resolve: {
       // extensions: [".jsx", ".js"],
