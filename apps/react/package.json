@@ -1,7 +1,7 @@
 {
   "name": "react3",
   "author": "yhtml5 <1417376255@qq.com>",
-  "version": "0.7.3",
+  "version": "0.8.3",
   "main": "",
   "license": "MIT",
   "description": "The web's scaffolding tool for modern webapps",
@@ -84,7 +84,7 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "dev": "clear && webpack -- node ./build/dev.server.js",
+    "dev": "clear && node ./build/dev.server.js",
     "dev-debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
     "build": "clear && node ./build/build.js",
     "build-debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
