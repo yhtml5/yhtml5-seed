@@ -6,9 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = function () {
   console.log('\n  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
 
-  const extractPostcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
-  const extractAntdCss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}antd.css`)
-
   return {
     // context: path.resolve(__dirname, "./app"),
     entry: {
@@ -100,7 +97,7 @@ module.exports = function () {
         }, {
           test: /\.pcss$/,
           exclude: /node_modules/,
-          use: extractPostcss.extract({
+          use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: [{
               loader: 'css-loader',
@@ -170,8 +167,7 @@ module.exports = function () {
       ],
     },
     plugins: [
-      extractPostcss,
-      extractAntdCss,
+      new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.css`),
       new HtmlWebpackPlugin({
         chunks: ['index', 'vendor', 'manifest'],
         excludeChunks: [''],
@@ -203,7 +199,7 @@ module.exports = function () {
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'manifest'
-      }),
+      })
     ]
   }
 }
