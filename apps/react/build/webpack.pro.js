@@ -11,6 +11,7 @@ module.exports = function (env) {
   return webpackMerge(commonConfig(), {
     output: {
       filename: 'static/[name].[chunkhash:6].js',
+      chunkFilename: 'static/[name]-[id].[chunkhash:6].js',
       path: path.resolve(__dirname, '../dist/' + version),
       // publicPath: './',
       // sourceMapFilename: '[name].map'

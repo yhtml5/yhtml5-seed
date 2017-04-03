@@ -1,6 +1,18 @@
 ## React + Redux + Webpack2 + Ant-design
 
 
+#### Containers
+  Containers 经过connect的，redux的组件，负责向子组件传入**props**
+  
+### 文件后缀名写上.jsx  
+
+### 已知冲突
+
+-[] babel-plugin-import importLazy css-loader and code splitting 
+
+ Keep in mind that import() path cannot be fully dynamic (e.g., import(Math.random())). 
+ Rather either completely static (e.g., import('./locale/de.json')) 
+ or partially static (e.g., import('./locale/' + language + '.json')). 
 
 ### Directory Structure
 

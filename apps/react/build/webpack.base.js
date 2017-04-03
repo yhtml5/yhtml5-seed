@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = function () {
   console.log('\n  The process.env.NODE_ENV is: ', process.env.NODE_ENV, '\n')
+  const extractPcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
+  const extractAntd = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.antd.css`)
 
   return {
     // context: path.resolve(__dirname, "./app"),
@@ -14,9 +16,9 @@ module.exports = function () {
         : './app/index.jsx'
     },
     output: {
-      path: path.resolve(__dirname, '../dist/'),
       filename: 'static/[name].js',
-      chunkFilename: '[name]-[id].js'
+      chunkFilename: 'static/[name]-[id].js',
+      path: path.resolve(__dirname, '../dist/')
     },
     resolve: {
       // extensions: [".jsx", ".js"],
@@ -72,42 +74,20 @@ module.exports = function () {
               ]
             }
           }
-          // }, {
-          //   test: /\.js$/,
-          //   exclude: /node_modules/,
-          //   use: {
-          //     loader: 'babel-loader',
-          //     options: {
-          //       presets: [
-          //         ["es2015", {
-          //           "modules": false
-          //         }],
-          //         "stage-2",
-          //         "react"
-          //       ],
-          //       plugins: [
-          //         // 'transform-runtime',
-          //         ["import", {
-          //           "libraryName": "antd",
-          //           "style": 'css',  // `style: true` 会加载 less 文件
-          //         }]
-          //       ]
-          //     }
-          //   }
         }, {
           test: /\.pcss$/,
           exclude: /node_modules/,
-          use: ExtractTextPlugin.extract({
+          use: extractPcss.extract({
             fallback: 'style-loader',
             use: [{
               loader: 'css-loader',
               options: {
                 modules: true,
+                minimize: process.env.NODE_ENV === 'production',
+                localIdentName: (process.env.NODE_ENV === 'production') ? '[local]-[hash:base64:6]' : '[path][name]-[local]',
                 // camelCase: true,
-                // localIdentName: '[path][name]__[local]--[hash:base64:5]',
                 // sourceMap: true,
                 // importLoaders: 1,
-                minimize: process.env.NODE_ENV === 'production'
               }
             }, {
               loader: 'postcss-loader',
@@ -124,10 +104,8 @@ module.exports = function () {
           })
         }, {
           test: /\.css$/,
-          include: [
-            path.resolve(__dirname, "../node_modules/antd")
-          ],
-          use: ExtractTextPlugin.extract({
+          include: [path.resolve(__dirname, "../node_modules/antd")],
+          use: extractAntd.extract({
             fallback: 'style-loader',
             use: [{
               loader: 'css-loader',
@@ -136,13 +114,6 @@ module.exports = function () {
               }
             }]
           })
-          // }, {
-          //   test: /\.css$/,
-          //   include: /node_modules/,
-          //   use: ExtractTextPlugin.extract({
-          //     fallback: 'style-loader',
-          //     use: ['css-loader']
-          //   })
         }, {
           test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
           exclude: /favicon\.ico/,
@@ -167,10 +138,11 @@ module.exports = function () {
       ],
     },
     plugins: [
-      new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.css`),
+      extractPcss,
+      extractAntd,
       new HtmlWebpackPlugin({
         chunks: ['index', 'vendor', 'manifest'],
-        excludeChunks: [''],
+        // excludeChunks: [''],
         filename: 'app.html',
         template: path.resolve(__dirname, './template/template.js'),
         chunksSortMode: 'dependency',

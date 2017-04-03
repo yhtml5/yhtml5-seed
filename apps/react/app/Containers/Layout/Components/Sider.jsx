@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {Layout, Menu, Icon} from 'antd'
 import styles from '../index.pcss'
 
@@ -18,8 +19,10 @@ function Sider({collapsed, title}) {
           <span className="nav-text">nav 1</span>
         </Menu.Item>
         <Menu.Item key="2">
-          <Icon type="video-camera"/>
-          <span className="nav-text">nav 2</span>
+          <Link to="/app">
+            <Icon type="video-camera"/>
+            <span className="nav-text">nav 2</span>
+          </Link>
         </Menu.Item>
         <Menu.Item key="3">
           <Icon type="upload"/>
