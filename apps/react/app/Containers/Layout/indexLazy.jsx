@@ -1,9 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Layout} from 'antd'
+import Sider from './Components/Sider.jsx'
+import Header from './Components/Header.jsx'
+import Content from './Components/Content.jsx'
 import {LazilyLoad, importLazy} from '../../Components/LazilyLoad/index.jsx'
 import {toggleSider} from  './task'
-
 
 function newLayout({dispatch, layout}) {
   console.clear()
@@ -24,21 +26,23 @@ function newLayout({dispatch, layout}) {
     }
   }
   const ContentProps = {}
-  return <LazilyLoad modules={{
-    Sider: () => importLazy(import('./Components/Sider.jsx')),
-    Header: () => importLazy(import('./Components/Header.jsx')),
-    Content: () => importLazy(import('./Components/Content.jsx')),
-  }}>
-    {({Sider, Header, Content}) => (
-      <Layout {...LayoutProps}>
-        <Sider {...SiderProps}/>
-        <Layout>
-          <Header {...HeaderProps}/>
-          <Content {...ContentProps}/>
+  return (
+    <LazilyLoad modules={{
+      HelloWorld: () => importLazy(import ('../../Components/HelloWorld.jsx')),
+    }}>
+      {({HelloWorld}) => (
+        <Layout {...LayoutProps}>
+          <Sider {...SiderProps}/>
+          <Layout>
+            <Header {...HeaderProps}/>
+            <Content {...ContentProps}>
+              <HelloWorld/>
+            </Content>
+          </Layout>
         </Layout>
-      </Layout>
-    )}
-  </LazilyLoad>
+      )}
+    </LazilyLoad>
+  )
 }
 
 export default connect(state => {

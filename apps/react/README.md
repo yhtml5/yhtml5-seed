@@ -8,7 +8,7 @@
 
 ### 已知冲突
 
--[] babel-plugin-import importLazy css-loader and code splitting 
+-[] babel-plugin-import importLazy and code splitting 
 
 
 ### notice 
