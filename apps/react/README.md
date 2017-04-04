@@ -10,6 +10,12 @@
 
 -[] babel-plugin-import importLazy css-loader and code splitting 
 
+
+### notice 
+
+* react-router exact
+  When true, will only match if the path matches the location.pathname exactly.
+
  Keep in mind that import() path cannot be fully dynamic (e.g., import(Math.random())). 
  Rather either completely static (e.g., import('./locale/de.json')) 
  or partially static (e.g., import('./locale/' + language + '.json')). 

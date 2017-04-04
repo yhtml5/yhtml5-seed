@@ -3,17 +3,20 @@ import {Link} from 'react-router-dom'
 import styles from './App.pcss'
 import {LazilyLoadFactory} from './LazilyLoad/index.jsx'
 import {Button} from 'antd'
-import {determineDate} from './Test/codeSplitting'
 
-function App() {
+function App(props) {
+  console.log('AppProps: ', props)
+
   function onDetermineDate() {
-    determineDate()
+    console.log('onDetermineDate')
   }
+
+  // const {moment} = props.moment
 
   return (
     <div className={styles.app}>
       <h2>Hello world 99</h2>
-      <Link to="/app">
+      <Link to="/">
         <Button
           type="primary"
           onClick={onDetermineDate()}>Primary</Button>
@@ -23,5 +26,5 @@ function App() {
 }
 
 export  default LazilyLoadFactory(App, {
-  moment: () => import('lodash'),
+  moment: () => import('moment'),
 })
