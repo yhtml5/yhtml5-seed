@@ -1,9 +1,8 @@
 'use strict';
+import thunk from 'redux-thunk'
 import {createStore, combineReducers, applyMiddleware} from 'redux'
-import {Route} from 'react-router'
 import {routerReducer, routerMiddleware, push} from 'react-router-redux'
-import createHistory from 'history/createBrowserHistory'
-import thunk from 'redux-thunk';
+import createHistory from 'history/createHashHistory'
 import reducers from './reducers'
 
 // Create a history of your choosing (we're using a browser history in this case)

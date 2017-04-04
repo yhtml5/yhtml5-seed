@@ -7,22 +7,21 @@ import Content from './Components/Content.jsx'
 import {toggleSider} from  './task'
 
 
-function newLayout({dispatch, layout, children}) {
-  console.clear()
-  console.log('newLayoutProps: ', layout)
+function newLayout(props) {
+  console.log('newLayoutProps: ', props)
   const LayoutProps = {
     id: "layout",
     style: {height: '100%'},
     className: "ant-layout-has-sider"
   }
   const SiderProps = {
-    collapsed: layout.collapsed,
-    title: layout.title,
+    collapsed: props.layout.collapsed,
+    title: props.layout.title,
   }
   const HeaderProps = {
-    collapsed: layout.collapsed,
+    collapsed: props.layout.collapsed,
     onToggleSider(){
-      dispatch(toggleSider())
+      props.dispatch(toggleSider())
     }
   }
   const ContentProps = {}

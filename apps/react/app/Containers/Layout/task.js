@@ -20,7 +20,6 @@ function updateState(data) {
 }
 
 function toggleSider() {
-  console.log('toggleSider',)
   return (dispatch, getState) => {
     console.log('toggleSider', getState())
     const layout = getState().layout
