@@ -1,28 +1,19 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {LazilyLoad, importLazy} from '../../Components/LazilyLoad/index.jsx'
+import Form from './Components/Form.jsx'
+import {submitLogin} from './task'
 
-function Login(props) {
-  console.log('UserProps: ', props)
+function Login({dispatch, login}) {
+  console.log('LoginProps: ', login)
 
   const FormProps = {
-    onSubmit (e) {
-      e.preventDefault();
-
+    onSubmit () {
+      dispatch(submitLogin())
     }
   }
 
   return (
-    <LazilyLoad modules={{
-      HelloWorld: () => importLazy(import ('../../Components/HelloWorld.jsx')),
-      Form: () => importLazy(import ('./Components/Form.jsx')),
-    }}>
-      {({HelloWorld, Form}) => (
-        <div>
-          <Form {...FormProps}/>
-        </div>
-      )}
-    </LazilyLoad>
+    <Form {...FormProps}/>
   )
 }
 

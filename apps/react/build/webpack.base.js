@@ -46,36 +46,6 @@ module.exports = function () {
             // }
           }]
         }, {
-          test: /\.(js|jsx)$/,
-          include: [
-            path.resolve(__dirname, "../app")
-          ],
-          exclude: /(node_modules|bower_components)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                // ["env", {
-                //   "targets": {
-                //     "browsers": ["last 2 versions", "safari >= 7"]
-                //   }
-                // }],
-                ["es2015", {
-                  "modules": false
-                }],
-                "stage-2",
-                "react"
-              ],
-              plugins: [
-                // 'transform-runtime',
-                ["import", {
-                  "libraryName": "antd",
-                  "style": "css" //`style: true` 会加载 less 文件
-                }]
-              ]
-            }
-          }
-        }, {
           test: /\.pcss$/,
           exclude: /node_modules/,
           use: extractPcss.extract({
@@ -115,6 +85,36 @@ module.exports = function () {
               }
             }]
           })
+        }, {
+          test: /\.(js|jsx)$/,
+          include: [
+            path.resolve(__dirname, "../app")
+          ],
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                // ["env", {
+                //   "targets": {
+                //     "browsers": ["last 2 versions", "safari >= 7"]
+                //   }
+                // }],
+                ["es2015", {
+                  "modules": false
+                }],
+                "stage-2",
+                "react"
+              ],
+              plugins: [
+                'transform-runtime',
+                ["import", {
+                  "libraryName": "antd",
+                  "style": "css" //`style: true` 会加载 less 文件
+                }]
+              ]
+            }
+          }
         }, {
           test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
           exclude: /favicon\.ico/,

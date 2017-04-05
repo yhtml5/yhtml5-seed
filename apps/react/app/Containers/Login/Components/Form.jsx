@@ -1,27 +1,17 @@
 import React from 'react'
-import Form from 'antd/lib/form'
-import Icon from 'antd/lib/icon'
-import Input from 'antd/lib/input'
-import Button from 'antd/lib/button'
-import Checkbox from 'antd/lib/checkbox'
-import 'antd/lib/form/style/css'
-import 'antd/lib/icon/style/css'
-import 'antd/lib/input/style/css'
-import 'antd/lib/button/style/css'
-import 'antd/lib/checkbox/style/css'
-
+import {Form, Icon, Input, Button, Checkbox} from 'antd'
 import styles from './form.pcss'
-
-// import {Form, Icon, Input, Button, Checkbox} from 'antd'
 
 function LoginForm({onSubmit, form}) {
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault()
     form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
       }
     })
+    onSubmit()
   }
 
   return (

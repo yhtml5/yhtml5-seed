@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react'
-import {Router, Route, Redirect} from 'react-router'
+import {Router, Route, Redirect} from 'react-router-dom'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
 import {history} from './redux/store'
 import User from './Containers/User/index.jsx'
@@ -22,3 +22,4 @@ function newRouter() {
 }
 
 export default newRouter
+

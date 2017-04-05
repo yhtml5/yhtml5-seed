@@ -24,23 +24,12 @@ development:  [path][name]-[local],
 production :  [local]-[hash:base64:6]
 ```
 
-### 已知冲突
+### bugs
 
--[ ] babel-plugin-import importLazy and code splitting 
+- [ ] antd and code splitting
+  > import().then  import  require 
   lazyLoad is important, so we give up use babel-plugin-import plugin
-
-```
-import Form from 'antd/lib/form'
-import Icon from 'antd/lib/icon'
-import Input from 'antd/lib/input'
-import Button from 'antd/lib/button'
-import Checkbox from 'antd/lib/checkbox'
-import 'antd/lib/form/style/css'
-import 'antd/lib/icon/style/css'
-import 'antd/lib/input/style/css'
-import 'antd/lib/button/style/css'
-import 'antd/lib/checkbox/style/css'
-```
+- [ ] Code Splitting - Using import()
 
 ### notice 
 

@@ -5,7 +5,7 @@ class LazilyLoad extends React.Component {
     super(...arguments);
     this.state = {
       isLoaded: false,
-    };
+    }
   }
 
   componentDidMount() {

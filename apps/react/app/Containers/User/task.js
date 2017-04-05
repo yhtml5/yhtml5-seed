@@ -1,4 +1,3 @@
-import {Modal, message, notification} from 'antd'
 import {browserHistory} from 'react-router'
 import {UpdateState} from './action'
 import {validator} from  '../../util/validator'

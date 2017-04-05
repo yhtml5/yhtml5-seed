@@ -1,4 +1,3 @@
-// import {message} from 'antd';
 // import reqwest from 'reqwest'
 // import config from '../config.js'
 // import {getToken} from '../App/util';

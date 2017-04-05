@@ -1,5 +1,4 @@
-import {Modal, message, notification} from 'antd'
-import {browserHistory} from 'react-router'
+import {history} from '../../redux/store'
 import {UpdateState} from './action'
 import {validator} from  '../../util/validator'
 import {config} from '../../config'
@@ -19,17 +18,11 @@ function updateState(data) {
   }
 }
 
-function toggleSider() {
+function submitLogin() {
+  history.push('/')
   return (dispatch, getState) => {
-    console.log('toggleSider', getState())
-    const layout = getState().layout
-    dispatch(updateState({collapsed: !layout.collapsed}))
-    if (layout.collapsed) {
-      setTimeout(() => dispatch(updateState({title: title})), 100)
-    } else {
-      dispatch(updateState({title: subTitle}))
-    }
+    console.log('login', getState(), history)
   }
 }
 
-export {updateState, toggleSider}
+export {updateState, submitLogin}

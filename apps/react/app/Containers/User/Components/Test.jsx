@@ -1,8 +1,10 @@
 import React from 'react'
 
+import {Button} from 'antd'
+
 function Test() {
   return (
-    <div>User page</div>
+    <Button>User page2</Button>
   )
 }
 

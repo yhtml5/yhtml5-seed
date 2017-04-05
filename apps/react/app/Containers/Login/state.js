@@ -3,7 +3,7 @@ const {title} = config()
 
 const state = {
   collapsed: false,
-  title: title
+  token: '112311241'
 }
 
 export default state
