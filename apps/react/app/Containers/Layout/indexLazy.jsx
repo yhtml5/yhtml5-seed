@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Layout} from 'antd'
 import Sider from './Components/Sider.jsx'
 import Header from './Components/Header.jsx'
+import Footer from './Components/Footer.jsx'
 import Content from './Components/Content.jsx'
 import {LazilyLoad, importLazy} from '../../Components/LazilyLoad/index.jsx'
 import {toggleSider} from  './task'
@@ -26,22 +27,24 @@ function newLayout({dispatch, layout}) {
     }
   }
   const ContentProps = {}
+  const FooterProps = {}
   return (
-    <LazilyLoad modules={{
-      HelloWorld: () => importLazy(import ('../../Components/HelloWorld.jsx')),
-    }}>
-      {({HelloWorld}) => (
-        <Layout {...LayoutProps}>
-          <Sider {...SiderProps}/>
-          <Layout>
-            <Header {...HeaderProps}/>
-            <Content {...ContentProps}>
+    <Layout {...LayoutProps}>
+      <Sider {...SiderProps}/>
+      <Layout>
+        <Header {...HeaderProps}/>
+        <Content {...ContentProps}>
+          <LazilyLoad modules={{
+            HelloWorld: () => importLazy(import ('../../Components/HelloWorld.jsx')),
+          }}>
+            {({HelloWorld}) => (
               <HelloWorld/>
-            </Content>
-          </Layout>
-        </Layout>
-      )}
-    </LazilyLoad>
+            )}
+          </LazilyLoad>
+        </Content>
+        <Footer {...FooterProps}/>
+      </Layout>
+    </Layout>
   )
 }
 

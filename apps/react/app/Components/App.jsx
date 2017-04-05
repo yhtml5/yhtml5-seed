@@ -26,5 +26,5 @@ function App(props) {
 }
 
 export  default LazilyLoadFactory(App, {
-  history: () => import('history'),
+  // history: () => import('history'),
 })

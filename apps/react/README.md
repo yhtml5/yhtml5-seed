@@ -8,7 +8,8 @@
 
 ### 已知冲突
 
--[] babel-plugin-import importLazy and code splitting 
+-[ ] babel-plugin-import importLazy and code splitting 
+  lazyLoad is important, so we give up use babel-plugin-import plugin
 
 
 ### notice 
