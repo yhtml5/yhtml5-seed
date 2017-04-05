@@ -19,7 +19,7 @@ function App(props) {
       <Link to="/">
         <Button
           type="primary"
-          onClick={onDetermineDate()}>Primary</Button>
+          onClick={onDetermineDate()}>Login</Button>
       </Link>
     </div>
   )

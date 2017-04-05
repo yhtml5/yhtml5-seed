@@ -19,7 +19,7 @@ function Sider({collapsed, title}) {
           <span className="nav-text">nav 1</span>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/app">
+          <Link to="/login">
             <Icon type="video-camera"/>
             <span className="nav-text">nav 2</span>
           </Link>

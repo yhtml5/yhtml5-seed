@@ -1,3 +1,4 @@
+'strict'
 import 'normalize.css'
 import reqwest from 'reqwest'
 import {isPassword, isUsername, setCookie, addClass, fade, removeClass, addListener, documentReady} from './utils'
@@ -10,7 +11,6 @@ import './index.css'
  * 3.IE 8+
  */
 
-'strict';
 var states = {
   loading: function (loading) {
     if (loading) {
