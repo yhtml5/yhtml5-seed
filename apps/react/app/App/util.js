@@ -14,7 +14,7 @@
 //   let keyIndex = 10
 //   config.siteMap.map((value, index) => {
 //     if (value.url == url) {
-//       return keyIndex = index
+//       return keyIndex =å index
 //     }
 //     let subIndex = index
 //     if (validator.isArrayNotEmpty(value.items)) {

@@ -1,3 +1,5 @@
+import {validator} from './validator'
+
 let awaitStatus = true
 
 function notRepeating(fun) {

@@ -5,7 +5,7 @@ import Sider from './Components/Sider.jsx'
 import Header from './Components/Header.jsx'
 import Footer from './Components/Footer.jsx'
 import Content from './Components/Content.jsx'
-import {toggleSider} from  './task'
+const taskLazy = require("bundle-loader?lazy&name=[name]-layout!./task.js")
 
 function newLayout({dispatch, layout, children}) {
   console.log('newLayoutProps: ', layout)
@@ -21,7 +21,7 @@ function newLayout({dispatch, layout, children}) {
   const HeaderProps = {
     collapsed: layout.collapsed,
     onToggleSider(){
-      dispatch(toggleSider())
+      taskLazy(({toggleSider}) => dispatch(toggleSider()))
     }
   }
   const ContentProps = {}

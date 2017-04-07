@@ -8,10 +8,11 @@ const {version} = require('./util')
 process.env.NODE_ENV = 'production'
 
 module.exports = function (env) {
+  console.log(env)
   return webpackMerge(commonConfig(), {
     output: {
       filename: 'static/[name].[chunkhash:6].js',
-      chunkFilename: 'static/[name]-[id].[chunkhash:6].js',
+      chunkFilename: 'static/[name]-[id].js',
       path: path.resolve(__dirname, '../dist/' + version),
       // publicPath: './',
       // sourceMapFilename: '[name].map'
@@ -22,7 +23,9 @@ module.exports = function (env) {
           'NODE_ENV': JSON.stringify('production') //process.env.NODE_ENV
         }
       }),
-      new webpack.optimize.UglifyJsPlugin({
+      (env === 'debug')
+        ? () => {}
+        : new webpack.optimize.UglifyJsPlugin({
         beautify: false,
         mangle: {
           screw_ie8: true,

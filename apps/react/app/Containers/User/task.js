@@ -1,4 +1,3 @@
-import {browserHistory} from 'react-router'
 import {UpdateState} from './action'
 import {validator} from  '../../util/validator'
 import {config} from '../../config'
@@ -27,6 +26,7 @@ function toggleSider() {
       setTimeout(() => dispatch(updateState({title: title})), 100)
     } else {
       dispatch(updateState({title: subTitle}))
+
     }
   }
 }

@@ -2,7 +2,7 @@ require('shelljs/global')
 const ora = require('ora')
 const path = require('path')
 const webpack = require('webpack')
-const webpackConfig = require('./webpack.pro.js')()
+const webpackConfig = require('./webpack.pro.js')('production')
 
 console.log(
   '  Tip:\n' +

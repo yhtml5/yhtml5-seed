@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = function () {
+module.exports = function (env) {
   console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV), '\n')
   const extractPcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
   const extractAntd = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.antd.css`)
@@ -13,8 +13,9 @@ module.exports = function () {
     // context: path.resolve(__dirname, "./app"),
     entry: {
       index: (process.env.NODE_ENV === 'development')
-        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.jsx']
-        : './app/index.jsx'
+        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.jsx', './app/util/ajax.js']
+        : ['./app/index.jsx', './app/util/ajax.js'],
+      vendorReact: ['react', 'react-dom', 'redux-thunk', 'react-router-redux', 'react-router-dom', 'react-router', 'react-redux'],
     },
     output: {
       filename: 'static/[name].js',
@@ -54,8 +55,8 @@ module.exports = function () {
               loader: 'css-loader',
               options: {
                 modules: true,
-                minimize: process.env.NODE_ENV === 'production',
-                localIdentName: (process.env.NODE_ENV === 'production') ? '[local]-[hash:base64:6]' : '[path][name]-[local]',
+                minimize: env === 'production',
+                localIdentName: (env === 'production') ? '[local]-[hash:base64:6]' : '[path][name]-[local]',
                 camelCase: true,
                 // sourceMap: true,
                 // importLoaders: 1,
@@ -81,7 +82,7 @@ module.exports = function () {
             use: [{
               loader: 'css-loader',
               options: {
-                minimize: process.env.NODE_ENV === 'production'
+                minimize: env === 'production'
               }
             }]
           })
@@ -142,7 +143,7 @@ module.exports = function () {
       extractPcss,
       extractAntd,
       new HtmlWebpackPlugin({
-        chunks: ['index', 'vendor', 'manifest'],
+        chunks: ['index', 'vendorReact', 'manifest'],
         // excludeChunks: [''],
         filename: 'app.html',
         template: path.resolve(__dirname, './template/template.js'),
@@ -162,14 +163,28 @@ module.exports = function () {
           : () => null
       }),
       new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor',
-        // names: ["vendor", 'react'],
-        // chunks: ["vendor", "react"],
-        // filename: "vendor.js",
-        minChunks: function (module) {
-          return module.context && module.context.indexOf('node_modules') !== -1;
-        },
+        // name: 'task',
+        children: true,
+        async: true,
+        // chunks: ['until'],
+        // filename: "task.js",
       }),
+      new webpack.optimize.CommonsChunkPlugin({
+        names: ["vendorReact", ["index", "vendorReact"]],
+        // children: true,
+        // async: true,
+        // chunks: ['vendorReact'],
+        // filename: "vendor.js",
+      }),
+      // new webpack.optimize.CommonsChunkPlugin({
+      //   name: 'vendor',
+      //   // names: ["vendor", 'react'],
+      //   // chunks: ["index", "react"],
+      //   // filename: "vendor.js",
+      //   minChunks: function (module) {
+      //     return module.context && module.context.indexOf('node_modules') !== -1;
+      //   },
+      // }),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'manifest'
       })

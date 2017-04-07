@@ -1,7 +1,7 @@
-import {browserHistory} from 'react-router'
 import {UpdateState} from './action'
 import {validator} from  '../../util/validator'
 import {config} from '../../config'
+import ajax from  '../../util/ajax'
 const {title, subTitle} = config()
 
 // import {searchKeyWithPathname} from './util'
@@ -18,10 +18,27 @@ function updateState(data) {
   }
 }
 
+function ajaxLogin() {
+  return (dispatch, getState) => {
+    dispatch(updateState({}))
+    ajax(
+      'property/site/menus', '',
+      () => {
+        dispatch(updateState({}))
+      },
+      () => {
+        dispatch(updateState({}))
+      },
+      (response) => {
+      }
+    )
+  }
+}
+
 function toggleSider() {
   return (dispatch, getState) => {
-    console.log('toggleSider', getState())
     const layout = getState().layout
+    dispatch(ajaxLogin())
     dispatch(updateState({collapsed: !layout.collapsed}))
     if (layout.collapsed) {
       setTimeout(() => dispatch(updateState({title: title})), 100)

@@ -38,7 +38,7 @@ const validator = {
     }
   },
   isFunction: function (value) {
-    return typeof (value) == "function"
+    return typeof (value) === "function"
   },
   isNumber: function (value) {
     return Object.prototype.toString.call(value) === '[object Number]'

@@ -4,7 +4,7 @@
 // import {initializeGenerateBill, ajaxGetFormulas, ajaxGetBuildings, ajaxGetService, ajaxViewBill, ajaxDetectionBill} from '../containers/GenerateBill/task'
 // import {ajaxUserManagementList, initializeUserManagement} from '../containers/UserManagement/task'
 // import {ajaxManageMenus, ajaxManageCommunities} from '../containers/UserManagement/task'
-// import {browserHistory} from 'react-router'
+// import {browserHistory} from 'react-router-dom'
 //
 // function routeChange(history, store) {
 //   // console.clear()

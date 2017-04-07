@@ -7,7 +7,7 @@ function setCookie(cname, cvalue, exdays) {
 
 function getCookie(name) {
   if (new RegExp(name, 'g').test(document.cookie)) {
-    return document.cookie.split("_communityId")[1].split("=")[1].split(";")[0]
+    return document.cookie.split(name)[1].split("=")[1].split(";")[0]
   } else {
     return false
   }

@@ -6,6 +6,16 @@
   
 ### 文件后缀名写上.jsx  
 
+### lazyload
+
+```
+const taskLazy = require("bundle-loader?lazy!./task.js")
+
+// The chunk is not requested until you call the load function
+
+taskLazy(({submitLogin}) => dispatch(submitLogin()))
+```
+
 ### postCss
 
 ```
@@ -26,11 +36,17 @@ production :  [local]-[hash:base64:6]
 
 ### bugs
 
-- [ ] antd and code splitting
-  > import().then  import  require 
-  lazyLoad is important, so we give up use babel-plugin-import plugin
-- [ ] Code Splitting - Using import()
+### antd and code splitting
+> import().then  import  require 
 
+### Code Splitting - Using import()
+```
+  import('./task')
+    .then((task)=>{
+    console.log(task)
+    })
+    .catch(err)
+```
 ### notice 
 
 * react-router exact

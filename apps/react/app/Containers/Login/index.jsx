@@ -1,19 +1,26 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Form from './Components/Form.jsx'
-import {submitLogin} from './task'
+import Background from './Components/Background.jsx'
+const taskLazy = require("bundle-loader?lazy&name=[name]-login!./task.js")
 
 function Login({dispatch, login}) {
   console.log('LoginProps: ', login)
 
+  const BackgroundProps = {
+    title: login.title
+  }
+
   const FormProps = {
     onSubmit () {
-      dispatch(submitLogin())
+      taskLazy(({submitLogin}) => dispatch(submitLogin()))
     }
   }
 
   return (
-    <Form {...FormProps}/>
+    <Background {...BackgroundProps}>
+      <Form {...FormProps}/>
+    </Background>
   )
 }
 
