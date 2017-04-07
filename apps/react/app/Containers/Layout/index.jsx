@@ -1,11 +1,12 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import {Layout} from 'antd'
+import connect from 'react-redux/es/connect/connect'// import {connect} from 'react-redux'
 import Sider from './Components/Sider.jsx'
 import Header from './Components/Header.jsx'
 import Footer from './Components/Footer.jsx'
 import Content from './Components/Content.jsx'
 const taskLazy = require("bundle-loader?lazy&name=[name]-layout!./task.js")
+
 
 function newLayout({dispatch, layout, children}) {
   console.log('newLayoutProps: ', layout)

@@ -64,7 +64,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
      - [x] css与js分离
      - [x] 业务代码与公共第三方包分离
      - [ ] 业务逻辑分离，根据需求切割代码，可以是[路由变化][react-router-code-splitting]、点击事件
-     - [ ] 第三方包分离，自定义分离
+     - [ ] 第三方包分离，自定义分离,只引用第三方包中需要的模块
    - [x] 环境分离 --production, development, test
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面

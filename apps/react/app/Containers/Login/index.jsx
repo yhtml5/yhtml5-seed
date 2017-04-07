@@ -1,8 +1,9 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import connect from 'react-redux/es/connect/connect'
 import Form from './Components/Form.jsx'
 import Background from './Components/Background.jsx'
 const taskLazy = require("bundle-loader?lazy&name=[name]-login!./task.js")
+// import {connect} from 'react-redux'
 
 function Login({dispatch, login}) {
   console.log('LoginProps: ', login)

@@ -2,9 +2,10 @@ import React from 'react'
 import {Router, Route, Redirect} from 'react-router-dom'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
 import {store, history} from './redux/store'
-import {Provider} from 'react-redux'
 import User from './Containers/User/index.jsx'
 import Login from './Containers/Login/index.jsx'
+import Provider from 'react-redux/es/components/Provider'
+// import {Provider} from 'react-redux'
 
 // import {routeChange, verifyPermissions} from './app/route'
 

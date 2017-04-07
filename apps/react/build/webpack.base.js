@@ -13,9 +13,10 @@ module.exports = function (env) {
     // context: path.resolve(__dirname, "./app"),
     entry: {
       index: (process.env.NODE_ENV === 'development')
-        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.jsx', './app/util/ajax.js']
-        : ['./app/index.jsx', './app/util/ajax.js'],
-      vendorReact: ['react', 'react-dom', 'redux-thunk', 'react-router-redux', 'react-router-dom', 'react-router', 'react-redux'],
+        ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.jsx']
+        : ['./app/index.jsx'],
+      vendorReact: ['react', 'react-dom', 'redux-thunk', 'react-router-redux', 'react-router-dom', 'react-redux'],
+      // ajax: './app/util/ajax.js'
     },
     output: {
       filename: 'static/[name].js',
@@ -163,11 +164,8 @@ module.exports = function (env) {
           : () => null
       }),
       new webpack.optimize.CommonsChunkPlugin({
-        // name: 'task',
         children: true,
         async: true,
-        // chunks: ['until'],
-        // filename: "task.js",
       }),
       new webpack.optimize.CommonsChunkPlugin({
         names: ["vendorReact", ["index", "vendorReact"]],
@@ -176,6 +174,9 @@ module.exports = function (env) {
         // chunks: ['vendorReact'],
         // filename: "vendor.js",
       }),
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'manifest'
+      })
       // new webpack.optimize.CommonsChunkPlugin({
       //   name: 'vendor',
       //   // names: ["vendor", 'react'],
@@ -185,9 +186,6 @@ module.exports = function (env) {
       //     return module.context && module.context.indexOf('node_modules') !== -1;
       //   },
       // }),
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest'
-      })
     ]
   }
 }
