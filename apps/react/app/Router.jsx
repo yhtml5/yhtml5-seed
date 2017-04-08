@@ -18,6 +18,8 @@ function newRouter() {
   // routeChange(history)
   console.log('newRouter')
 
+  Login()
+
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>

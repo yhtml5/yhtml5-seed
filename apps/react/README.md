@@ -1,19 +1,29 @@
 ## React + Redux + Webpack2 + Ant-design
 
 
-#### Containers
+### Containers
   Containers 经过connect的，redux的组件，负责向子组件传入**props**
   
-### 文件后缀名写上.jsx  
 
-### lazyload
+### Loading strategy
+
+the lazy load component is in `~/app/Components/LazilyLoad`
+
+#### Lazy Loading
+
+lazy load route Components 
+```
+import {LazilyLoadComponent} from './Components/LazilyLoad/index.jsx'
+const User = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/User/index.jsx').default, 'route-User'))
+ <Route exact path="/" component={User}/>
+```
+
+#### Pre loading
 
 ```
-const taskLazy = require("bundle-loader?lazy!./task.js")
-
-// The chunk is not requested until you call the load function
-
-taskLazy(({submitLogin}) => dispatch(submitLogin()))
+import {LazilyLoadComponent} from './Components/LazilyLoad/index.jsx'
+const User = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/User/index.jsx').default, 'route-User'))
+User()
 ```
 
 ### postCss
@@ -49,6 +59,7 @@ production :  [local]-[hash:base64:6]
 ```
 ### notice 
 
+* 组件文件后缀名写上.jsx  
 * react-router exact
   When true, will only match if the path matches the location.pathname exactly.
 
