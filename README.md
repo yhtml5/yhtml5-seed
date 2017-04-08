@@ -61,10 +61,11 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 - [x] **basic**
    - [x] 打包 --打包合并，压缩混淆html,css,js
    - [x] 代码切割 --分离第三方包与业务逻辑代码
-     - [x] css与js分离
+     - [x] css与js分离 (延迟加载css)
      - [x] 业务代码与公共第三方包分离
      - [ ] 业务逻辑分离，根据需求切割代码，可以是[路由变化][react-router-code-splitting]、点击事件
      - [ ] 第三方包分离，自定义分离,只引用第三方包中需要的模块
+     - [ ] [提取延迟加载模块中公共部分][move-common-modules-into-the-parent-chunk]
    - [x] 环境分离 --production, development, test
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
@@ -92,16 +93,17 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [x] 删除 未使用的函数 tree shaking
    - [x] 删除 if(false){代码块}
    - [ ] 删除 重复css class
-   - [ ] 删除 热更新模块
+   - [ ] 删除 仅用于开发环境的：`['react-hot-loader','react-hot-loader/patch', 'webpack-hot-middleware/client']`
    - [x] 增加 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
    - [ ] 优化 首屏css内联 style-loader
    - [ ] 兼容 css前缀、shim
    - [ ] 兼容 浏览器兼容性: IE系列,html5shim,css,js,兼容性检测
    - [ ] 加载策略
-      - [x] 按需加载
-      - [ ] 异步加载 lazyLoad
-      - [ ] 并线加载/同步执行 (css/js)
-      - [ ] 预加载
+      - [x] 合理的加载策略能大大降低资源大小、提高用户体验、提高客户端安全性(根据后端验证返回前端业务逻辑)、提供渐进式服务
+      - [x] 按需加载 在编译阶段，只打包需要的资源
+      - [x] 异步加载 lazyLoad, 根据路由，事件加载不同的资源   
+      - [x] 并线加载 根据浏览器特性，可以并线加载css、js等资源，同步执行 
+      - [ ] 预先加载 根据用户，预先加载一些资源
 - [ ] **others**
    - [ ] 自动化部署  -- 一键推送线上
    - [ ] 编写shell脚本，制作命令行界面（CLI）
@@ -184,3 +186,4 @@ opn|open browser|
 
 [postCSS]:(https://github.com/postcss/postcss#usage)
 [css-modules]:(https://github.com/css-modules/css-modules)
+[move-common-modules-into-the-parent-chunk]:(https://webpack.js.org/plugins/commons-chunk-plugin/#move-common-modules-into-the-parent-chunk)

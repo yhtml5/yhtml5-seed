@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'production'
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -5,14 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
 const {version} = require('./util')
-process.env.NODE_ENV = 'production'
 
 module.exports = function (env) {
   console.log(env)
-  return webpackMerge(commonConfig(), {
+  return webpackMerge(commonConfig(env), {
     output: {
       filename: 'static/[name].[chunkhash:6].js',
-      chunkFilename: 'static/[name]-[id].js',
       path: path.resolve(__dirname, '../dist/' + version),
       // publicPath: './',
       // sourceMapFilename: '[name].map'
@@ -24,7 +23,8 @@ module.exports = function (env) {
         }
       }),
       (env === 'debug')
-        ? () => {}
+        ? () => {
+      }
         : new webpack.optimize.UglifyJsPlugin({
         beautify: false,
         mangle: {

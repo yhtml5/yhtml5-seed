@@ -62,8 +62,14 @@ const LazilyLoadFactory = (Component, modules) => {
   )
 }
 
+const LazilyLoadComponent = (require) => (
+  <LazilyLoad modules={{Mod: () => require}}>
+    {({Mod}) => <Mod/>}
+  </LazilyLoad>
+)
+
 const importLazy = (promise) => (
   promise.then((result) => result.default)
 )
 
-export {LazilyLoad, LazilyLoadFactory, importLazy}
+export {LazilyLoad, LazilyLoadFactory, importLazy, LazilyLoadComponent}

@@ -1,12 +1,16 @@
 import {UpdateState} from './action'
 import {history} from '../../redux/store'
 import {validator} from  '../../util/validator'
-import ajax from  '../../util/ajax'
 import {config} from '../../config'
 const {title, subTitle} = config()
+import {ajax} from  '../../util/index'
 
 // import {searchKeyWithPathname} from './util'
 // import {history} from '../store/index'
+
+// const ajax = (url, param, fail, error, success) => require.ensure([], require => {
+//   require('../../util/ajax').default(url, param, fail, error, success)
+// }, 'ajax')
 
 function updateState(data) {
   if (validator.isObject(data)) {
@@ -38,9 +42,10 @@ function ajaxLogin() {
 }
 
 function submitLogin() {
+  console.log('submitLogin')
   history.push('/')
   return (dispatch, getState) => {
-    console.log('login', getState(), history)
+    console.log('submitLogin', getState(), history)
     dispatch(ajaxLogin())
   }
 }

@@ -1,9 +1,8 @@
 import React from 'react'
 import Layout from '../Layout/index.jsx'
+import connect from 'react-redux/es/connect/connect' // import {connect} from 'react-redux'
 import Test from './Components/Test.jsx'
-const taskLazy = require("bundle-loader?lazy&name=[name]-user!./task.js")
-import connect from 'react-redux/es/connect/connect'
-// import {connect} from 'react-redux'
+import {updateState} from  './task'
 
 function User(props) {
   console.log('UserProps: ', props)

@@ -1,11 +1,16 @@
 import {UpdateState} from './action'
 import {validator} from  '../../util/validator'
 import {config} from '../../config'
-import ajax from  '../../util/ajax'
 const {title, subTitle} = config()
+import {ajax} from  '../../util/index'
 
+// import ajax from  '../../util/ajax'
 // import {searchKeyWithPathname} from './util'
 // import {history} from '../store/index'
+
+// const ajax = (url, param, fail, error, success) => require.ensure([], require => {
+//   require('../../util/ajax').default(url, param, fail, error, success)
+// }, 'ajax')
 
 function updateState(data) {
   if (validator.isObject(data)) {

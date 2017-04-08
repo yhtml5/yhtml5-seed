@@ -1,18 +1,20 @@
 'use strict'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {AppContainer} from 'react-hot-loader' // AppContainer is a necessary wrapper component for HMR
-import 'antd/lib/style/index.css'
-import 'antd/lib/message/style/index.css'
 import Router from './Router.jsx'
 import './global.pcss'
 
-
 const render = (Components) => {
   ReactDOM.render(
-    <AppContainer>
-      <Components/>
-    </AppContainer>,
+    (module.hot) ?
+      (function () {
+        const {AppContainer} = require('react-hot-loader')
+        return <AppContainer>
+          <Components/>
+        </AppContainer>
+      })()
+      : <Components/>
+    ,
     document.getElementById('root')
   )
 }

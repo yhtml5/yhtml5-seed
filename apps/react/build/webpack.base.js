@@ -4,8 +4,14 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+/*
+ *  file-load
+ *  preLoad
+ */
+
 module.exports = function (env) {
   console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV), '\n')
+
   const extractPcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
   const extractAntd = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.antd.css`)
 
@@ -20,7 +26,7 @@ module.exports = function (env) {
     },
     output: {
       filename: 'static/[name].js',
-      chunkFilename: 'static/[name]-[id].js',
+      chunkFilename: `static/[name]-[id]${(env === 'production') ? '.[chunkhash:6]' : ''}.js`,
       path: path.resolve(__dirname, '../dist/')
     },
     resolve: {
@@ -59,7 +65,7 @@ module.exports = function (env) {
                 minimize: env === 'production',
                 localIdentName: (env === 'production') ? '[local]-[hash:base64:6]' : '[path][name]-[local]',
                 camelCase: true,
-                // sourceMap: true,
+                sourceMap: false,
                 // importLoaders: 1,
               }
             }, {
@@ -78,15 +84,16 @@ module.exports = function (env) {
         }, {
           test: /\.css$/,
           include: [path.resolve(__dirname, "../node_modules/antd")],
-          use: extractAntd.extract({
-            fallback: 'style-loader',
-            use: [{
-              loader: 'css-loader',
-              options: {
-                minimize: env === 'production'
-              }
-            }]
-          })
+          use: [{
+            loader: 'style-loader',
+          }, {
+            loader: 'css-loader',
+            options: {
+              modules: false,
+              minimize: env === 'production',
+              sourceMap: false,
+            }
+          }]
         }, {
           test: /\.(js|jsx)$/,
           include: [

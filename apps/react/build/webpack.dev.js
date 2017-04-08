@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'development'
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -5,10 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
 const {port} = require('./config')()
-process.env.NODE_ENV = 'development'
 
 module.exports = function (env) {
-  return webpackMerge(commonConfig(), {
+  return webpackMerge(commonConfig(env), {
     output: {
       publicPath: '/',
       sourceMapFilename: '[name].map'
