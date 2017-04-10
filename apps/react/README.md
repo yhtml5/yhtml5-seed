@@ -1,6 +1,24 @@
 ## React + Redux + Webpack2 + Ant-design
 
 
+### Quick start
+
+```
+npm i yhtml5-cli -g
+
+yhtml5 init <filename> 
+cd filename
+
+npm i 
+npm run dev
+npm run build
+```
+
+### import vs require
+
+在配置webpack或需要在node环境中编译执行的时候用commonjs，
+在写业务代码时候使用es6的import
+
 ### Containers
   Containers 经过connect的，redux的组件，负责向子组件传入**props**
   
@@ -11,6 +29,8 @@ the lazy load component is in `~/app/Components/LazilyLoad`
 
 #### Lazy Loading
 
+`require.ensure([], require => require('a').default, 'chunkName'))`
+
 lazy load route Components 
 ```
 import {LazilyLoadComponent} from './Components/LazilyLoad/index.jsx'
@@ -18,7 +38,9 @@ const User = () => LazilyLoadComponent(require.ensure([], require => require('./
  <Route exact path="/" component={User}/>
 ```
 
-#### Pre loading
+#### Preload lazy execution
+
+`require.ensure(['a'], require => require('a').default, 'chunkName'))`
 
 ```
 import {LazilyLoadComponent} from './Components/LazilyLoad/index.jsx'

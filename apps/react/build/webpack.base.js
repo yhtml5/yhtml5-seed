@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 /*
  *  file-load
- *  preLoad
  */
 
 module.exports = function (env) {

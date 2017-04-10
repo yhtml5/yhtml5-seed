@@ -64,7 +64,10 @@ const LazilyLoadFactory = (Component, modules) => {
 
 const LazilyLoadComponent = (require) => (
   <LazilyLoad modules={{Mod: () => require}}>
-    {({Mod}) => <Mod/>}
+    {({Mod}) => Mod
+      ? <Mod/>
+      : '加载模块中' //<Loading/>
+    }
   </LazilyLoad>
 )
 
