@@ -82,7 +82,7 @@ module.exports = function (env) {
           })
         }, {
           test: /\.css$/,
-          include: [path.resolve(__dirname, "../node_modules/antd")],
+          include: /antd/, //[path.resolve(__dirname, "../node_modules/antd")],
           use: [{
             loader: 'style-loader',
           }, {
