@@ -2,11 +2,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Router from './Router.jsx'
+import PropTypes from 'prop-types'
 import './global.pcss'
 
 const render = (Components) => {
   ReactDOM.render(
-    (module.hot) ?
+    (false) ?
       (function () {
         const {AppContainer} = require('react-hot-loader')
         return <AppContainer>

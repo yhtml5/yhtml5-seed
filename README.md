@@ -59,6 +59,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 #### Done
 
 - [x] **basic**
+   - [x] 监测处理所有的前端资源：html/css/js/img/file/url
    - [x] 打包 --打包合并，压缩混淆html,css,js
    - [x] 代码切割 --分离第三方包与业务逻辑代码
      - [x] css与js分离 (延迟加载css)
