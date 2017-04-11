@@ -11,7 +11,6 @@ import {submitLogin} from './task'
  *
  */
 
-
 function Login({dispatch, login, app}) {
   console.log('LoginProps: ', login)
 

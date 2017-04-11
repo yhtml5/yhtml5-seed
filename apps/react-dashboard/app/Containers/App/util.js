@@ -24,13 +24,23 @@ function searchKeyWithPathname(url) {
 
 let awaitStatus = true
 
-function notRepeating(fun) {
-  setTimeout(() => awaitStatus = true, 2000)
+const timer = () => new Promise((resolve) => setTimeout(resolve, 2000))
+
+async function notRepeating(fun) {
   if (awaitStatus) {
     awaitStatus = false
     fun()
+    await timer()
+    awaitStatus = true
   }
 }
+
+function submitLogin(values) {
+  asyncPrint('hello world', 5000).then(function (result) {
+    console.log(result)
+  })
+}
+
 
 function downLoad(url) {
   if (validator.isStringNotEmpty(url)) {

@@ -7,12 +7,14 @@ function LoginForm({onSubmit, form, loading, hasRegister}) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values)
-        notRepeating(() => onSubmit(values))
-      }
-    })
+    notRepeating(() =>
+      form.validateFields((err, values) => {
+        if (!err) {
+          console.log('Received values of form: ', values)
+          onSubmit(values)
+        }
+      })
+    )
   }
 
   return (

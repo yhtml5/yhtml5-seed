@@ -28,6 +28,10 @@ function config() {
     },
     siteMap: [
       {
+        key: '0',
+        name: '登录',
+        pathname: '/login'
+      }, {
         key: '1',
         name: '首页',
         icon: 'home',

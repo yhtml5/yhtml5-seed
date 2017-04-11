@@ -2,7 +2,7 @@ import {UpdateState} from './action'
 import {setCookie, getCookie, clearCookie} from '../../util/cookie'
 import {history} from '../../redux/store'
 import {validator} from  '../../util/validator'
-import {ajax} from  '../../util/index'
+import {ajaxLogin} from  './ajax'
 import {config} from '../../config'
 const {title, root, cookie} = config()
 // import {history} from '../store/index'
@@ -29,10 +29,13 @@ function initializeLogin() {
   }
 }
 
-function ajaxLogin() {
-  return (dispatch, getState) => {
-    dispatch(updateState({LoginLoading: true}))
+const submitLogin = (values) =>
+  async (dispatch, getState) => {
+    console.log('submitLogin', getState(), values)
+    dispatch(updateState({...values, LoginLoading: true}))
+
     const params = getState().login
+    const params2 = getState().app
     if (params.LoginName === root.name && params.LoginPassword === root.password) {
       clearCookie()
       setCookie(cookie.token, getState().app.token, 3)
@@ -40,31 +43,10 @@ function ajaxLogin() {
       history.push('/')
       return
     }
-    ajax(
-      'property/site/menus',
-      {
-        name: params.LoginName,
-        password: params.LoginPassword,
-      },
-      () => {
-        dispatch(updateState({LoginLoading: false}))
-      },
-      () => {
-        setTimeout(() => dispatch(updateState({LoginLoading: false})), 1000)
-      },
-      (response) => {
-        dispatch(updateState({LoginLoading: false}))
-      }
-    )
-  }
-}
 
-function submitLogin(values) {
-  return (dispatch, getState) => {
-    console.log('submitLogin', getState(), values)
-    dispatch(updateState(values))
-    dispatch(ajaxLogin())
+    await ajaxLogin({...params, ...params2}, dispatch)
+    console.warn('done!')
+    setTimeout(() => dispatch(updateState({LoginLoading: false})), 1000)
   }
-}
 
 export {updateState, submitLogin, initializeLogin}

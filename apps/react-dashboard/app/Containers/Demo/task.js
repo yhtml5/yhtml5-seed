@@ -1,11 +1,12 @@
 import {UpdateState} from './action'
+import {setCookie, getCookie, clearCookie} from '../../util/cookie'
 import {history} from '../../redux/store'
 import {validator} from  '../../util/validator'
+import {ajaxLogin} from  './ajax'
 import {config} from '../../config'
-const {title, subTitle} = config()
-import {ajax} from  '../../util/index'
-
-// ====== Basic. ======
+const {title, root, cookie} = config()
+// import {history} from '../store/index'
+// import {searchKeyWithPathname} from './util'
 
 function updateState(data) {
   if (validator.isObject(data)) {
@@ -19,37 +20,34 @@ function updateState(data) {
 }
 
 function initializeLogin() {
-  console.log('initializeLogin')
-}
-
-// ====== Ajax. ======
-
-function ajaxLogin() {
   return (dispatch, getState) => {
-    dispatch(updateState({}))
-    ajax(
-      'property/site/menus', '',
-      () => {
-        dispatch(updateState({}))
-      },
-      () => {
-        dispatch(updateState({}))
-      },
-      (response) => {
-      }
-    )
+    console.log('initializeLogin')
+    dispatch(updateState({
+      root: false,
+      LoginLoading: false
+    }))
   }
 }
 
-// ====== Business logic. ======
+const submitLogin = (values) =>
+  async (dispatch, getState) => {
+    console.log('submitLogin', getState(), values)
+    dispatch(updateState({...values, LoginLoading: true}))
 
-function submitLogin() {
-  console.log('submitLogin')
-  history.push('/')
-  return (dispatch, getState) => {
-    console.log('submitLogin', getState(), history)
-    dispatch(ajaxLogin())
+    const params = getState().login
+    const params2 = getState().app
+    if (params.LoginName === root.name && params.LoginPassword === root.password) {
+      clearCookie()
+      setCookie(cookie.token, getState().app.token, 3)
+      dispatch(updateState({root: true, LoginLoading: true}))
+      history.push('/')
+      return
+    }
+
+    await ajaxLogin({...params, ...params2}, dispatch)
+    console.warn('done!')
+    dispatch(updateState({LoginLoading: false}))
+    // setTimeout(() => dispatch(updateState({LoginLoading: false})), 1000)
   }
-}
 
 export {updateState, submitLogin, initializeLogin}
