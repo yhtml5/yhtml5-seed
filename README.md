@@ -54,7 +54,7 @@ MPA|||
 |npm run git|commit your code to git remote repertory|
 For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
 
-### Feature
+### Feature (webpack)
 
 - [x] **basic**
    - [x] 监测处理所有的前端资源：html/css/js/img/file/url
@@ -87,7 +87,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [ ] .eslintrc, eslint
    - [ ] .editconfig --统一编辑器格式，减少代码冲突
 - [ ] **production**
-   - [x] 版本号管理 --小版本携带版本号+时间戳，大版本使用版本号(字母)
+   - [x] 版本号管理 --小版本携带版本号+时间戳，大版本使用版本号(字母) 一个版本目录下应包含所有文件
    - [x] 删除 调试信息  console.log
    - [x] 删除 未使用的函数 tree shaking
    - [x] 删除 if(false){代码块}
@@ -113,12 +113,24 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
       - [x] 长久缓存 第三方的包、公用代码
       - [x] 及时更新 业务逻辑代码、常变动的css、js 
    - [ ] 安全策略    
+      - [x] XSS、CSRF、SQL注入、ddos、开启https 不讨论
+      - [ ] 哈希进行信息摘要
+      - [ ] 非对称加密
+      - [ ] 对称加密
+      - [ ] Salt
+      - [x] 压缩compression, 混淆obfuscation, 加密encryption 增加代码不可读性
+      - [ ] cookie加密 md5加密token等信息
 - [ ] **others**
    - [ ] 自动化部署  -- 一键推送线上
    - [ ] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower
 
 目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
+
+
+### react + redux + antd
+
+- [ ] 
 
 ### Technology Stacks
 

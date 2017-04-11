@@ -1,7 +1,8 @@
-import {config} from '../../config'
 import {validator} from '../../util/validator'
 import {getCookie} from '../../util/cookie'
 import {history} from '../../redux/store'
+import {config} from '../../config'
+const {cookie} = config()
 
 function searchKeyWithPathname(url) {
   let keyIndex = 10
@@ -49,8 +50,8 @@ function downLoad(url) {
 }
 
 function checkToken() {
-  console.log(getCookie('token'), !getCookie('token'), history.location.pathname, history.location.pathname !== '/login')
-  if (!getCookie('token') && history.location.pathname !== '/login') {
+  console.log(getCookie(cookie.token), !getCookie(cookie.token), history.location.pathname, history.location.pathname !== '/login')
+  if (!getCookie(cookie.token) && history.location.pathname !== '/login') {
     // 提示信息失效请登录
     history.push('/login')
   }

@@ -1,9 +1,14 @@
-import {config} from '../../config'
-const {title} = config()
-
 const state = {
-  title: title,
-  token: '112311241'
+  root: false,
+  LoginName: '',
+  LoginPassword: '',
+  LoginRemember: false,
+  LoginLoading: false,
+  ResetPhone: '',
+  ResetCode: '',
+  ResetPassword: '',
+  hasForgot: true,
+  hasRegister: false
 }
 
 export default state

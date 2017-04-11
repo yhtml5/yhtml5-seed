@@ -1,47 +1,58 @@
 import React from 'react'
 import {Form, Icon, Input, Button, Checkbox} from 'antd'
+import {notRepeating}from '../../App/util'
 import styles from './Form.pcss'
 
-function LoginForm({onSubmit, form}) {
+function LoginForm({onSubmit, form, loading, hasRegister}) {
 
   function handleSubmit(e) {
     e.preventDefault()
     form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        console.log('Received values of form: ', values)
+        notRepeating(() => onSubmit(values))
       }
     })
-    onSubmit()
   }
 
   return (
-    <Form onSubmit={handleSubmit} className={styles.form}>
+    <Form className={styles.form}
+          onSubmit={handleSubmit}>
       <Form.Item>
-        {form.getFieldDecorator('userName', {
-          rules: [{required: true, message: 'Please input your username!'}],
+        {form.getFieldDecorator('LoginName', {
+          rules: [{
+            required: true,
+            message: '用户名不能为空'
+          }],
         })(
-          <Input prefix={<Icon type="user" style={{fontSize: 13}}/>} placeholder="Username"/>
+          <Input prefix={<Icon type="user" style={{fontSize: 13}}/>} placeholder="请输入用户名"/>
         )}
       </Form.Item>
       <Form.Item>
-        {form.getFieldDecorator('password', {
-          rules: [{required: true, message: 'Please input your Password!'}],
+        {form.getFieldDecorator('LoginPassword', {
+          rules: [{
+            required: true,
+            message: '密码不能为空'
+          }],
         })(
-          <Input prefix={<Icon type="lock" style={{fontSize: 13}}/>} type="password" placeholder="Password"/>
+          <Input prefix={<Icon type="lock" style={{fontSize: 13}}/>} type="password" placeholder="请输入密码"/>
         )}
       </Form.Item>
-      <Form.Item>
-        {form.getFieldDecorator('remember', {
+      <Form.Item className="no-select">
+        {form.getFieldDecorator('LoginRemember', {
           valuePropName: 'checked',
           initialValue: true,
         })(
-          <Checkbox>Remember me</Checkbox>
+          <Checkbox>记住我</Checkbox>
         )}
-        <a className={styles.loginForgot}>Forgot password</a>
-        <Button type="primary" htmlType="submit" className={styles.loginButton}>
-          Log in
-        </Button>
-        Or <a>register now!</a>
+        <a className={styles.loginForgot}>忘记密码</a>
+        <Button type="primary"
+                htmlType="submit"
+                loading={loading}
+                className={styles.loginButton}
+                icon="login"
+        >登录</Button>
+        {(hasRegister) ? <span><Icon type="arrow-right"/> <a> 去注册 </a></span> : ''}
       </Form.Item>
     </Form>
   )

@@ -4,14 +4,9 @@ import {history} from '../../redux/store'
 import {validator} from  '../../util/validator'
 import {ajax} from  '../../util/index'
 import {config} from '../../config'
-const {title, subTitle} = config()
-
-// import {searchKeyWithPathname} from './util'
+const {title, root, cookie} = config()
 // import {history} from '../store/index'
-
-// const ajax = (url, param, fail, error, success) => require.ensure([], require => {
-//   require('../../util/ajax').default(url, param, fail, error, success)
-// }, 'ajax')
+// import {searchKeyWithPathname} from './util'
 
 function updateState(data) {
   if (validator.isObject(data)) {
@@ -25,36 +20,49 @@ function updateState(data) {
 }
 
 function initializeLogin() {
-  console.log('initializeLogin')
-  return () => {
+  return (dispatch, getState) => {
+    console.log('initializeLogin')
+    dispatch(updateState({
+      root: false,
+      LoginLoading: false
+    }))
   }
 }
 
-
 function ajaxLogin() {
   return (dispatch, getState) => {
-    dispatch(updateState({}))
+    dispatch(updateState({LoginLoading: true}))
+    const params = getState().login
+    if (params.LoginName === root.name && params.LoginPassword === root.password) {
+      clearCookie()
+      setCookie(cookie.token, getState().app.token, 3)
+      dispatch(updateState({root: true, LoginLoading: true}))
+      history.push('/')
+      return
+    }
     ajax(
-      'property/site/menus', '',
-      () => {
-        dispatch(updateState({}))
+      'property/site/menus',
+      {
+        name: params.LoginName,
+        password: params.LoginPassword,
       },
       () => {
-        dispatch(updateState({}))
+        dispatch(updateState({LoginLoading: false}))
+      },
+      () => {
+        setTimeout(() => dispatch(updateState({LoginLoading: false})), 1000)
       },
       (response) => {
+        dispatch(updateState({LoginLoading: false}))
       }
     )
   }
 }
 
-function submitLogin() {
-  console.log('submitLogin')
-  setCookie('token', '11111', 3)
-  history.push('/')
-
+function submitLogin(values) {
   return (dispatch, getState) => {
-    console.log('submitLogin', getState(), history)
+    console.log('submitLogin', getState(), values)
+    dispatch(updateState(values))
     dispatch(ajaxLogin())
   }
 }

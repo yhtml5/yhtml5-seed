@@ -1,31 +1,29 @@
 import React from 'react'
-import connect from 'react-redux/es/connect/connect' // import {connect} from 'react-redux'
+import connect from 'react-redux/es/connect/connect'
 import Background from './Components/Background.jsx'
 import Form from './Components/Form.jsx'
+import {LazilyLoadFactory} from '../../Components/LazilyLoad/index.jsx'
+import {submitLogin} from './task'
 
-// import {submitLogin} from './task'
+/**
+ *  Todo
+ *  https://www.zhihu.com/#signin
+ *
+ */
 
 
-function Login({dispatch, login}) {
+function Login({dispatch, login, app}) {
   console.log('LoginProps: ', login)
 
-  const taskLoad = (task) => require.ensure([], require => {
-    let {submitLogin} = require('./task')
-    switch (task) {
-      case 'onSubmit':
-        return dispatch(submitLogin())
-      default:
-        return console.error('no task')
-    }
-  }, 'task-login')
-
   const BackgroundProps = {
-    title: login.title
+    title: app.title
   }
 
   const FormProps = {
-    onSubmit () {
-      taskLoad('onSubmit')
+    loading: login.LoginLoading,
+    hasRegister: login.hasRegister,
+    onSubmit (values) {
+      dispatch(submitLogin(values))
     }
   }
 
@@ -38,6 +36,7 @@ function Login({dispatch, login}) {
 
 export default connect(state => {
   return {
+    app: state.app,
     login: state.login,
   }
 })(Login)

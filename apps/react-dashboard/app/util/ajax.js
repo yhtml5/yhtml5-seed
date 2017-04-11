@@ -1,9 +1,10 @@
 import reqwest from 'reqwest'
 import message from 'antd/lib/message/index'
-import {config} from '../config.js'
+import {config, getApiUrl} from '../config.js'
+import {history} from '../redux/store'
 import {getCookie} from './cookie.js'
 import {validator} from  './validator'
-let {domain, loginUrl} = config
+let {cookie, entryUrl} = config()
 
 function ajax(url, param, fail, error, success) {
   // console.clear()
@@ -17,11 +18,11 @@ function ajax(url, param, fail, error, success) {
   }
   let newParam = {
     data: JSON.stringify(param),
-    token: getCookie('token')
+    token: getCookie(cookie.token)
   }
   console.log('ajaxParam-' + url + ': ', newParam)
   reqwest({
-    url: domain + '/' + url,
+    url: getApiUrl() + '/' + url,
     type: 'json',
     method: 'get',
     data: newParam,
@@ -39,10 +40,10 @@ function ajax(url, param, fail, error, success) {
       } else if (response.code === 50002) {
         message.info('当前登录状态已失效，2秒后自动将跳转到登录页...', 3);
         setTimeout(() => {
-          location.href = loginUrl
+          history.push(entryUrl)
         }, 2000)
       } else {
-        console.warn(message.error((response.error.errorMsg) ? response.error.errorMsg : '网络异常'))
+        message.error((response.error.errorMsg) ? response.error.errorMsg : '网络异常')
         error()
       }
       console.log('ajaxResponse-' + url + ': ', response)

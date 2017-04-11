@@ -1,10 +1,12 @@
 import React from 'react'
 import {Layout} from 'antd'
+import {config} from '../../../config'
+const {title, copyright} = config()
 
 function Footer() {
   return (
     <Layout.Footer style={{textAlign: 'center'}}>
-      XXXX管理系统 ©2017 powered by zje.com
+      {title} ©2017 powered by {copyright}
     </Layout.Footer>
   )
 }

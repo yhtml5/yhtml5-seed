@@ -35,5 +35,6 @@ function Sider({collapsed, title}) {
   )
 }
 
+Sider.__ANT_LAYOUT_SIDER = true
 
 export default Sider

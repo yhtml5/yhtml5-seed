@@ -1,11 +1,22 @@
 import React from 'react'
 import {Breadcrumb} from 'antd'
 import {Link} from 'react-router-dom';
-import {validator} from  '../validator'
+import {validator} from  '../../util/validator'
 
-function newBreadcrumb({list}) {
+const list = [{
+  name: '首页',
+}, {
+  name: '列表',
+}, {
+  name: '详情',
+}]
+
+function newBreadcrumb() {
   return (
-    <Breadcrumb separator=">">
+    <Breadcrumb
+      separator=">"
+      style={{marginBottom: '20px'}}
+    >
       {list.map((value, index) => {
         return (
           <Breadcrumb.Item key={index}>

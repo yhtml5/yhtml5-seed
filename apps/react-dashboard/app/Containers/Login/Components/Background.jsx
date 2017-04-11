@@ -4,6 +4,7 @@ import Footer from '../../Layout/Components/Footer.jsx'
 import styles from './Background.pcss'
 
 function Background({children, title}) {
+
   return (
     <div className={styles.login}>
       <Card className={styles.card}>
