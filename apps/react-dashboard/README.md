@@ -84,7 +84,7 @@ production :  [local]-[hash:base64:6]
 * 组件文件后缀名写上.jsx  
 * react-router exact
   When true, will only match if the path matches the location.pathname exactly.
-
+* process.env.NODE_ENV === 'production'
  Keep in mind that import() path cannot be fully dynamic (e.g., import(Math.random())). 
  Rather either completely static (e.g., import('./locale/de.json')) 
  or partially static (e.g., import('./locale/' + language + '.json')). 

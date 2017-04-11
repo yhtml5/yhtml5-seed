@@ -56,8 +56,6 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 
 ### Feature
 
-#### Done
-
 - [x] **basic**
    - [x] 监测处理所有的前端资源：html/css/js/img/file/url
    - [x] 打包 --打包合并，压缩混淆html,css,js
@@ -97,8 +95,13 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [ ] 删除 仅用于开发环境的：`['react-hot-loader','react-hot-loader/patch', 'webpack-hot-middleware/client']`
    - [x] 增加 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
    - [ ] 优化 首屏css内联 style-loader
-   - [ ] 兼容 css前缀、shim
-   - [ ] 兼容 浏览器兼容性: IE系列,html5shim,css,js,兼容性检测
+   - [ ] 兼容策略
+      - [ ] 浏览器兼容包含html、css、js等兼容问题，涉及广泛
+      - [ ] 兼容性检测
+      - [ ] html5shim 
+      - [ ] css浏览器前缀
+      - [ ] javascript shim
+      - [ ] IE 系列兼容
    - [ ] 加载策略
       - [x] 合理的加载策略能大大降低资源大小、提高用户体验、提高客户端安全性(根据后端验证返回前端业务逻辑)、提供渐进式服务
       - [x] 按需加载 在编译阶段，只打包需要的资源 (npm 各个包都有提供单独的es6模块，除非必须尽量不要引全部)
@@ -155,9 +158,6 @@ opn|open browser|
 **How to export logo in term?**
 
 ##### Webpack
-
-
-
 
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg

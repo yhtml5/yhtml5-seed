@@ -1,39 +1,33 @@
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date()
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))
-  var expires = "expires=" + d.toGMTString()
-  document.cookie = cname + "=" + cvalue + "; " + expires
+/**
+ * set cookie.
+ *
+ * Todo: sha1
+ *
+ * @param {String} name
+ * @param {String} value
+ * @param {number} hour
+ */
+
+function setCookie(name, value, hour) {
+  let currentTime = new Date()
+  currentTime.setTime(currentTime.getTime() + (hour * 60 * 60 * 1000))
+  document.cookie = `${name}=${value};expires=${currentTime.toGMTString()}`
 }
 
-function getCookie(name) {
-  if (new RegExp(name, 'g').test(document.cookie)) {
-    return document.cookie.split(name)[1].split("=")[1].split(";")[0]
+const getCookie = (name) =>
+  (new RegExp(name, 'g').test(document.cookie))
+    ? document.cookie.split(name)[1].split("=")[1].split(";")[0]
+    : false
+
+const clearCookie = (name) => {
+  if (name) {
+    setCookie(name, '', -1)
   } else {
-    return false
-  }
-}
-
-function checkCookie() {
-  var user = getCookie("zusername")
-  if (user != "") {
-    alert("Welcome again " + user)
-  }
-  else {
-    user = prompt("Please enter your name:", "");
-    if (user != "" && user != null) {
-      setCookie("zusername", user, 30)
+    const keys = document.cookie.match(/[^ =;]+(?=\=)/g)
+    if (keys) {
+      keys.forEach((key) => setCookie(key, '', -1))
     }
   }
 }
-function clearCookie(cookieName) {
-  document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-}
-function clearCookieAll() {
-  var keys = document.cookie.match(/[^ =;]+(?=\=)/g)
-  if (keys) {
-    for (var i = keys.length; i--;)
-      document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
-  }
-}
 
-export {getCookie, clearCookieAll}
+export {setCookie, getCookie, clearCookie}

@@ -1,17 +1,11 @@
 import {UpdateState} from './action'
-import {setCookie, getCookie, clearCookie} from '../../util/cookie'
 import {history} from '../../redux/store'
 import {validator} from  '../../util/validator'
-import {ajax} from  '../../util/index'
 import {config} from '../../config'
 const {title, subTitle} = config()
+import {ajax} from  '../../util/index'
 
-// import {searchKeyWithPathname} from './util'
-// import {history} from '../store/index'
-
-// const ajax = (url, param, fail, error, success) => require.ensure([], require => {
-//   require('../../util/ajax').default(url, param, fail, error, success)
-// }, 'ajax')
+// ====== Basic. ======
 
 function updateState(data) {
   if (validator.isObject(data)) {
@@ -26,10 +20,9 @@ function updateState(data) {
 
 function initializeLogin() {
   console.log('initializeLogin')
-  return () => {
-  }
 }
 
+// ====== Ajax. ======
 
 function ajaxLogin() {
   return (dispatch, getState) => {
@@ -48,11 +41,11 @@ function ajaxLogin() {
   }
 }
 
+// ====== Business logic. ======
+
 function submitLogin() {
   console.log('submitLogin')
-  setCookie('token', '11111', 3)
   history.push('/')
-
   return (dispatch, getState) => {
     console.log('submitLogin', getState(), history)
     dispatch(ajaxLogin())

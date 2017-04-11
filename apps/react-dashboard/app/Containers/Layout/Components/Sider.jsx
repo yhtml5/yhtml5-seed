@@ -15,8 +15,10 @@ function Sider({collapsed, title}) {
       </div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
         <Menu.Item key="1">
-          <Icon type="user"/>
-          <span className="nav-text">nav 1</span>
+          <Link to="/">
+            <Icon type="user"/>
+            <span className="nav-text">nav 1</span>
+          </Link>
         </Menu.Item>
         <Menu.Item key="2">
           <Link to="/login">

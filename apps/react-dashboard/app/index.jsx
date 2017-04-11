@@ -2,7 +2,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Router from './Router.jsx'
-import PropTypes from 'prop-types'
 import './global.pcss'
 
 const render = (Components) => {
@@ -15,8 +14,7 @@ const render = (Components) => {
         </AppContainer>
       })()
       : <Components/>
-    ,
-    document.getElementById('root')
+    , document.getElementById('root')
   )
 }
 
