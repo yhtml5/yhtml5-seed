@@ -8,7 +8,7 @@ function config() {
     environment: [{
       title: 'development',
       host: 'localhost:9999',
-      api: (isMock) ? 'mock.yhtml5.com' : '//116.62.92.115:71'
+      api: (isMock) ? 'mock.yhtml5.com' : ''
     }, {
       name: 'test',
       host: 'test.yhtml5.com',
@@ -28,42 +28,80 @@ function config() {
     },
     siteMap: [
       {
-        key: '0',
-        name: '登录',
-        pathname: '/login'
-      }, {
-        key: '1',
-        name: '首页',
+        key: '2',
+        name: '页面管理',
         icon: 'home',
       }, {
-        key: '2',
-        name: '系统设置',
-        icon: 'setting',
-      }, {
         key: '3',
-        name: '小区管理',
-        icon: 'team',
+        name: '内容管理',
+        icon: 'book',
       }, {
-        key: '4',
-        name: '缴费管理',
-        icon: 'pay-circle-o',
-      }, {
-        key: '5',
-        name: '物业服务',
-        icon: 'customer-service',
-      }, {
-        key: '10',
-        name: '工作台',
-        url: '/',
+        key: '20',
+        name: '导航20',
+        pathname: '/navigation',
         items: [{
           name: '新增',
-          url: '/collectionsAdd'
+          pathname: '/add'
         }, {
-          name: '收费',
-          url: '/collections',
+          name: '编辑',
+          pathname: '/edit',
+        }]
+      }, {
+        key: '21',
+        name: '导航21',
+        pathname: '/navigation',
+        items: [{
+          name: '新增',
+          pathname: '/add'
+        }, {
+          name: '编辑',
+          pathname: '/edit',
+        }]
+      }, {
+        key: '22',
+        name: '导航22',
+        pathname: '/navigation',
+        items: [{
+          name: '新增',
+          pathname: '/add'
+        }, {
+          name: '编辑',
+          pathname: '/edit',
+        }]
+      }, {
+        key: '23',
+        name: '导航23',
+        pathname: '/navigation',
+        items: [{
+          name: '新增',
+          pathname: '/add'
+        }, {
+          name: '编辑',
+          pathname: '/edit',
+        }]
+      }, {
+        key: '30',
+        name: '导航30',
+        pathname: '/navigation',
+        items: [{
+          name: '新增',
+          pathname: '/add'
+        }, {
+          name: '编辑',
+          pathname: '/edit',
         }]
       }]
   }
+}
+
+function searchMenuWithKey(key) {
+  let keyIndex = 0
+  config().siteMap.forEach((value, index) => {
+    if (value.key === key) {
+      return keyIndex = index
+    }
+  })
+  return config().siteMap[keyIndex]
 }
 
 function getApiUrl() {
@@ -73,4 +111,4 @@ function getApiUrl() {
     : config().environment[0].api
 }
 
-export {config, getApiUrl}
+export {config, getApiUrl, searchMenuWithKey}

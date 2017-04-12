@@ -1,5 +1,5 @@
 import reqwest from 'reqwest'
-import message from 'antd/lib/message/index'
+import {message} from 'antd'
 import {config, getApiUrl} from '../config.js'
 import {history} from '../redux/store'
 import {getCookie} from './cookie.js'
@@ -35,10 +35,10 @@ function ajax(url, param, fail, error, success) {
     },
     success: function (response) {
       message.destroy()
-      if (response.code === 20000) {
+      if (Number(response.code) === 20000) {
         success(response)
-      } else if (response.code === 50002) {
-        message.info('当前登录状态已失效，2秒后自动将跳转到登录页...', 3);
+      } else if (Number(response.code) === 50002) {
+        message.info('当前登录状态已失效，2秒后自动将跳转到登录页...', 3)
         setTimeout(() => {
           history.push(entryUrl)
         }, 2000)

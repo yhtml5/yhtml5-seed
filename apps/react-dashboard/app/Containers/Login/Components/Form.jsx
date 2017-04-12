@@ -5,17 +5,27 @@ import styles from './Form.pcss'
 
 function LoginForm({onSubmit, form, loading, hasRegister}) {
 
-  function handleSubmit(e) {
-    e.preventDefault()
+  // function handleSubmit(e) {
+  //   e.preventDefault()
+  //   return notRepeating(() =>
+  //     form.validateFields((err, values) => {
+  //       if (!err) {
+  //         console.log('Received values of form: ', values)
+  //         onSubmit(values)
+  //       }
+  //     })
+  //   )
+  // }
+
+  const handleSubmit = (e) =>
     notRepeating(() =>
       form.validateFields((err, values) => {
+        e.preventDefault()
         if (!err) {
           console.log('Received values of form: ', values)
           onSubmit(values)
         }
-      })
-    )
-  }
+      }))
 
   return (
     <Form className={styles.form}

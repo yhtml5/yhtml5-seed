@@ -13,7 +13,7 @@ import {encrypt, decrypted} from './security'
 function setCookie(name, value, hour) {
   let currentTime = new Date()
   currentTime.setTime(currentTime.getTime() + (hour * 60 * 60 * 1000))
-  document.cookie = 'token=hello world'
+  document.cookie = 'token=null'
   document.cookie = `${name}=${encrypt(value)};expires=${currentTime.toGMTString()}`
 }
 

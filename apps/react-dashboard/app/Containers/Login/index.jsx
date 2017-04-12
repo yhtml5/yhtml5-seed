@@ -3,7 +3,7 @@ import connect from 'react-redux/es/connect/connect'
 import Background from './Components/Background.jsx'
 import Form from './Components/Form.jsx'
 import {LazilyLoadFactory} from '../../Components/LazilyLoad/index.jsx'
-import {submitLogin} from './task'
+import {login as taskLogin} from './task'
 
 /**
  *  Todo
@@ -22,7 +22,7 @@ function Login({dispatch, login, app}) {
     loading: login.LoginLoading,
     hasRegister: login.hasRegister,
     onSubmit (values) {
-      dispatch(submitLogin(values))
+      dispatch(taskLogin(values))
     }
   }
 

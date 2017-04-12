@@ -15,8 +15,8 @@ async function ajaxLogin(params, dispatch) {
         name: params.LoginName,
         password: params.LoginPassword,
       },
-      () => resolve(),
-      () => resolve(),
+      resolve,
+      resolve,
       (response) => {
         return resolve()
       }
@@ -24,4 +24,21 @@ async function ajaxLogin(params, dispatch) {
   )
 }
 
-export {ajaxLogin}
+async function ajaxLogout(params, dispatch) {
+  await new Promise((resolve) =>
+    ajax(
+      'property/site/menus',
+      {
+        name: params.LoginName,
+        password: params.LoginPassword,
+      },
+      resolve,
+      resolve,
+      (response) => {
+        return resolve()
+      }
+    )
+  )
+}
+
+export {ajaxLogin, ajaxLogout}

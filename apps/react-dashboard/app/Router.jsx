@@ -6,9 +6,13 @@ import {store, history} from './redux/store'
 import {LazilyLoadComponent} from './Components/LazilyLoad/index.jsx'
 import {routeChange} from './Containers/App/route'
 
-// import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
-// import User from './Containers/User/index.jsx'
-// import Login from './Containers/Login/index.jsx'
+/**
+ *
+ * Todo
+ * 1.import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+ *
+ *
+ */
 
 // ==== lazy load route components ====
 
@@ -24,6 +28,7 @@ function newRouter() {
         <div style={{height: '100%'}}>
           <Route exact path="/" component={User}/>
           <Route exact path="/login" component={Login}/>
+          <Route exact path="/user" component={User}/>
         </div>
       </ConnectedRouter>
     </Provider>

@@ -2,8 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {Layout, Menu, Icon} from 'antd'
 import styles from '../index.pcss'
+import {searchMenuWithKey} from '../../../config'
 
-function Sider({collapsed, title}) {
+function Sider({collapsed, title, selectedKeys, openKeys, defaultOpenKeys, permissions}) {
+
   return (
     <Layout.Sider
       trigger={null}
@@ -13,27 +15,31 @@ function Sider({collapsed, title}) {
       <div className={styles.logo}>
         <p className={styles.title}>{title}</p>
       </div>
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-        <Menu.Item key="1">
-          <Link to="/">
-            <Icon type="user"/>
-            <span className="nav-text">nav 1</span>
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <Link to="/login">
-            <Icon type="video-camera"/>
-            <span className="nav-text">nav 2</span>
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="3">
-          <Icon type="upload"/>
-          <span className="nav-text">nav 3</span>
-        </Menu.Item>
+      <Menu mode={(collapsed) ? "vertical" : "inline"}
+            theme="dark"
+            selectedKeys={selectedKeys}
+            defaultOpenKeys={defaultOpenKeys}
+      >
+        {permissions.map((value, index) => {
+          let menus = searchMenuWithKey(value.key)
+          return (
+            <Menu.SubMenu key={menus.key} title={<span><Icon type={menus.icon}/><span className="nav-text">{menus.name}</span></span>}>
+              {value.children.map((value, index) => {
+                let subMenus = searchMenuWithKey(value.key)
+                if (subMenus.items) {
+                  return <Menu.Item key={subMenus.key}>
+                    <Link to={subMenus.pathname}>{subMenus.name}</Link>
+                  </Menu.Item>
+                }
+              })}
+            </Menu.SubMenu>
+          )
+        })}
       </Menu>
     </Layout.Sider>
   )
 }
+
 
 Sider.__ANT_LAYOUT_SIDER = true
 

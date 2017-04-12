@@ -2,7 +2,7 @@ import {UpdateState} from './action'
 import {setCookie, getCookie, clearCookie} from '../../util/cookie'
 import {history} from '../../redux/store'
 import {validator} from  '../../util/validator'
-import {ajaxLogin} from  './ajax'
+import {ajaxLogin, ajaxLogout} from  './ajax'
 import {config} from '../../config'
 const {title, root, cookie} = config()
 // import {history} from '../store/index'
@@ -21,7 +21,6 @@ function updateState(data) {
 
 function initializeLogin() {
   return (dispatch, getState) => {
-    console.log('initializeLogin')
     dispatch(updateState({
       root: false,
       LoginLoading: false
@@ -29,9 +28,9 @@ function initializeLogin() {
   }
 }
 
-const submitLogin = (values) =>
+const login = (values) =>
   async (dispatch, getState) => {
-    console.log('submitLogin', getState(), values)
+    console.log('loginIn', getState(), values)
     dispatch(updateState({...values, LoginLoading: true}))
 
     const params = getState().login
@@ -49,4 +48,16 @@ const submitLogin = (values) =>
     setTimeout(() => dispatch(updateState({LoginLoading: false})), 1000)
   }
 
-export {updateState, submitLogin, initializeLogin}
+const logout = (resolve, reject) =>
+  async (dispatch, getState) => {
+    console.log('loginOut', getState())
+    const params = getState().app
+
+    await ajaxLogout(params, dispatch, resolve, reject)
+    resolve()
+    console.warn('done!')
+    history.push('/login')
+    clearCookie()
+  }
+
+export {updateState, login, logout, initializeLogin}

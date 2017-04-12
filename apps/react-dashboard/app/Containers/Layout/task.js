@@ -3,14 +3,8 @@ import {validator} from  '../../util/validator'
 import {config} from '../../config'
 const {title, subTitle} = config()
 import ajax from  '../../util/ajax'
-
-// import ajax from  '../../util/ajax'
+import {history} from '../../redux/store'
 // import {searchKeyWithPathname} from './util'
-// import {history} from '../store/index'
-
-// const ajax = (url, param, fail, error, success) => require.ensure([], require => {
-//   require('../../util/ajax').default(url, param, fail, error, success)
-// }, 'ajax')
 
 function updateState(data) {
   if (validator.isObject(data)) {
@@ -23,28 +17,22 @@ function updateState(data) {
   }
 }
 
-function ajaxLogin() {
+function initializeLayout() {
   return (dispatch, getState) => {
-    dispatch(updateState({}))
-    ajax(
-      'property/site/menus', '',
-      () => {
-        dispatch(updateState({}))
-      },
-      () => {
-        dispatch(updateState({}))
-      },
-      (response) => {
-      }
-    )
+    dispatch(updateState({
+      root: false,
+      LoginLoading: false
+    }))
   }
 }
 
 function toggleSider() {
   return (dispatch, getState) => {
     const layout = getState().layout
-    dispatch(ajaxLogin())
-    dispatch(updateState({collapsed: !layout.collapsed}))
+    dispatch(updateState({
+      collapsed: !layout.collapsed,
+      menusDefaultOpenKeys: [],
+    }))
     if (layout.collapsed) {
       setTimeout(() => dispatch(updateState({title: title})), 100)
     } else {
@@ -53,4 +41,5 @@ function toggleSider() {
   }
 }
 
-export {updateState, toggleSider}
+
+export {updateState, initializeLayout, toggleSider}

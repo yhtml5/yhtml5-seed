@@ -1,9 +1,13 @@
-import {config} from '../../config'
-const {title} = config()
-
 const state = {
-  collapsed: false,
-  title: title
+  searchUser: '',
+  tableData: [],
+  tableTotals: 0,
+  tableCurrent: 1,
+  tablePageSize: 10,
+  tableLoading: false,
+  buttonAddLoading: false,
+  buttonSearchLoading: false,
+  buttonResetLoading: false,
 }
 
 export default state

@@ -172,6 +172,9 @@ module.exports = function (env) {
       new webpack.optimize.CommonsChunkPlugin({
         children: true,
         async: true,
+        // minChunks: function (module) {
+        //   return module.context && module.context.indexOf('node_modules') !== -1;
+        // },
       }),
       new webpack.optimize.CommonsChunkPlugin({
         names: ["vendorReact", ["index", "vendorReact"]],

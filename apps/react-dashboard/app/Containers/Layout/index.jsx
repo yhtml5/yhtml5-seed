@@ -6,24 +6,34 @@ import Header from './Components/Header.jsx'
 import Footer from './Components/Footer.jsx'
 import Content from './Components/Content.jsx'
 import {toggleSider} from './task'
+import {logout} from '../Login/task'
 
-function newLayout({dispatch, layout, children}) {
+function newLayout({dispatch, app, layout, children}) {
   console.log('newLayoutProps: ', layout)
 
   const LayoutProps = {
     id: "layout",
-    style: {height: '100%'},
+    style: {minHeight: '100%'},
   }
   const SiderProps = {
-    collapsed: layout.collapsed,
     title: layout.title,
+    collapsed: layout.collapsed,
+    permissions: app.permissions,
+    openKeys: layout.menusOpenKeys,
+    defaultOpenKeys: layout.menusDefaultOpenKeys,
+    selectedKeys: layout.menusSelectedKeys,
   }
   const HeaderProps = {
     collapsed: layout.collapsed,
     onToggleSider(){
       dispatch(toggleSider())
+    },
+    onLogout(resolve, reject){
+      console.log('onLoginOut')
+      dispatch(logout(resolve, reject))
     }
   }
+
   const ContentProps = {}
   const FooterProps = {}
 
@@ -44,5 +54,6 @@ function newLayout({dispatch, layout, children}) {
 export default connect(state => {
   return {
     layout: state.layout,
+    app: state.app,
   }
 })(newLayout)

@@ -14,6 +14,14 @@ npm run dev
 npm run build
 ```
 
+### 开发模式
+
+```
+state => reduce => Containers => Components => CallBack => Containers event => 
+
+dispatch(task) => dispatch(ajax) => dispatch(upstate) =>newState  
+```
+
 ### import vs require
 
 在配置webpack或需要在node环境中编译执行的时候用commonjs，
