@@ -3,6 +3,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Router from './Router.jsx'
 import './global.pcss'
+// import ajax from'./util/ajax'
+// import {ajax} from'./util/index'
+// ajax()
 
 const render = (Components) => {
   ReactDOM.render(

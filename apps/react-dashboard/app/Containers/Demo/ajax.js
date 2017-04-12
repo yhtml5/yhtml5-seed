@@ -1,4 +1,4 @@
-import {ajax} from  '../../util/index'
+import ajax from  '../../util/ajax'
 
 /**
  * Todo Mapping Parameters
@@ -6,7 +6,6 @@ import {ajax} from  '../../util/index'
  * @param {object} params
  * @param {function} dispatch
  */
-
 
 const ajaxLogin = (params, dispatch) =>
   new Promise((resolve) =>

@@ -2,7 +2,7 @@ import {UpdateState} from './action'
 import {validator} from  '../../util/validator'
 import {config} from '../../config'
 const {title, subTitle} = config()
-import {ajax} from  '../../util/index'
+import ajax from  '../../util/ajax'
 
 // import ajax from  '../../util/ajax'
 // import {searchKeyWithPathname} from './util'

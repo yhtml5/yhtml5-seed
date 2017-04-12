@@ -1,4 +1,4 @@
-import {ajax} from  '../../util/index'
+import ajax from  '../../util/ajax'
 
 /**
  * Todo Mapping Parameters
