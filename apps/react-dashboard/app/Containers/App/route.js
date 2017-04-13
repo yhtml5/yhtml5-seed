@@ -18,6 +18,7 @@ function listener(store, history) {
 
     switch (pathname) {
       case '/':
+        store.dispatch(initializeUser())
         console.log('in the root route')
         break
       case '/login':

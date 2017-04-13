@@ -39,6 +39,7 @@ module.exports = function (env) {
         // "react-router": "./node_modules/react-router/umd/ReactRouter" + isMin() + ".js",
         // "react-router-redux": "./node_modules/react-router-redux/dist/ReactRouterRedux" + isMin() + ".js",
         // redux: "./node_modules/redux/dist/redux" + isMin() + ".js",
+        // reqwest: "./node_modules/reqwest/reqwest" + (process.env.NODE_ENV === 'production') ? '.min' : '' + ".js",
       }
     },
     module: {

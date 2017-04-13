@@ -73,6 +73,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [ ] support sass, less, [postCSS][postCSS],[css-modules][css-modules]
    - [ ] 支持js、jsx、ts
    - [x] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`
+   - [ ] 提高打包速度 重定向资源路径，不打包全部引用的资源，直接引用min文件，例：`react => react/react.min.js` 
 - [x] **development**
    - [x] 自动打开默认浏览器
    - [x] 热替换 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
