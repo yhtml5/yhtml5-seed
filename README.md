@@ -128,7 +128,6 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
 
 目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
 
-
 ### react + redux + antd
 
 - [ ] 
