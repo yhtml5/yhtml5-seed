@@ -3,13 +3,15 @@ const chalk = require('chalk')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {clearConsole} = require('./util')
+// const {title} = require('../app/config')()
 
 /*
  *  file-load
  */
 
 module.exports = function (env) {
-  console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV), '\n')
+  console.log('\n  The process.env.NODE_ENV is: ', title,chalk.cyan.bold(process.env.NODE_ENV), '\n')
 
   const extractPcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
   const extractAntd = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.antd.css`)

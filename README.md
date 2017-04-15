@@ -52,6 +52,8 @@ MPA|||
 |npm run dev|develop model|
 |npm run test|test code|
 |npm run git|commit your code to git remote repertory|
+|npm i |`--registry=https://registry.npm.taobao.org`|
+
 For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
 
 ### Feature (webpack)

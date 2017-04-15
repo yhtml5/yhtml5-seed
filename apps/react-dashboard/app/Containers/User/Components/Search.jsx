@@ -3,6 +3,17 @@ import {Card, Form, Button, Input, Icon, DatePicker, message} from 'antd'
 import {validator} from '../../../util/validator'
 
 
+const splitTime = (time) => {
+  let end = '', start = ''
+
+  if (validator.isArrayNotEmpty(time)) {
+    start = time[0].format('YYYY-MM-DD')
+    end = time[1].format('YYYY-MM-DD')
+  }
+  return {start, end}
+}
+
+
 function Search({form, onSearch, onReset}) {
 
   const formItemLayout = {
