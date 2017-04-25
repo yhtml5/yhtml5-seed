@@ -85,7 +85,8 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [x] 局域网访问  --开发环境允许局域网访问
    - [x] 重定向依赖 --使用第三方包提供的压缩包而不是通过webpack
    - [x] 兼容windows系统
-   - [ ] mock  --mock data
+   - [ ] mock  --mock 
+   - [ ] 开发者面板：isMock
 - [ ] **test**
    - [ ] .eslintrc, eslint
    - [ ] .editconfig --统一编辑器格式，减少代码冲突
@@ -114,7 +115,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [ ] 缓存策略
       - [x] 合理的缓存策略能减少资源下载、保证用户每次获取的事最新的资源、提高用户体验
       - [x] 长久缓存 第三方的包、公用代码
-      - [x] 及时更新 业务逻辑代码、常变动的css、js 
+      - [x] 及时更新 业务逻辑代码、常变动的css、js, 不需要强刷  
    - [ ] 安全策略    
       - [x] XSS、CSRF、SQL注入、ddos、开启https 不讨论
       - [ ] 哈希进行信息摘要

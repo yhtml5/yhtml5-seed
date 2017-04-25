@@ -14,6 +14,12 @@ npm run dev
 npm run build
 ```
 
+### 业务模块
+
+- [x] 登录、注册、忘记密码
+- [x] 权限
+- [x] layout
+
 ### 开发模式
 
 ```
