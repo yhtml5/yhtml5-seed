@@ -76,6 +76,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [ ] 支持js、jsx、ts
    - [x] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`
    - [ ] 提高打包速度 重定向资源路径，不打包全部引用的资源，直接引用min文件，例：`react => react/react.min.js` 
+   - [ ] 压缩图片资源
 - [x] **development**
    - [x] 自动打开默认浏览器
    - [x] 热替换 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
@@ -99,6 +100,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
    - [ ] 删除 仅用于开发环境的：`['react-hot-loader','react-hot-loader/patch', 'webpack-hot-middleware/client']`
    - [x] 增加 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
    - [ ] 优化 首屏css内联 style-loader
+   - [ ] 增加 作者信息
    - [ ] 兼容策略
       - [ ] 浏览器兼容包含html、css、js等兼容问题，涉及广泛
       - [ ] 兼容性检测
@@ -126,7 +128,7 @@ For detailed explanation on how things work, checkout the [YHTML5-Seed document]
       - [ ] cookie加密 md5加密token等信息
 - [ ] **others**
    - [ ] 自动化部署  -- 一键推送线上
-   - [ ] 编写shell脚本，制作命令行界面（CLI）
+   - [x] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower
 
 目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
