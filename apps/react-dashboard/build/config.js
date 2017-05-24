@@ -1,9 +1,13 @@
+const { version } = require('./util.js')
+
 function config() {
   const hostname = 'localhost'
   const port = 9999
   return {
     hostname,
     port,
+    version,
+    title: '后台管理系统',
     origin: 'http://' + hostname + ':' + port,
     domain: '',
     pages: [{

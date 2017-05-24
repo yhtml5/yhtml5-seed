@@ -2,8 +2,7 @@ import React from 'react'
 import connect from 'react-redux/es/connect/connect'
 import Background from './Components/Background.jsx'
 import Form from './Components/Form.jsx'
-import {LazilyLoadFactory} from '../../Components/LazilyLoad/index.jsx'
-import {login as taskLogin} from './task'
+import { login } from './task'
 
 /**
  *  Todo
@@ -11,24 +10,22 @@ import {login as taskLogin} from './task'
  *
  */
 
-function Login({dispatch, login, app}) {
-  console.log('LoginProps: ', login)
-
+function Component({ dispatch, props, app }) {
+  process.env.NODE_ENV === 'production' || console.log('LoginProps: ', props)
   const BackgroundProps = {
     title: app.title
   }
-
   const FormProps = {
-    loading: login.LoginLoading,
-    hasRegister: login.hasRegister,
-    onSubmit (values) {
-      dispatch(taskLogin(values))
+    loading: props.LoginLoading,
+    hasRegister: props.hasRegister,
+    onSubmit(values) {
+      dispatch(login(values))
     }
   }
 
   return (
     <Background {...BackgroundProps}>
-      <Form {...FormProps}/>
+      <Form {...FormProps} />
     </Background>
   )
 }
@@ -36,6 +33,6 @@ function Login({dispatch, login, app}) {
 export default connect(state => {
   return {
     app: state.app,
-    login: state.login,
+    props: state.login,
   }
-})(Login)
+})(Component)

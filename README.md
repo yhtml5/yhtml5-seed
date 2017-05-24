@@ -28,19 +28,32 @@ Welcome to NEW front-end world and enjoy yourself
 * 效率丨让团队成员只需要简单培训学习使用这套框架，将精力主要放在业务需求开发上，
   而不需要额外学习研究webpack，jsx，babel，node，shell,express等等一堆概念与知识
 
-### Solutions
-
-There are so many problems when we start a front-end project
-
 ### Apps
 
 我们为不同的项目类型准备了不同的开发脚手架：
 
-type|demo|path
----|---|---
-SPA|react+webpack|`apps/`|
-SPA|react+webpack|`apps/`|
-MPA|||
+name|demo|path|document
+---|---|---|---
+fis3|fis3|`apps/fis3/`|``
+react-dashboard|react + redux + webpack2 + ant-design|`apps/react-dashboard`|`document/react-dashboard`
+vue|vue|`apps/vue`|``
+
+### [YHTML5-CLI][YHTML5-ClI]
+
+A simple CLI for scaffolding front-end projects.  
+
+```
+ npm i yhtml5-cli -g
+ yhtml5 init <project-name>
+
+ # select template
+ # waiting
+ cd <project-name>
+
+ npm i 
+ npm run dev
+ npm run build
+```
 
 ### Command Line
 
@@ -57,6 +70,8 @@ MPA|||
 For detailed explanation on how things work, checkout the [YHTML5-Seed document][YHTML5-Seed-document]
 
 ### Feature (webpack)
+
+There are so many problems when we start a front-end project
 
 - [x] **basic**
    - [x] 监测处理所有的前端资源：html/css/js/img/file/url
@@ -202,6 +217,7 @@ opn|open browser|
 [issue]:https://github.com/yhtml5/YHTML5-Seed/blob/master/issue.md
 [progress]:https://github.com/yhtml5/YHTML5-Seed/blob/master/progress.md
 [problem]:https://github.com/yhtml5/FW-Dashboard/blob/master/question.md
+[YHTML5-ClI]:https://github.com/yhtml5/YHTML5-CLI
 [YHTML5-Seed]:https://github.com/yhtml5/YHTML5-Seed
 [YHTML5-Seed-document]:./document/README.md
 [YHTML5-Seed-issue]:./document/04-frequent-problems.md

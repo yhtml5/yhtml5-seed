@@ -26,4 +26,4 @@ function clearConsole() {
     })
 }
 
-module.exports = {version, isMin, clearConsole}
+module.exports = { version, isMin, clearConsole }

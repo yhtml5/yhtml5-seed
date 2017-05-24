@@ -1,6 +1,6 @@
 import React from 'react'
 import {Form, Icon, Input, Button, Checkbox} from 'antd'
-import {notRepeating}from '../../App/util'
+import {notRepeating}from '../../../util/util'
 import styles from './Form.pcss'
 
 function LoginForm({onSubmit, form, loading, hasRegister}) {
@@ -22,7 +22,9 @@ function LoginForm({onSubmit, form, loading, hasRegister}) {
       form.validateFields((err, values) => {
         e.preventDefault()
         if (!err) {
+          if (process.env.NODE_ENV !== 'production') {
           console.log('Received values of form: ', values)
+          }
           onSubmit(values)
         }
       }))

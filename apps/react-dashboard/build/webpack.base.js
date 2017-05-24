@@ -3,15 +3,10 @@ const chalk = require('chalk')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {clearConsole} = require('./util')
-// const {title} = require('../app/config')()
-
-/*
- *  file-load
- */
+const { version, title } = require('./config')()
 
 module.exports = function (env) {
-  console.log('\n  The process.env.NODE_ENV is: ', title,chalk.cyan.bold(process.env.NODE_ENV), '\n')
+  console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV), '\n')
 
   const extractPcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
   const extractAntd = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.antd.css`)
@@ -19,6 +14,7 @@ module.exports = function (env) {
   return {
     // context: path.resolve(__dirname, "./app"),
     entry: {
+      author: './build/template/author.js',
       index: (process.env.NODE_ENV === 'development')
         ? ['react-hot-loader/patch', 'webpack-hot-middleware/client', './app/index.jsx']
         : ['./app/index.jsx'],
@@ -28,7 +24,7 @@ module.exports = function (env) {
     output: {
       filename: 'static/[name].js',
       chunkFilename: `static/[name]-[id]${(env === 'production') ? '.[chunkhash:6]' : ''}.js`,
-      path: path.resolve(__dirname, '../dist/')
+      path: path.resolve(__dirname, '../dist/'),
     },
     resolve: {
       // extensions: [".jsx", ".js"],
@@ -75,15 +71,30 @@ module.exports = function (env) {
               options: {
                 plugins: function () {
                   return [
-                    require('postcss-smart-import')({/* ...options */}),
-                    require('precss')({/* ...options */}),
-                    require('autoprefixer')({/* ...options */})
+                    require('postcss-smart-import')({/* ...options */ }),
+                    require('precss')({/* ...options */ }),
+                    require('autoprefixer')({/* ...options */ })
                   ]
                 }
               }
             }]
           })
-        }, {
+        },
+        {
+          test: /\.css$/,
+          include: /wangeditor/,
+          use: extractPcss.extract({
+            fallback: 'style-loader',
+            use: [{
+              loader: 'css-loader',
+              options: {
+                minimize: env === 'production',
+                sourceMap: false,
+              }
+            }]
+          })
+        },
+        {
           test: /\.css$/,
           include: /antd/, //[path.resolve(__dirname, "../node_modules/antd")],
           use: [{
@@ -130,20 +141,12 @@ module.exports = function (env) {
           test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
           exclude: /favicon\.ico/,
           use: [{
-            loader: 'file-loader',//https://github.com/webpack/file-loader
+            loader: 'url-loader',//https://github.com/webpack/file-loader
             options: {
-              name: '[sha512:hash:base64:7].[ext]',
+              name: '[name].[hash:6].[ext]',
+              limit: 5000,
               outputPath: 'static/img/',
-              publicPath: '../img/',//works when you just want to prefix the name with a directory
-            }
-          }]
-        }, {
-          test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
-          exclude: /favicon\.png$/,
-          use: [{
-            loader: 'url-loader',
-            options: {
-              limit: 5000
+              publicPath: '',//works when you just want to prefix the name with a directory
             }
           }]
         }
@@ -152,13 +155,21 @@ module.exports = function (env) {
     plugins: [
       extractPcss,
       extractAntd,
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify(process.env.NODE_ENV === 'production' ? 'production' : 'development'),
+          'version': JSON.stringify(version),
+          'title': JSON.stringify(title)
+        },
+        'DEBUG': process.env.NODE_ENV !== 'production'
+      }),
       new HtmlWebpackPlugin({
-        chunks: ['index', 'vendorReact', 'manifest'],
+        chunks: ['author', 'index', 'vendorReact', 'manifest'],
         // excludeChunks: [''],
-        filename: 'app.html',
+        filename: 'index.html',
         template: path.resolve(__dirname, './template/template.js'),
         chunksSortMode: 'dependency',
-        title: 'Test',
+        title: title,
         hash: false,
         cache: true,
         favicon: './app/static/favicon.ico',
@@ -175,9 +186,9 @@ module.exports = function (env) {
       new webpack.optimize.CommonsChunkPlugin({
         children: true,
         async: true,
-        // minChunks: function (module) {
-        //   return module.context && module.context.indexOf('node_modules') !== -1;
-        // },
+        minChunks: function (module) {
+          return module.context && module.context.indexOf('node_modules') !== -1;
+        },
       }),
       new webpack.optimize.CommonsChunkPlugin({
         names: ["vendorReact", ["index", "vendorReact"]],

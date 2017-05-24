@@ -3,12 +3,18 @@ const {title} = config()
 
 const state = {
   title: title,
-  token: '112311241',
   communityId: '',
+  uploadToken: '',
   pathnameChange: true,
   pathnameCurrent: '',
   permissions: [],
   permissionsCurrent: 5,
+  selectChannels: [],
+  selectColumns: [],
+  selectLabels: [],
+  selectedChannel: undefined,
+  selectedColumn: undefined,
+  selectedLabels: undefined,
 }
 
 export default state

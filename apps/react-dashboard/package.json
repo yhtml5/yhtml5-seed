@@ -1,8 +1,8 @@
 {
   "name": "react-dashboard",
   "author": "yhtml5 <1417376255@qq.com>",
-  "version": "1.1.6",
-  "main": "",
+  "version": "1.1.1",
+  "main": "app/",
   "license": "MIT",
   "description": "A CURD system frame that build with React, Redux, Webpack and Antd ",
   "repository": "git@github.com:yhtml5/YHTML5-Seed.git",
@@ -16,13 +16,12 @@
     "react hot loader",
     "redux",
     "scaffold",
-    "vue",
     "web",
     "webpack",
     "weui"
   ],
   "dependencies": {
-    "antd": "^2.9.1",
+    "antd": "^2.10.2",
     "history": "^4.6.1",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
@@ -37,13 +36,15 @@
     "react-transition-group": "^1.1.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
-    "reqwest": "^2.0.5"
+    "reqwest": "^2.0.5",
+    "wangeditor": "^2.1.23"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
+    "autoprefixer": "^7.1.1",
     "awesome-typescript-loader": "^3.1.2",
     "babel-core": "^6.24.0",
-    "babel-loader": "^7.0.0-beta.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
     "babel-plugin-import": "^1.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.3.2",
@@ -54,12 +55,16 @@
     "bundle-loader": "^0.5.5",
     "chalk": "^1.1.3",
     "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.0",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
-    "opn": "^4.0.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "opn": "^5.0.0",
     "ora": "^1.2.0",
     "pm2": "^2.4.4",
     "postcss-loader": "^1.3.3",
@@ -80,7 +85,7 @@
     "webpack-merge": "^4.1.0"
   },
   "peerDependencies": {
-    "react": "^15.x",
+    "react": "^15.4.x",
     "webpack": "^2.x",
     "babel-core": "^6.x"
   },
@@ -94,8 +99,10 @@
     "build": "clear && node ./build/build.js",
     "build-debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext ./app",
+    "precommit": "npm run lint &&  npm run test",
     "pregit": "clear && git status",
-    "git": "git checkout dev && git add -A && git commit -m 'auto update' && git checkout master && git merge dev && git push --all && git checkout dev && git merge master",
+    "git": "git checkout dev && git add -A && git commit -m 'auto update'  && git pull && git push",
     "postgit": "clear && git status"
   }
 }

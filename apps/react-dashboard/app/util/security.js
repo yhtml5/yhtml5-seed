@@ -5,4 +5,4 @@ const salt = 'zXb1m'
 const encrypt = (value) => createNonceStr() + createTimestamp() + salt + value
 const decrypted = (value) => value.split(salt)[1]
 
-export {encrypt, decrypted}
+export {encrypt, decrypted, createTimestamp, createNonceStr}

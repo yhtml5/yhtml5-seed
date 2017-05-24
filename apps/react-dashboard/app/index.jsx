@@ -3,20 +3,17 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Router from './Router.jsx'
 import './global.pcss'
-// import ajax from'./util/ajax'
-// import {ajax} from'./util/index'
-// ajax()
 
 const render = (Components) => {
   ReactDOM.render(
-    (false) ?
+    (module.hot) ?
       (function () {
-        const {AppContainer} = require('react-hot-loader')
+        const { AppContainer } = require('react-hot-loader')
         return <AppContainer>
-          <Components/>
+          <Components />
         </AppContainer>
       })()
-      : <Components/>
+      : <Components />
     , document.getElementById('root')
   )
 }

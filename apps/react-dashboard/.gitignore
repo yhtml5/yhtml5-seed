@@ -2,12 +2,12 @@
 logs/*
 /**/node_modules/
 /**/bower_components/
-dist
 npm-debug.log
 
 tmp
 .DS_Store
 .idea
+.vscode
 *.swp
 .test.html.swp
 .test.html.swo

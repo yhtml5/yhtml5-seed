@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
-const {port} = require('./config')()
+const { port } = require('./config')()
 
 module.exports = function (env) {
   return webpackMerge(commonConfig(env), {

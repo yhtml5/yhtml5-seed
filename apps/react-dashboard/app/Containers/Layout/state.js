@@ -1,13 +1,14 @@
 import {config} from '../../config'
-const {subTitle} = config()
+const {title} = config()
 
 const state = {
-  title: subTitle,
-  collapsed: true,
+  title: title,
+  collapsed: false,
   menus: [],
-  menusOpenKeys: ['2'],
-  menusDefaultOpenKeys: [],
+  menusOpenKeys: ['2', '3'],
+  menusDefaultOpenKeys: ['2', '3'],
   menusSelectedKeys: [],
+  menusDefaultSelectedKeys: []
 }
 
 export default state

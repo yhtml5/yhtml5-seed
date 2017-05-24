@@ -1,12 +1,10 @@
-import {UpdateState} from './action'
-import {setCookie, getCookie, clearCookie} from '../../util/cookie'
-import {history} from '../../redux/store'
-import {validator} from  '../../util/validator'
-import {ajaxLogin, ajaxLogout} from  './ajax'
-import {config} from '../../config'
-const {title, root, cookie} = config()
-// import {history} from '../store/index'
-// import {searchKeyWithPathname} from './util'
+import { UpdateState } from './action'
+import { setCookie, getCookie, clearCookie } from '../../util/cookie'
+import { history } from '../../redux/store'
+import { validator } from '../../util/validator'
+import { ajaxLogin, ajaxLogout } from './ajax'
+import { config } from '../../config'
+const { title, root, cookie } = config()
 
 function updateState(data) {
   if (validator.isObject(data)) {
@@ -19,7 +17,7 @@ function updateState(data) {
   }
 }
 
-function initializeLogin() {
+function init() {
   return (dispatch, getState) => {
     dispatch(updateState({
       root: false,
@@ -30,34 +28,45 @@ function initializeLogin() {
 
 const login = (values) =>
   async (dispatch, getState) => {
-    console.log('loginIn', getState(), values)
-    dispatch(updateState({...values, LoginLoading: true}))
+    process.env.NODE_ENV === 'production' || console.log('loginIn', getState(), values)
+
+    dispatch(updateState({ ...values, LoginLoading: true }))
+    clearCookie()
 
     const params = getState().login
-    const params2 = getState().app
     if (params.LoginName === root.name && params.LoginPassword === root.password) {
-      clearCookie()
-      setCookie(cookie.token, getState().app.token, 3)
-      dispatch(updateState({root: true, LoginLoading: true}))
+      setCookie(cookie.token, cookie.tokenValue, 3)
+      dispatch(updateState({ root: true, LoginLoading: true }))
       history.push('/')
       return
     }
 
-    await ajaxLogin({...params, ...params2}, dispatch)
-    console.warn('done!')
-    setTimeout(() => dispatch(updateState({LoginLoading: false})), 1000)
+    await ajaxLogin({ ...params }, dispatch)
+      .then(() => {
+        setCookie(cookie.token, getState().login.token, 6)
+        setCookie(cookie.userName, getState().login.userName, 6)
+        history.push('/')
+      }).catch(() => {
+        console.error('ajaxLogin fail!')
+      })
+
+    dispatch(updateState({ root: false, LoginLoading: false }))
+
+    process.env.NODE_ENV === 'production' || console.log('login done!')
   }
 
 const logout = (resolve, reject) =>
   async (dispatch, getState) => {
-    console.log('loginOut', getState())
-    const params = getState().app
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('loginOut', getState())
+    }
+    const params = getState().login
 
     await ajaxLogout(params, dispatch, resolve, reject)
     resolve()
-    console.warn('done!')
-    history.push('/login')
     clearCookie()
+    dispatch(updateState({ root: false, token: '', userName: '', userId: '' }))
+    history.push('/login')
   }
 
-export {updateState, login, logout, initializeLogin}
+export { updateState, init, login, logout }

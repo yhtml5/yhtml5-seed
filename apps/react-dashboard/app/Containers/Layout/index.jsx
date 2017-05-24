@@ -1,19 +1,19 @@
 import React from 'react'
-import {Layout} from 'antd'
-import connect from 'react-redux/es/connect/connect'// import {connect} from 'react-redux'
+import { Layout } from 'antd'
+import connect from 'react-redux/es/connect/connect'
+import { logout } from '../Login/task'
 import Sider from './Components/Sider.jsx'
 import Header from './Components/Header.jsx'
 import Footer from './Components/Footer.jsx'
 import Content from './Components/Content.jsx'
-import {toggleSider} from './task'
-import {logout} from '../Login/task'
+import { toggleSide, changeSubMenus } from './task'
 
-function newLayout({dispatch, app, layout, children}) {
-  console.log('newLayoutProps: ', layout)
+function newLayout({ dispatch, app, layout, children }) {
+  process.env.NODE_ENV === 'production' || console.log('newLayoutProps: ', layout)
 
   const LayoutProps = {
     id: "layout",
-    style: {minHeight: '100%'},
+    style: { minHeight: '100%' },
   }
   const SiderProps = {
     title: layout.title,
@@ -22,30 +22,33 @@ function newLayout({dispatch, app, layout, children}) {
     openKeys: layout.menusOpenKeys,
     defaultOpenKeys: layout.menusDefaultOpenKeys,
     selectedKeys: layout.menusSelectedKeys,
+    defaultSelectedKeys: layout.menusDefaultSelectedKeys,
+    onOpenChange(value) {
+      dispatch(changeSubMenus(value))
+    }
   }
   const HeaderProps = {
     collapsed: layout.collapsed,
-    onToggleSider(){
-      dispatch(toggleSider())
+    onToggleSide() {
+      dispatch(toggleSide())
     },
-    onLogout(resolve, reject){
+    onLogout(resolve, reject) {
       console.log('onLoginOut')
       dispatch(logout(resolve, reject))
-    }
+    },
   }
-
   const ContentProps = {}
   const FooterProps = {}
 
   return (
     <Layout {...LayoutProps}>
-      <Sider {...SiderProps}/>
+      <Sider {...SiderProps} />
       <Layout>
-        <Header {...HeaderProps}/>
+        <Header {...HeaderProps} />
         <Content {...ContentProps}>
           {children}
         </Content>
-        <Footer {...FooterProps}/>
+        <Footer {...FooterProps} />
       </Layout>
     </Layout>
   )

@@ -1,144 +1,201 @@
-## React + Redux + Webpack2 + Ant-design
+## Home-decoration
+
+### Quick Start
+
+### 一、项目简介
+
+本系统系统包含：官网前台 + 管理后台
+
+**日期**：2022年2月2日 -- 2044年4月4日
+**成员**：成员1、成员2、成员3
+**开发时间预估**：  
+
+|系统|负责人|时间|
+|---|---|---|
+|官网前台|曾媛媛|24天|
+|管理后台|张大漾、李元庆|4天|
+|总计|36天+4天隐性需求|32天/人|
+
+#### 帐号信息
+
+* root: root  123456
+* test: admin 123456
+* gitlab: `git@192.168.1.235:front-end-engineers/home-decoration.git`
+* api: `//192.168.1.235:7111`、`//116.62.92.115:72 `
+* api-test: `//192.168.1.235:7111`
+* api-mock: `//192.168.1.89:8077/mockjs/33`
+* ~~domain: `//httest.ejz99.com/#/login`~~
+* domain-test: `192.168.1.105:1113`
+* domain-pro: `houtai.ejz99.com`
+* ~~ftp: `121.196.219.40` home home2017123!@# (测试地址)~~
+* ftp-test: `192.168.1.105`  home  home123!@#
+* ftp-pro: `121.196.219.40` home_formal home123!@#  (正式地址)
+
+### 二、前端整体架构实现方案
+	（1）页面基础组件基于react框架实现，并配合以redux、webpack、ES6为组合的发开模式，进行项目功能和交互的实现
+	（2）接口数据格式为json，所有接口均只返回客户端json数据包而不是传统的视图数据，避免在需求变更后同一问题前后台都要修改的弊端
+	（3）前端编码需符合现有的前端编码规范（一般规范、js规范、html规范、css规范）
+	（4）该项目的实现方式为，php作为中间层完成表结构设计并提供相应接口，以及相应的接口文档，前端对接口数据进行处理，并处理用户权限问题
+	（5）对整个项目结构进行分解，降低耦合度。
 
 
-### Quick start
+### 三、系统功能与时间估算 
 
-```
-npm i yhtml5-cli -g
+#### 官网前台
 
-yhtml5 init <filename> 
-cd filename
 
-npm i 
-npm run dev
-npm run build
-```
+#### 管理后台工作量评估
 
-### 业务模块
+**工期：** 2017.4.10 ~ 2017.4.21
+**要求工作量：**  15天工作量
+**预计工作量：** （ 52.7天工作量 * 0.5熟练度）+ 4天风险 = 30.5工作量 
+**完成工作量：**  8.4天工作量 | 16% 
+**剩余工作量：**  26.3天工作量 
+**风险点：**
+* 富文本编辑器
+* 上传图片、文件（七牛？）
+* 接口质量、切换正式环境
+* 套餐管理业务逻辑复杂
 
-- [x] 登录、注册、忘记密码
-- [x] 权限
-- [x] layout
+- [ ] **公共部分** | 11天
+  - [x] 项目构建、创建项目（webpack）| 1天
+  - [x] Layout、Header、Sidebar、Footer、Content、Breadcrumb等公共组件开发 | 2天
+  - [x] 公用配置文件编写、基于业务逻辑的ajax的方法封装 | 0.5天
+  - [x] 权限功能（城市站预留）| 1天
+  - [x] 路由功能（根据路由初始化页面、判断权限、重置状态）| 2天 
+  - [ ] `风险点`：富文本编辑器 | 2天 
+  - [ ] `风险点`：上传图片 | 1.5天 
+  - [ ] 频道栏目级联接口、关联标签接口 | 1天
+- [ ] **登录**丨1.7天
+  - [x] 登录页面组件开发 | 1天
+  - [x] 登出组件开发、修改密码功能 0.2天
+  - [x] 登录(涉及存取cookie、加密cookie)接口 | 0.3天
+  - [x] 登出接口联调 丨 0.1天
+  - [-] 修改密码接口 | 0.1 天
+- [ ] 页面管理
+  - [ ] **导航管理**丨1.9天 
+    - [x] 搜索/重置/分页/操作提示功能开发 | 0.4天
+    - [x] 表格、新增编辑组件开发| 0.3天  
+    - [x] 导航列表接口 (9字段) | 0.3天
+    - [x] 导航删除接口、导航显示/隐藏接口 | 0.3天
+    - [x] 导航新增接口、导航查看接口、导航编辑接口 (20字段) | 0.6 天
+  - [ ] **频道管理**丨2.6天
+    - [ ] 搜索/重置/分页等功能开发 | 0.3天
+    - [ ] 表格、操作提示功能开发 | 0.3天  
+    - [ ] 频道配置编辑、首页频道配置编辑组件 | 0.2天 
+    - [ ] 频道列表接口 (11字段) | 0.3天
+    - [ ] 频道删除接口、频道显示/隐藏接口 | 0.2天
+    - [ ] 频道查看接口、频道编辑接口 | 0.5天
+    - [ ] 首页频道配置接口、首页频道配置查看接口 (30字段) | 0.8天
+  - [ ] **标签管理**丨1.6天
+    - [ ] 搜索/重置/分页功能 | 0.3天
+    - [ ] 表格、操作提示功能、新增编辑弹窗开发 | 0.5天  
+    - [ ] 标签编辑接口 | 0.2天  
+    - [ ] 标签列表接口、所属频道(19字段) | 0.6天
+  - [ ] **广告位管理**丨1.9天
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 广告位新增/编辑弹窗 | 0.2天
+    - [ ] 广告位列表接口 (10字段) | 0.3天
+    - [ ] 广告位上线/下线接口 | 0.1 天 
+    - [ ] 广告位类型接口、广告位配置位置接口| 0.2天
+    - [ ] 广告位新增接口、广告位查看接口、广告位编辑接口 | 0.6天
+  - [ ] **广告管理**丨1.9天  
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 广告位新增/编辑弹窗 | 0.2天
+    - [ ] 广告类型接口、广告配置位置接口 | 0.3天
+    - [ ] 广告删除接口、广告显示隐藏接口 | 0.3天
+    - [ ] 广告位新增接口、广告查看接口、广告编辑接口 | 0.6天
+  - [ ] **友情链接**丨2.3天
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 广告位新增/编辑弹窗 | 0.3天
+    - [ ] 友情链接列表接口(15字段) | 0.5天
+    - [ ] 友情链接删除接口、友情链接显示/隐藏接口、友情链接类型 | 0.5天
+    - [ ] 友情链接新增接口、友情链接查看接口、友情链接编辑接口 | 0.5天
+- [ ] 内容管理    
+  - [ ] **套餐管理**丨5.9天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 新增套餐表单（8个栏目类型、12处表单验证）| 1天
+    - [ ] 套餐效果图说明页 | 0.2 天
+    - [ ] 套餐栏弹窗 | 0.2天
+    - [ ] 保存并预览页 | 0.5 天
+    - [ ] 列表接口 | 0.3天
+    - [ ] `风险点`: 保存并预览、上线、推荐到首页、增加删除栏目（业务逻辑复杂）| 1天
+    - [ ] `风险点` 套餐新增接口、套餐查看接口、套餐编辑接口 (36字段)| 1.5天
+    - [ ] 套餐上线/下线接口、套餐推荐/取消推荐接口 | 0.2天
+    - [ ] 套餐栏目类型接口 | 0.3天
+    - [ ] 套餐预览接口 | 0.5天 
+  - [ ] **直播管理**丨5.1天  
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 新增/编辑直播视频(15个表单项、正则) | 1天
+    - [ ] 新增/编辑直播图文(复杂表单) | 1天
+    - [ ] 直播列表接口 | 0.3天
+    - [ ] 直播删除接口、直播隐藏/显示接口 | 0.3天
+    - [ ] 直播新增接口、直播详情接口、直播编辑接口 (26 * 3字段) | 2天
+  - [ ] **资讯管理**丨3.1天  
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 新增/编辑资讯管理 | 0.5天
+    - [ ] 所属频道接口、栏目接口、管理标签接口 | 0.3天
+    - [ ] 资讯列表接口 (16字段) | 0.6天
+    - [ ] 资讯删除接口、资讯隐藏/显示接口 | 0.3天
+    - [ ] 资讯新增接口、资讯查看接口、资讯编辑接口 (13*3)| 0.9天
+  - [ ] **日志管理**丨4天  
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 新增/编辑日志页 | 0.5天
+    - [ ] 所属频道接口、栏目接口、管理标签接口(2处) | 0.4天
+    - [ ] 日志列表接口(9字段) | 0.5天
+    - [ ] 日志删除接口、日志隐藏/显示接口 | 0.3天
+    - [ ] 日志新增接口、日志查看接口、日志编辑接口 (复杂表单)| 1.8天   
+  - [ ] **问答管理**丨3.3天  
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 问答列表接口 (8字段) | 0.5天
+    - [ ] 问答删除接口、问答隐藏/显示接口、问答回复接口 | 0.5天
+    - [ ] 问答新增接口、问答查看接口、问答编辑接口 (复杂表单) | 1.8天   
+  - [ ] **微信群管理**丨2.9天  
+    - [ ] 搜索/重置/分页功能 | 0.3 天
+    - [ ] 表格、操作提示功能开发 | 0.2天  
+    - [ ] 微信群新增/编辑弹窗 (表单) | 0.5天
+    - [ ] 微信群列表接口 (9字段) | 0.5天
+    - [ ] 微信群配置位置接口 | 0.2天 
+    - [ ] 微信群删除接口、微信群隐藏/显示接口 | 0.4天
+    - [ ] 微信群新增接口、微信群查看接口、微信群编辑接口 (7*3 字段)| 0.8天  
+    
+### 需求评审
 
-### 开发模式
+#### 网站前台 
+* 兼容性 >=ie8 ?
+* 响应式设计 >=996px
+* php嵌套？ 业务逻辑代码谁写
+* 前端框架：bootstrap3 + jquery1
+* 登录注册模块，权限，模块化配置
 
-```
-state => reduce => Containers => Components => CallBack => Containers event => 
+#### 后台
+* 设计风格 ：ant design
+* 前端框架：react + redux 
+* 权限？
 
-dispatch(task) => dispatch(ajax) => dispatch(upstate) =>newState  
-```
+#### Api 评审
+* http code
+* 数据格式`[{}]`
 
-### import vs require
+### 总结
 
-在配置webpack或需要在node环境中编译执行的时候用commonjs，
-在写业务代码时候使用es6的import
+* 难点：上传+表单+动态生成 
+* 产品结构，数据结构上，扁平化，少深度，避免多层结构
+* 接口使用与配合比较顺利
+* 战术上的勤奋掩盖不了战略的愚蠢
+* 计划一定要出，不管是否合理。说服不了大家要这么多开发时间，那就提高开发效率
 
-### Containers
-  Containers 经过connect的，redux的组件，负责向子组件传入**props**
+- [ ] 提高开发效率
+  - [ ] 封装一些基于业务逻辑的代码（登录/注册/列表查询），可以发布npm包或放在gitlab上
+  - [ ] 前端的基础框架搭建的更完善点（权限路由、基础组件）
+  - [ ] 使用mock数据再切换接口, 比直接用真实接口效率要高（少了反反复复确认的过程）
+  - [ ] 正确理解需求，给出建议，减少不必要的开发
+  - [ ] 接口之间的字段一直
   
-
-### Loading strategy
-
-the lazy load component is in `~/app/Components/LazilyLoad`
-
-#### Lazy Loading
-
-`require.ensure([], require => require('a').default, 'chunkName'))`
-
-lazy load route Components 
-```
-import {LazilyLoadComponent} from './Components/LazilyLoad/index.jsx'
-const User = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/User/index.jsx').default, 'route-User'))
- <Route exact path="/" component={User}/>
-```
-
-#### Preload lazy execution
-
-`require.ensure(['a'], require => require('a').default, 'chunkName'))`
-
-```
-import {LazilyLoadComponent} from './Components/LazilyLoad/index.jsx'
-const User = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/User/index.jsx').default, 'route-User'))
-User()
-```
-
-### postCss
-
-```
-==== app.pcss ====
-.login-button {
-  width: 100%;
-}
-
-==== app.js ====
-import styles from './form.pcss'
-
-styles.loginButton
-
-==== webpack ====
-development:  [path][name]-[local],
-production :  [local]-[hash:base64:6]
-```
-
-### bugs
-
-### antd and code splitting
-> import().then  import  require 
-
-### Code Splitting - Using import()
-```
-  import('./task')
-    .then((task)=>{
-    console.log(task)
-    })
-    .catch(err)
-```
-### notice 
-
-* 组件文件后缀名写上.jsx  
-* react-router exact
-  When true, will only match if the path matches the location.pathname exactly.
-* process.env.NODE_ENV === 'production'
- Keep in mind that import() path cannot be fully dynamic (e.g., import(Math.random())). 
- Rather either completely static (e.g., import('./locale/de.json')) 
- or partially static (e.g., import('./locale/' + language + '.json')). 
-
-### Directory Structure
-
-合理的规范有利于项目开发速度，我们推崇高内聚低耦合的代码结构
-模块化开发， 分而治之， 各模块同目录下就近维护。
-这里，我们规定了项目构建，开发，测试，发布等目录及文件路径（react项目为例）：
-
-```
- root
-  ├── app                              --client source code
-  │   ├── components
-  │   ├── login
-  │   ├── static                       --公共静态资源
-  │   │     └── favicon.ico
-  │   ├── global.pcss                  --公共静态资源
-  │   ├── template.jsx                 --页面模板
-  │   ├── index.jsx                    --公用入口
-  │   └── others
-  ├── build
-  │   ├── webpack.config.js
-  │   ├── webpack.dev.js
-  │   ├── webpack.pro.js
-  │   └── other.js
-  ├── exmaple
-  ├── dist                             --产品发布目录
-  ├── node_modules
-  ├── server                           --server source code
-  ├── .babelrc
-  ├── .editorconfig
-  ├── .eslintignore
-  ├── .eslintrc.js
-  ├── .gitignore
-  ├── .npmignore
-  ├── .gitignore
-  ├── CHANGELOG.md
-  ├── ISSUE.md
-  ├── LICENSE
-  ├── package.json
-  └── README.md
-```

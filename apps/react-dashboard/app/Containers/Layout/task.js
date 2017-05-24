@@ -1,10 +1,7 @@
-import {UpdateState} from './action'
-import {validator} from  '../../util/validator'
-import {config} from '../../config'
-const {title, subTitle} = config()
-import ajax from  '../../util/ajax'
-import {history} from '../../redux/store'
-// import {searchKeyWithPathname} from './util'
+import { UpdateState } from './action'
+import { validator } from '../../util/validator'
+import { config, searchKetWithPathname } from '../../config'
+const { title, subTitle } = config()
 
 function updateState(data) {
   if (validator.isObject(data)) {
@@ -17,29 +14,56 @@ function updateState(data) {
   }
 }
 
-function initializeLayout() {
+function init() {
   return (dispatch, getState) => {
+    process.env.NODE_ENV === 'production' || console.log('initializeLayout', searchKetWithPathname())
+
+    if (searchKetWithPathname()) {
+      dispatch(updateState({ menusSelectedKeys: [searchKetWithPathname()] }))
+    }
+
+    document.body.clientWidth < 996 && dispatch(toggleSide('close'))
+
     dispatch(updateState({
       root: false,
-      LoginLoading: false
+      LoginLoading: false,
     }))
   }
 }
 
-function toggleSider() {
+function toggleSide(status) {
   return (dispatch, getState) => {
-    const layout = getState().layout
+    const collapsed = getState().layout.collapsed
+
+    if (status === 'close') {
+      dispatch(updateState({
+        collapsed: true,
+        menusOpenKeys: [],
+      }))
+      setTimeout(() => dispatch(updateState({ title: subTitle })), 100)
+      return
+    }
+
     dispatch(updateState({
-      collapsed: !layout.collapsed,
-      menusDefaultOpenKeys: [],
+      collapsed: !collapsed,
+      menusOpenKeys: (collapsed) ? ['2', '3'] : [],
     }))
-    if (layout.collapsed) {
-      setTimeout(() => dispatch(updateState({title: title})), 100)
+
+    if (collapsed) {
+      setTimeout(() => dispatch(updateState({ title: title })), 100)
     } else {
-      dispatch(updateState({title: subTitle}))
+      dispatch(updateState({ title: subTitle }))
     }
   }
 }
 
+const changeSubMenus = (value) => {
+  return (dispatch, getState) => {
+    dispatch(updateState({
+      menusOpenKeys: value,
+    }))
+  }
+}
 
-export {updateState, initializeLayout, toggleSider}
+
+export { updateState, init, toggleSide, changeSubMenus }

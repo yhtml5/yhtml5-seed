@@ -1,18 +1,18 @@
 import React from 'react'
-import {Breadcrumb} from 'antd'
-import {Link} from 'react-router-dom';
-import {validator} from  '../../util/validator'
+import { Breadcrumb } from 'antd'
+import { Link } from 'react-router-dom';
+import { validator } from '../../util/validator'
 
-function newBreadcrumb({breadcrumbs}) {
+function Component({ breadcrumbs }) {
   return (
     <Breadcrumb
       separator=">"
-      style={{marginBottom: '20px'}}
+      style={{ marginBottom: '20px' }}
     >
       {breadcrumbs.map((value, index) => {
         return (
           <Breadcrumb.Item key={index}>
-            {(validator.isStringNotEmpty(value.href)) ? <Link to={value.href}>{value.name}</Link> : value.name }
+            {(validator.isStringNotEmpty(value.href)) ? <Link to={value.href}>{value.name}</Link> : value.name}
           </Breadcrumb.Item>
         )
       })}
@@ -20,4 +20,4 @@ function newBreadcrumb({breadcrumbs}) {
   )
 }
 
-export default newBreadcrumb
+export default Component

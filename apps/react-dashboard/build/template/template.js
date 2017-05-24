@@ -1,5 +1,4 @@
 module.exports = function (templateParams) {
-
   return (
     `<!DOCTYPE html>
     <html>

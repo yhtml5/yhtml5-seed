@@ -21,7 +21,7 @@ loading.color = 'blue'
 
 app.use(webpackDevMiddleware(compiler, {
   // publicPath: webpackConfig.output.publicPath,
-  index: 'app.html',
+  index: 'index.html',
   stats: {color: true},
   // historyApiFallback: true
   // noInfo: true,

@@ -1,10 +1,10 @@
 import reqwest from 'reqwest'
-import {message} from 'antd'
-import {config, getApiUrl} from '../config.js'
-import {history} from '../redux/store'
-import {getCookie} from './cookie.js'
-import {validator} from  './validator'
-let {cookie, entryUrl} = config()
+import { message } from 'antd'
+import { config, getApiUrl } from '../config.js'
+import { history } from '../redux/store'
+import { getCookie } from './cookie.js'
+import { validator } from './validator'
+let { cookie, entryUrl } = config()
 
 function ajax(url, param, fail, error, success) {
   // console.clear()
@@ -14,27 +14,26 @@ function ajax(url, param, fail, error, success) {
     return console.warn('ajax param should be the object')
   } else if (!(validator.isFunction(fail) && validator.isFunction(error) && validator.isFunction(success))) {
     return console.warn('ajax callback should be a function')
-  } else {
-  }
+  } else {}
   let newParam = {
     data: JSON.stringify(param),
     token: getCookie(cookie.token)
   }
-  console.log('ajaxParam-' + url + ': ', newParam)
+  console.warn('ajaxParam-' + url + ': ', newParam)
   reqwest({
     url: getApiUrl() + '/' + url,
     type: 'json',
     method: 'get',
     data: newParam,
     contentType: 'application/json',
-    error: function (error) {
-      message.destroy()
-      message.error('网络异常, http状态码：' + error.status, 3);
+    error: function(error) {
+      // setTimeout(() => message.destroy(), 200)
+      message.error('网络异常, http状态码：' + 500, 3);
       console.error(error)
       fail()
     },
-    success: function (response) {
-      message.destroy()
+    success: function(response) {
+      // setTimeout(() => message.destroy(), 200)
       if (Number(response.code) === 20000) {
         success(response)
       } else if (Number(response.code) === 50002) {
@@ -46,7 +45,7 @@ function ajax(url, param, fail, error, success) {
         message.error((response.error.errorMsg) ? response.error.errorMsg : '网络异常')
         error()
       }
-      console.log('ajaxResponse-' + url + ': ', response)
+      console.warn('ajaxResponse-' + url + ': ', response)
     }
   })
 }

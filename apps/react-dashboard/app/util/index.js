@@ -6,3 +6,4 @@ const ajax = (url, param, fail, error, success) => require.ensure([], require =>
 }, 'ajax')
 
 export {ajax}
+
