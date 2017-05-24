@@ -46,7 +46,7 @@ function toggleSide(status) {
 
     dispatch(updateState({
       collapsed: !collapsed,
-      menusOpenKeys: (collapsed) ? ['2', '3'] : [],
+      menusOpenKeys: (collapsed) ? ['1', '2', '3'] : [],
     }))
 
     if (collapsed) {

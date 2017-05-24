@@ -34,6 +34,10 @@ function config() {
       userValue: ''
     },
     siteMap: [{
+      key: '1',
+      name: '基础组件',
+      icon: 'api',
+    }, {
       key: '2',
       name: '页面管理',
       icon: 'home',
@@ -41,6 +45,10 @@ function config() {
       key: '3',
       name: '内容管理',
       icon: 'book',
+    }, {
+      key: '10',
+      name: '表单与正则',
+      pathname: '/form',
     }, {
       key: '20',
       name: '导航管理',
@@ -51,61 +59,6 @@ function config() {
       }, {
         name: '编辑',
         pathname: '/edit',
-      }]
-    }, {
-      key: '21',
-      name: '频道管理',
-      pathname: '/channel',
-      items: [{
-        name: '新增',
-        pathname: '/add'
-      }, {
-        name: '编辑',
-        pathname: '/edit',
-      }]
-    }, {
-      key: '22',
-      name: '广告管理',
-      pathname: '/ad',
-      items: [{
-        name: '新增',
-        pathname: '/add'
-      }, {
-        name: '编辑',
-        pathname: '/edit',
-      }]
-    }, {
-      key: '23',
-      name: '广告位管理',
-      pathname: '/adPlacement',
-      items: [{
-        name: '新增',
-        pathname: '/add'
-      }, {
-        name: '编辑',
-        pathname: '/edit',
-      }]
-    }, {
-      key: '24',
-      name: '友情链接管理',
-      pathname: '/link',
-      items: [{
-        name: '新增',
-        pathname: '/add'
-      }, {
-        name: '编辑',
-        pathname: '/edit',
-      }]
-    }, {
-      key: '25',
-      name: '标签管理',
-      pathname: '/label',
-      items: [{
-        name: '新增',
-        pathname: '/label/add'
-      }, {
-        name: '编辑',
-        pathname: '/label/edit',
       }]
     }, {
       key: '30',
@@ -128,39 +81,6 @@ function config() {
       }, {
         name: '编辑',
         pathname: '/live/edit',
-      }]
-    }, {
-      key: '33',
-      name: '微信群管理',
-      pathname: '/weChat',
-      items: [{
-        name: '新增',
-        pathname: '/weChat/add'
-      }, {
-        name: '编辑',
-        pathname: '/weChat/edit',
-      }]
-    }, {
-      key: '34',
-      name: '资讯管理',
-      pathname: '/information',
-      items: [{
-        name: '新增',
-        pathname: '/information/add'
-      }, {
-        name: '编辑',
-        pathname: '/information/edit',
-      }]
-    }, {
-      key: '35',
-      name: '日志管理',
-      pathname: '/log',
-      items: [{
-        name: '新增',
-        pathname: '/log/add'
-      }, {
-        name: '编辑',
-        pathname: '/log/edit',
       }]
     }, {
       key: '36',

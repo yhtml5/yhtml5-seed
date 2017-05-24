@@ -49,8 +49,8 @@ function Sider({
         theme="dark"
         openKeys={openKeys}
         selectedKeys={selectedKeys}
-        defaultOpenKeys={['2', '3']}
-        defaultSelectedKeys={['20']}
+        defaultOpenKeys={['1', '2', '3']}
+        defaultSelectedKeys={['10']}
         onSelect={handleSelect}
         onClick={handleClick}
         onOpenChange={handleOpenChange}
@@ -61,7 +61,7 @@ function Sider({
             <Menu.SubMenu key={menus.key} title={<span><Icon type={menus.icon} /><span className="nav-text">{menus.name}</span></span>}>
               {value.children.map((value, index) => {
                 let subMenus = searchMenuWithKey(value.key)
-                if (subMenus.items) {
+                if (Number(subMenus.key) >= 10) {
                   return <Menu.Item key={subMenus.key}>
                     <Link className={styles.link}
                       to={subMenus.pathname}

@@ -15,7 +15,19 @@
 * 在 App/ajax 增加路由权限key
 * 在 App/route 增加路由变化的初始化页面的actionCreator
 
-### 开发模式
+### 开发模式 
+
+一个模块就是一个文件夹,储存该模块需要的所有资源: 
+
+* action.js | create action.type (naming action)
+* ajax.js | 处理api server 与 redux state 数据的映射,校验
+* index.jsx | 模块的入口, 经过 redux connect 的 react 组件
+* reduce.js | redux reduce, 根据 dispatch 过来的 action 返回新的 state
+* state.js | 模块的数据中心, 通常与页面状态一一对应, 建议单层数据结构，按组件名命名key
+* task.js | 处理同步,异步的业务逻辑, 建议将所有的业务逻辑集中于这里
+* Components | 存放子组件, 样式, 资源, 图片等等
+
+参考 Demo component `app/Containers/Demo`
 
 ```
 state => reduce => Containers => Components => CallBack => Containers event => 

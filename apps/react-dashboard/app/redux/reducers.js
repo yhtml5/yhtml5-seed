@@ -1,17 +1,17 @@
 import app from '../Containers/App/reduce'
 import navigation from '../Containers/Navigation/reduce'
-import ad from '../Containers/Ad/reduce'
-import adPlacement from '../Containers/AdPlacement/reduce'
-import link from '../Containers/Link/reduce'
 import live from '../Containers/Live/reduce'
-import weChat from '../Containers/WeChat/reduce'
-import information from '../Containers/Information/reduce'
-import log from '../Containers/Log/reduce'
 import question from '../Containers/Question/reduce'
-import channel from '../Containers/Channel/reduce'
-import label from '../Containers/Label/reduce'
 import login from '../Containers/Login/reduce'
 import layout from '../Containers/Layout/reduce'
 import packages from '../Containers/Packages/reduce'
 
-export default { app, layout, login, navigation, ad, adPlacement, link, live, weChat, channel, label, information, log, question, packages }
+export default {
+  app,
+  layout,
+  login,
+  navigation,
+  live,
+  question,
+  packages
+}

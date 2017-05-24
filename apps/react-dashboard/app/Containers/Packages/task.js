@@ -2,7 +2,6 @@ import { message } from 'antd'
 import { config } from '../../config'
 import { history } from '../../redux/store'
 import { validator } from '../../util/validator'
-import { selectChannels, resetChannelsColumn } from '../App/task'
 import { UpdateState } from './action'
 import {
   ajaxList,

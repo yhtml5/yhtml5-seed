@@ -1,18 +1,10 @@
 import { initializeApp } from './task'
-import { initializeAd } from '../Ad/task'
-import { initializeLink } from '../Link/task'
 import { initializeLive } from '../Live/task'
-import { initializelabel } from '../Label/task'
 import { init as initializeLogin } from '../Login/task'
 import { init as initializeLayout } from '../Layout/task'
-import { initializeWeChat } from '../WeChat/task'
-import { initializeChannel } from '../Channel/task'
 import { initializeNavigation } from '../Navigation/task'
 import { init as initPackages } from '../Packages/task'
-import { initializeAdPlacement } from '../AdPlacement/task'
 import { initializeQuestion, initializeQuestionAdd, initializeQuestionEdit } from '../Question/task'
-import { initializeInformation, initializeInformationAdd, initializeInformationEdit } from '../Information/task'
-import { initializeLog, initializeLogAdd, initializeLogEdit } from '../Log/task'
 import { checkToken } from '../../util/util'
 // import {ajaxMenus, changeMenus, verifyPermissions} from './task'
 
@@ -35,42 +27,6 @@ function listener(store, history) {
         break
       case '/navigation':
         store.dispatch(initializeNavigation())
-        break
-      case '/channel':
-        store.dispatch(initializeChannel())
-        break
-      case '/label':
-        store.dispatch(initializelabel())
-        break
-      case '/ad':
-        store.dispatch(initializeAd())
-        break
-      case '/adPlacement':
-        store.dispatch(initializeAdPlacement())
-        break
-      case '/link':
-        store.dispatch(initializeLink())
-        break
-      case '/weChat':
-        store.dispatch(initializeWeChat())
-        break
-      case '/information':
-        store.dispatch(initializeInformation())
-        break
-      case '/information/add':
-        store.dispatch(initializeInformationAdd())
-        break
-      case '/information/edit':
-        store.dispatch(initializeInformationEdit())
-        break
-      case '/log':
-        store.dispatch(initializeLog())
-        break
-      case '/log/add':
-        store.dispatch(initializeLogAdd())
-        break
-      case '/log/edit':
-        store.dispatch(initializeLogEdit())
         break
       case '/question':
         store.dispatch(initializeQuestion())
