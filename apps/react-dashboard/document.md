@@ -70,6 +70,39 @@ const edit = (value) =>
 * state结构：一层数据结构，按组件名分
 * 命名尽可能公共化
 
+### API
+
+### 基础模块
+
+- [x] 登录、注册、忘记密码
+- [x] 权限
+- [x] layout
+
+### Components `app/Components/`
+
+* LazilyLoad
+* LazilyLoadFactory
+* importLazy
+
+### util `app/util/`
+
+#### ajax
+```
+ajax(url, param, fail, error, success) 
+```
+#### cookie
+```
+setCookie(name, value, hour)
+getCookie(name)
+clearCookie(name)
+```
+#### other
+```
+notRepeating(callback) 
+downLoad(url) [downLoad][downLoad]
+checkToken()
+```
+
 ### Directory Structure
 
 合理的规范有利于项目开发速度，我们推崇高内聚低耦合的代码结构
@@ -124,7 +157,7 @@ const edit = (value) =>
 
 
 [react-component]:(https://facebook.github.io/react/docs/components-and-props.html)
-
+[downLoad]:https://segmentfault.com/a/1190000005863250
 
 
 
