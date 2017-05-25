@@ -19,6 +19,7 @@ import Layout from './Containers/Layout/index.jsx'
 
 const Login = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Login/index.jsx').default, 'route-Login'))
 const Demo = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Demo/index.jsx').default, 'route-Demo'))
+const Document = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Document/index.jsx').default, 'route-Document'))
 const Form = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Form/index.jsx').default, 'route-Form'))
 const Question = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Question/index.jsx').default, 'route-Question'))
 const Navigation = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Navigation/index.jsx').default, 'route-Navigation'))
@@ -43,9 +44,10 @@ function newRouter() {
         <Switch>
           <Route path="/login" component={Login} />
           <Layout>
-            <Route path="/" component={Demo} exact />
+            <Route path="/" component={Document} exact />
             <Route path="/form" component={Form} />
             <Route path="/demo" component={Demo} />
+            <Route path="/document" component={Document} />
             <Route path="/navigation" component={Navigation} />
             <Route path="/live" component={Live} exact />
             <Route path="/live/add" component={LiveAdd} />

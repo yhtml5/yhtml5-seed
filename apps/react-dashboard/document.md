@@ -1,5 +1,7 @@
 ## React-Dashboard
 
+**You can see all demo in this project. We think code is the best doc.**
+
 ### Quick start
 
 * 拷贝 Containers 下类似模块，改文件名称

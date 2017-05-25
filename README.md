@@ -86,7 +86,8 @@ There are so many problems when we start a front-end project
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
    - [x] 绝对路径  --简化import路径，`../../../a.js`, `~/components/a.js`
-   - [ ] 支持 `markdown => html`
+   - [x] 支持 `markdown => html`, 使用 github-markdown-css
+   - [ ] 代码高亮
    - [ ] support sass, less, [postCSS][postCSS],[css-modules][css-modules]
    - [ ] 支持js、jsx、ts
    - [x] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`

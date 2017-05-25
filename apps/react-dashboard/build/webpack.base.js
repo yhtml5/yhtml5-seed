@@ -82,7 +82,8 @@ module.exports = function (env) {
         },
         {
           test: /\.css$/,
-          include: /wangeditor/,
+          //include: /wangeditor/,
+          exclude: /antd/,
           use: extractPcss.extract({
             fallback: 'style-loader',
             use: [{
@@ -149,6 +150,19 @@ module.exports = function (env) {
               publicPath: '',//works when you just want to prefix the name with a directory
             }
           }]
+        }, {
+          test: /\.md$/,
+          use: [
+            {
+              loader: "html-loader"
+            },
+            {
+              loader: "markdown-loader",
+              options: {
+                /* your options here */
+              }
+            }
+          ]
         }
       ],
     },

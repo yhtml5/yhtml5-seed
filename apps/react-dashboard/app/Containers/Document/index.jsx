@@ -3,20 +3,20 @@ import { Card } from 'antd'
 import connect from 'react-redux/es/connect/connect'
 import { history } from '../../redux/store'
 import Breadcrumb from '../../Components/Breadcrumb/index.jsx'
-import Test from './Components/Test.jsx'
+import Document from './Components/Document.jsx'
 import { notRepeating } from '../../util/util'
 import { toggleStatus } from './task'
 
 function Component({ dispatch, props, app }) {
-  DEBUG && console.log('DemoProps: ', props, app)
+  DEBUG && console.log('DocumentProps: ', props)
 
   const breadcrumbProps = {
     breadcrumbs: [{
       name: '首页',
     }, {
-      name: '列表',
+      name: '系统功能',
     }, {
-      name: '详情',
+      name: '开发文档',
     }]
   }
   const testProps = {
@@ -27,7 +27,7 @@ function Component({ dispatch, props, app }) {
     <div>
       <Breadcrumb {...breadcrumbProps} />
       <Card className="y-m-b-40">
-        <Test {...testProps} />
+        <Document {...testProps} />
       </Card>
     </div>
   )
@@ -36,6 +36,6 @@ function Component({ dispatch, props, app }) {
 export default connect(state => {
   return {
     app: state.app,
-    props: state.demo,
+    props: state.document,
   }
 })(Component)

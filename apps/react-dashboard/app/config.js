@@ -46,6 +46,10 @@ function config() {
       name: '系统功能',
       icon: 'setting',
     }, {
+      key: '11',
+      name: '功能函数',
+      pathname: '/function',
+    }, {
       key: '12',
       name: '表单正则',
       pathname: '/form',
