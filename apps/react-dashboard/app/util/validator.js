@@ -66,27 +66,6 @@ const validator = {
   isObjectEmpty: function (value) {
     return Object.prototype.isPrototypeOf(value) && Object.keys(value).length === 0
   },
-  isBankCardNum: function (str) {
-    return /^(\d{14}|\d{16}|\d{19})$/.test(str)
-  },
-  isChinaName: function (str) {
-    return /^[\u4e00-\u9fa5]{1,10}$/.test(str)
-  },
-  isChinaPhoneNum: function (str) {
-    return /^(13[0-9]|14[5|7]|15[0-9]|18[0-9])\d{8}$/.test(str)
-  },
-  isEmail: function (str) {
-    return /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(str)
-  },
-  isIdCard: function (str) {
-    return /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/.test(str)
-  },
-  isNum: function (str) {
-    return /^[0-9]*$/.test(str)
-  },
-  isNumSixToTwenty: function (str) {
-    return /^[a-zA-Z0-9]\w{5,19}$/.test(str)
-  },
 }
 
-export {validator}
+export { validator }

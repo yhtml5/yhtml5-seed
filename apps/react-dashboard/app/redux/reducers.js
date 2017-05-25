@@ -1,4 +1,5 @@
 import app from '../Containers/App/reduce'
+import demo from '../Containers/Demo/reduce'
 import navigation from '../Containers/Navigation/reduce'
 import live from '../Containers/Live/reduce'
 import question from '../Containers/Question/reduce'
@@ -8,6 +9,7 @@ import packages from '../Containers/Packages/reduce'
 
 export default {
   app,
+  demo,
   layout,
   login,
   navigation,

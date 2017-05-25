@@ -5,8 +5,8 @@ const state = {
   title: title,
   collapsed: false,
   menus: [],
-  menusOpenKeys: ['1', '2', '3'],
-  menusDefaultOpenKeys: ['1', '2', '3'],
+  menusOpenKeys: ['1'],
+  menusDefaultOpenKeys: ['1'],
   menusSelectedKeys: [],
   menusDefaultSelectedKeys: []
 }

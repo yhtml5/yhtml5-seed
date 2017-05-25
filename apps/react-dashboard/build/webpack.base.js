@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { version, title } = require('./config')()
 
 module.exports = function (env) {
-  console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV), '\n')
+  console.log('\n  The process.env.NODE_ENV is: ', chalk.cyan.bold(process.env.NODE_ENV, env), '\n')
 
   const extractPcss = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.pcss.css`)
   const extractAntd = new ExtractTextPlugin(`static/[name]${(process.env.NODE_ENV === 'production') ? '.[chunkhash:6]' : ''}.antd.css`)
@@ -24,7 +24,7 @@ module.exports = function (env) {
     output: {
       filename: 'static/[name].js',
       chunkFilename: `static/[name]-[id]${(env === 'production') ? '.[chunkhash:6]' : ''}.js`,
-      path: path.resolve(__dirname, '../dist/'),
+      path: path.resolve(__dirname, `../dist/${process.env.NODE_ENV === 'production' ? version : ''}`),
     },
     resolve: {
       // extensions: [".jsx", ".js"],
@@ -173,7 +173,7 @@ module.exports = function (env) {
         hash: false,
         cache: true,
         favicon: './app/static/favicon.ico',
-        minify: (process.env.NODE_ENV === 'production') ?
+        minify: (env === 'production') ?
           {
             collapseWhitespace: true,
             removeComments: true,
@@ -186,9 +186,7 @@ module.exports = function (env) {
       new webpack.optimize.CommonsChunkPlugin({
         children: true,
         async: true,
-        minChunks: function (module) {
-          return module.context && module.context.indexOf('node_modules') !== -1;
-        },
+        minChunks: 2,
       }),
       new webpack.optimize.CommonsChunkPlugin({
         names: ["vendorReact", ["index", "vendorReact"]],

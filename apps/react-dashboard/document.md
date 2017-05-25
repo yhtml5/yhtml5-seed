@@ -1,4 +1,4 @@
-## React-dashboard
+## React-Dashboard
 
 ### Quick start
 
@@ -61,6 +61,11 @@ const edit = (value) =>
     console.log('done!')
   }
 ```
+### 命名规范
+
+* 一般函数使用驼峰法
+* action name, components, 使用首字母大写的驼峰法
+* state 使用 `compoent + status`
 
 ### [Functional and Class Components][react-component]
 
@@ -86,9 +91,26 @@ const edit = (value) =>
 
 ### 基础模块
 
-- [x] 登录、注册、忘记密码
-- [x] 权限
-- [x] layout
+- [x] Login
+  - [x] login/logout
+  - [x] reset password
+  - [ ] forgot password
+  - [ ] register
+- [x] App
+  - [x] routeChange listener
+  - [x] getPermissions/verifyPermissions
+- [x] Layout
+  - [x] Header
+  - [x] Sider 
+  - [x] Footer 
+- [ ] Form
+- [ ] Upload
+- [ ] richEditor  
+- [ ] theme  
+- [ ] superAdmin
+  - [ ] toggle api server
+  - [ ] don't logout
+  - [ ] get all permissions
 
 ### Components `app/Components/`
 
@@ -102,17 +124,28 @@ const edit = (value) =>
 ```
 ajax(url, param, fail, error, success) 
 ```
+
 #### cookie
 ```
 setCookie(name, value, hour)
 getCookie(name)
 clearCookie(name)
 ```
+
 #### other
 ```
 notRepeating(callback) 
 downLoad(url) [downLoad][downLoad]
 checkToken()
+```
+
+#### DEBUG
+```
+DEBUG && console.log('Props: ', props)
+
+if (DEBUG){
+  do()
+}
 ```
 
 ### Directory Structure

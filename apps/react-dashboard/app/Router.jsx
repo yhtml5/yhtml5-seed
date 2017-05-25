@@ -18,9 +18,9 @@ import Layout from './Containers/Layout/index.jsx'
 // ==== lazy load route components ====
 
 const Login = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Login/index.jsx').default, 'route-Login'))
+const Demo = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Demo/index.jsx').default, 'route-Demo'))
+const Form = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Form/index.jsx').default, 'route-Form'))
 const Question = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Question/index.jsx').default, 'route-Question'))
-const QuestionAdd = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Question/InformationAdd.jsx').default, 'route-QuestionAdd'))
-const QuestionEdit = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Question/InformationEdit.jsx').default, 'route-QuestionEdit'))
 const Navigation = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Navigation/index.jsx').default, 'route-Navigation'))
 const Live = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Live/index.jsx').default, 'route-Live'))
 const LiveAdd = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Live/indexAdd.jsx').default, 'route-LiveAdd'))
@@ -43,7 +43,9 @@ function newRouter() {
         <Switch>
           <Route path="/login" component={Login} />
           <Layout>
-            <Route path="/" component={Navigation} exact />
+            <Route path="/" component={Demo} exact />
+            <Route path="/form" component={Form} />
+            <Route path="/demo" component={Demo} />
             <Route path="/navigation" component={Navigation} />
             <Route path="/live" component={Live} exact />
             <Route path="/live/add" component={LiveAdd} />
@@ -52,8 +54,6 @@ function newRouter() {
             <Route path="/packages/add" component={PackagesAddEdit} />
             <Route path="/packages/edit" component={PackagesAddEdit} />
             <Route path="/question" component={Question} exact />
-            <Route path="/question/add" component={QuestionAdd} />
-            <Route path="/question/edit" component={QuestionEdit} />
           </Layout>
           <Route component={NoMatch} />
         </Switch>

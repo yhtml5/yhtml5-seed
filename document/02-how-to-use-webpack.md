@@ -100,7 +100,7 @@ So we can do like this:
 ```
 process.env.NODE_ENV === 'production' || console.log('development') 
 
-DEBUG || console.log('development') 
+DEBUG && console.log('development') 
 ```
 
 

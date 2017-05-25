@@ -8,27 +8,27 @@ import Footer from './Components/Footer.jsx'
 import Content from './Components/Content.jsx'
 import { toggleSide, changeSubMenus } from './task'
 
-function newLayout({ dispatch, app, layout, children }) {
-  process.env.NODE_ENV === 'production' || console.log('newLayoutProps: ', layout)
+function Component({ dispatch, app, props, children }) {
+  DEBUG && console.log('newLayoutProps: ', props)
 
   const LayoutProps = {
     id: "layout",
     style: { minHeight: '100%' },
   }
   const SiderProps = {
-    title: layout.title,
-    collapsed: layout.collapsed,
+    title: props.title,
+    collapsed: props.collapsed,
     permissions: app.permissions,
-    openKeys: layout.menusOpenKeys,
-    defaultOpenKeys: layout.menusDefaultOpenKeys,
-    selectedKeys: layout.menusSelectedKeys,
-    defaultSelectedKeys: layout.menusDefaultSelectedKeys,
+    openKeys: props.menusOpenKeys,
+    defaultOpenKeys: props.menusDefaultOpenKeys,
+    selectedKeys: props.menusSelectedKeys,
+    defaultSelectedKeys: props.menusDefaultSelectedKeys,
     onOpenChange(value) {
       dispatch(changeSubMenus(value))
     }
   }
   const HeaderProps = {
-    collapsed: layout.collapsed,
+    collapsed: props.collapsed,
     onToggleSide() {
       dispatch(toggleSide())
     },
@@ -56,7 +56,7 @@ function newLayout({ dispatch, app, layout, children }) {
 
 export default connect(state => {
   return {
-    layout: state.layout,
     app: state.app,
+    props: state.layout,
   }
-})(newLayout)
+})(Component)

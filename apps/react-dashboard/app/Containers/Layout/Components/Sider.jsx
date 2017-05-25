@@ -49,27 +49,31 @@ function Sider({
         theme="dark"
         openKeys={openKeys}
         selectedKeys={selectedKeys}
-        defaultOpenKeys={['1', '2', '3']}
-        defaultSelectedKeys={['10']}
+        defaultOpenKeys={['1']}
+        defaultSelectedKeys={['13']}
         onSelect={handleSelect}
         onClick={handleClick}
         onOpenChange={handleOpenChange}
       >
         {permissions.map((value, index) => {
-          let menus = searchMenuWithKey(value.key)
+          const menus = searchMenuWithKey(value.key)
           return (
-            <Menu.SubMenu key={menus.key} title={<span><Icon type={menus.icon} /><span className="nav-text">{menus.name}</span></span>}>
-              {value.children.map((value, index) => {
-                let subMenus = searchMenuWithKey(value.key)
-                if (Number(subMenus.key) >= 10) {
-                  return <Menu.Item key={subMenus.key}>
-                    <Link className={styles.link}
-                      to={subMenus.pathname}
-                    >{subMenus.name}</Link>
-                  </Menu.Item>
-                }
-              })}
-            </Menu.SubMenu>
+            (menus.key)
+              ? <Menu.SubMenu
+                key={menus.key}
+                title={<span><Icon type={menus.icon} /><span className="nav-text">{menus.name}</span></span>}>
+                {value.children.map((v, index) => {
+                  const subMenus = searchMenuWithKey(v.key)
+                  if (Number(subMenus.key) >= 10) {
+                    return <Menu.Item key={subMenus.key}>
+                      <Link className={styles.link}
+                        to={subMenus.pathname}
+                      >{subMenus.name}</Link>
+                    </Menu.Item>
+                  }
+                })}
+              </Menu.SubMenu>
+              : null
           )
         })}
       </Menu>

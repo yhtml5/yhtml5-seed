@@ -8,7 +8,7 @@ module.exports = function (env) {
   return webpackMerge(commonConfig(env), {
     output: {
       filename: 'static/[name].[chunkhash:6].js',
-      path: path.resolve(__dirname, '../dist/' + version),
+      //path: path.resolve(__dirname, '../dist/' + version),
       // publicPath: './',
       // sourceMapFilename: '[name].map'
     },

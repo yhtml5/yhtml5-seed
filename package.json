@@ -1,74 +1,11 @@
 {
   "name": "yhtml5-seed",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "author": "yhtml5 <1417376255@qq.com>",
   "description": "The web's scaffolding tool for modern webapps",
   "main": "app/index.js",
   "license": "MIT",
   "repository": "git@github.com:yhtml5/YHTML5-Seed.git",
-  "scripts": {
-    "prestart": "clear",
-    "start": "npm i && npm run build && npm run dev",
-    "prebuild": "clear",
-    "build": "NODE_ENV=production  webpack --progress --hide-modules --colors --config build/webpack.pro.js",
-    "build-debug": "NODE_ENV=debug  webpack-dashboard -- webpack --display-modules --progress --profile --colors --config build/webpack.pro.debug.js",
-    "predev": "clear",
-    "dev": "NODE_ENV=development webpack-dashboard -- webpack-dev-server --open  --config build/webpack.dev.js",
-    "postdev": "clear",
-    "pregit": "clear && git status",
-    "git": "git checkout dev && git add -A && git commit -m 'auto update' && git checkout master && git merge dev && git push --all && git checkout dev && git merge master",
-    "postgit": "clear && git status",
-    "predemo": "rimraf exmaple && mkdir exmaple && cd exmaple && touch .yhtml5",
-    "demo": "clear",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint app",
-    "prerelease": "",
-    "release": "cp ../../gitlab/ exmpale"
-  },
-  "peerDependencies": {
-    "webpack": "*",
-    "react": "~15.x"
-  },
-  "dependencies": {
-    "lodash": "^4.17.4",
-    "moment": "^2.17.1",
-    "react": "^15.5.3",
-    "react-dom": "^15.4.1",
-    "react-redux": "^5.0.4",
-    "react-router": "^3.0.0",
-    "react-router-redux": "^4.0.7",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^6.6.1",
-    "babel": "^6.5.2",
-    "babel-core": "^6.13.2",
-    "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-2": "^6.13.0",
-    "css-loader": "^0.23.1",
-    "eslint": "^3.13.1",
-    "eslint-plugin-react": "^6.9.0",
-    "express": "^4.14.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
-    "file-loader": "github:webpack/file-loader",
-    "handlebars-loader": "^1.4.0",
-    "html-loader": "^0.4.4",
-    "html-minifier": "^3.2.3",
-    "html-webpack-plugin": "^2.26.0",
-    "postcss-loader": "^0.9.1",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "rimraf": "^2.5.4",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^2.2.0-rc.3",
-    "webpack-dashboard": "^0.2.1",
-    "webpack-dev-middleware": "^1.9.0",
-    "webpack-dev-server": "^2.1.0-beta.12",
-    "webpack-merge": "^2.3.1"
-  },
   "keywords": [
     "component",
     "framework",
@@ -82,8 +19,19 @@
     "webpack",
     "weui"
   ],
+  "peerDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1"
+  },
+  "devDependencies": {},
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "pregit": "clear && git status",
+    "git": "git checkout dev && git add -A && git commit -m 'auto update'  && git pull && git push",
+    "postgit": "clear && git status"
   }
 }

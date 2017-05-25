@@ -38,19 +38,35 @@ function config() {
       name: '基础组件',
       icon: 'api',
     }, {
-      key: '2',
-      name: '页面管理',
-      icon: 'home',
-    }, {
       key: '3',
-      name: '内容管理',
+      name: '模板页面',
       icon: 'book',
     }, {
-      key: '10',
-      name: '表单与正则',
+      key: '9',
+      name: '系统功能',
+      icon: 'setting',
+    }, {
+      key: '12',
+      name: '表单正则',
       pathname: '/form',
     }, {
-      key: '20',
+      key: '13',
+      name: '下载打印',
+      pathname: '/output',
+    }, {
+      key: '14',
+      name: '文件上传',
+      pathname: '/upload',
+    }, {
+      key: '15',
+      name: '富文本编辑器',
+      pathname: '/richEditor',
+    }, {
+      key: '30',
+      name: 'Demo',
+      pathname: '/demo',
+    }, {
+      key: '32',
       name: '导航管理',
       pathname: '/navigation',
       items: [{
@@ -61,7 +77,7 @@ function config() {
         pathname: '/edit',
       }]
     }, {
-      key: '30',
+      key: '33',
       name: '套餐管理',
       pathname: '/packages',
       items: [{
@@ -72,7 +88,7 @@ function config() {
         pathname: '/edit',
       }]
     }, {
-      key: '31',
+      key: '34',
       name: '直播管理',
       pathname: '/live',
       items: [{
@@ -93,18 +109,23 @@ function config() {
         name: '编辑',
         pathname: '/question/edit',
       }]
+    }, {
+      key: '91',
+      name: '开发文档',
+      pathname: '/document'
     }]
   }
 }
 
 function searchMenuWithKey(key) {
-  let keyIndex = 0
+  let obj = {}
+
   config().siteMap.forEach((value, index) => {
     if (value.key === key) {
-      return keyIndex = index
+      return obj = config().siteMap[index]
     }
   })
-  return config().siteMap[keyIndex]
+  return obj
 }
 
 function searchKetWithPathname() {
