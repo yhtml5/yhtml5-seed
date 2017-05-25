@@ -54,17 +54,17 @@ function config() {
       name: '表单正则',
       pathname: '/form',
     }, {
-      key: '13',
-      name: '下载打印',
-      pathname: '/output',
-    }, {
       key: '14',
       name: '文件上传',
       pathname: '/upload',
     }, {
       key: '15',
-      name: '富文本编辑器',
+      name: 'Rich Editor',
       pathname: '/richEditor',
+    }, {
+      key: '17',
+      name: 'Markdown',
+      pathname: '/markdown',
     }, {
       key: '30',
       name: 'Demo',

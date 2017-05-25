@@ -25,6 +25,16 @@ function Component({
         { pattern: /^[\u4e00-\u9fa5]{1,10}$/, message: '请输入1-10位中文字符!' }
       ],
     }, {
+      label: '账号',
+      key: 'formAccount',
+      initialValue: undefined,
+      pattern: /^[a-zA-Z0-9\u4e00-\u9fa5]+$/,
+      placeholder: '请输入账号',
+      rules: [
+        { required: true, message: '值不能为空!' },
+        { pattern: /^[a-zA-Z0-9\u4e00-\u9fa5]+$/, message: '请输入20字以内文字字母数字!' }
+      ],
+    }, {
       label: '手机号码',
       key: 'formMobilePhone',
       initialValue: undefined,
@@ -84,6 +94,33 @@ function Component({
         { required: true, message: '值不能为空!' },
         { pattern: /^(\d{14}|\d{16}|\d{19})$/, message: '请输入14,16,19位正整数!' }
       ],
+    }, {
+      label: '折扣',
+      key: 'formDiscount',
+      initialValue: undefined,
+      pattern: /^[0-9](\.[0-9]{1,2}){0,1}$/,
+      placeholder: '请输入折扣',
+      addonAfter: "折",
+      rules: [{
+        validator: (rule, value, callback) => {
+          if (Number(value) === 0) { callback('') }
+          callback()
+        }, message: '折扣不能为0或空!'
+      },
+      { type: "string", pattern: /^[0-9](\.[0-9]{1,2}){0,1}$/, required: true, message: '请输入正确的折扣!' },
+      ]
+    }, {
+      label: '直减',
+      key: 'formDirectOff',
+      initialValue: undefined,
+      pattern: /^[1-9]*[1-9][0-9]*$/,
+      placeholder: '请输入',
+      addonBefore: "减",
+      addonAfter: "元",
+      rules: [
+        { required: true, message: '值不能为空!' },
+        { type: "string", pattern: /^[1-9]*[1-9][0-9]*$/, message: '请输入正整数!' }
+      ]
     }, {
       label: '六位正整数',
       key: 'formPositiveInteger',
