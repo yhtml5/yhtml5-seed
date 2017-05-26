@@ -47,7 +47,7 @@ const validator = {
     return Object.prototype.toString.call(value) === '[object String]'
   },
   isStringEmpty: function (value) {
-    return Object.prototype.toString.call(value) === '[object String]' && value == ''
+    return Object.prototype.toString.call(value) === '[object String]' && value === ''
   },
   isStringNotEmpty: function (value) {
     if (this.isString(value)) {

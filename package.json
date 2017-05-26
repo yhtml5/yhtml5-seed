@@ -32,6 +32,7 @@
   "scripts": {
     "pregit": "clear && git status",
     "git": "git checkout dev && git add -A && git commit -m 'auto update'  && git pull && git push",
-    "postgit": "clear && git status"
+    "postgit": "clear && git status",
+    "update": "rimraf site && cd site/static && mkdir vendors  && cp CNAME site/"
   }
 }

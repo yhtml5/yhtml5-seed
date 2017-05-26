@@ -159,7 +159,11 @@ module.exports = function (env) {
             {
               loader: "markdown-loader",
               options: {
-                /* your options here */
+                // highlight: function (code) {
+                //   return require('highlight').highlightAuto(code).value;
+                // }
+                //pedantic: true,
+                //renderer
               }
             }
           ]

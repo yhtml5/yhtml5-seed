@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
-import markdown from '../../../../document.md'
+import markdown from '../../../../document/document.md'
 import 'github-markdown-css'
 
 import styles from './Document.pcss'
