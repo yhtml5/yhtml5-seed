@@ -11,7 +11,9 @@ This is not only a project-seed for front-end. It is a complete set of solutions
 react,redux,webpack,web security,nodejs,express,api,git version,performance optimization
 what you want technology stack all in one, and provides many out-of-the-box features
 
-前端世界的变化总是惊人的，在这个项目里，我们会及时更新依赖的技术到最新最稳定版本，同时及时淘汰一些过时的技术元素
+YHTML5-Seed 还提供了相应的加载策略, 缓存策略, 兼容策略, 安全策略. 更好的为业务服务, 创造商业价值
+
+前端世界的变化总是惊人的，在这个项目里，我们会及时更新依赖的技术到最新稳定版本，同时及时淘汰一些过时的技术元素
 我们不建议重度依赖别人发明的轮子，我们鼓励自己重复造轮子。在编码中了解底层原理，创造出更适合团队的解决方案
 
 Welcome to NEW front-end world and enjoy yourself
@@ -91,6 +93,7 @@ There are so many problems when we start a front-end project
    - [ ] support sass, less, [postCSS][postCSS],[css-modules][css-modules]
    - [ ] 支持js、jsx、ts
    - [x] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`
+   - [ ] 图片压缩, 雪碧图, base64化
    - [ ] 提高打包速度 重定向资源路径，不打包全部引用的资源，直接引用min文件，例：`react => react/react.min.js` 
    - [ ] 压缩图片资源
 - [x] **development**

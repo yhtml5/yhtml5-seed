@@ -138,18 +138,60 @@ module.exports = function (env) {
               ]
             }
           }
+          // }, {
+          //   test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+          //   exclude: /favicon\.ico/,
+          //   use: [{
+          //     loader: 'url-loader',//https://github.com/webpack/file-loader
+          //     options: {
+          //       name: '[name].[hash:6].[ext]',
+          //       limit: 5000,
+          //       outputPath: 'static/img/',
+          //       publicPath: '',//works when you just want to prefix the name with a directory
+          //     }
+          //   }]
         }, {
-          test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+          test: /\.(eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
           exclude: /favicon\.ico/,
           use: [{
             loader: 'url-loader',//https://github.com/webpack/file-loader
             options: {
               name: '[name].[hash:6].[ext]',
-              limit: 5000,
+              limit: 1000,
               outputPath: 'static/img/',
               publicPath: '',//works when you just want to prefix the name with a directory
             }
           }]
+        }, {
+          test: /.*\.(gif|png|jpe?g|svg)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                name: '[name].[hash:6].[ext]',
+                limit: 1000,
+                outputPath: 'static/img/',
+              }
+            }, {
+              loader: 'image-webpack-loader',
+              options: {
+                gifsicle: {
+                  interlaced: false,
+                },
+                optipng: {
+                  optimizationLevel: env === 'production' ? 7 : 1,
+                },
+                pngquant: {
+                  quality: '65-90',
+                  speed: 4
+                },
+                mozjpeg: {
+                  progressive: true,
+                  quality: 65
+                }
+              }
+            }
+          ]
         }, {
           test: /\.md$/,
           use: [
