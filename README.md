@@ -137,6 +137,7 @@ There are so many problems when we start a front-end project
       - [x] 合理的缓存策略能减少资源下载、保证用户每次获取的事最新的资源、提高用户体验
       - [x] 长久缓存 第三方的包、公用代码
       - [x] 及时更新 业务逻辑代码、常变动的css、js, 不需要强刷  
+      - [x] 加上资源版本号, 避免被盗链
    - [ ] 安全策略    
       - [x] XSS、CSRF、SQL注入、ddos、开启https 不讨论
       - [ ] 哈希进行信息摘要
