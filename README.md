@@ -153,48 +153,31 @@ There are so many problems when we start a front-end project
 
 目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
 
-### react + redux + antd
-
-- [ ] 
 
 ### Technology Stacks
 
-#### Technology Stacks for developing a project
+#### The web's scaffolding tool for build modern webapps
 
-|Name|Usage|Note|
-|---|---|---|
-|cssModule|||
-|react|||
-|redux|||
-|react-ant|||
-
-#### The web's scaffolding tool for build modern webapps(option)
-
-|Name|Usage|Note|
-|---|---|---|
-|babel|||
-|[Eslint][eslint]|||
-|express|||
-|[NodeJS][node]|||
-|[NPM][npm]|||
-|PM2|||
-|postCSS|||
-|react-hot-loader|||
-|webpack|||
-
-#### Development Dependencies
-
-##### Node
-
-name|usage|url
+Name|Usage|Note
 ---|---|---
-shelljs|Portable Unix shell commands for Node.js|`https://github.com/shelljs/shelljs`
+babel|||
+cssModule||
+react||
+redux||
+react-ant||
+[Eslint][eslint]||
+express||
+[NodeJS][node]||
+[NPM][npm]||
+PM2||
+postCSS||
+react-hot-loader||
+webpack||
+shelljs|Portable Unix shell commands for Node.js`https://github.com/shelljs/shelljs`
 ora|Elegant terminal spinner |`https://github.com/sindresorhus/ora`
-opn|open browser|
+opn|open browser
 
-**How to export logo in term?**
 
-##### Webpack
 
 [author]:https://img.shields.io/badge/author-yhtml5-blue.svg
 [Build Status]:https://img.shields.io/travis/twbs/bootstrap/master.svg
