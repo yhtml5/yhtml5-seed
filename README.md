@@ -36,8 +36,9 @@ Welcome to NEW front-end world and enjoy yourself
 
 name|demo|path|document
 ---|---|---|---
+react-dashboard|react + redux + webpack2 + ant-design|`apps/react-dashboard`|`apps/react-dashboard/document/`
+MPA|--|`apps/mpa`|`apps/mpa/document/`
 fis3|fis3|`apps/fis3/`|``
-react-dashboard|react + redux + webpack2 + ant-design|`apps/react-dashboard`|`document/react-dashboard`
 vue|vue|`apps/vue`|``
 
 ### [YHTML5-CLI][YHTML5-ClI]
