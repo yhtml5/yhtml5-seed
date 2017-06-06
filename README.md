@@ -162,18 +162,17 @@ There are so many problems when we start a front-end project
 Name|Usage|Note
 ---|---|---
 babel|||
-cssModule||
+[express]|service|[Express 中文文档][express-cn]
+[echarts][echarts]|图表库|数据可视化、开放、大气|`http://echarts.baidu.com/echarts2/doc/slide/whyEcharts.html`
 react||
 redux||
-react-ant||
 [Eslint][eslint]||
-express||
 [NodeJS][node]||
+Normalize.css|重置浏览器css样式| 
 [NPM][npm]||
 PM2||
 postCSS||
-react-hot-loader||
-webpack||
+webpack|构建工具|
 shelljs|Portable Unix shell commands for Node.js`https://github.com/shelljs/shelljs`
 ora|Elegant terminal spinner |`https://github.com/sindresorhus/ora`
 opn|open browser
