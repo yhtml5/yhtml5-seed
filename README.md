@@ -82,45 +82,45 @@ There are so many problems when we start a front-end project
    - [x] 代码切割 --分离第三方包与业务逻辑代码
      - [x] css与js分离 (延迟加载css)
      - [x] 业务代码与公共第三方包分离
-     - [ ] 业务逻辑分离，根据需求切割代码，可以是[路由变化][react-router-code-splitting]、点击事件
-     - [ ] 第三方包分离，自定义分离,只引用第三方包中需要的模块
-     - [ ] [提取延迟加载模块中公共部分][move-common-modules-into-the-parent-chunk]
+     - [x] 业务逻辑分离，根据需求切割代码，可以是[路由变化][react-router-code-splitting]、点击事件
+     - [x] 第三方包分离，自定义分离,只引用第三方包中需要的模块
+     - [x] [提取延迟加载模块中公共部分][move-common-modules-into-the-parent-chunk]
    - [x] 环境分离 --production, development, test
    - [x] 支持单页面，多页面应用，混合应用
    - [x] 模板引擎 --html模板，动态生成页面
    - [x] 绝对路径  --简化import路径，`../../../a.js`, `~/components/a.js`
    - [x] 支持 `markdown => html`, 使用 github-markdown-css
    - [ ] 代码高亮
-   - [ ] support sass, less, [postCSS][postCSS],[css-modules][css-modules]
-   - [ ] 支持js、jsx、ts
-   - [x] css模块  --support cssModule `[modular and reusable CSS, No more conflicts, Explicit dependencies, No global scope]`
-   - [ ] 图片压缩, 雪碧图, base64化
+   - [x] support [postCSS][postCSS],[css-modules][css-modules]
+   - [x] support js、jsx
+   - [ ] support sass, less
+   - [ ] support ts
+   - [x] 图片压缩, 雪碧图, base64化
    - [ ] 提高打包速度 重定向资源路径，不打包全部引用的资源，直接引用min文件，例：`react => react/react.min.js` 
-   - [ ] 压缩图片资源
 - [x] **development**
    - [x] 自动打开默认浏览器
    - [x] 热替换 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
-   - [ ] 自动刷新 --及时刷新页面
+   - [x] 自动刷新 --及时刷新页面
    - [x] 源码映射 --追踪错误代码到开发源码的错误一行
    - [x] 打包监测 --分析打包性能，模块内容
    - [x] 局域网访问  --开发环境允许局域网访问
    - [x] 重定向依赖 --使用第三方包提供的压缩包而不是通过webpack
    - [x] 兼容windows系统
    - [ ] mock  --mock 
-   - [ ] 开发者面板：isMock
+   - [ ] 开发者面板：isMock, 切换api地址, 开发权限
 - [ ] **test**
    - [ ] .eslintrc, eslint
-   - [ ] .editconfig --统一编辑器格式，减少代码冲突
+   - [x] .editconfig --统一编辑器格式，减少代码冲突
 - [ ] **production**
    - [x] 版本号管理 --小版本携带版本号+时间戳，大版本使用版本号(字母) 一个版本目录下应包含所有文件
    - [x] 删除 调试信息  console.log
    - [x] 删除 未使用的函数 tree shaking
    - [x] 删除 if(false){代码块}
+   - [x] 删除 仅用于开发环境的：`['react-hot-loader','react-hot-loader/patch', 'webpack-hot-middleware/client']`
    - [ ] 删除 重复css class
-   - [ ] 删除 仅用于开发环境的：`['react-hot-loader','react-hot-loader/patch', 'webpack-hot-middleware/client']`
    - [x] 增加 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
+   - [x] 增加 作者信息
    - [ ] 优化 首屏css内联 style-loader
-   - [ ] 增加 作者信息
    - [ ] 兼容策略
       - [ ] 浏览器兼容包含html、css、js等兼容问题，涉及广泛
       - [ ] 兼容性检测
@@ -141,15 +141,15 @@ There are so many problems when we start a front-end project
       - [x] 加上资源版本号, 避免被盗链
    - [ ] 安全策略    
       - [x] XSS、CSRF、SQL注入、ddos、开启https 不讨论
+      - [x] 压缩compression, 混淆obfuscation, 加密encryption 增加代码不可读性
       - [ ] 哈希进行信息摘要
       - [ ] 非对称加密
       - [ ] 对称加密
       - [ ] Salt
-      - [x] 压缩compression, 混淆obfuscation, 加密encryption 增加代码不可读性
       - [ ] cookie加密 md5加密token等信息
 - [ ] **others**
+   - [x] 编写shell脚本，制作命令行界面（CLI）, 用于生成项目模板
    - [ ] 自动化部署  -- 一键推送线上
-   - [x] 编写shell脚本，制作命令行界面（CLI）
    - [ ] 发布到Npm, Bower
 
 目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
