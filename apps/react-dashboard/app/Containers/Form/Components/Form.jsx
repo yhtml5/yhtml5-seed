@@ -132,24 +132,24 @@ function Component({
         { pattern: /^[1-9]\d{0,5}$/, message: '请输入六位正整数!' }
       ],
     }, {
-      label: '最少20个字',
+      label: '最少500个字',
       key: 'formMin',
       initialValue: undefined,
-      pattern: /^.{20,}$/,
+      pattern: /^(\S|\s){0,500}$/,
       placeholder: '请输入',
       rules: [
         { required: true, message: '值不能为空!' },
-        { pattern: /^.{20,}$/, message: '最少输入20个字!' }
+        { pattern: /^(\S|\s){0,500}$/, message: '最少输入500个字!' }
       ]
     }, {
-      label: '最多20个字',
+      label: '最多500个字',
       key: 'formMax',
       initialValue: undefined,
-      pattern: /^.{0,20}$/,
+      pattern: /^(\S|\s){0,500}$/,
       placeholder: '请输入',
       rules: [
         { required: true, message: '值不能为空!' },
-        { pattern: /^.{0,20}$/, message: '最多输入20个字!' }
+        { pattern: /^(\S|\s){0,500}$/, message: '最多输入500个字!' }
       ],
     }, {
       label: 'URL',
