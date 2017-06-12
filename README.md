@@ -141,6 +141,7 @@ There are so many problems when we start a front-end project
       - [x] 加上资源版本号, 避免被盗链
    - [ ] 安全策略    
       - [x] XSS、CSRF、SQL注入、ddos、开启https 不讨论
+      - [x] [xss][js-xss], 对用户输入进行过滤
       - [x] 压缩compression, 混淆obfuscation, 加密encryption 增加代码不可读性
       - [ ] 哈希进行信息摘要
       - [ ] 非对称加密
@@ -213,4 +214,5 @@ opn|open browser
 
 [postCSS]:(https://github.com/postcss/postcss#usage)
 [css-modules]:(https://github.com/css-modules/css-modules)
-[move-common-modules-into-the-parent-chunk]:(https://webpack.js.org/plugins/commons-chunk-plugin/#move-common-modules-into-the-parent-chunk)
+[move-common-modules-into-the-parent-chunk]:https://webpack.js.org/plugins/commons-chunk-plugin/#move-common-modules-into-the-parent-chunk
+[js-xss]:http://jsxss.com/
