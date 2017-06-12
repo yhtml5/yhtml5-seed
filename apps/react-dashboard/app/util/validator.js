@@ -16,6 +16,24 @@
 //     )(c);
 // }
 
+const isNumber = (value) => Object.prototype.toString.call(value) === '[object Number]'
+const isString = (value) => Object.prototype.toString.call(value) === '[object String]'
+const isStringEmpty = (value) => Object.prototype.toString.call(value) === '[object String]' && value === ''
+const isFunction = (value) => Object.prototype.toString.call(value) === '[object Function]'
+const isArray = (value) => Object.prototype.toString.call(value) === '[object Array]'
+const isArrayEmpty = (value) => Array.isArray(value) && value.length === 0
+const isObject = (value) => Object.prototype.toString.call(value) === '[object Object]'
+const isObjectEmpty = (value) => Object.prototype.isPrototypeOf(value) && Object.keys(value).length === 0
+
+export {
+  isNumber,
+  isFunction,
+  isArray, isArrayEmpty,
+  isString, isStringEmpty,
+  isObject, isObjectEmpty
+}
+
+
 const validator = {
   isUndefined: function (value) {
     return typeof value === 'undefined'

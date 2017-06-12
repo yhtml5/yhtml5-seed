@@ -44,6 +44,7 @@ function newRouter() {
       <ConnectedRouter history={history}>
         <Switch>
           <Route path="/login" component={Login} />
+          {/*<Route path="/demo" component={Demo} />*/}
           <Layout>
             <Route path="/" component={Document} exact />
             <Route path="/form" component={Form} />
