@@ -151,6 +151,7 @@ There are so many problems when we start a front-end project
 - [ ] **others**
    - [x] 编写shell脚本，制作命令行界面（CLI）, 用于生成项目模板
    - [ ] 自动化部署  -- 一键推送线上
+   - [ ] 定制化主题
    - [ ] 发布到Npm, Bower
 
 目前，还有一些新功能及bug需要解决，详见[问题列列表][YHTML5-Seed-issue]
