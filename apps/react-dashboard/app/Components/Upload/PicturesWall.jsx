@@ -2,7 +2,7 @@ import React from 'react'
 import { Upload, Icon, Modal, message, Button } from 'antd'
 import { store } from '../../redux/store'
 import { updateLiveState } from '../../Containers/Live/task'
-import { validator } from '../../util/validator'
+import { isStringEmpty,isStringNotEmpty } from '../../util/validator'
 
 /**
  * Todo
@@ -88,7 +88,7 @@ class PicturesWall extends React.Component {
     let urls = []
     this.setState({ fileList })
     for (let i = 0; i < e.fileList.length; i++) {
-      if (e.fileList[i].status === 'done' && validator.isStringNotEmpty(e.fileList[i].url)) {
+      if (e.fileList[i].status === 'done' && isStringNotEmpty(e.fileList[i].url)) {
         urls.push(e.fileList[i].url)
       } else if (e.fileList[i].status === 'done' && e.fileList[i].response) {
         let data = e.fileList[i].response.data

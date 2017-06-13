@@ -1,6 +1,6 @@
 import React from 'react'
 import { Table, Card, Popconfirm } from 'antd'
-import { validator } from '../../../util/validator'
+import { isStringEmpty } from '../../../util/validator'
 import { renderColumns, renderStatus, renderLiveType, renderRecommendation } from '../../../Components/Table/index.jsx'
 
 function NewTable({ loading, dataSource, toggleRecommendation, toggleStatus, onEdit, onPreview }) {
@@ -23,7 +23,7 @@ function NewTable({ loading, dataSource, toggleRecommendation, toggleStatus, onE
     key: 'status',
     title: '状态',
     dataIndex: 'status',
-    render: (text, record) => (validator.isStringEmpty(text)) ? '--' : (Number(record.status) === 1) ? '上线' : '下线'
+    render: (text, record) => (isStringEmpty(text)) ? '--' : (Number(record.status) === 1) ? '上线' : '下线'
   }, {
     key: 'option',
     title: '操作',

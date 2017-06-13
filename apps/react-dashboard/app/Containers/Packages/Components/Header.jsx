@@ -1,7 +1,6 @@
 import React from 'react'
 import { Row, Col, Button } from 'antd'
 import { Link } from 'react-router-dom';
-// import { validator } from '../../util/validator'
 import styles from './Header.pcss'
 
 function Component({

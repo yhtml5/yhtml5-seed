@@ -1,7 +1,6 @@
 import React from 'react'
 import {Card, Pagination} from 'antd'
 import connect from 'react-redux/es/connect/connect'
-import {validator}from '../../util/validator'
 import Breadcrumb from '../../Components/Breadcrumb/index.jsx'
 import {notRepeating}from '../../util/util'
 import {selectChannels, resetChannelsColumns} from '../App/task'

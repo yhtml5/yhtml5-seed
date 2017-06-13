@@ -3,7 +3,6 @@ import { Modal, Col, Button } from 'antd'
 import { Link } from 'react-router-dom';
 import styles from './Modal.pcss'
 import url from './introduction.png'
-// import { validator } from '../../util/validator'
 
 function Component({ visible, onOK }) {
   return (

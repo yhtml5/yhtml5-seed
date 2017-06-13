@@ -1,13 +1,13 @@
 import { UpdateState } from './action'
 import { setCookie, getCookie, clearCookie } from '../../util/cookie'
 import { history } from '../../redux/store'
-import { validator } from '../../util/validator'
+import { isObject } from '../../util/validator'
 import { ajaxLogin, ajaxLogout } from './ajax'
 import { config } from '../../config'
 const { title, root, cookie } = config()
 
 function updateState(data) {
-  if (validator.isObject(data)) {
+  if (isObject(data)) {
     return {
       type: UpdateState,
       payload: data

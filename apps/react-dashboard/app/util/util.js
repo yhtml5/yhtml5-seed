@@ -1,7 +1,7 @@
 import { config } from '../config'
 import { history } from '../redux/store'
 import { getCookie } from './cookie'
-import { validator } from './validator'
+import { isStringNotEmpty } from './validator'
 const { cookie } = config()
 
 let awaitStatus = true
@@ -18,7 +18,7 @@ async function notRepeating(fun) {
 }
 
 function downLoad(url) {
-  if (validator.isStringNotEmpty(url)) {
+  if (isStringNotEmpty(url)) {
     let a = document.createElement('a')
     a.href = encodeURI(url)
     a.download = 'excel'

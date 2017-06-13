@@ -1,6 +1,5 @@
 import React from 'react'
 import { Radio, Form, Tag, Button, Input, message, Icon, Select, Row, Col, Slider, Upload, Checkbox, Modal } from 'antd'
-import { validator } from '../../../util/validator'
 import PicturesWall from '../../../Components/Upload/PicturesWall.jsx'
 import styles from './Form.pcss'
 

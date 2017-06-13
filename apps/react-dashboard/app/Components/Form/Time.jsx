@@ -1,4 +1,3 @@
-import {validator} from '../../util/validator'
 import {Select} from 'antd'
 const Option = Select.Option
 

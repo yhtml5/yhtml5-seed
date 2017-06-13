@@ -1,6 +1,5 @@
 import React from 'react'
 import {Card, Form, Button, Input, Icon, DatePicker, message, Select} from 'antd'
-import {validator} from '../../../util/validator'
 import styles from '../index.pcss'
 const Option = Select.Option;
 

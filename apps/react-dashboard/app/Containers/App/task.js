@@ -1,6 +1,6 @@
 import { config } from '../../config'
 import { getCookie } from '../../util/cookie'
-import { validator } from '../../util/validator'
+import { isObject,isArrayEmpty,isStringEmpty } from '../../util/validator'
 import { updateState as updateLoginState } from '../Login/task'
 import { UpdateState } from './action'
 import { ajaxPermissions, ajaxChannelColumnsList, ajaxLabels, ajaxUploadToken } from './ajax'
@@ -15,7 +15,7 @@ import { history } from '../../redux/store'
  */
 
 function updateState(data) {
-  if (validator.isObject(data)) {
+  if (isObject(data)) {
     return {
       type: UpdateState,
       payload: data
@@ -41,10 +41,10 @@ function initializeApp() {
     }))
 
     if (history.location.pathname !== '/login') {
-      if (validator.isArrayEmpty(getState().app.selectChannels)) {
+      if (isArrayEmpty(getState().app.selectChannels)) {
         ajaxChannelColumnsList(dispatch)
       }
-      if (validator.isStringEmpty(getState().app.uploadToken)) {
+      if (isStringEmpty(getState().app.uploadToken)) {
         ajaxUploadToken(dispatch)
       }
     }

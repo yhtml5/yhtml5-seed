@@ -1,7 +1,7 @@
 import { message } from 'antd'
 import { config } from '../../config'
 import { history } from '../../redux/store'
-import { validator } from '../../util/validator'
+import { isObject ,isArrayEmpty} from '../../util/validator'
 import { UpdateState } from './action'
 import {
   ajaxList,
@@ -21,7 +21,7 @@ const { title, subTitle } = config()
 /* ===== base =====*/
 
 function updateState(data) {
-  if (validator.isObject(data)) {
+  if (isObject(data)) {
     return {
       type: UpdateState,
       payload: data
@@ -37,7 +37,7 @@ const init = (value) =>
     const params = getState().packages
     const params2 = getState().app
 
-    if (validator.isArrayEmpty(params.modalColumnsStyles)) {
+    if (isArrayEmpty(params.modalColumnsStyles)) {
       ajaxColumnStyles(dispatch)
         .catch((err) => console.error(err))
     }

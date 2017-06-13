@@ -1,13 +1,13 @@
 import {config} from '../../config'
 const {title, subTitle} = config()
-import {validator} from  '../../util/validator'
+import {isObject} from  '../../util/validator'
 import {UpdateState} from './action'
 import {ajaxAdList, ajaxDeleteNav, ajaxEditStatus, ajaxAddNav, ajaxNavEditInfo, ajaxEditNav, positionType, getUploadToken, ajaxReply} from './ajax'
 import {history} from '../../redux/store'
 import {message} from "antd"
 
 function updateState(data) {
-  if (validator.isObject(data)) {
+  if (isObject(data)) {
     return {
       type: UpdateState,
       payload: data

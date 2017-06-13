@@ -1,32 +1,32 @@
 import React from 'react'
-import {Card, Form, Button, Input, Icon, DatePicker, message} from 'antd'
-import {validator} from '../../../util/validator'
+import { Card, Form, Button, Input, Icon, DatePicker, message } from 'antd'
+import { isArrayEmpty } from '../../../util/validator'
 
 
-function Search({form, onSearch, onReset, buttonSearchLoading, buttonResetLoading}) {
+function Search({ form, onSearch, onReset, buttonSearchLoading, buttonResetLoading }) {
 
   const formItemLayout = {
-    labelCol: {span: 9},
-    wrapperCol: {span: 15},
+    labelCol: { span: 9 },
+    wrapperCol: { span: 15 },
   }
 
   const getFormValues = () => {
     let searchTimeEnd = '', searchTimeStart = ''
     let searchName = form.getFieldValue('searchName')
 
-    if (validator.isArrayNotEmpty(form.getFieldValue('time'))) {
+    if (isArrayEmpty(form.getFieldValue('time'))) {
       searchTimeStart = form.getFieldValue('time')[0].format('YYYY-MM-DD')
       searchTimeEnd = form.getFieldValue('time')[1].format('YYYY-MM-DD')
     }
-    return {searchName, searchTimeStart, searchTimeEnd}
+    return { searchName, searchTimeStart, searchTimeEnd }
   }
 
   const handleSearch = (e) =>
     form.validateFields((err, values) => {
       e.preventDefault()
       if (!err) {
-        if (process.env.NODE_ENV !== 'production'){
-        console.log('Received values of form: ', values)
+        if (process.env.NODE_ENV !== 'production') {
+          console.log('Received values of form: ', values)
         }
         onSearch(values)
       }
@@ -37,7 +37,7 @@ function Search({form, onSearch, onReset, buttonSearchLoading, buttonResetLoadin
     onReset({
       tableCurrent: 1,
       tablePageSize: 10,
-      searchName:"",
+      searchName: "",
     })
   }
 
@@ -46,7 +46,7 @@ function Search({form, onSearch, onReset, buttonSearchLoading, buttonResetLoadin
       <Form layout='inline'>
         <Form.Item label="导航名称" {...formItemLayout}>
           {form.getFieldDecorator('searchName')(
-            <Input type="text" placeholder="请输入导航名称"/>
+            <Input type="text" placeholder="请输入导航名称" />
           )}
         </Form.Item>
         <Form.Item>

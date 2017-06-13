@@ -1,7 +1,5 @@
 import React from 'react'
 import {Modal, Form, Select, Radio, Input, Spin} from 'antd'
-import {validator} from '../../../util/validator'
-
 
 function newModal({
                     form, visible, confirmLoading, onOk, onCancel, onChange, title, selectChannels,

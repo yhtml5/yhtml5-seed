@@ -1,11 +1,11 @@
 import {config} from '../../config'
 const {title, subTitle} = config()
-import {validator} from  '../../util/validator'
+import {isObject} from  '../../util/validator'
 import {UpdateState} from './action'
 import {ajaxNavigationList, ajaxDeleteNav, ajaxEditStatus, ajaxAddNav, ajaxNavEditInfo, ajaxEditNav, ajaxNavTypeList} from './ajax'
 
 function updateState(data) {
-  if (validator.isObject(data)) {
+  if (isObject(data)) {
     return {
       type: UpdateState,
       payload: data

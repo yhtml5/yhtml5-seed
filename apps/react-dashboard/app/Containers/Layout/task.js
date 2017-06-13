@@ -1,10 +1,10 @@
 import { UpdateState } from './action'
-import { validator } from '../../util/validator'
+import { isObject } from '../../util/validator'
 import { config, searchKetWithPathname } from '../../config'
 const { title, subTitle } = config()
 
 function updateState(data) {
-  if (validator.isObject(data)) {
+  if (isObject(data)) {
     return {
       type: UpdateState,
       payload: data
