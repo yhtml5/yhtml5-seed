@@ -15,6 +15,12 @@ function Component({ dispatch, app, props, children }) {
     id: "layout",
     style: { minHeight: '100%' },
   }
+  const SubLayoutProps = {
+    style: {
+      marginLeft: props.collapsed ? '64px' : '200px',
+    },
+    className: 'y-transition-all'
+  }
   const SiderProps = {
     title: props.title,
     collapsed: props.collapsed,
@@ -43,7 +49,7 @@ function Component({ dispatch, app, props, children }) {
   return (
     <Layout {...LayoutProps}>
       <Sider {...SiderProps} />
-      <Layout>
+      <Layout {...SubLayoutProps}>
         <Header {...HeaderProps} />
         <Content {...ContentProps}>
           {children}

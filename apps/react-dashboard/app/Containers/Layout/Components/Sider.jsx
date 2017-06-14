@@ -24,20 +24,22 @@ function Sider({
 }) {
 
   const handleSelect = (obj) => {
-    // console.log('handleSelect', obj)
+    console.log('handleSelect', obj)
   }
 
   const handleClick = (obj) => {
-    // console.log('handleClick', obj)
+    console.log('handleClick', obj)
   }
 
   const handleOpenChange = (openKeys) => {
+    console.log('handleOpenChange', openKeys)
     onOpenChange(openKeys)
   }
 
 
   return (
     <Layout.Sider
+      className={styles.sider}
       trigger={null}
       collapsible
       collapsed={collapsed}
@@ -45,7 +47,8 @@ function Sider({
       <div className={styles.logo}>
         <p className={styles.title}>{title}</p>
       </div>
-      <Menu mode={(collapsed) ? "vertical" : "inline"}
+      <Menu
+        mode={(collapsed) ? "vertical" : "inline"}
         theme="dark"
         openKeys={openKeys}
         selectedKeys={selectedKeys}

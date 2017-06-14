@@ -132,7 +132,7 @@ function searchMenuWithKey(key) {
   return obj
 }
 
-function searchKetWithPathname() {
+function searchKeyWithPathname() {
   // let index = config().siteMap.findIndex((value, index) => value.pathname === window.location.hash.split('#')[1])
   let index = config().siteMap.findIndex((value, index) => {
     const url = window.location.hash.split('#')[1]
@@ -156,4 +156,4 @@ function getApiUrl() {
     config().environment[0].api
 }
 
-export { config, getApiUrl, searchMenuWithKey, searchKetWithPathname }
+export { config, getApiUrl, searchMenuWithKey, searchKeyWithPathname }

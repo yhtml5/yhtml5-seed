@@ -1,6 +1,6 @@
 import { UpdateState } from './action'
 import { isObject } from '../../util/validator'
-import { config, searchKetWithPathname } from '../../config'
+import { config, searchKeyWithPathname } from '../../config'
 const { title, subTitle } = config()
 
 function updateState(data) {
@@ -16,10 +16,14 @@ function updateState(data) {
 
 function init() {
   return (dispatch, getState) => {
-    process.env.NODE_ENV === 'production' || console.log('initializeLayout', searchKetWithPathname())
+    process.env.NODE_ENV === 'production' || console.log('initializeLayout', searchKeyWithPathname())
+    const selectedKeys = searchKeyWithPathname()
 
-    if (searchKetWithPathname()) {
-      dispatch(updateState({ menusSelectedKeys: [searchKetWithPathname()] }))
+    if (selectedKeys) {
+      dispatch(updateState({
+        menusSelectedKeys: [selectedKeys],
+        menusOpenKeys: selectedKeys ? [selectedKeys[0]] : []
+      }))
     }
 
     document.body.clientWidth < 996 && dispatch(toggleSide('close'))
@@ -57,13 +61,21 @@ function toggleSide(status) {
   }
 }
 
-const changeSubMenus = (value) => {
-  return (dispatch, getState) => {
+const changeSubMenus = (value) =>
+  (dispatch, getState) => {
+
+    function getMenusOpenKeys(params) {
+      if (value && value.length > 0) {
+        return [value[value.length - 1]]
+      } else {
+        return value
+      }
+    }
+
     dispatch(updateState({
-      menusOpenKeys: value,
+      menusOpenKeys: getMenusOpenKeys(),
     }))
   }
-}
 
 
 export { updateState, init, toggleSide, changeSubMenus }
