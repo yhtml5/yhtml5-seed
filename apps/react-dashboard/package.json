@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "antd": "^2.10.2",
+    "axios": "^0.16.2",
     "github-markdown-css": "^2.6.0",
     "history": "^4.6.1",
     "lodash": "^4.17.4",

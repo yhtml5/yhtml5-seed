@@ -12,7 +12,6 @@ const state = {
       ResetPassword: '',
       hasForgot: true,
       hasRegister: false
-
 }
 
 export default state

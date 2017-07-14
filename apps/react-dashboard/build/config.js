@@ -2,7 +2,7 @@ const { version } = require('./util.js')
 
 function config() {
   const hostname = 'localhost'
-  const port = 9999
+  const port = 9991
   return {
     hostname,
     port,
