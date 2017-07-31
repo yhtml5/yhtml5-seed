@@ -103,10 +103,11 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "dev": "clear && node ./build/dev.server.js",
-    "dev-debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
+    "start": "clear && node ./build/dev.server.js",
+    "start:debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
+    "pm2": "pm2 start pm2.config.js",
     "build": "clear && node ./build/build.js",
-    "build-debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
+    "build:debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",

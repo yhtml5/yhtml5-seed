@@ -33,11 +33,11 @@ webpack(webpackConfig, function (err, stats) {
   spinnerSetting.stop()
   if (err) throw err
   process.stdout.write(stats.toString({
-      children: false,
-      chunks: false,
-      chunkModules: false,
-      colors: true,
-      modules: false,
-      progress: true,
-    }) + '\n')
+    children: false,
+    chunks: false,
+    chunkModules: false,
+    colors: true,
+    modules: false,
+    progress: true,
+  }) + '\n')
 })
