@@ -91,12 +91,18 @@ There are so many problems when we start a front-end project
    - [x] 绝对路径  --简化import路径，`../../../a.js`, `~/components/a.js`
    - [x] 支持 `markdown => html`, 使用 github-markdown-css
    - [ ] 代码高亮
-   - [x] support [postCSS][postCSS],[css-modules][css-modules]
-   - [x] support js、jsx
-   - [ ] support sass, less
-   - [ ] support ts
    - [x] 图片压缩, 雪碧图, base64化
-   - [ ] 提高打包速度 重定向资源路径，不打包全部引用的资源，直接引用min文件，例：`react => react/react.min.js` 
+   - [ ] 提高打包速度 重定向资源路径，不打包全部引用的资源，直接引用min文件，例：`react => react/react.min.js`
+   - [ ] loader 
+     - [x] support js、jsx
+     - [ ] support ts
+   - [x] css处理
+     - [x] [postCSS][postCSS]
+     - [ ] support sass, less
+     - [x] 自动添加浏览器前缀 autoprefixer  
+     - [x] [CSS Modules][css-modules]
+     - [ ] 删除 重复css class
+     - [ ] 语法检查
 - [x] **development**
    - [x] 自动打开默认浏览器
    - [x] 热替换 --不需要刷新页面，尤其连续改一个功能不需要重复做页面操作
@@ -117,7 +123,6 @@ There are so many problems when we start a front-end project
    - [x] 删除 未使用的函数 tree shaking
    - [x] 删除 if(false){代码块}
    - [x] 删除 仅用于开发环境的：`['react-hot-loader','react-hot-loader/patch', 'webpack-hot-middleware/client']`
-   - [ ] 删除 重复css class
    - [x] 增加 浏览器前缀 --使用autoprefixer自动创建css的vendor prefixes
    - [x] 增加 作者信息
    - [ ] 优化 首屏css内联 style-loader
