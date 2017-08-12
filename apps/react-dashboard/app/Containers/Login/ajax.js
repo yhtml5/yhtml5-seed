@@ -20,7 +20,7 @@ const ajaxLogin = (params, dispatch) =>
       (response) => {
         resolve()
         return dispatch(updateState({
-          userId: response.data.id,
+          userId: reespons.data.id,
           userName: response.data.username,
           token: response.data.token
         }))
