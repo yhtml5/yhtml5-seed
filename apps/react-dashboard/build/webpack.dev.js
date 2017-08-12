@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
 const { port } = require('./config')()
+const webpackAnalyze = require('./webpack.analyze')
 
 module.exports = function (env) {
   return webpackMerge(commonConfig(env), {
@@ -38,7 +39,8 @@ module.exports = function (env) {
       // enable HMR globally
       new webpack.NamedModulesPlugin(),
       // prints more readable module names in the browser console on HMR updates
-      new webpack.NoEmitOnErrorsPlugin()
+      new webpack.NoEmitOnErrorsPlugin(),
+      webpackAnalyze
     ]
   })
 }

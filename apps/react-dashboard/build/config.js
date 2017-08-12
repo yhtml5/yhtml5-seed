@@ -9,6 +9,7 @@ function config() {
     version,
     title: '后台管理系统',
     origin: 'http://' + hostname + ':' + port,
+    analyzerPort: 9992,
     domain: '',
     pages: [{
       key: 'app',
