@@ -25,7 +25,8 @@
     "lodash": "^4.17.4",
     "moment": "^2.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
