@@ -8,8 +8,9 @@ module.exports = new BundleAnalyzerPlugin({
   analyzerPort: analyzerPort,
   defaultSizes: 'parsed',// [stat,parsed,gzip]
   openAnalyzer: true,
-  logLevel: 'info',
   reportFilename: 'report/report.html',
   generateStatsFile: true,
   statsFilename: 'report/stats.json',
+  statsOptions: null,
+  logLevel: 'info' //['info','warn','error','silent']
 })
