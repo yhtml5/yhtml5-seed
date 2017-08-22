@@ -6,6 +6,7 @@
 * [Markdown 编写规范][standardMarkdown]
 * [Javascript 编码规范][standardJavascript]
 * [js-native 编码规范][standardJsNative]
+* [CodeReview][CodeReview]
 
 ## Plan
 

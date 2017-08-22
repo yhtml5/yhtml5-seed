@@ -83,6 +83,7 @@
     "react-redux": "^5.0.5",
     "react-transition-group": "^1.1.3",
     "script-ext-html-webpack-plugin": "^1.8.0",
+    "serve": "^6.0.6",
     "shelljs": "^0.7.7",
     "style-loader": "^0.18.1",
     "to-string-loader": "^1.1.5",
@@ -106,12 +107,11 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "start": "clear && node ./build/dev.server.js",
-    "start:debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
-    "analyze": "clear && webpack-dashboard -- node ./build/dev.analyze.js",
-    "pm2": "pm2 start pm2.config.js",
+    "dev": "clear && node ./build/dev.server.js",
+    "dev:debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
     "build": "clear && node ./build/build.js",
     "build:debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
+    "pm2": "pm2 start pm2.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",

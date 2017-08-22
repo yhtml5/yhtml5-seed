@@ -14,6 +14,6 @@ function yhtml5() {
 global.yhtml5 = yhtml5
 
 if (process.env.NODE_ENV === 'production') {
-  setInterval(author, 3000)
+  setTimeout(author, 1000)
 }
 

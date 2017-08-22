@@ -1,15 +1,11 @@
-process.env.NODE_ENV = 'development'
 const path = require('path')
 const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
 const { port } = require('./config')()
-const webpackAnalyze = require('./webpack.analyze')
 
-module.exports = function (env) {
-  return webpackMerge(commonConfig(env), {
+module.exports = function () {
+  return webpackMerge(commonConfig(), {
     output: {
       publicPath: '/',
       sourceMapFilename: '[name].map'
@@ -40,7 +36,6 @@ module.exports = function (env) {
       new webpack.NamedModulesPlugin(),
       // prints more readable module names in the browser console on HMR updates
       new webpack.NoEmitOnErrorsPlugin(),
-      webpackAnalyze
     ]
   })
 }

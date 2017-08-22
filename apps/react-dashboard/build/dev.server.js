@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'development'
 const ora = require('ora')
 const opn = require('opn')
 const express = require("express")
@@ -5,8 +6,8 @@ const webpack = require("webpack")
 const webpackDevMiddleware = require("webpack-dev-middleware")
 const webpackHotMiddleware = require("webpack-hot-middleware")
 const DashboardPlugin = require('webpack-dashboard/plugin')
-const webpackConfig = require("./webpack.dev")('development')
-const {port, hostname, origin} = require('./config')()
+const webpackConfig = require("./webpack.dev")()
+const { port, hostname, origin } = require('./config')()
 const app = express()
 const compiler = webpack(webpackConfig)
 compiler.apply(new DashboardPlugin())
@@ -22,7 +23,7 @@ loading.color = 'blue'
 app.use(webpackDevMiddleware(compiler, {
   // publicPath: webpackConfig.output.publicPath,
   index: 'index.html',
-  stats: {color: true},
+  stats: { color: true },
   // historyApiFallback: true
   // noInfo: true,
 }))

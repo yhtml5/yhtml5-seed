@@ -1,12 +1,10 @@
-process.env.NODE_ENV = 'production'
-const path = require('path')
 const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./webpack.base.js')
-const webpackAnalyze = require('./webpack.analyze')
+const { webpackBundleAnalyzerPlugin, webpackUglifyJsPlugin } = require('./webpack.plugins')
 
-module.exports = function (env) {
-  return webpackMerge(commonConfig(env), {
+module.exports = function () {
+  return webpackMerge(commonConfig(), {
     output: {
       filename: 'static/[name].[chunkhash:6].js',
       //path: path.resolve(__dirname, '../dist/' + version),
@@ -14,22 +12,10 @@ module.exports = function (env) {
       // sourceMapFilename: '[name].map'
     },
     plugins: [
-      webpackAnalyze,
-      (env === 'debug')
-        ? () => {
-        }
-        : new webpack.optimize.UglifyJsPlugin({
-          beautify: false,
-          mangle: {
-            screw_ie8: true,
-            keep_fnames: true
-          },
-          compress: {
-            warnings: false,
-            screw_ie8: true,
-          },
-          comments: false
-        })
+      webpackUglifyJsPlugin,
+      (process.env.NODE_ENV === 'production-debug')
+        ? webpackBundleAnalyzerPlugin
+        : () => null
     ],
     performance: {
       hints: 'warning'

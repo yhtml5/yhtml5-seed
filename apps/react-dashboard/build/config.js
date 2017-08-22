@@ -10,6 +10,7 @@ function config() {
     title: '后台管理系统',
     origin: 'http://' + hostname + ':' + port,
     analyzerPort: 9992,
+    distributePort: 9993,
     domain: '',
     pages: [{
       key: 'app',
