@@ -38,9 +38,7 @@
   - [ ] render should only have display logic
   - [ ] 组件应该大写
 - [ ] git commit message
-  - [ ] add: bjcsa
-  - [ ] bug: hjsad
-  - [ ] feature: sahjhdaj
+  - [ ] [新增, 更新, 修复, 删除, bug:id]
 
 
 

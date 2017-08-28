@@ -8,7 +8,7 @@ import { notRepeating } from '../../util/util'
 import { toggleStatus } from './task'
 
 function Component({ dispatch, props, app }) {
-  DEBUG && console.log('DocumentProps: ', props)
+  // DEBUG && console.log('DocumentProps: ', props)
 
   const breadcrumbProps = {
     breadcrumbs: [{
