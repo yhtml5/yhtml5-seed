@@ -38,11 +38,13 @@
   - [ ] render should only have display logic
   - [ ] 组件应该大写
 - [ ] git commit message
-  - [ ] [新增, 更新, 修复, 删除, bug:id]
 
+### git commit message
 
-
-
+新增: 
+优化: 
+修复: bug:id / eslint
+删除: 
 
 
 
