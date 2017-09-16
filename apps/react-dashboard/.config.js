@@ -4,7 +4,7 @@
 
 const config = {
   test: {
-    testMatch: []
+    testMatch: ['app']
   }
 }
 
