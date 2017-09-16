@@ -42,7 +42,8 @@
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "reqwest": "^2.0.5",
-    "wangeditor": "^2.1.23"
+    "wangeditor": "^2.1.23",
+    "yhtml5-test": "0.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
@@ -112,7 +113,8 @@
     "build": "clear && node ./build/build.js",
     "build:debug": "clear && webpack-dashboard -- node ./build/build.debug.js",
     "pm2": "pm2 start pm2.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "clear && yhtml5-test --env=jsdom",
+    "test:c": "npm test -- --coverage",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
     "pregit": "clear && git status",
