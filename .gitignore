@@ -3,6 +3,7 @@ logs/*
 /**/node_modules/
 /**/bower_components/
 npm-debug.log
+coverage
 
 tmp
 .DS_Store

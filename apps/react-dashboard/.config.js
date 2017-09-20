@@ -4,8 +4,10 @@
 
 const config = {
   test: {
-    testMatch: ['app']
+    testMatch: ['app/**/__tests__/**/*.js?(x)', 'app/**/?(*.)(spec|test).js?(x)'],
+    transformIgnorePatterns: ["node_modules/(?!(yhtml5-test|react-redux|react-native-button)/)"],
+    collectCoverageFrom: ['app/**/*.{js,jsx}']
   }
 }
 
-export default config
+module.exports = config
