@@ -32,9 +32,8 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "pregit": "git checkout dev && clear && git status",
-    "git": "git add -A && git commit -m 'auto update'  && git pull && git push && git checkout master && git merge dev && git pull && git push ",
-    "postgit": "git checkout dev && git merge master && clear && git status",
+    "git": "clear && git status && git add . && git commit -m",
+    "postgit": "git pull && git push && git push origin dev:master",
     "update": "rimraf site && cd site/static && mkdir vendors  && cp CNAME site/"
   }
 }
