@@ -118,8 +118,7 @@
     "test:i": "npm i yhtml5-test@latest -D",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
-    "pregit": "clear && git status",
-    "git": "git checkout dev && git add -A && git commit -m 'auto update'  && git pull && git push",
-    "postgit": "clear && git status"
+    "git": "clear && git status && git add . && git commit -m",
+    "postgit": "git pull && git push && git status"
   }
 }
