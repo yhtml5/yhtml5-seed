@@ -22,7 +22,6 @@ const Demo = () => LazilyLoadComponent(require.ensure([], require => require('./
 const Document = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Document/index.jsx').default, 'route-Document'))
 const Function = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Function/index.jsx').default, 'route-Function'))
 const Form = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Form/index.jsx').default, 'route-Form'))
-const Question = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Question/index.jsx').default, 'route-Question'))
 const Navigation = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Navigation/index.jsx').default, 'route-Navigation'))
 const Live = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Live/index.jsx').default, 'route-Live'))
 const LiveAdd = () => LazilyLoadComponent(require.ensure([], require => require('./Containers/Live/indexAdd.jsx').default, 'route-LiveAdd'))
@@ -58,7 +57,6 @@ function newRouter() {
             <Route path="/packages" component={Packages} exact />
             <Route path="/packages/add" component={PackagesAddEdit} />
             <Route path="/packages/edit" component={PackagesAddEdit} />
-            <Route path="/question" component={Question} exact />
           </Layout>
           <Route component={NoMatch} />
         </Switch>

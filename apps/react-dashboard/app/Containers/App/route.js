@@ -4,7 +4,6 @@ import { init as initializeLogin } from '../Login/task'
 import { init as initializeLayout } from '../Layout/task'
 import { initializeNavigation } from '../Navigation/task'
 import { init as initPackages } from '../Packages/task'
-import { initializeQuestion, initializeQuestionAdd, initializeQuestionEdit } from '../Question/task'
 import { checkToken } from '../../util/util'
 // import {ajaxMenus, changeMenus, verifyPermissions} from './task'
 
@@ -27,15 +26,6 @@ function listener(store, history) {
         break
       case '/navigation':
         store.dispatch(initializeNavigation())
-        break
-      case '/question':
-        store.dispatch(initializeQuestion())
-        break
-      case '/question/add':
-        store.dispatch(initializeQuestionAdd())
-        break
-      case '/question/edit':
-        store.dispatch(initializeQuestionEdit())
         break
       case '/live':
         store.dispatch(initializeLive())
