@@ -1,0 +1,65 @@
+:global {
+
+    #root {
+        height:100%;
+    }
+    .y-m-t-20 {
+        margin-top: 20px;
+    }
+    .y-m-t-40 {
+        margin-top: 40px;
+    }
+    .y-m-t-100 {
+        margin-top: 100px;
+    }
+    .y-m-b-20 {
+        margin-bottom: 20px;
+    }
+    .y-m-b-40 {
+        margin-bottom: 40px;
+    }
+    .y-m-l-10 {
+        margin-left: 10px;
+    }
+    .y-m-l-20 {
+        margin-left: 20px;
+    }
+    .test {
+        transition: all .3s;
+    }
+    .no-select {
+        user-select: none;
+    }
+    .route-enter {
+        opacity: 0.01;
+    }
+    .route-enter.route-enter-active {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+    }
+    .route-leave {
+        opacity: 1;
+    }
+    .route-leave.route-leave-active {
+        opacity: 0.01;
+        transition: opacity 300ms ease-in;
+    }
+    .y-card-pagination {
+        float: right;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .table-operating {
+        padding: 4px;
+    }
+    .y-table .ant-table-thead>tr>th,
+    .y-table .ant-table-tbody>tr>td {
+        text-align: center !important;
+    }
+    .y-table {
+        min-height: 200px;
+    }
+    .y-transition-all{
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+}

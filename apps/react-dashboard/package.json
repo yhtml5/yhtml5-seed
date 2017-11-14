@@ -21,7 +21,7 @@
     "weui"
   ],
   "dependencies": {
-    "antd": "^2.10.2",
+    "antd": "^2.13.10",
     "axios": "^0.16.2",
     "github-markdown-css": "^2.6.0",
     "history": "^4.6.1",
@@ -96,11 +96,12 @@
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
+    "yhtml5-scripts": "^0.1.6",
     "yhtml5-test": "^0.1.2"
   },
   "peerDependencies": {
     "react": "^15.4.x",
-    "webpack": "^2.x",
+    "webpack": ">= 2.0.0",
     "babel-core": "^6.x"
   },
   "engines": {
@@ -108,6 +109,9 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
+    "start": "yhtml5-scripts start",
+    "scripts:u": "npm i yhtml5-scripts@latest -D",
+    "Build": "clear && yhtml5-scripts build",
     "dev": "clear && node ./build/dev.server.js",
     "dev:debug": "clear && webpack-dashboard -- node ./build/dev.server.js",
     "build": "clear && node ./build/build.js",
@@ -115,7 +119,7 @@
     "pm2": "pm2 start pm2.config.js",
     "test": "clear && yhtml5-test --env=jsdom",
     "test:c": "npm test -- --coverage",
-    "test:i": "npm i yhtml5-test@latest -D",
+    "test:u": "npm i yhtml5-test@latest -D",
     "lint": "eslint --ext .js,.jsx ./app/Containers",
     "precommit": "npm run test",
     "git": "clear && git status && git add . && git commit -m",
