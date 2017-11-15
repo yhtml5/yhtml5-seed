@@ -28,8 +28,6 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "normalize.css": "^7.0.0",
-    "preact": "^8.2.1",
-    "preact-compat": "^3.16.0",
     "prop-types": "^15.5.6",
     "react": "~15.4.x",
     "react-dom": "~15.4.x",
@@ -96,8 +94,8 @@
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
-    "yhtml5-scripts": "^0.1.6",
-    "yhtml5-test": "^0.1.2"
+    "yhtml5-scripts": "^0.2.3",
+    "yhtml5-test": "^0.1.11"
   },
   "peerDependencies": {
     "react": "^15.4.x",
@@ -110,7 +108,7 @@
   },
   "scripts": {
     "start": "yhtml5-scripts start",
-    "scripts:u": "npm i yhtml5-scripts@latest -D",
+    "scripts:u": "npm i yhtml5-scripts@latest yhtml5-test@latest -D",
     "Build": "clear && yhtml5-scripts build",
     "dev": "clear && node ./build/dev.server.js",
     "dev:debug": "clear && webpack-dashboard -- node ./build/dev.server.js",

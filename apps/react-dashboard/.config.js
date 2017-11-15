@@ -8,6 +8,7 @@ const config = {
   devHost: '0.0.0.0',
   devPort: 9991,
   analyzerPort: 9992,
+  isAnalyze : true,
   // host: './',
 
   entry: 'src/index.js',
