@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Router from './Router.jsx'
-import './global.pcss'
+import './global.css'
 
 const render = (Components) => {
   ReactDOM.render(
