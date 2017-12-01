@@ -1,6 +1,6 @@
 {
   "name": "yhtml5-seed",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "author": "yhtml5 <1417376255@qq.com>",
   "description": "The web's scaffolding tool for modern webapps",
   "main": "app/index.js",
@@ -32,7 +32,7 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "git": "clear && git status && git add . && git commit -m",
+    "git": "clear && git status && git add -A && git commit -m",
     "postgit": "git pull && git push && git push origin dev:master",
     "update": "rimraf site && cd site/static && mkdir vendors  && cp CNAME site/"
   }
